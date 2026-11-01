@@ -1,0 +1,56 @@
+# ValleyFixes
+
+Small, separately switchable fixes for verified Stardew Valley 1.6.15 bugs. Every fix has its own toggle in `config.json`, and each one skips itself when the game data no longer matches what it expects.
+
+Status: 0.1.0. Eight fixes were tested before and after in the running game (Stardew Valley 1.6.15 build 24356, SMAPI 4.5.2, Windows 11, English and Portuguese, single player). Multiplayer and other mods were not tested. See `docs/AUDIT.md` for what was and was not covered.
+
+## Install
+
+1. Install SMAPI 4.2.1 or newer.
+2. Copy the `ValleyFixes` folder from the zip into your `Mods` folder.
+3. Start the game once. A `config.json` appears in the mod folder with every setting listed below.
+
+## Fixes
+
+| Setting | Bug | What it does |
+|---|---|---|
+| `FixFairThirdPlaceText` | VF-007 | Lewis says 200 star tokens for third place in the Grange display but the game gives 250. The speech is corrected in every language. The reward is not touched. |
+| `FixMovieReactionScripts` | VF-001 | Three movie reactions (Sam twice, Demetrius once) pass the NPC name to the message command, which shows the name in place of the reaction text. The stray name is removed. |
+| `TrimLocationChangeBacklog` | VF-043 | In single player the game queues every object added to or removed from a location for a network send that never happens, which keeps removed objects in memory. Once a morning this clears those queues. Memory only, nothing you can see changes. It does nothing in multiplayer. |
+| `FixPortugueseSingleStatus` | VF-036 | In Portuguese, single male farmers show the female "single" text on the social page. Fixed for that language only. |
+| `FixChefBundleReward` | VF-030 | The remixed Chef's bundle gives 1 Pink Cake where the classic one gives 3. Fixed to 3. Bundles are saved when a world is created, so only new remixed worlds are affected. |
+| `FixTrashBearSardine` | VF-022 | Trash Bear could ask for a Sardine in summer, when it cannot be caught. The request is changed to another summer item. |
+| `FixBlankNames` | VF-012 | The new farm and new farmhand menus let you finish with a name made only of spaces. A space-only farm name reads back empty after saving and then blocks new farmhands from joining. The OK button is now blocked for such names. It does not repair farms already affected. |
+| `FixLumberjackMahoganyBonus` | VF-006 | **Off by default.** The tree code gives Lumberjack players 25% extra hardwood from mahogany trees, but a mismatched id means it never applies. Turning this on makes it apply, which raises their mahogany hardwood by about a quarter. |
+| `LogEatInterrupts` | VF-004 | Writes a log line with the calling code when something cuts the eating animation short. This only logs. It changes nothing in the game. |
+
+## What is not fixed
+
+- The eating freeze (VF-004). The cause is not known yet. The logger writes the calling code to the SMAPI log when it happens.
+- Farms already saved with a space-only farm name stay stuck. Only new ones are prevented.
+- Worlds already created keep the 1 Pink Cake Chef's bundle.
+- Italian and Russian show the female "single" text to everyone on the social page.
+
+## More
+
+- `docs/AUDIT.md`: every report, its verdict, and the evidence
+- `docs/COMPATIBILITY.md`: how each fix hooks in, other mods, multiplayer, limits
+- `docs/REPRODUCTION.md`: how it was tested and what was not
+- `docs/CHANGELOG.md`
+
+## Testing in game
+
+```bash
+pwsh tools/Run-CleanProfile.ps1
+```
+
+This builds the mod, copies it into `testprofile/Mods` beside SMAPI's own ConsoleCommands, and starts SMAPI with `--mods-path` pointing there. Your live Mods folder is not touched. Add `-NoLaunch` to build and copy only. `tools/Run-Harness.ps1 -Label baseline|defaults|fixed` (add `-Only natural -Days 12` for the overnight memory test, `-HeapDumps` for heap dumps) runs the automated in-game scenarios from `ValleyFixes.DevHarness` (a test tool that is never shipped) and saves results under `testprofile/results`. Saves cannot be redirected, so make a new farm for tests and do not load an existing one. The harness removes its own `VFTest_*` saves afterwards. The game starts without Steam, which only turns off achievements. The log is `%APPDATA%\StardewValley\ErrorLogs\SMAPI-latest.txt`. Each launch moves your last SMAPI log to `SMAPI-previous.txt`.
+
+## Building
+
+```bash
+dotnet build ValleyFixes/ValleyFixes.csproj
+dotnet test ValleyFixes.Tests/ValleyFixes.Tests.csproj
+```
+
+The build does not copy into the game's Mods folder. The zip lands in `ValleyFixes/bin/Debug/net6.0/`. The tests read the unpacked game content next to the install (set `STARDEW_GAME_PATH` to point somewhere else) and skip that part if it is missing.

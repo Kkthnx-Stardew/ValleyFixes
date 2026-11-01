@@ -1,0 +1,55 @@
+# Handoff for the next session
+
+Updated 2026-11-01 at the end of the second session. Read `docs/AUDIT.md` (Summary, VF-004, VF-043, Performance sample) and `README.md` first.
+
+## State
+
+- Mod: ValleyFixes 0.1.0 for Stardew Valley 1.6.15 build 24356, SMAPI 4.5.2, repo `C:\Users\Administrator\Documents\GitHub\ValleyFixes`. Not a git repo, nothing committed. The user wants to be asked before `git init` or any commit.
+- Game: `D:\SteamLibrary\steamapps\common\Stardew Valley`. The live Mods folder has about 100 mods. Never touch it. Test only through `testprofile/Mods`.
+- Settings in the mod: `FixFairThirdPlaceText`, `FixMovieReactionScripts`, `FixChefBundleReward`, `FixPortugueseSingleStatus`, `FixBlankNames`, `FixTrashBearSardine`, `TrimLocationChangeBacklog` (all on), `FixLumberjackMahoganyBonus` (off, opt-in), `LogEatInterrupts` (log only).
+- Eight fixes were tested before and after in the running game (VF-001, 006, 007, 012, 022, 030, 036, 043). VF-004 (eating freeze) is only logged, its real trigger is still unknown.
+- The Release DLL (SHA-256 `d80d09d8...`) passed a full `defaults` run. Evidence for all passes is in `docs/evidence/`. Unit tests: 59 pass.
+
+## Done in session two
+
+- VF-043 is in the audit (ledger row, runtime section, module table). Late-game style farm over 40 nights: retained growth 44.7 MB without the fix and 8.2 MB with it, queues cleared every morning, nightly save reads back equal.
+- Full `fixed` and `baseline` passes are clean (no `_error` keys, no ValleyFixes errors). One earlier `fixed` run was slow and stalled (frame median 20.8 ms, eat freeze never cleared, later scenarios cascaded). It was rerun. Kept as `testprofile/results/stalled/fixed-stalled.json`.
+- Skull Cavern floors 121, 150, 200 and 300 with 40 added monsters: no stutter, update under 0.25 ms mean.
+- Eating freeze: all 73 call sites of `completelyStopAnimatingOrDoingAction` triaged, seven eating states tried. Only `holdUpItemThenMessage` orphans the freeze (4 seconds). Also found: a cut-short eat loses the food effect, because stamina, health and buffs are applied only in `doneEating`.
+- Harness additions: `-Only skull`, `-Only eatstates`, `-Heavy`, `-OutName`.
+
+## Ideas worth doing next
+
+- Eating freeze: decide whether to ship a reset. The mechanism is proven, the organic trigger is not. A postfix that clears `freezePause` when the prefix saw `isEating` would remove any stall. A fuller fix would also finish the eat (apply the food) when it is cut short. Neither is built. The audit policy was to wait for a logged caller.
+- The `just_hit` row in `eatstates` threw a null reference in setup. Fix the test (probably the slime needs a location) and rerun.
+- Measure VF-043 on a real played late-game save, if the user can give one. Play with the logger and VF-043 on for a long session and compare memory.
+- VF-013 Egg Festival freeze with a blank player name, now that `FixBlankNames` blocks new ones.
+- Multiplayer and split screen tests. None have been done, and VF-043 steps aside there.
+- More languages in the running game (the harness can switch language, see the `Portuguese` scenario).
+
+## How to run things
+
+```bash
+dotnet build ValleyFixes.slnx
+dotnet test ValleyFixes.Tests/ValleyFixes.Tests.csproj
+pwsh tools/Run-Harness.ps1 -Label baseline -Configuration Release -TimeoutSeconds 540
+pwsh tools/Run-Harness.ps1 -Label fixed -Configuration Release -TimeoutSeconds 540
+pwsh tools/Run-Harness.ps1 -Label fixed -Configuration Release -Only natural -Days 40 -Heavy -OutName heavy40-fixed
+pwsh tools/Run-Harness.ps1 -Label fixed -Configuration Release -Only skull -OutName skull-fixed
+pwsh tools/Run-Harness.ps1 -Label fixed -Configuration Release -Only eatstates -OutName eatstates-fixed
+```
+
+A full run takes 6 to 8 minutes, so start it with `run_in_background` and pass `-TimeoutSeconds 540` (the default of 240 is too short). Every run rebuilds the Release zip, so take the zip hash after the last run.
+
+## Gotchas learned
+
+- The game starts without Steam. Saves cannot be redirected: the runner deletes its own `VFTest_*` saves. Check `%APPDATA%\StardewValley\Saves` still has only the user's four saves (LazyRooster, TheBigDill, lamp, test).
+- Every run bumps `timesPlayed` and replaces `SMAPI-latest.txt`. The runner warns if the saved game language changes.
+- Touching or moving the game window, or a busy PC, can stall a run. Signs: idle frame median above 16.7 ms and `freezePause` falling slower than 16 ms a tick. Rerun. Idle frame time and whole-process CPU vary between runs for no reason tied to the mod, so compare update and render times instead.
+- The soak test in the full run calls `DayUpdate` directly, so it never raises `DayStarted` and does not show VF-043. The `-Only natural` runs do.
+- The wiki returns 403 to scripted fetches. Read it through the built-in browser (`get_page_text` or javascript).
+- Python in bash heredocs with apostrophes or backslashes broke several times. Write script files with the Write tool, or use a quoted heredoc (`<<'EOF'`).
+- Verdicts from code reading alone were wrong several times (VF-001, VF-022). Run it in the game.
+- `Game1.getFarm().objects` is an overlay wrapper. The real network dictionary is `netObjects`.
+- The decompile is not kept. `ilspycmd -p -o <dir> "<game>\Stardew Valley.dll"` takes under a minute.
+- The user's writing rules: no em dashes, no semicolons, no emojis, short sentences, plain words.

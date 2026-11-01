@@ -1,0 +1,461 @@
+[16:29:14 INFO  SMAPI] SMAPI 4.5.2 with Stardew Valley 1.6.15 build 24356 on Windows 11 (10.0.26200.0)
+[16:29:14 INFO  SMAPI] Mods go here: ~\Documents\GitHub\ValleyFixes\testprofile\Mods
+[16:29:14 TRACE SMAPI] (Using custom --mods-path argument. Game folder: D:\SteamLibrary\steamapps\common\Stardew Valley.)
+[16:29:14 TRACE SMAPI] Log started at 2026-11-01T21:29:14 UTC
+[16:29:17 WARN  SMAPI] Writing to the terminal is disabled because the --no-terminal argument was received. This usually means launching the terminal failed.
+[16:29:17 DEBUG SMAPI] Waiting for game to launch...
+[16:29:18 TRACE game] Instance_Initialize() finished, elapsed = '00:00:00.2462559'
+[16:29:18 TRACE SMAPI] Scanning for malicious files...
+[16:29:18 DEBUG SMAPI] Loading mod metadata...
+[16:29:18 DEBUG SMAPI] Loading mods...
+[16:29:18 TRACE SMAPI]    Console Commands (from Mods\ConsoleCommands\ConsoleCommands.dll, ID: SMAPI.ConsoleCommands, assembly version: 4.5.2)...
+[16:29:18 TRACE SMAPI]    ValleyFixes (from Mods\ValleyFixes\ValleyFixes.dll, ID: Kkthnx.ValleyFixes, assembly version: 0.1.0)...
+[16:29:18 TRACE SMAPI]       Detected game patcher in assembly ValleyFixes.dll.
+[16:29:18 TRACE SMAPI]    ValleyFixes DevHarness (from Mods\ValleyFixes.DevHarness\ValleyFixes.DevHarness.dll, ID: Kkthnx.ValleyFixes.DevHarness, assembly version: 0.1.0)...
+[16:29:18 INFO  SMAPI] Loaded 3 mods:
+[16:29:18 INFO  SMAPI]    Console Commands 4.5.2 by SMAPI | Adds SMAPI console commands that let you manipulate the game.
+[16:29:18 INFO  SMAPI]    ValleyFixes 0.1.0 by Kkthnx | Small, separately switchable fixes for verified Stardew Valley 1.6.15 bugs. Every fix has its own toggle and skips itself if the game data no longer matches.
+[16:29:18 INFO  SMAPI]    ValleyFixes DevHarness 0.1.0 by Kkthnx | Test tool for ValleyFixes. Does nothing unless the VFH_OUT environment variable is set. Never ship this.
+
+[16:29:18 INFO  SMAPI]    Patched game code
+[16:29:18 INFO  SMAPI]    --------------------------------------------------
+[16:29:18 INFO  SMAPI]       These mods directly change the game code. They're more likely to cause errors or bugs in-game; if
+[16:29:18 INFO  SMAPI]       your game has issues, try removing these first. Otherwise you can ignore this warning.
+
+[16:29:18 INFO  SMAPI]       - ValleyFixes
+
+[16:29:18 DEBUG SMAPI]    No update keys
+[16:29:18 DEBUG SMAPI]    --------------------------------------------------
+[16:29:18 DEBUG SMAPI]       These mods have no update keys in their manifest. SMAPI may not notify you about updates for these
+[16:29:18 DEBUG SMAPI]       mods. Consider notifying the mod authors about this problem.
+
+[16:29:18 DEBUG SMAPI]       - ValleyFixes
+[16:29:18 DEBUG SMAPI]       - ValleyFixes DevHarness
+
+[16:29:18 DEBUG SMAPI] Launching mods...
+[16:29:18 DEBUG SMAPI] Mods loaded and ready!
+[16:29:18 TRACE SMAPI] Checking for known software conflicts...
+[16:29:18 WARN  SMAPI] Found MSI Afterburner and RivaTuner Statistics Server installed, which may conflict with SMAPI. If you experience errors or crashes, try disabling that software or adding an exception for SMAPI and Stardew Valley.
+[16:29:18 TRACE SMAPI] Checking for updates...
+[16:29:18 TRACE SMAPI] ValleyFixes edited Strings/StringsFromCSFiles.
+[16:29:19 TRACE game] setGameMode( 'titleScreenGameMode (0)' )
+[16:29:19 TRACE SMAPI]    SMAPI okay.
+[16:29:19 TRACE SMAPI]    Checking for updates to 2 mods...
+[16:29:19 TRACE SMAPI] ValleyFixes edited Strings/StringsFromCSFiles.
+[16:29:19 TRACE SMAPI]    All mods up to date.
+[16:29:19 TRACE SMAPI] Running on GPU: NVIDIA GeForce RTX 5070/PCIe/SSE2
+[16:29:19 TRACE game] Instance_LoadContent() finished, elapsed = '00:00:00.8213548'
+[16:29:19 ERROR game] Oops! Steam achievements won't work because Steam isn't loaded. See 'Configure your game client' in the install guide for more info: https://smapi.io/install.
+[16:29:19 INFO  SMAPI] Type 'help' for help, or 'help <cmd>' for a command's usage
+[16:29:19 TRACE game] Window_ClientSizeChanged(); Window.ClientBounds={X:0 Y:0 Width:2560 Height:1440}
+[16:29:19 TRACE SMAPI]    Mod blacklist OK.
+[16:29:23 TRACE game] Successfully loaded ContentHashes.json containing 3560 file(s);
+[16:29:23 TRACE game] EnsureManifestInitialized() finished, elapsed = '00:00:00.0045470'
+[16:29:23 TRACE ValleyFixes] Movie reaction fix changed 3 of 3 expected scripts.
+[16:29:23 TRACE SMAPI] ValleyFixes edited Data/MoviesReactions.
+[16:29:23 TRACE game] setGameMode( 'playingGameMode (3)' )
+[16:29:23 TRACE game] Window_ClientSizeChanged(); Window.ClientBounds={X:0 Y:0 Width:2560 Height:1440}
+[16:29:23 TRACE game] Window_ClientSizeChanged(); Window.ClientBounds={X:0 Y:0 Width:2560 Height:1440}
+[16:29:23 TRACE SMAPI] Synchronizing 'NewDay' task...
+[16:29:23 TRACE ValleyFixes] Lumberjack hardwood fix changed 2 of 2 expected tree entries.
+[16:29:23 TRACE SMAPI] ValleyFixes edited Data/WildTrees.
+[16:29:24 TRACE SMAPI]    task complete.
+[16:29:24 TRACE SMAPI] Context: before save creation.
+[16:29:24 TRACE game] SaveGame.Save() called.
+[16:29:24 TRACE SMAPI] Synchronizing 'Save' task...
+[16:29:24 TRACE game] Saving without compression...
+[16:29:25 TRACE SMAPI]    task complete.
+[16:29:25 TRACE game] SaveGame.Save() completed without exceptions.
+[16:29:26 TRACE SMAPI] Context: after save creation, starting spring 1 Y1.
+[16:29:26 TRACE SMAPI] Context: loaded save 'VFTest_453245354', starting spring 1 Y1, locale set to . Single-player.
+[16:29:26 TRACE ValleyFixes] Cleared the unsent change queues of 80 locations.
+[16:29:29 TRACE SMAPI] Synchronizing 'NewDay' task...
+[16:29:29 TRACE SMAPI]    task complete.
+[16:29:29 TRACE SMAPI] Context: before save.
+[16:29:29 TRACE game] SaveGame.Save() called.
+[16:29:29 TRACE SMAPI] Synchronizing 'Save' task...
+[16:29:29 TRACE game] Saving without compression...
+[16:29:29 TRACE SMAPI]    task complete.
+[16:29:29 TRACE game] SaveGame.Save() completed without exceptions.
+[16:29:31 TRACE SMAPI] Context: after save, starting spring 2 Y1.
+[16:29:31 TRACE ValleyFixes] Cleared the unsent change queues of 80 locations.
+[16:29:35 TRACE SMAPI] Synchronizing 'NewDay' task...
+[16:29:35 TRACE SMAPI]    task complete.
+[16:29:35 TRACE SMAPI] Context: before save.
+[16:29:35 TRACE game] SaveGame.Save() called.
+[16:29:35 TRACE SMAPI] Synchronizing 'Save' task...
+[16:29:35 TRACE game] Saving without compression...
+[16:29:35 TRACE SMAPI]    task complete.
+[16:29:35 TRACE game] SaveGame.Save() completed without exceptions.
+[16:29:37 TRACE SMAPI] Context: after save, starting spring 3 Y1.
+[16:29:37 TRACE ValleyFixes] Cleared the unsent change queues of 80 locations.
+[16:29:41 TRACE SMAPI] Synchronizing 'NewDay' task...
+[16:29:41 TRACE SMAPI]    task complete.
+[16:29:41 TRACE SMAPI] Context: before save.
+[16:29:41 TRACE game] SaveGame.Save() called.
+[16:29:41 TRACE SMAPI] Synchronizing 'Save' task...
+[16:29:41 TRACE game] Saving without compression...
+[16:29:41 TRACE SMAPI]    task complete.
+[16:29:41 TRACE game] SaveGame.Save() completed without exceptions.
+[16:29:43 TRACE SMAPI] Context: after save, starting spring 4 Y1.
+[16:29:43 TRACE ValleyFixes] Cleared the unsent change queues of 80 locations.
+[16:29:47 TRACE SMAPI] Synchronizing 'NewDay' task...
+[16:29:47 TRACE SMAPI]    task complete.
+[16:29:47 TRACE SMAPI] Context: before save.
+[16:29:47 TRACE game] SaveGame.Save() called.
+[16:29:47 TRACE SMAPI] Synchronizing 'Save' task...
+[16:29:47 TRACE game] Saving without compression...
+[16:29:47 TRACE SMAPI]    task complete.
+[16:29:47 TRACE game] SaveGame.Save() completed without exceptions.
+[16:29:49 TRACE SMAPI] Context: after save, starting spring 5 Y1.
+[16:29:49 TRACE ValleyFixes] Cleared the unsent change queues of 80 locations.
+[16:29:52 TRACE SMAPI] Synchronizing 'NewDay' task...
+[16:29:52 TRACE SMAPI]    task complete.
+[16:29:52 TRACE SMAPI] Context: before save.
+[16:29:52 TRACE game] SaveGame.Save() called.
+[16:29:52 TRACE SMAPI] Synchronizing 'Save' task...
+[16:29:52 TRACE game] Saving without compression...
+[16:29:52 TRACE SMAPI]    task complete.
+[16:29:52 TRACE game] SaveGame.Save() completed without exceptions.
+[16:29:54 TRACE SMAPI] Context: after save, starting spring 6 Y1.
+[16:29:54 TRACE ValleyFixes] Cleared the unsent change queues of 80 locations.
+[16:29:58 TRACE SMAPI] Synchronizing 'NewDay' task...
+[16:29:58 TRACE SMAPI]    task complete.
+[16:29:58 TRACE SMAPI] Context: before save.
+[16:29:58 TRACE game] SaveGame.Save() called.
+[16:29:58 TRACE SMAPI] Synchronizing 'Save' task...
+[16:29:58 TRACE game] Saving without compression...
+[16:29:58 TRACE SMAPI]    task complete.
+[16:29:58 TRACE game] SaveGame.Save() completed without exceptions.
+[16:30:00 TRACE SMAPI] Context: after save, starting spring 7 Y1.
+[16:30:00 TRACE ValleyFixes] Cleared the unsent change queues of 80 locations.
+[16:30:04 TRACE SMAPI] Synchronizing 'NewDay' task...
+[16:30:04 TRACE SMAPI]    task complete.
+[16:30:04 TRACE SMAPI] Context: before save.
+[16:30:04 TRACE game] SaveGame.Save() called.
+[16:30:04 TRACE SMAPI] Synchronizing 'Save' task...
+[16:30:04 TRACE game] Saving without compression...
+[16:30:04 TRACE SMAPI]    task complete.
+[16:30:04 TRACE game] SaveGame.Save() completed without exceptions.
+[16:30:06 TRACE SMAPI] Context: after save, starting spring 8 Y1.
+[16:30:06 TRACE ValleyFixes] Cleared the unsent change queues of 80 locations.
+[16:30:10 TRACE SMAPI] Synchronizing 'NewDay' task...
+[16:30:10 TRACE SMAPI]    task complete.
+[16:30:10 TRACE SMAPI] Context: before save.
+[16:30:10 TRACE game] SaveGame.Save() called.
+[16:30:10 TRACE SMAPI] Synchronizing 'Save' task...
+[16:30:10 TRACE game] Saving without compression...
+[16:30:10 TRACE SMAPI]    task complete.
+[16:30:10 TRACE game] SaveGame.Save() completed without exceptions.
+[16:30:12 TRACE SMAPI] Context: after save, starting spring 9 Y1.
+[16:30:12 TRACE ValleyFixes] Cleared the unsent change queues of 80 locations.
+[16:30:16 TRACE SMAPI] Synchronizing 'NewDay' task...
+[16:30:16 TRACE SMAPI]    task complete.
+[16:30:16 TRACE SMAPI] Context: before save.
+[16:30:16 TRACE game] SaveGame.Save() called.
+[16:30:16 TRACE SMAPI] Synchronizing 'Save' task...
+[16:30:16 TRACE game] Saving without compression...
+[16:30:16 TRACE SMAPI]    task complete.
+[16:30:16 TRACE game] SaveGame.Save() completed without exceptions.
+[16:30:18 TRACE SMAPI] Context: after save, starting spring 10 Y1.
+[16:30:18 TRACE ValleyFixes] Cleared the unsent change queues of 80 locations.
+[16:30:21 TRACE SMAPI] Synchronizing 'NewDay' task...
+[16:30:21 TRACE SMAPI]    task complete.
+[16:30:21 TRACE SMAPI] Context: before save.
+[16:30:21 TRACE game] SaveGame.Save() called.
+[16:30:21 TRACE SMAPI] Synchronizing 'Save' task...
+[16:30:21 TRACE game] Saving without compression...
+[16:30:22 TRACE SMAPI]    task complete.
+[16:30:22 TRACE game] SaveGame.Save() completed without exceptions.
+[16:30:23 TRACE SMAPI] Context: after save, starting spring 11 Y1.
+[16:30:23 TRACE ValleyFixes] Cleared the unsent change queues of 80 locations.
+[16:30:27 TRACE SMAPI] Synchronizing 'NewDay' task...
+[16:30:27 TRACE SMAPI]    task complete.
+[16:30:27 TRACE SMAPI] Context: before save.
+[16:30:27 TRACE game] SaveGame.Save() called.
+[16:30:27 TRACE SMAPI] Synchronizing 'Save' task...
+[16:30:27 TRACE game] Saving without compression...
+[16:30:27 TRACE SMAPI]    task complete.
+[16:30:27 TRACE game] SaveGame.Save() completed without exceptions.
+[16:30:29 TRACE SMAPI] Context: after save, starting spring 12 Y1.
+[16:30:29 TRACE ValleyFixes] Cleared the unsent change queues of 80 locations.
+[16:30:33 TRACE SMAPI] Synchronizing 'NewDay' task...
+[16:30:33 TRACE SMAPI]    task complete.
+[16:30:33 TRACE SMAPI] Context: before save.
+[16:30:33 TRACE game] SaveGame.Save() called.
+[16:30:33 TRACE SMAPI] Synchronizing 'Save' task...
+[16:30:33 TRACE game] Saving without compression...
+[16:30:33 TRACE SMAPI]    task complete.
+[16:30:33 TRACE game] SaveGame.Save() completed without exceptions.
+[16:30:35 TRACE SMAPI] Context: after save, starting spring 13 Y1.
+[16:30:35 TRACE ValleyFixes] Cleared the unsent change queues of 80 locations.
+[16:30:39 TRACE SMAPI] Synchronizing 'NewDay' task...
+[16:30:39 TRACE SMAPI]    task complete.
+[16:30:39 TRACE SMAPI] Context: before save.
+[16:30:39 TRACE game] SaveGame.Save() called.
+[16:30:39 TRACE SMAPI] Synchronizing 'Save' task...
+[16:30:39 TRACE game] Saving without compression...
+[16:30:39 TRACE SMAPI]    task complete.
+[16:30:39 TRACE game] SaveGame.Save() completed without exceptions.
+[16:30:41 TRACE SMAPI] Context: after save, starting spring 14 Y1.
+[16:30:41 TRACE ValleyFixes] Cleared the unsent change queues of 80 locations.
+[16:30:45 TRACE SMAPI] Synchronizing 'NewDay' task...
+[16:30:45 TRACE SMAPI]    task complete.
+[16:30:45 TRACE SMAPI] Context: before save.
+[16:30:45 TRACE game] SaveGame.Save() called.
+[16:30:45 TRACE SMAPI] Synchronizing 'Save' task...
+[16:30:45 TRACE game] Saving without compression...
+[16:30:45 TRACE SMAPI]    task complete.
+[16:30:45 TRACE game] SaveGame.Save() completed without exceptions.
+[16:30:47 TRACE SMAPI] Context: after save, starting spring 15 Y1.
+[16:30:47 TRACE ValleyFixes] Cleared the unsent change queues of 80 locations.
+[16:30:50 TRACE SMAPI] Synchronizing 'NewDay' task...
+[16:30:50 TRACE game] Applied trigger action 'Mail_Pierre_Fertilizers' with actions [AddMail Current fertilizers].
+[16:30:50 TRACE SMAPI]    task complete.
+[16:30:50 TRACE SMAPI] Context: before save.
+[16:30:50 TRACE game] SaveGame.Save() called.
+[16:30:50 TRACE SMAPI] Synchronizing 'Save' task...
+[16:30:50 TRACE game] Saving without compression...
+[16:30:51 TRACE SMAPI]    task complete.
+[16:30:51 TRACE game] SaveGame.Save() completed without exceptions.
+[16:30:52 TRACE SMAPI] Context: after save, starting spring 16 Y1.
+[16:30:52 TRACE ValleyFixes] Cleared the unsent change queues of 80 locations.
+[16:30:56 TRACE SMAPI] Synchronizing 'NewDay' task...
+[16:30:56 TRACE SMAPI]    task complete.
+[16:30:56 TRACE SMAPI] Context: before save.
+[16:30:56 TRACE game] SaveGame.Save() called.
+[16:30:56 TRACE SMAPI] Synchronizing 'Save' task...
+[16:30:56 TRACE game] Saving without compression...
+[16:30:56 TRACE SMAPI]    task complete.
+[16:30:56 TRACE game] SaveGame.Save() completed without exceptions.
+[16:30:58 TRACE SMAPI] Context: after save, starting spring 17 Y1.
+[16:30:58 TRACE ValleyFixes] Cleared the unsent change queues of 80 locations.
+[16:31:02 TRACE SMAPI] Synchronizing 'NewDay' task...
+[16:31:02 TRACE SMAPI]    task complete.
+[16:31:02 TRACE SMAPI] Context: before save.
+[16:31:02 TRACE game] SaveGame.Save() called.
+[16:31:02 TRACE SMAPI] Synchronizing 'Save' task...
+[16:31:02 TRACE game] Saving without compression...
+[16:31:02 TRACE SMAPI]    task complete.
+[16:31:02 TRACE game] SaveGame.Save() completed without exceptions.
+[16:31:04 TRACE SMAPI] Context: after save, starting spring 18 Y1.
+[16:31:04 TRACE ValleyFixes] Cleared the unsent change queues of 80 locations.
+[16:31:08 TRACE SMAPI] Synchronizing 'NewDay' task...
+[16:31:08 TRACE SMAPI]    task complete.
+[16:31:08 TRACE SMAPI] Context: before save.
+[16:31:08 TRACE game] SaveGame.Save() called.
+[16:31:08 TRACE SMAPI] Synchronizing 'Save' task...
+[16:31:08 TRACE game] Saving without compression...
+[16:31:08 TRACE SMAPI]    task complete.
+[16:31:08 TRACE game] SaveGame.Save() completed without exceptions.
+[16:31:10 TRACE SMAPI] Context: after save, starting spring 19 Y1.
+[16:31:10 TRACE ValleyFixes] Cleared the unsent change queues of 80 locations.
+[16:31:14 TRACE SMAPI] Synchronizing 'NewDay' task...
+[16:31:14 TRACE SMAPI]    task complete.
+[16:31:14 TRACE SMAPI] Context: before save.
+[16:31:14 TRACE game] SaveGame.Save() called.
+[16:31:14 TRACE SMAPI] Synchronizing 'Save' task...
+[16:31:14 TRACE game] Saving without compression...
+[16:31:14 TRACE SMAPI]    task complete.
+[16:31:14 TRACE game] SaveGame.Save() completed without exceptions.
+[16:31:16 TRACE SMAPI] Context: after save, starting spring 20 Y1.
+[16:31:16 TRACE ValleyFixes] Cleared the unsent change queues of 80 locations.
+[16:31:19 TRACE SMAPI] Synchronizing 'NewDay' task...
+[16:31:19 TRACE SMAPI]    task complete.
+[16:31:19 TRACE SMAPI] Context: before save.
+[16:31:19 TRACE game] SaveGame.Save() called.
+[16:31:19 TRACE SMAPI] Synchronizing 'Save' task...
+[16:31:19 TRACE game] Saving without compression...
+[16:31:20 TRACE SMAPI]    task complete.
+[16:31:20 TRACE game] SaveGame.Save() completed without exceptions.
+[16:31:21 TRACE SMAPI] Context: after save, starting spring 21 Y1.
+[16:31:21 TRACE ValleyFixes] Cleared the unsent change queues of 80 locations.
+[16:31:25 TRACE SMAPI] Synchronizing 'NewDay' task...
+[16:31:25 TRACE SMAPI]    task complete.
+[16:31:25 TRACE SMAPI] Context: before save.
+[16:31:25 TRACE game] SaveGame.Save() called.
+[16:31:25 TRACE SMAPI] Synchronizing 'Save' task...
+[16:31:25 TRACE game] Saving without compression...
+[16:31:25 TRACE SMAPI]    task complete.
+[16:31:25 TRACE game] SaveGame.Save() completed without exceptions.
+[16:31:27 TRACE SMAPI] Context: after save, starting spring 22 Y1.
+[16:31:27 TRACE ValleyFixes] Cleared the unsent change queues of 80 locations.
+[16:31:31 TRACE SMAPI] Synchronizing 'NewDay' task...
+[16:31:31 TRACE SMAPI]    task complete.
+[16:31:31 TRACE SMAPI] Context: before save.
+[16:31:31 TRACE game] SaveGame.Save() called.
+[16:31:31 TRACE SMAPI] Synchronizing 'Save' task...
+[16:31:31 TRACE game] Saving without compression...
+[16:31:31 TRACE SMAPI]    task complete.
+[16:31:31 TRACE game] SaveGame.Save() completed without exceptions.
+[16:31:33 TRACE SMAPI] Context: after save, starting spring 23 Y1.
+[16:31:33 TRACE ValleyFixes] Cleared the unsent change queues of 80 locations.
+[16:31:37 TRACE SMAPI] Synchronizing 'NewDay' task...
+[16:31:37 TRACE SMAPI]    task complete.
+[16:31:37 TRACE SMAPI] Context: before save.
+[16:31:37 TRACE game] SaveGame.Save() called.
+[16:31:37 TRACE SMAPI] Synchronizing 'Save' task...
+[16:31:37 TRACE game] Saving without compression...
+[16:31:37 TRACE SMAPI]    task complete.
+[16:31:37 TRACE game] SaveGame.Save() completed without exceptions.
+[16:31:39 TRACE SMAPI] Context: after save, starting spring 24 Y1.
+[16:31:39 TRACE ValleyFixes] Cleared the unsent change queues of 80 locations.
+[16:31:43 TRACE SMAPI] Synchronizing 'NewDay' task...
+[16:31:43 TRACE SMAPI]    task complete.
+[16:31:43 TRACE SMAPI] Context: before save.
+[16:31:43 TRACE game] SaveGame.Save() called.
+[16:31:43 TRACE SMAPI] Synchronizing 'Save' task...
+[16:31:43 TRACE game] Saving without compression...
+[16:31:43 TRACE SMAPI]    task complete.
+[16:31:43 TRACE game] SaveGame.Save() completed without exceptions.
+[16:31:45 TRACE SMAPI] Context: after save, starting spring 25 Y1.
+[16:31:45 TRACE ValleyFixes] Cleared the unsent change queues of 80 locations.
+[16:31:48 TRACE SMAPI] Synchronizing 'NewDay' task...
+[16:31:49 TRACE SMAPI]    task complete.
+[16:31:54 TRACE SMAPI] Synchronizing 'NewDay' task...
+[16:31:55 TRACE SMAPI]    task complete.
+[16:31:55 TRACE SMAPI] Context: before save.
+[16:31:55 TRACE game] SaveGame.Save() called.
+[16:31:55 TRACE SMAPI] Synchronizing 'Save' task...
+[16:31:55 TRACE game] Saving without compression...
+[16:31:55 TRACE SMAPI]    task complete.
+[16:31:55 TRACE game] SaveGame.Save() completed without exceptions.
+[16:31:57 TRACE SMAPI] Context: after save, starting spring 27 Y1.
+[16:31:57 TRACE ValleyFixes] Cleared the unsent change queues of 80 locations.
+[16:32:00 TRACE SMAPI] Synchronizing 'NewDay' task...
+[16:32:00 TRACE SMAPI]    task complete.
+[16:32:00 TRACE SMAPI] Context: before save.
+[16:32:00 TRACE game] SaveGame.Save() called.
+[16:32:00 TRACE SMAPI] Synchronizing 'Save' task...
+[16:32:00 TRACE game] Saving without compression...
+[16:32:00 TRACE SMAPI]    task complete.
+[16:32:00 TRACE game] SaveGame.Save() completed without exceptions.
+[16:32:02 TRACE SMAPI] Context: after save, starting spring 28 Y1.
+[16:32:02 TRACE ValleyFixes] Cleared the unsent change queues of 80 locations.
+[16:32:06 TRACE SMAPI] Synchronizing 'NewDay' task...
+[16:32:06 TRACE SMAPI]    task complete.
+[16:32:06 TRACE SMAPI] Context: before save.
+[16:32:06 TRACE game] SaveGame.Save() called.
+[16:32:06 TRACE SMAPI] Synchronizing 'Save' task...
+[16:32:06 TRACE game] Saving without compression...
+[16:32:06 TRACE SMAPI]    task complete.
+[16:32:06 TRACE game] SaveGame.Save() completed without exceptions.
+[16:32:08 TRACE SMAPI] Context: after save, starting summer 1 Y1.
+[16:32:08 TRACE ValleyFixes] Cleared the unsent change queues of 80 locations.
+[16:32:12 TRACE SMAPI] Synchronizing 'NewDay' task...
+[16:32:12 TRACE SMAPI]    task complete.
+[16:32:12 TRACE SMAPI] Context: before save.
+[16:32:12 TRACE game] SaveGame.Save() called.
+[16:32:12 TRACE SMAPI] Synchronizing 'Save' task...
+[16:32:12 TRACE game] Saving without compression...
+[16:32:12 TRACE SMAPI]    task complete.
+[16:32:12 TRACE game] SaveGame.Save() completed without exceptions.
+[16:32:14 TRACE SMAPI] Context: after save, starting summer 2 Y1.
+[16:32:14 TRACE ValleyFixes] Cleared the unsent change queues of 80 locations.
+[16:32:18 TRACE SMAPI] Synchronizing 'NewDay' task...
+[16:32:18 TRACE SMAPI]    task complete.
+[16:32:24 TRACE SMAPI] Synchronizing 'NewDay' task...
+[16:32:24 TRACE SMAPI]    task complete.
+[16:32:24 TRACE SMAPI] Context: before save.
+[16:32:24 TRACE game] SaveGame.Save() called.
+[16:32:24 TRACE SMAPI] Synchronizing 'Save' task...
+[16:32:24 TRACE game] Saving without compression...
+[16:32:24 TRACE SMAPI]    task complete.
+[16:32:24 TRACE game] SaveGame.Save() completed without exceptions.
+[16:32:26 TRACE SMAPI] Context: after save, starting summer 4 Y1.
+[16:32:26 TRACE ValleyFixes] Cleared the unsent change queues of 80 locations.
+[16:32:29 TRACE SMAPI] Synchronizing 'NewDay' task...
+[16:32:30 TRACE SMAPI]    task complete.
+[16:32:30 TRACE SMAPI] Context: before save.
+[16:32:30 TRACE game] SaveGame.Save() called.
+[16:32:30 TRACE SMAPI] Synchronizing 'Save' task...
+[16:32:30 TRACE game] Saving without compression...
+[16:32:30 TRACE SMAPI]    task complete.
+[16:32:30 TRACE game] SaveGame.Save() completed without exceptions.
+[16:32:32 TRACE SMAPI] Context: after save, starting summer 5 Y1.
+[16:32:32 TRACE ValleyFixes] Cleared the unsent change queues of 80 locations.
+[16:32:35 TRACE SMAPI] Synchronizing 'NewDay' task...
+[16:32:35 TRACE SMAPI]    task complete.
+[16:32:35 TRACE SMAPI] Context: before save.
+[16:32:35 TRACE game] SaveGame.Save() called.
+[16:32:35 TRACE SMAPI] Synchronizing 'Save' task...
+[16:32:35 TRACE game] Saving without compression...
+[16:32:35 TRACE SMAPI]    task complete.
+[16:32:35 TRACE game] SaveGame.Save() completed without exceptions.
+[16:32:37 TRACE SMAPI] Context: after save, starting summer 6 Y1.
+[16:32:37 TRACE ValleyFixes] Cleared the unsent change queues of 80 locations.
+[16:32:41 TRACE SMAPI] Synchronizing 'NewDay' task...
+[16:32:41 TRACE SMAPI]    task complete.
+[16:32:41 TRACE SMAPI] Context: before save.
+[16:32:41 TRACE game] SaveGame.Save() called.
+[16:32:41 TRACE SMAPI] Synchronizing 'Save' task...
+[16:32:41 TRACE game] Saving without compression...
+[16:32:41 TRACE SMAPI]    task complete.
+[16:32:41 TRACE game] SaveGame.Save() completed without exceptions.
+[16:32:43 TRACE SMAPI] Context: after save, starting summer 7 Y1.
+[16:32:43 TRACE ValleyFixes] Cleared the unsent change queues of 80 locations.
+[16:32:47 TRACE SMAPI] Synchronizing 'NewDay' task...
+[16:32:47 TRACE SMAPI]    task complete.
+[16:32:47 TRACE SMAPI] Context: before save.
+[16:32:47 TRACE game] SaveGame.Save() called.
+[16:32:47 TRACE SMAPI] Synchronizing 'Save' task...
+[16:32:47 TRACE game] Saving without compression...
+[16:32:47 TRACE SMAPI]    task complete.
+[16:32:47 TRACE game] SaveGame.Save() completed without exceptions.
+[16:32:49 TRACE SMAPI] Context: after save, starting summer 8 Y1.
+[16:32:49 TRACE ValleyFixes] Cleared the unsent change queues of 80 locations.
+[16:32:53 TRACE SMAPI] Synchronizing 'NewDay' task...
+[16:32:53 TRACE SMAPI]    task complete.
+[16:32:53 TRACE SMAPI] Context: before save.
+[16:32:53 TRACE game] SaveGame.Save() called.
+[16:32:53 TRACE SMAPI] Synchronizing 'Save' task...
+[16:32:53 TRACE game] Saving without compression...
+[16:32:53 TRACE SMAPI]    task complete.
+[16:32:53 TRACE game] SaveGame.Save() completed without exceptions.
+[16:32:55 TRACE SMAPI] Context: after save, starting summer 9 Y1.
+[16:32:55 TRACE ValleyFixes] Cleared the unsent change queues of 80 locations.
+[16:32:58 TRACE SMAPI] Synchronizing 'NewDay' task...
+[16:32:59 TRACE SMAPI]    task complete.
+[16:32:59 TRACE SMAPI] Context: before save.
+[16:32:59 TRACE game] SaveGame.Save() called.
+[16:32:59 TRACE SMAPI] Synchronizing 'Save' task...
+[16:32:59 TRACE game] Saving without compression...
+[16:32:59 TRACE SMAPI]    task complete.
+[16:32:59 TRACE game] SaveGame.Save() completed without exceptions.
+[16:33:01 TRACE SMAPI] Context: after save, starting summer 10 Y1.
+[16:33:01 TRACE ValleyFixes] Cleared the unsent change queues of 80 locations.
+[16:33:04 TRACE SMAPI] Synchronizing 'NewDay' task...
+[16:33:04 TRACE SMAPI]    task complete.
+[16:33:04 TRACE SMAPI] Context: before save.
+[16:33:04 TRACE game] SaveGame.Save() called.
+[16:33:04 TRACE SMAPI] Synchronizing 'Save' task...
+[16:33:04 TRACE game] Saving without compression...
+[16:33:04 TRACE SMAPI]    task complete.
+[16:33:04 TRACE game] SaveGame.Save() completed without exceptions.
+[16:33:06 TRACE SMAPI] Context: after save, starting summer 11 Y1.
+[16:33:06 TRACE ValleyFixes] Cleared the unsent change queues of 80 locations.
+[16:33:10 TRACE SMAPI] Synchronizing 'NewDay' task...
+[16:33:10 TRACE SMAPI]    task complete.
+[16:33:10 TRACE SMAPI] Context: before save.
+[16:33:10 TRACE game] SaveGame.Save() called.
+[16:33:10 TRACE SMAPI] Synchronizing 'Save' task...
+[16:33:10 TRACE game] Saving without compression...
+[16:33:10 TRACE SMAPI]    task complete.
+[16:33:10 TRACE game] SaveGame.Save() completed without exceptions.
+[16:33:12 TRACE SMAPI] Context: after save, starting summer 12 Y1.
+[16:33:12 TRACE ValleyFixes] Cleared the unsent change queues of 80 locations.
+[16:33:16 TRACE SMAPI] Synchronizing 'NewDay' task...
+[16:33:16 TRACE SMAPI]    task complete.
+[16:33:16 TRACE SMAPI] Context: before save.
+[16:33:16 TRACE game] SaveGame.Save() called.
+[16:33:16 TRACE SMAPI] Synchronizing 'Save' task...
+[16:33:16 TRACE game] Saving without compression...
+[16:33:16 TRACE SMAPI]    task complete.
+[16:33:16 TRACE game] SaveGame.Save() completed without exceptions.
+[16:33:18 TRACE SMAPI] Context: after save, starting summer 13 Y1.
+[16:33:18 TRACE ValleyFixes] Cleared the unsent change queues of 80 locations.
+[16:33:22 INFO  ValleyFixes DevHarness] Harness results written to C:\Users\Administrator\Documents\GitHub\ValleyFixes\testprofile\results\heavy40-fixed.json.
+[16:33:22 TRACE game] Window_ClientSizeChanged(); Window.ClientBounds={X:0 Y:0 Width:2560 Height:1440}
+[16:33:22 TRACE game] Disconnected: ClosedGame
+[16:33:22 TRACE SMAPI] Disposing...
+[16:33:22 TRACE SMAPI] Disposing the content coordinator. Content managers will no longer be usable after this point.

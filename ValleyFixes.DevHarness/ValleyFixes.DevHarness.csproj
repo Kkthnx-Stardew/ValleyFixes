@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+	<PropertyGroup>
+		<TargetFramework>net6.0</TargetFramework>
+		<Nullable>enable</Nullable>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<RootNamespace>ValleyFixes.DevHarness</RootNamespace>
+		<AssemblyName>ValleyFixes.DevHarness</AssemblyName>
+		<Version>0.1.0</Version>
+		<!-- a test tool only: it is never deployed to the live Mods folder and never zipped -->
+		<EnableModDeploy>false</EnableModDeploy>
+		<EnableModZip>false</EnableModZip>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Pathoschild.Stardew.ModBuildConfig" Version="4.4.0" />
+	</ItemGroup>
+</Project>

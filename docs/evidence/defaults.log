@@ -1,0 +1,176 @@
+[16:40:05 INFO  SMAPI] SMAPI 4.5.2 with Stardew Valley 1.6.15 build 24356 on Windows 11 (10.0.26200.0)
+[16:40:05 INFO  SMAPI] Mods go here: ~\Documents\GitHub\ValleyFixes\testprofile\Mods
+[16:40:05 TRACE SMAPI] (Using custom --mods-path argument. Game folder: D:\SteamLibrary\steamapps\common\Stardew Valley.)
+[16:40:05 TRACE SMAPI] Log started at 2026-11-01T21:40:05 UTC
+[16:40:08 WARN  SMAPI] Writing to the terminal is disabled because the --no-terminal argument was received. This usually means launching the terminal failed.
+[16:40:08 DEBUG SMAPI] Waiting for game to launch...
+[16:40:09 TRACE game] Instance_Initialize() finished, elapsed = '00:00:00.2345235'
+[16:40:09 TRACE SMAPI] Scanning for malicious files...
+[16:40:09 DEBUG SMAPI] Loading mod metadata...
+[16:40:09 DEBUG SMAPI] Loading mods...
+[16:40:09 TRACE SMAPI]    Console Commands (from Mods\ConsoleCommands\ConsoleCommands.dll, ID: SMAPI.ConsoleCommands, assembly version: 4.5.2)...
+[16:40:09 TRACE SMAPI]    ValleyFixes (from Mods\ValleyFixes\ValleyFixes.dll, ID: Kkthnx.ValleyFixes, assembly version: 0.1.0)...
+[16:40:09 TRACE SMAPI]       Detected game patcher in assembly ValleyFixes.dll.
+[16:40:09 TRACE SMAPI]    ValleyFixes DevHarness (from Mods\ValleyFixes.DevHarness\ValleyFixes.DevHarness.dll, ID: Kkthnx.ValleyFixes.DevHarness, assembly version: 0.1.0)...
+[16:40:09 INFO  SMAPI] Loaded 3 mods:
+[16:40:09 INFO  SMAPI]    Console Commands 4.5.2 by SMAPI | Adds SMAPI console commands that let you manipulate the game.
+[16:40:09 INFO  SMAPI]    ValleyFixes 0.1.0 by Kkthnx | Small, separately switchable fixes for verified Stardew Valley 1.6.15 bugs. Every fix has its own toggle and skips itself if the game data no longer matches.
+[16:40:09 INFO  SMAPI]    ValleyFixes DevHarness 0.1.0 by Kkthnx | Test tool for ValleyFixes. Does nothing unless the VFH_OUT environment variable is set. Never ship this.
+
+[16:40:09 INFO  SMAPI]    Patched game code
+[16:40:09 INFO  SMAPI]    --------------------------------------------------
+[16:40:09 INFO  SMAPI]       These mods directly change the game code. They're more likely to cause errors or bugs in-game; if
+[16:40:09 INFO  SMAPI]       your game has issues, try removing these first. Otherwise you can ignore this warning.
+
+[16:40:09 INFO  SMAPI]       - ValleyFixes
+
+[16:40:09 DEBUG SMAPI]    No update keys
+[16:40:09 DEBUG SMAPI]    --------------------------------------------------
+[16:40:09 DEBUG SMAPI]       These mods have no update keys in their manifest. SMAPI may not notify you about updates for these
+[16:40:09 DEBUG SMAPI]       mods. Consider notifying the mod authors about this problem.
+
+[16:40:09 DEBUG SMAPI]       - ValleyFixes
+[16:40:09 DEBUG SMAPI]       - ValleyFixes DevHarness
+
+[16:40:09 DEBUG SMAPI] Launching mods...
+[16:40:09 DEBUG SMAPI] Mods loaded and ready!
+[16:40:09 TRACE SMAPI] Checking for known software conflicts...
+[16:40:09 WARN  SMAPI] Found MSI Afterburner and RivaTuner Statistics Server installed, which may conflict with SMAPI. If you experience errors or crashes, try disabling that software or adding an exception for SMAPI and Stardew Valley.
+[16:40:09 TRACE SMAPI] Checking for updates...
+[16:40:09 TRACE SMAPI] ValleyFixes edited Strings/StringsFromCSFiles.
+[16:40:09 TRACE SMAPI]    SMAPI okay.
+[16:40:09 TRACE SMAPI]    Checking for updates to 2 mods...
+[16:40:09 TRACE game] setGameMode( 'titleScreenGameMode (0)' )
+[16:40:09 TRACE SMAPI] ValleyFixes edited Strings/StringsFromCSFiles.
+[16:40:09 TRACE SMAPI]    All mods up to date.
+[16:40:09 TRACE SMAPI] Running on GPU: NVIDIA GeForce RTX 5070/PCIe/SSE2
+[16:40:09 TRACE game] Instance_LoadContent() finished, elapsed = '00:00:00.8247980'
+[16:40:09 ERROR game] Oops! Steam achievements won't work because Steam isn't loaded. See 'Configure your game client' in the install guide for more info: https://smapi.io/install.
+[16:40:09 INFO  SMAPI] Type 'help' for help, or 'help <cmd>' for a command's usage
+[16:40:10 TRACE SMAPI]    Mod blacklist OK.
+[16:40:11 TRACE game] Window_ClientSizeChanged(); Window.ClientBounds={X:0 Y:0 Width:2560 Height:1440}
+[16:40:15 TRACE game] Successfully loaded ContentHashes.json containing 3560 file(s);
+[16:40:15 TRACE game] EnsureManifestInitialized() finished, elapsed = '00:00:00.0043745'
+[16:40:15 TRACE ValleyFixes] Movie reaction fix changed 3 of 3 expected scripts.
+[16:40:15 TRACE SMAPI] ValleyFixes edited Data/MoviesReactions.
+[16:40:15 TRACE game] setGameMode( 'playingGameMode (3)' )
+[16:40:15 TRACE game] Window_ClientSizeChanged(); Window.ClientBounds={X:0 Y:0 Width:2560 Height:1440}
+[16:40:15 TRACE game] Window_ClientSizeChanged(); Window.ClientBounds={X:0 Y:0 Width:2560 Height:1440}
+[16:40:15 TRACE SMAPI] Synchronizing 'NewDay' task...
+[16:40:16 TRACE SMAPI]    task complete.
+[16:40:16 TRACE SMAPI] Context: before save creation.
+[16:40:16 TRACE game] SaveGame.Save() called.
+[16:40:16 TRACE SMAPI] Synchronizing 'Save' task...
+[16:40:16 TRACE game] Saving without compression...
+[16:40:17 TRACE SMAPI]    task complete.
+[16:40:17 TRACE game] SaveGame.Save() completed without exceptions.
+[16:40:18 TRACE SMAPI] Context: after save creation, starting spring 1 Y1.
+[16:40:18 TRACE SMAPI] Context: loaded save 'VFTest_453246005', starting spring 1 Y1, locale set to . Single-player.
+[16:40:18 TRACE ValleyFixes] Cleared the unsent change queues of 80 locations.
+[16:40:20 TRACE ValleyFixes] Chef's bundle fix changed 1 of 1 expected reward.
+[16:40:20 TRACE SMAPI] ValleyFixes edited Data/RandomBundles.
+[16:41:26 WARN  ValleyFixes] Eating was cut short (freezePause 19952, time 600, in FarmHouse). Called from: <Scenarios>d__19.MoveNext <- ModEntry.OnUpdateTicked <- ManagedEvent`1.Raise <- SCore.OnPlayerInstanceUpdating <- SGame.Update <- GameRunner.Update <- SCore.OnGameUpdating <- Game.DoUpdate <- Game.Tick <- SdlGamePlatform.RunLoop
+[16:41:58 TRACE game] Warping to Farm
+[16:43:16 TRACE game] Warping to Town
+[16:43:34 TRACE game] Warping to Mine
+[16:43:37 TRACE game] Warping to UndergroundMine130
+[16:43:58 TRACE game] Warping to Farm
+[16:44:02 TRACE game] Warping to Town
+[16:44:03 TRACE game] Warping to Farm
+[16:44:05 TRACE game] Warping to Town
+[16:44:07 TRACE game] Warping to Farm
+[16:44:08 TRACE game] Warping to Town
+[16:44:10 TRACE game] Warping to Farm
+[16:44:12 TRACE game] Warping to Town
+[16:44:13 TRACE game] Warping to Farm
+[16:44:15 TRACE game] Warping to Town
+[16:44:17 TRACE game] Warping to Farm
+[16:44:18 TRACE game] Warping to Town
+[16:44:20 TRACE game] Warping to Farm
+[16:44:22 TRACE game] Warping to Town
+[16:44:23 TRACE game] Warping to Farm
+[16:44:25 TRACE game] Warping to Town
+[16:44:27 TRACE game] Warping to Farm
+[16:44:28 TRACE game] Warping to Town
+[16:44:30 TRACE game] Warping to Farm
+[16:44:32 TRACE game] Warping to Town
+[16:44:33 TRACE game] Warping to Farm
+[16:44:35 TRACE game] Warping to Town
+[16:44:37 TRACE game] Warping to Farm
+[16:44:38 TRACE game] Warping to Town
+[16:44:40 TRACE game] Warping to Farm
+[16:44:42 TRACE game] Window_ClientSizeChanged(); Window.ClientBounds={X:0 Y:0 Width:2560 Height:1440}
+[16:44:42 TRACE game] Window_ClientSizeChanged(); Window.ClientBounds={X:0 Y:0 Width:2560 Height:1440}
+[16:44:42 TRACE game] Window_ClientSizeChanged(); Window.ClientBounds={X:0 Y:0 Width:2560 Height:1440}
+[16:44:42 TRACE game] Window_ClientSizeChanged(); Window.ClientBounds={X:0 Y:0 Width:2560 Height:1440}
+[16:44:42 TRACE game] Window_ClientSizeChanged(); Window.ClientBounds={X:0 Y:0 Width:2560 Height:1440}
+[16:44:42 TRACE game] Window_ClientSizeChanged(); Window.ClientBounds={X:0 Y:0 Width:2560 Height:1440}
+[16:44:42 TRACE game] Window_ClientSizeChanged(); Window.ClientBounds={X:0 Y:0 Width:2560 Height:1440}
+[16:44:42 TRACE game] Window_ClientSizeChanged(); Window.ClientBounds={X:0 Y:0 Width:2560 Height:1440}
+[16:44:42 TRACE game] Window_ClientSizeChanged(); Window.ClientBounds={X:0 Y:0 Width:2560 Height:1440}
+[16:44:43 TRACE game] Window_ClientSizeChanged(); Window.ClientBounds={X:0 Y:0 Width:2560 Height:1440}
+[16:44:43 TRACE game] Window_ClientSizeChanged(); Window.ClientBounds={X:0 Y:0 Width:2560 Height:1440}
+[16:44:43 TRACE game] Window_ClientSizeChanged(); Window.ClientBounds={X:0 Y:0 Width:2560 Height:1440}
+[16:44:43 TRACE game] Window_ClientSizeChanged(); Window.ClientBounds={X:0 Y:0 Width:2560 Height:1440}
+[16:44:43 TRACE game] Window_ClientSizeChanged(); Window.ClientBounds={X:0 Y:0 Width:2560 Height:1440}
+[16:44:43 TRACE game] Window_ClientSizeChanged(); Window.ClientBounds={X:0 Y:0 Width:2560 Height:1440}
+[16:44:43 TRACE game] Window_ClientSizeChanged(); Window.ClientBounds={X:0 Y:0 Width:2560 Height:1440}
+[16:44:43 TRACE game] Window_ClientSizeChanged(); Window.ClientBounds={X:0 Y:0 Width:2560 Height:1440}
+[16:44:43 TRACE game] Window_ClientSizeChanged(); Window.ClientBounds={X:0 Y:0 Width:2560 Height:1440}
+[16:44:43 TRACE game] Window_ClientSizeChanged(); Window.ClientBounds={X:0 Y:0 Width:2560 Height:1440}
+[16:44:44 TRACE game] Window_ClientSizeChanged(); Window.ClientBounds={X:0 Y:0 Width:2560 Height:1440}
+[16:44:44 TRACE game] Window_ClientSizeChanged(); Window.ClientBounds={X:0 Y:0 Width:2560 Height:1440}
+[16:44:44 TRACE game] Window_ClientSizeChanged(); Window.ClientBounds={X:0 Y:0 Width:2560 Height:1440}
+[16:44:44 TRACE game] Window_ClientSizeChanged(); Window.ClientBounds={X:0 Y:0 Width:2560 Height:1440}
+[16:44:44 TRACE game] Window_ClientSizeChanged(); Window.ClientBounds={X:0 Y:0 Width:2560 Height:1440}
+[16:44:44 TRACE game] Window_ClientSizeChanged(); Window.ClientBounds={X:0 Y:0 Width:2560 Height:1440}
+[16:44:44 TRACE game] Window_ClientSizeChanged(); Window.ClientBounds={X:0 Y:0 Width:2560 Height:1440}
+[16:44:44 TRACE game] Window_ClientSizeChanged(); Window.ClientBounds={X:0 Y:0 Width:2560 Height:1440}
+[16:44:44 TRACE game] Window_ClientSizeChanged(); Window.ClientBounds={X:0 Y:0 Width:2560 Height:1440}
+[16:44:44 TRACE game] Window_ClientSizeChanged(); Window.ClientBounds={X:0 Y:0 Width:2560 Height:1440}
+[16:44:45 TRACE game] Window_ClientSizeChanged(); Window.ClientBounds={X:0 Y:0 Width:2560 Height:1440}
+[16:44:45 TRACE game] Window_ClientSizeChanged(); Window.ClientBounds={X:0 Y:0 Width:2560 Height:1440}
+[16:44:45 TRACE game] Window_ClientSizeChanged(); Window.ClientBounds={X:0 Y:0 Width:2560 Height:1440}
+[16:44:45 TRACE game] Window_ClientSizeChanged(); Window.ClientBounds={X:0 Y:0 Width:2560 Height:1440}
+[16:44:45 TRACE game] Window_ClientSizeChanged(); Window.ClientBounds={X:0 Y:0 Width:2560 Height:1440}
+[16:44:45 TRACE game] Window_ClientSizeChanged(); Window.ClientBounds={X:0 Y:0 Width:2560 Height:1440}
+[16:44:45 TRACE game] Window_ClientSizeChanged(); Window.ClientBounds={X:0 Y:0 Width:2560 Height:1440}
+[16:44:45 TRACE game] Window_ClientSizeChanged(); Window.ClientBounds={X:0 Y:0 Width:2560 Height:1440}
+[16:44:45 TRACE game] Window_ClientSizeChanged(); Window.ClientBounds={X:0 Y:0 Width:2560 Height:1440}
+[16:44:45 TRACE game] Window_ClientSizeChanged(); Window.ClientBounds={X:0 Y:0 Width:2560 Height:1440}
+[16:44:46 TRACE game] Window_ClientSizeChanged(); Window.ClientBounds={X:0 Y:0 Width:2560 Height:1440}
+[16:44:46 TRACE game] Window_ClientSizeChanged(); Window.ClientBounds={X:0 Y:0 Width:2560 Height:1440}
+[16:44:46 TRACE game] Window_ClientSizeChanged(); Window.ClientBounds={X:0 Y:0 Width:2560 Height:1440}
+[16:44:46 TRACE game] Window_ClientSizeChanged(); Window.ClientBounds={X:0 Y:0 Width:2560 Height:1440}
+[16:44:46 TRACE game] Window_ClientSizeChanged(); Window.ClientBounds={X:0 Y:0 Width:2560 Height:1440}
+[16:44:46 TRACE game] Window_ClientSizeChanged(); Window.ClientBounds={X:0 Y:0 Width:2560 Height:1440}
+[16:44:46 TRACE game] Window_ClientSizeChanged(); Window.ClientBounds={X:0 Y:0 Width:2560 Height:1440}
+[16:44:46 TRACE game] Window_ClientSizeChanged(); Window.ClientBounds={X:0 Y:0 Width:2560 Height:1440}
+[16:44:46 TRACE game] Window_ClientSizeChanged(); Window.ClientBounds={X:0 Y:0 Width:2560 Height:1440}
+[16:44:46 TRACE game] Window_ClientSizeChanged(); Window.ClientBounds={X:0 Y:0 Width:2560 Height:1440}
+[16:44:47 TRACE game] Window_ClientSizeChanged(); Window.ClientBounds={X:0 Y:0 Width:2560 Height:1440}
+[16:44:47 TRACE game] Window_ClientSizeChanged(); Window.ClientBounds={X:0 Y:0 Width:2560 Height:1440}
+[16:44:47 TRACE game] Window_ClientSizeChanged(); Window.ClientBounds={X:0 Y:0 Width:2560 Height:1440}
+[16:44:47 TRACE game] Window_ClientSizeChanged(); Window.ClientBounds={X:0 Y:0 Width:2560 Height:1440}
+[16:44:47 TRACE game] Window_ClientSizeChanged(); Window.ClientBounds={X:0 Y:0 Width:2560 Height:1440}
+[16:44:47 TRACE game] Window_ClientSizeChanged(); Window.ClientBounds={X:0 Y:0 Width:2560 Height:1440}
+[16:44:47 TRACE game] Window_ClientSizeChanged(); Window.ClientBounds={X:0 Y:0 Width:2560 Height:1440}
+[16:44:47 TRACE game] Window_ClientSizeChanged(); Window.ClientBounds={X:0 Y:0 Width:2560 Height:1440}
+[16:44:47 TRACE game] Window_ClientSizeChanged(); Window.ClientBounds={X:0 Y:0 Width:2560 Height:1440}
+[16:44:47 TRACE game] Window_ClientSizeChanged(); Window.ClientBounds={X:0 Y:0 Width:2560 Height:1440}
+[16:44:48 TRACE game] Window_ClientSizeChanged(); Window.ClientBounds={X:0 Y:0 Width:2560 Height:1440}
+[16:45:01 TRACE game] SaveGame.Save() called.
+[16:45:01 TRACE SMAPI] Synchronizing 'Save' task...
+[16:45:01 TRACE game] Saving without compression...
+[16:45:01 TRACE SMAPI]    task complete.
+[16:45:01 TRACE game] SaveGame.Save() completed without exceptions.
+[16:45:01 TRACE game] LocalizedContentManager.CurrentLanguageCode CHANGING from 'en' to 'pt'
+[16:45:01 TRACE SMAPI] ValleyFixes edited Strings/StringsFromCSFiles.pt-BR.
+[16:45:01 TRACE SMAPI] ValleyFixes edited Strings/StringsFromCSFiles.pt-BR.
+[16:45:01 TRACE game] LocalizedContentManager.CurrentLanguageCode CHANGED from 'en' to 'pt'
+[16:45:01 TRACE game] LocalizedContentManager.CurrentLanguageCode CHANGING from 'pt' to 'en'
+[16:45:01 TRACE game] LocalizedContentManager.CurrentLanguageCode CHANGED from 'pt' to 'en'
+[16:45:01 INFO  ValleyFixes DevHarness] Harness results written to C:\Users\Administrator\Documents\GitHub\ValleyFixes\testprofile\results\defaults.json.
+[16:45:01 TRACE game] Disconnected: ClosedGame
+[16:45:01 TRACE SMAPI] Disposing...
+[16:45:01 TRACE SMAPI] Disposing the content coordinator. Content managers will no longer be usable after this point.

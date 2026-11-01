@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+	<PropertyGroup>
+		<TargetFramework>net6.0</TargetFramework>
+		<Nullable>enable</Nullable>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<RootNamespace>ValleyFixes</RootNamespace>
+		<AssemblyName>ValleyFixes</AssemblyName>
+		<Version>0.1.0</Version>
+		<EnableHarmony>true</EnableHarmony>
+		<!-- builds never copy into the live Mods folder, which holds a large unrelated mod list -->
+		<EnableModDeploy>false</EnableModDeploy>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Pathoschild.Stardew.ModBuildConfig" Version="4.4.0" />
+	</ItemGroup>
+</Project>

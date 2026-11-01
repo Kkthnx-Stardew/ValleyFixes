@@ -1,0 +1,182 @@
+{
+  "world": "ready in FarmHouse, tick 405",
+  "stress": {
+    "natural_days": [
+      {
+        "day": 0,
+        "date": "spring 1",
+        "farmObjects": 1012,
+        "farmTerrainFeatures": 543,
+        "objectQueue": 0,
+        "terrainQueue": 0,
+        "retainedMB": 111,
+        "workingSetMB": 1140
+      },
+      {
+        "day": 1,
+        "date": "spring 2",
+        "farmObjects": 1022,
+        "farmTerrainFeatures": 577,
+        "objectQueue": 0,
+        "terrainQueue": 0,
+        "retainedMB": 112.2,
+        "workingSetMB": 1137
+      },
+      {
+        "day": 2,
+        "date": "spring 3",
+        "farmObjects": 1040,
+        "farmTerrainFeatures": 603,
+        "objectQueue": 0,
+        "terrainQueue": 0,
+        "retainedMB": 113.1,
+        "workingSetMB": 1119
+      },
+      {
+        "day": 3,
+        "date": "spring 4",
+        "farmObjects": 1049,
+        "farmTerrainFeatures": 632,
+        "objectQueue": 0,
+        "terrainQueue": 0,
+        "retainedMB": 113.3,
+        "workingSetMB": 1119
+      },
+      {
+        "day": 4,
+        "date": "spring 5",
+        "farmObjects": 1057,
+        "farmTerrainFeatures": 652,
+        "objectQueue": 0,
+        "terrainQueue": 0,
+        "retainedMB": 113.7,
+        "workingSetMB": 1119
+      },
+      {
+        "day": 5,
+        "date": "spring 6",
+        "farmObjects": 1069,
+        "farmTerrainFeatures": 670,
+        "objectQueue": 0,
+        "terrainQueue": 0,
+        "retainedMB": 114.1,
+        "workingSetMB": 1119
+      },
+      {
+        "day": 6,
+        "date": "spring 7",
+        "farmObjects": 1076,
+        "farmTerrainFeatures": 691,
+        "objectQueue": 0,
+        "terrainQueue": 0,
+        "retainedMB": 114.2,
+        "workingSetMB": 1119
+      },
+      {
+        "day": 7,
+        "date": "spring 8",
+        "farmObjects": 1085,
+        "farmTerrainFeatures": 711,
+        "objectQueue": 0,
+        "terrainQueue": 0,
+        "retainedMB": 114.6,
+        "workingSetMB": 1127
+      },
+      {
+        "day": 8,
+        "date": "spring 9",
+        "farmObjects": 1093,
+        "farmTerrainFeatures": 729,
+        "objectQueue": 0,
+        "terrainQueue": 0,
+        "retainedMB": 115,
+        "workingSetMB": 1123
+      },
+      {
+        "day": 9,
+        "date": "spring 10",
+        "farmObjects": 1102,
+        "farmTerrainFeatures": 746,
+        "objectQueue": 0,
+        "terrainQueue": 0,
+        "retainedMB": 115.4,
+        "workingSetMB": 1123
+      },
+      {
+        "day": 10,
+        "date": "spring 11",
+        "farmObjects": 1116,
+        "farmTerrainFeatures": 769,
+        "objectQueue": 0,
+        "terrainQueue": 0,
+        "retainedMB": 115.5,
+        "workingSetMB": 1123
+      },
+      {
+        "day": 11,
+        "date": "spring 12",
+        "farmObjects": 1126,
+        "farmTerrainFeatures": 780,
+        "objectQueue": 0,
+        "terrainQueue": 0,
+        "retainedMB": 115.9,
+        "workingSetMB": 1123
+      },
+      {
+        "day": 12,
+        "date": "spring 13",
+        "farmObjects": 1134,
+        "farmTerrainFeatures": 800,
+        "objectQueue": 0,
+        "terrainQueue": 0,
+        "retainedMB": 116.2,
+        "workingSetMB": 1123
+      },
+      {
+        "day": -1,
+        "date": "spring 13",
+        "farmObjects": 1134,
+        "farmTerrainFeatures": 800,
+        "objectQueue": 0,
+        "terrainQueue": 0,
+        "retainedMB": 146.3,
+        "workingSetMB": 1155
+      }
+    ],
+    "save_check": {
+      "readError": null,
+      "recoveredFromBackup": false,
+      "savedFarmObjects": 1134,
+      "liveFarmObjects": 1134,
+      "savedFarmTerrainFeatures": 800,
+      "liveFarmTerrainFeatures": 800,
+      "savedDay": 13,
+      "liveDay": 13
+    },
+    "clear_queues": {
+      "locations": 80,
+      "farmObjectQueue": {
+        "before": 0,
+        "after": 0
+      },
+      "farmTerrainQueue": {
+        "before": 0,
+        "after": 0
+      },
+      "retainedMBBefore": 146.5,
+      "locationsFreedMB": -0,
+      "locationsMs": 0.44,
+      "playersFreedMB": -0,
+      "playersMs": 0.3,
+      "worldAndTeamFreedMB": 0.1,
+      "worldAndTeamMs": 0.49,
+      "retainedMBAfter": 146.3
+    }
+  },
+  "note": null,
+  "mods": [
+    "SMAPI.ConsoleCommands 4.5.2",
+    "Kkthnx.ValleyFixes 0.1.0",
+    "Kkthnx.ValleyFixes.DevHarness 0.1.0"
+  ]
+}

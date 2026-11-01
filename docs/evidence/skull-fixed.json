@@ -1,0 +1,316 @@
+{
+  "world": "ready in FarmHouse, tick 405",
+  "skull": {
+    "floors": [
+      {
+        "level": 121,
+        "location": "UndergroundMine121",
+        "monstersAtStart": {
+          "BigSlime": 1,
+          "GreenSlime": 1,
+          "Bug": 3,
+          "Serpent": 1
+        },
+        "monstersAtEnd": 6,
+        "healthLost": 0,
+        "sample": {
+          "seconds": 15,
+          "processCpuMsPerFrame": 2.33,
+          "processCpuPercentOfOneCore": 14,
+          "update": {
+            "frames": 900,
+            "meanMs": 0.11,
+            "medianMs": 0.08,
+            "p99Ms": 0.21,
+            "maxMs": 21,
+            "over8ms": 1,
+            "over16ms": 1
+          },
+          "render": {
+            "frames": 900,
+            "meanMs": 0.44,
+            "medianMs": 0.42,
+            "p99Ms": 0.55,
+            "maxMs": 0.67,
+            "over8ms": 0,
+            "over16ms": 0
+          },
+          "allocatedMBPerSecond": 3.72,
+          "gen0": 1,
+          "gen1": 0,
+          "gen2": 0,
+          "heapMB": 159
+        },
+        "crowdSpawned": 40,
+        "crowdMonsters": {
+          "BigSlime": 20,
+          "GreenSlime": 7,
+          "Bug": 12,
+          "Serpent": 7
+        },
+        "crowdHealthLost": 195,
+        "crowdSample": {
+          "seconds": 15,
+          "processCpuMsPerFrame": 2.48,
+          "processCpuPercentOfOneCore": 15,
+          "update": {
+            "frames": 900,
+            "meanMs": 0.22,
+            "medianMs": 0.16,
+            "p99Ms": 1.36,
+            "maxMs": 20.8,
+            "over8ms": 1,
+            "over16ms": 1
+          },
+          "render": {
+            "frames": 900,
+            "meanMs": 0.48,
+            "medianMs": 0.47,
+            "p99Ms": 0.61,
+            "maxMs": 1.22,
+            "over8ms": 0,
+            "over16ms": 0
+          },
+          "allocatedMBPerSecond": 4.91,
+          "gen0": 2,
+          "gen1": 1,
+          "gen2": 0,
+          "heapMB": 144
+        }
+      },
+      {
+        "level": 150,
+        "location": "UndergroundMine150",
+        "monstersAtStart": {
+          "Serpent": 2,
+          "BigSlime": 3,
+          "GreenSlime": 3,
+          "Bug": 1,
+          "RockCrab": 2
+        },
+        "monstersAtEnd": 11,
+        "healthLost": 166,
+        "sample": {
+          "seconds": 15,
+          "processCpuMsPerFrame": 2.6,
+          "processCpuPercentOfOneCore": 16,
+          "update": {
+            "frames": 900,
+            "meanMs": 0.1,
+            "medianMs": 0.08,
+            "p99Ms": 0.27,
+            "maxMs": 2.35,
+            "over8ms": 0,
+            "over16ms": 0
+          },
+          "render": {
+            "frames": 900,
+            "meanMs": 0.37,
+            "medianMs": 0.36,
+            "p99Ms": 0.44,
+            "maxMs": 0.46,
+            "over8ms": 0,
+            "over16ms": 0
+          },
+          "allocatedMBPerSecond": 3.72,
+          "gen0": 1,
+          "gen1": 0,
+          "gen2": 0,
+          "heapMB": 161
+        },
+        "crowdSpawned": 40,
+        "crowdMonsters": {
+          "Serpent": 5,
+          "BigSlime": 18,
+          "GreenSlime": 15,
+          "Bug": 9,
+          "RockCrab": 4
+        },
+        "crowdHealthLost": 172,
+        "crowdSample": {
+          "seconds": 15,
+          "processCpuMsPerFrame": 2.67,
+          "processCpuPercentOfOneCore": 16,
+          "update": {
+            "frames": 900,
+            "meanMs": 0.19,
+            "medianMs": 0.14,
+            "p99Ms": 0.95,
+            "maxMs": 10.99,
+            "over8ms": 1,
+            "over16ms": 0
+          },
+          "render": {
+            "frames": 900,
+            "meanMs": 0.42,
+            "medianMs": 0.41,
+            "p99Ms": 0.52,
+            "maxMs": 0.63,
+            "over8ms": 0,
+            "over16ms": 0
+          },
+          "allocatedMBPerSecond": 4.23,
+          "gen0": 1,
+          "gen1": 0,
+          "gen2": 0,
+          "heapMB": 184
+        }
+      },
+      {
+        "level": 200,
+        "location": "UndergroundMine200",
+        "monstersAtStart": {
+          "Bug": 1,
+          "Bat": 2
+        },
+        "monstersAtEnd": 3,
+        "healthLost": 0,
+        "sample": {
+          "seconds": 15,
+          "processCpuMsPerFrame": 2.29,
+          "processCpuPercentOfOneCore": 14,
+          "update": {
+            "frames": 900,
+            "meanMs": 0.09,
+            "medianMs": 0.08,
+            "p99Ms": 0.12,
+            "maxMs": 0.53,
+            "over8ms": 0,
+            "over16ms": 0
+          },
+          "render": {
+            "frames": 900,
+            "meanMs": 0.29,
+            "medianMs": 0.27,
+            "p99Ms": 0.37,
+            "maxMs": 14.73,
+            "over8ms": 1,
+            "over16ms": 0
+          },
+          "allocatedMBPerSecond": 3.74,
+          "gen0": 1,
+          "gen1": 0,
+          "gen2": 0,
+          "heapMB": 164
+        },
+        "crowdSpawned": 40,
+        "crowdMonsters": {
+          "Bug": 4,
+          "Bat": 32,
+          "BigSlime": 5,
+          "RockCrab": 1,
+          "GreenSlime": 1
+        },
+        "crowdHealthLost": 161,
+        "crowdSample": {
+          "seconds": 15,
+          "processCpuMsPerFrame": 2.22,
+          "processCpuPercentOfOneCore": 13,
+          "update": {
+            "frames": 900,
+            "meanMs": 0.14,
+            "medianMs": 0.12,
+            "p99Ms": 0.51,
+            "maxMs": 2.17,
+            "over8ms": 0,
+            "over16ms": 0
+          },
+          "render": {
+            "frames": 900,
+            "meanMs": 0.28,
+            "medianMs": 0.28,
+            "p99Ms": 0.36,
+            "maxMs": 0.39,
+            "over8ms": 0,
+            "over16ms": 0
+          },
+          "allocatedMBPerSecond": 3.99,
+          "gen0": 1,
+          "gen1": 0,
+          "gen2": 0,
+          "heapMB": 183
+        }
+      },
+      {
+        "level": 300,
+        "location": "UndergroundMine300",
+        "monstersAtStart": {
+          "Bat": 4
+        },
+        "monstersAtEnd": 4,
+        "healthLost": 0,
+        "sample": {
+          "seconds": 15,
+          "processCpuMsPerFrame": 2.26,
+          "processCpuPercentOfOneCore": 14,
+          "update": {
+            "frames": 900,
+            "meanMs": 0.1,
+            "medianMs": 0.1,
+            "p99Ms": 0.13,
+            "maxMs": 0.52,
+            "over8ms": 0,
+            "over16ms": 0
+          },
+          "render": {
+            "frames": 900,
+            "meanMs": 0.33,
+            "medianMs": 0.32,
+            "p99Ms": 0.44,
+            "maxMs": 0.58,
+            "over8ms": 0,
+            "over16ms": 0
+          },
+          "allocatedMBPerSecond": 3.95,
+          "gen0": 1,
+          "gen1": 1,
+          "gen2": 0,
+          "heapMB": 170
+        },
+        "crowdSpawned": 40,
+        "crowdMonsters": {
+          "Bat": 21,
+          "BigSlime": 9,
+          "GreenSlime": 2,
+          "RockCrab": 4,
+          "Bug": 8
+        },
+        "crowdHealthLost": 163,
+        "crowdSample": {
+          "seconds": 15,
+          "processCpuMsPerFrame": 2.36,
+          "processCpuPercentOfOneCore": 14,
+          "update": {
+            "frames": 900,
+            "meanMs": 0.18,
+            "medianMs": 0.16,
+            "p99Ms": 0.53,
+            "maxMs": 1.35,
+            "over8ms": 0,
+            "over16ms": 0
+          },
+          "render": {
+            "frames": 900,
+            "meanMs": 0.37,
+            "medianMs": 0.36,
+            "p99Ms": 0.46,
+            "maxMs": 0.65,
+            "over8ms": 0,
+            "over16ms": 0
+          },
+          "allocatedMBPerSecond": 4.44,
+          "gen0": 2,
+          "gen1": 2,
+          "gen2": 0,
+          "heapMB": 149
+        }
+      }
+    ]
+  },
+  "note": null,
+  "mods": [
+    "SMAPI.ConsoleCommands 4.5.2",
+    "Kkthnx.ValleyFixes 0.1.0",
+    "Kkthnx.ValleyFixes.DevHarness 0.1.0"
+  ]
+}

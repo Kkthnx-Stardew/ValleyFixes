@@ -1,0 +1,9 @@
+{
+    "Name": "ValleyFixes DevHarness",
+    "Author": "Kkthnx",
+    "Version": "0.1.0",
+    "Description": "Test tool for ValleyFixes. Does nothing unless the VFH_OUT environment variable is set. Never ship this.",
+    "UniqueID": "Kkthnx.ValleyFixes.DevHarness",
+    "EntryDll": "ValleyFixes.DevHarness.dll",
+    "MinimumApiVersion": "4.2.1"
+}

@@ -1,0 +1,8 @@
+[Bb]in/
+[Oo]bj/
+.vs/
+*.user
+*.zip
+testprofile/
+ValleyFixes.DevHarness/bin/
+ValleyFixes.DevHarness/obj/
