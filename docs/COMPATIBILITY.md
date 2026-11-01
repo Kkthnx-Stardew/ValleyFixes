@@ -12,11 +12,16 @@ Tested against Stardew Valley 1.6.15 build 24356 with SMAPI 4.5.2 on Windows 11.
 | `FixPortugueseSingleStatus` | `AssetRequested`, late | One key in `Strings/StringsFromCSFiles` for pt-BR only | on |
 | `FixLumberjackMahoganyBonus` | `AssetRequested`, late | Two `ChopItems` entries in `Data/WildTrees` | **off** |
 | `TrimLocationChangeBacklog` | `DayStarted` event, calls the game's own `MarkClean` on each location's net fields | The unsent change queues of every location, single player only | on |
+| `FixGeorgeWheelchair` | `AssetRequested`, late, reads `Characters/George_Winter` | Frames 2 and 4 of the up row of `Characters/George`, only when the sheets match vanilla | on |
+| `FixTitleMusicMute` | Harmony postfix | `TitleMenu.ReturnToMainTitleScreen` and `LoadGameMenu.saveFileScanComplete` | on |
+| `CheckStaleOrderParticipants` | `DayStarted` event, host only, log only | Reads `team.specialOrders` | on |
+| `RepairStaleOrderParticipants` | Same event, removes ids that belong to no player | `participants` and `unclaimedRewards` of special orders | **off** |
+| `FixQuestItemGroundDrops` | Harmony postfix | `Game1._RecursiveRemoveThisNormalItemLocation` | **off** |
 | `FixBlankNames` | Harmony postfix | `CharacterCustomization.canLeaveMenu` | on |
 | `FixTrashBearSardine` | Harmony postfix | `Utility.getRandomPureSeasonalItem` | on |
 | `LogEatInterrupts` | Harmony prefix, log only | `Farmer.completelyStopAnimatingOrDoingAction` | on |
 
-No transpilers. No per-tick work. The only repeating work is the morning queue clear, about 2 ms across 80 locations. No data is written to saves or to disk beyond `config.json`.
+No transpilers. No per-tick work. The title screen and ground drop patches run only when those menus close or a quest ends, and the order check runs once a morning on the host. The only repeating work is the morning queue clear, about 2 ms across 80 locations. No data is written to saves or to disk beyond `config.json`.
 
 ## Failure behavior
 
@@ -39,6 +44,8 @@ Not tested in multiplayer. By design:
 - `FixChefBundleReward` decides the reward when a host creates a new remixed world, so only the host needs it at that moment. Existing worlds keep the bundles they were created with.
 - `FixTrashBearSardine` is deterministic for a given world id, so players with and without the mod could see different Trash Bear requests in summer in 1 case of about 16.
 - `FixLumberjackMahoganyBonus` changes drops on the machine that fells the tree.
+- `CheckStaleOrderParticipants` runs on the host only. `RepairStaleOrderParticipants` edits state that every player shares, was only tested with a made-up id and is off by default.
+- `FixQuestItemGroundDrops` and `FixTitleMusicMute` run on each machine for what that machine sees.
 - `TrimLocationChangeBacklog` returns immediately when `Context.IsMultiplayer` is true (this includes split screen), because there the game sends the changes and clears the queues itself.
 
 ## Known limits
@@ -47,4 +54,6 @@ Not tested in multiplayer. By design:
 - Italian and Russian show the female "single" text to everyone on the social page. The game never reads the male string for those languages, and a data edit cannot fix that.
 - Worlds already created keep the 1 Pink Cake Chef's bundle.
 - `TrimLocationChangeBacklog` only covers locations. The queues on the player, world state and team were not measured as a problem and are left alone. It was measured over 12 nights on a starter farm and 40 nights on a synthetic late-game style farm, not on a real played save or a session of many hours.
+- `RepairStaleOrderParticipants` removes only ids that belong to no player in the world, but a real deleted farmhand was never tested.
+- `FixGeorgeWheelchair` does nothing if another mod changed either George sheet, by design.
 - The eating freeze (VF-004) is not fixed. The logger only names the cause when it happens.

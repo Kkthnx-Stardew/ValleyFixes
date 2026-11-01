@@ -31,6 +31,12 @@ namespace ValleyFixes
             if (config.TrimLocationChangeBacklog)
                 Start("Location change queue trim", () => new LocationBacklogTrim(Monitor).Register(helper.Events));
 
+            if (config.CheckStaleOrderParticipants)
+                Start("Special order participant check", () => new StaleOrderParticipantsCheck(Monitor, config.RepairStaleOrderParticipants).Register(helper.Events));
+
+            if (config.FixGeorgeWheelchair)
+                Start("George wheelchair", () => new GeorgeWheelchairFix(Monitor, helper.GameContent).Register(helper.Events));
+
             if (config.FixPortugueseSingleStatus)
                 Start("Portuguese single status", () => new PortugueseSingleStatusFix(Monitor).Register(helper.Events));
 
@@ -41,13 +47,19 @@ namespace ValleyFixes
                 Start("Lumberjack mahogany bonus", () => new LumberjackHardwoodFix(Monitor).Register(helper.Events));
 
             // one Harmony instance for every code patch, created only if a patching fix is on
-            Harmony? harmony = config.FixBlankNames || config.FixTrashBearSardine || config.LogEatInterrupts ? new Harmony(ModManifest.UniqueID) : null;
+            Harmony? harmony = config.FixBlankNames || config.FixTrashBearSardine || config.LogEatInterrupts || config.FixQuestItemGroundDrops || config.FixTitleMusicMute ? new Harmony(ModManifest.UniqueID) : null;
 
             if (config.FixBlankNames)
                 Start("Blank name check", () => BlankNameFix.Apply(harmony!, Monitor));
 
             if (config.FixTrashBearSardine)
                 Start("Trash Bear Sardine", () => TrashBearSardineFix.Apply(harmony!, Monitor));
+
+            if (config.FixQuestItemGroundDrops)
+                Start("Quest item ground drops", () => { QuestItemDebrisFix.ModLog = Monitor; QuestItemDebrisFix.Apply(harmony!, Monitor); });
+
+            if (config.FixTitleMusicMute)
+                Start("Title screen mute", () => TitleMusicMuteFix.Apply(harmony!, Monitor));
 
             if (config.LogEatInterrupts)
                 Start("Eat interrupt logging", () => EatInterruptLogger.Apply(harmony!, Monitor));

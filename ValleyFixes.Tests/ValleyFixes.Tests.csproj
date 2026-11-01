@@ -26,6 +26,8 @@
     <Compile Include="..\ValleyFixes\Fixes\ChefBundleReward.cs" Link="ChefBundleReward.cs" />
     <Compile Include="..\ValleyFixes\Fixes\SeasonalPick.cs" Link="SeasonalPick.cs" />
     <Compile Include="..\ValleyFixes\Fixes\GenderedSingleStatus.cs" Link="GenderedSingleStatus.cs" />
+    <Compile Include="..\ValleyFixes\Fixes\StaleParticipants.cs" Link="StaleParticipants.cs" />
+    <Compile Include="..\ValleyFixes\Fixes\SpriteFrames.cs" Link="SpriteFrames.cs" />
   </ItemGroup>
 
 </Project>

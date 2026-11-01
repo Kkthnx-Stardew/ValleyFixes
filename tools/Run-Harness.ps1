@@ -50,7 +50,7 @@ if ($Label -eq 'defaults') {
     Remove-Item $configFile -ErrorAction SilentlyContinue
 } else {
     $on = $Label -eq 'fixed'
-    $config = [ordered]@{ FixFairThirdPlaceText = $on; FixMovieReactionScripts = $on; FixLumberjackMahoganyBonus = $on; FixBlankNames = $on; FixChefBundleReward = $on; FixPortugueseSingleStatus = $on; TrimLocationChangeBacklog = $on; FixTrashBearSardine = $on; LogEatInterrupts = $on } | ConvertTo-Json
+    $config = [ordered]@{ FixFairThirdPlaceText = $on; FixMovieReactionScripts = $on; FixLumberjackMahoganyBonus = $on; FixBlankNames = $on; FixChefBundleReward = $on; FixPortugueseSingleStatus = $on; TrimLocationChangeBacklog = $on; FixQuestItemGroundDrops = $on; FixTitleMusicMute = $on; FixGeorgeWheelchair = $on; CheckStaleOrderParticipants = $on; RepairStaleOrderParticipants = $on; FixTrashBearSardine = $on; LogEatInterrupts = $on } | ConvertTo-Json
     Set-Content $configFile $config
 }
 
@@ -62,6 +62,9 @@ $env:VFH_OUT = $out
 $prefs = Join-Path $env:APPDATA 'StardewValley\startup_preferences'
 function Get-Lang { if (Test-Path $prefs) { $m = [regex]::Match((Get-Content $prefs -Raw), '<languageCode>([^<]*)</languageCode>'); if ($m.Success) { $m.Groups[1].Value } else { '(not set)' } } }
 $langBefore = Get-Lang
+# the title screen scenario clicks the real mute button, which writes this file, so the original is put back afterwards
+$prefsBackup = $null
+if (Test-Path $prefs) { $prefsBackup = Get-Content $prefs -Raw }
 
 if ($HeapDumps) { $env:VFH_HOLD = '1' }
 if ($Heavy) { $env:VFH_HEAVY = '1' } else { Remove-Item Env:VFH_HEAVY -ErrorAction SilentlyContinue }
@@ -93,6 +96,7 @@ Remove-Item Env:VFH_HOLD -ErrorAction SilentlyContinue
 $saves = Join-Path $env:APPDATA 'StardewValley\Saves'
 Get-ChildItem $saves -Directory -Filter 'VFTest_*' -ErrorAction SilentlyContinue | Remove-Item -Recurse -Force
 
+if ($null -ne $prefsBackup -and (Get-Content $prefs -Raw) -ne $prefsBackup) { Write-Host 'startup_preferences differs from before the run (timesPlayed counts up every launch). Restoring the original.'; Set-Content $prefs $prefsBackup -NoNewline }
 $langAfter = Get-Lang
 if ($langBefore -ne $langAfter) { Write-Warning "Saved game language changed from '$langBefore' to '$langAfter'. Check startup_preferences." } else { Write-Host "Saved game language unchanged: '$langAfter'" }
 

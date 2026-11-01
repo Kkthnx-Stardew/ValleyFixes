@@ -1,0 +1,73 @@
+{
+  "world": "ready in FarmHouse, tick 405",
+  "quest_items": {
+    "groundDebrisBefore": [
+      {
+        "id": "(O)890",
+        "hasItem": false,
+        "stack": null
+      },
+      {
+        "id": "(O)890",
+        "hasItem": false,
+        "stack": null
+      },
+      {
+        "id": "(O)890",
+        "hasItem": false,
+        "stack": null
+      },
+      {
+        "id": "(O)890",
+        "hasItem": false,
+        "stack": null
+      },
+      {
+        "id": "(O)890",
+        "hasItem": true,
+        "stack": 2
+      },
+      {
+        "id": "(O)388",
+        "hasItem": false,
+        "stack": null
+      }
+    ],
+    "groundBeansBefore": 5,
+    "inventoryBeansBefore": 5,
+    "chestBeansBefore": 4,
+    "controlBefore": 1,
+    "groundBeansAfter": 4,
+    "inventoryBeansAfter": 0,
+    "chestBeansAfter": 0,
+    "controlAfter": 1,
+    "groundDebrisAfter": [
+      {
+        "id": "(O)890",
+        "hasItem": false
+      },
+      {
+        "id": "(O)890",
+        "hasItem": false
+      },
+      {
+        "id": "(O)890",
+        "hasItem": false
+      },
+      {
+        "id": "(O)890",
+        "hasItem": false
+      },
+      {
+        "id": "(O)388",
+        "hasItem": false
+      }
+    ]
+  },
+  "note": null,
+  "mods": [
+    "SMAPI.ConsoleCommands 4.5.2",
+    "Kkthnx.ValleyFixes 0.1.0",
+    "Kkthnx.ValleyFixes.DevHarness 0.1.0"
+  ]
+}

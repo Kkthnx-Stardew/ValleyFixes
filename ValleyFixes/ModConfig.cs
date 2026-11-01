@@ -27,6 +27,21 @@ namespace ValleyFixes
         /// <summary>VF-043: in single player, removed objects stay in memory in a network queue nobody reads. This clears the queues every morning. Memory only, no visible change.</summary>
         public bool TrimLocationChangeBacklog { get; set; } = true;
 
+        /// <summary>VF-044: items a quest removes overnight (Qi Beans, Calico Eggs) still survive as ground drops made from an item id. Off by default because it removes items the player could otherwise pick up and keep.</summary>
+        public bool FixQuestItemGroundDrops { get; set; } = false;
+
+        /// <summary>VF-045: closing the About screen on the title screen turns the music back on while the mute button still shows muted. This mutes it again.</summary>
+        public bool FixTitleMusicMute { get; set; } = true;
+
+        /// <summary>VF-046: each morning the host logs special order participants who are no longer in this world. These keep an order from ever being removed. Log only unless the repair setting is also on.</summary>
+        public bool CheckStaleOrderParticipants { get; set; } = true;
+
+        /// <summary>VF-046: also remove those stale ids (only those, only when they belong to no player in this world). Off by default because it edits shared multiplayer state and was only tested with a made-up id.</summary>
+        public bool RepairStaleOrderParticipants { get; set; } = false;
+
+        /// <summary>VF-047: George's wheelchair wheels do not turn when he walks up. The missing wheel frames are copied from his winter sprite sheet when the sheets are unmodified.</summary>
+        public bool FixGeorgeWheelchair { get; set; } = true;
+
         /// <summary>VF-004: writes a short log entry when something cuts the eating animation short. Changes nothing in the game.</summary>
         public bool LogEatInterrupts { get; set; } = true;
     }

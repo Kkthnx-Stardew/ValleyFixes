@@ -2,7 +2,7 @@
 
 Small, separately switchable fixes for verified Stardew Valley 1.6.15 bugs. Every fix has its own toggle in `config.json`, and each one skips itself when the game data no longer matches what it expects.
 
-Status: 0.1.0. Eight fixes were tested before and after in the running game (Stardew Valley 1.6.15 build 24356, SMAPI 4.5.2, Windows 11, English and Portuguese, single player). Multiplayer and other mods were not tested. See `docs/AUDIT.md` for what was and was not covered.
+Status: 0.1.0. Twelve fixes were tested before and after in the running game (Stardew Valley 1.6.15 build 24356, SMAPI 4.5.2, Windows 11, English and Portuguese, single player). Multiplayer and other mods were not tested. See `docs/AUDIT.md` for what was and was not covered.
 
 ## Install
 
@@ -20,6 +20,10 @@ Status: 0.1.0. Eight fixes were tested before and after in the running game (Sta
 | `FixPortugueseSingleStatus` | VF-036 | In Portuguese, single male farmers show the female "single" text on the social page. Fixed for that language only. |
 | `FixChefBundleReward` | VF-030 | The remixed Chef's bundle gives 1 Pink Cake where the classic one gives 3. Fixed to 3. Bundles are saved when a world is created, so only new remixed worlds are affected. |
 | `FixTrashBearSardine` | VF-022 | Trash Bear could ask for a Sardine in summer, when it cannot be caught. The request is changed to another summer item. |
+| `FixTitleMusicMute` | VF-045 | Mute the music on the title screen, open the ? screen or the load menu, come back, and the music plays while the button still shows muted. The mute is applied again after those two screens. |
+| `FixGeorgeWheelchair` | VF-047 | George's wheelchair wheels do not turn when he walks up. The two missing wheel frames are copied from his winter sprite sheet when you have not replaced his sprites. |
+| `CheckStaleOrderParticipants` and `RepairStaleOrderParticipants` | VF-046 | A special order can never be removed if a farmhand who was deleted before claiming is still on its list. The host logs such orders each morning (on). Removing the stale ids is a second switch that is **off** and was only tested with a made-up id. |
+| `FixQuestItemGroundDrops` | VF-044 | **Off by default.** When a quest ends, Qi Beans and Calico Eggs dropped on the ground as items from crates, trees or monsters are not removed overnight like the ones in bags and chests. Turning this on removes them too. |
 | `FixBlankNames` | VF-012 | The new farm and new farmhand menus let you finish with a name made only of spaces. A space-only farm name reads back empty after saving and then blocks new farmhands from joining. The OK button is now blocked for such names. It does not repair farms already affected. |
 | `FixLumberjackMahoganyBonus` | VF-006 | **Off by default.** The tree code gives Lumberjack players 25% extra hardwood from mahogany trees, but a mismatched id means it never applies. Turning this on makes it apply, which raises their mahogany hardwood by about a quarter. |
 | `LogEatInterrupts` | VF-004 | Writes a log line with the calling code when something cuts the eating animation short. This only logs. It changes nothing in the game. |

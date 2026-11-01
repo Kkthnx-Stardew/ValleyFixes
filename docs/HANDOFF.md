@@ -1,14 +1,14 @@
 # Handoff for the next session
 
-Updated 2026-11-01 at the end of the second session. Read `docs/AUDIT.md` (Summary, VF-004, VF-043, Performance sample) and `README.md` first.
+Updated 2026-11-01 at the end of the third round (second session). Read `docs/AUDIT.md` (Summary, VF-004, VF-043, Performance sample) and `README.md` first.
 
 ## State
 
 - Mod: ValleyFixes 0.1.0 for Stardew Valley 1.6.15 build 24356, SMAPI 4.5.2, repo `C:\Users\Administrator\Documents\GitHub\ValleyFixes`. Not a git repo, nothing committed. The user wants to be asked before `git init` or any commit.
 - Game: `D:\SteamLibrary\steamapps\common\Stardew Valley`. The live Mods folder has about 100 mods. Never touch it. Test only through `testprofile/Mods`.
-- Settings in the mod: `FixFairThirdPlaceText`, `FixMovieReactionScripts`, `FixChefBundleReward`, `FixPortugueseSingleStatus`, `FixBlankNames`, `FixTrashBearSardine`, `TrimLocationChangeBacklog` (all on), `FixLumberjackMahoganyBonus` (off, opt-in), `LogEatInterrupts` (log only).
-- Eight fixes were tested before and after in the running game (VF-001, 006, 007, 012, 022, 030, 036, 043). VF-004 (eating freeze) is only logged, its real trigger is still unknown.
-- The Release DLL (SHA-256 `d80d09d8...`) passed a full `defaults` run. Evidence for all passes is in `docs/evidence/`. Unit tests: 59 pass.
+- Settings in the mod: `FixFairThirdPlaceText`, `FixMovieReactionScripts`, `FixChefBundleReward`, `FixPortugueseSingleStatus`, `FixBlankNames`, `FixTrashBearSardine`, `TrimLocationChangeBacklog`, `FixTitleMusicMute`, `FixGeorgeWheelchair`, `CheckStaleOrderParticipants` (all on), `FixLumberjackMahoganyBonus`, `FixQuestItemGroundDrops`, `RepairStaleOrderParticipants` (off, opt-in), `LogEatInterrupts` (log only).
+- Twelve fixes were tested in the running game: VF-001, 006, 007, 012, 022, 030, 036, 043, 044 (opt-in), 045, 046 (log on, repair opt-in, made-up id) and 047. VF-004 (eating freeze) is only logged, its real trigger is still unknown.
+- The Release DLL (SHA-256 `5725070c...`) passed a full `defaults` run. Evidence for all passes is in `docs/evidence/`. Unit tests: 69 pass.
 
 ## Done in session two
 
@@ -18,7 +18,17 @@ Updated 2026-11-01 at the end of the second session. Read `docs/AUDIT.md` (Summa
 - Eating freeze: all 73 call sites of `completelyStopAnimatingOrDoingAction` triaged, seven eating states tried. Only `holdUpItemThenMessage` orphans the freeze (4 seconds). Also found: a cut-short eat loses the food effect, because stamina, health and buffs are applied only in `doneEating`.
 - Harness additions: `-Only skull`, `-Only eatstates`, `-Heavy`, `-OutName`.
 
+## Done in round three
+
+- Triaged two more research briefs against the audit. New fixes: VF-044 Qi Bean ground drops (opt-in), VF-045 title screen music, VF-046 stale special order participants, VF-047 George's wheels. New unconfirmed reports VF-048 to VF-056 and VF-057 (upstream) are in the ledger.
+- New harness scenarios: `-Only qibeans`, `-Only title`, `-Only stale`. The runner now saves and restores `startup_preferences`.
+
 ## Ideas worth doing next
+
+- A multiplayer test setup would unlock VF-046 (real deleted farmhand), VF-055 (offline gold) and VF-056 (lost progression). None can be checked alone.
+- VF-048 (Desert Festival makeover): check what happens to the old clothes and dye by running `DesertFestival.ReceiveMakeOver` in the harness.
+- VF-054 horse through fences: read how `Fence` gates add `TemporaryPassableTiles` to the rider and whether a horse's wider box slips through. Needs the report's steps.
+- The Lead Bobber (VF-002) is still a design call. A bottom bounce postfix that never lets two bobbers bounce more than one would be small, but it changes balance.
 
 - Eating freeze: decide whether to ship a reset. The mechanism is proven, the organic trigger is not. A postfix that clears `freezePause` when the prefix saw `isEating` would remove any stall. A fuller fix would also finish the eat (apply the food) when it is cut short. Neither is built. The audit policy was to wait for a logged caller.
 - The `just_hit` row in `eatstates` threw a null reference in setup. Fix the test (probably the slime needs a location) and rerun.

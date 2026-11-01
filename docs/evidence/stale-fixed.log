@@ -1,0 +1,86 @@
+[17:09:31 INFO  SMAPI] SMAPI 4.5.2 with Stardew Valley 1.6.15 build 24356 on Windows 11 (10.0.26200.0)
+[17:09:31 INFO  SMAPI] Mods go here: ~\Documents\GitHub\ValleyFixes\testprofile\Mods
+[17:09:31 TRACE SMAPI] (Using custom --mods-path argument. Game folder: D:\SteamLibrary\steamapps\common\Stardew Valley.)
+[17:09:31 TRACE SMAPI] Log started at 2026-11-01T22:09:31 UTC
+[17:09:34 WARN  SMAPI] Writing to the terminal is disabled because the --no-terminal argument was received. This usually means launching the terminal failed.
+[17:09:34 DEBUG SMAPI] Waiting for game to launch...
+[17:09:35 TRACE game] Instance_Initialize() finished, elapsed = '00:00:00.2567721'
+[17:09:35 TRACE SMAPI] Scanning for malicious files...
+[17:09:35 DEBUG SMAPI] Loading mod metadata...
+[17:09:35 DEBUG SMAPI] Loading mods...
+[17:09:35 TRACE SMAPI]    Console Commands (from Mods\ConsoleCommands\ConsoleCommands.dll, ID: SMAPI.ConsoleCommands, assembly version: 4.5.2)...
+[17:09:35 TRACE SMAPI]    ValleyFixes (from Mods\ValleyFixes\ValleyFixes.dll, ID: Kkthnx.ValleyFixes, assembly version: 0.1.0)...
+[17:09:35 TRACE SMAPI]       Detected game patcher in assembly ValleyFixes.dll.
+[17:09:35 TRACE SMAPI]    ValleyFixes DevHarness (from Mods\ValleyFixes.DevHarness\ValleyFixes.DevHarness.dll, ID: Kkthnx.ValleyFixes.DevHarness, assembly version: 0.1.0)...
+[17:09:35 INFO  SMAPI] Loaded 3 mods:
+[17:09:35 INFO  SMAPI]    Console Commands 4.5.2 by SMAPI | Adds SMAPI console commands that let you manipulate the game.
+[17:09:35 INFO  SMAPI]    ValleyFixes 0.1.0 by Kkthnx | Small, separately switchable fixes for verified Stardew Valley 1.6.15 bugs. Every fix has its own toggle and skips itself if the game data no longer matches.
+[17:09:35 INFO  SMAPI]    ValleyFixes DevHarness 0.1.0 by Kkthnx | Test tool for ValleyFixes. Does nothing unless the VFH_OUT environment variable is set. Never ship this.
+
+[17:09:35 INFO  SMAPI]    Patched game code
+[17:09:35 INFO  SMAPI]    --------------------------------------------------
+[17:09:35 INFO  SMAPI]       These mods directly change the game code. They're more likely to cause errors or bugs in-game; if
+[17:09:35 INFO  SMAPI]       your game has issues, try removing these first. Otherwise you can ignore this warning.
+
+[17:09:35 INFO  SMAPI]       - ValleyFixes
+
+[17:09:35 DEBUG SMAPI]    No update keys
+[17:09:35 DEBUG SMAPI]    --------------------------------------------------
+[17:09:35 DEBUG SMAPI]       These mods have no update keys in their manifest. SMAPI may not notify you about updates for these
+[17:09:35 DEBUG SMAPI]       mods. Consider notifying the mod authors about this problem.
+
+[17:09:35 DEBUG SMAPI]       - ValleyFixes
+[17:09:35 DEBUG SMAPI]       - ValleyFixes DevHarness
+
+[17:09:35 DEBUG SMAPI] Launching mods...
+[17:09:35 DEBUG SMAPI] Mods loaded and ready!
+[17:09:35 TRACE SMAPI] Checking for known software conflicts...
+[17:09:35 WARN  SMAPI] Found MSI Afterburner and RivaTuner Statistics Server installed, which may conflict with SMAPI. If you experience errors or crashes, try disabling that software or adding an exception for SMAPI and Stardew Valley.
+[17:09:35 TRACE SMAPI] Checking for updates...
+[17:09:35 TRACE SMAPI] ValleyFixes edited Strings/StringsFromCSFiles.
+[17:09:35 TRACE game] setGameMode( 'titleScreenGameMode (0)' )
+[17:09:35 TRACE SMAPI]    SMAPI okay.
+[17:09:35 TRACE SMAPI]    Checking for updates to 2 mods...
+[17:09:35 TRACE SMAPI] ValleyFixes edited Strings/StringsFromCSFiles.
+[17:09:35 TRACE SMAPI] Running on GPU: NVIDIA GeForce RTX 5070/PCIe/SSE2
+[17:09:35 TRACE game] Instance_LoadContent() finished, elapsed = '00:00:00.8408739'
+[17:09:35 ERROR game] Oops! Steam achievements won't work because Steam isn't loaded. See 'Configure your game client' in the install guide for more info: https://smapi.io/install.
+[17:09:35 INFO  SMAPI] Type 'help' for help, or 'help <cmd>' for a command's usage
+[17:09:35 TRACE SMAPI]    All mods up to date.
+[17:09:36 TRACE game] Window_ClientSizeChanged(); Window.ClientBounds={X:0 Y:0 Width:2560 Height:1440}
+[17:09:36 TRACE SMAPI]    Mod blacklist OK.
+[17:09:40 TRACE game] Successfully loaded ContentHashes.json containing 3560 file(s);
+[17:09:40 TRACE game] EnsureManifestInitialized() finished, elapsed = '00:00:00.0050604'
+[17:09:40 TRACE ValleyFixes] Movie reaction fix changed 3 of 3 expected scripts.
+[17:09:40 TRACE SMAPI] ValleyFixes edited Data/MoviesReactions.
+[17:09:40 TRACE game] setGameMode( 'playingGameMode (3)' )
+[17:09:40 TRACE game] Window_ClientSizeChanged(); Window.ClientBounds={X:0 Y:0 Width:2560 Height:1440}
+[17:09:40 TRACE game] Window_ClientSizeChanged(); Window.ClientBounds={X:0 Y:0 Width:2560 Height:1440}
+[17:09:40 TRACE SMAPI] Synchronizing 'NewDay' task...
+[17:09:40 TRACE ValleyFixes] Lumberjack hardwood fix changed 2 of 2 expected tree entries.
+[17:09:40 TRACE SMAPI] ValleyFixes edited Data/WildTrees.
+[17:09:41 TRACE SMAPI]    task complete.
+[17:09:41 TRACE SMAPI] Context: before save creation.
+[17:09:41 TRACE game] SaveGame.Save() called.
+[17:09:41 TRACE SMAPI] Synchronizing 'Save' task...
+[17:09:41 TRACE game] Saving without compression...
+[17:09:42 TRACE SMAPI]    task complete.
+[17:09:42 TRACE game] SaveGame.Save() completed without exceptions.
+[17:09:43 TRACE SMAPI] Context: after save creation, starting spring 1 Y1.
+[17:09:43 TRACE SMAPI] Context: loaded save 'VFTest_453247771', starting spring 1 Y1, locale set to . Single-player.
+[17:09:43 TRACE ValleyFixes] Cleared the unsent change queues of 80 locations.
+[17:09:47 TRACE SMAPI] Synchronizing 'NewDay' task...
+[17:09:48 TRACE SMAPI]    task complete.
+[17:09:48 TRACE SMAPI] Context: before save.
+[17:09:48 TRACE game] SaveGame.Save() called.
+[17:09:48 TRACE SMAPI] Synchronizing 'Save' task...
+[17:09:48 TRACE game] Saving without compression...
+[17:09:48 TRACE SMAPI]    task complete.
+[17:09:48 TRACE game] SaveGame.Save() completed without exceptions.
+[17:09:50 TRACE SMAPI] Context: after save, starting spring 2 Y1.
+[17:09:50 TRACE ValleyFixes] Cleared the unsent change queues of 80 locations.
+[17:09:50 INFO  ValleyFixes] Special order 'Willy' (state Complete) lists 1 participant(s) and 1 unclaimed reward(s) for players this world no longer has. Removing them.
+[17:09:54 INFO  ValleyFixes DevHarness] Harness results written to C:\Users\Administrator\Documents\GitHub\ValleyFixes\testprofile\results\stale-fixed.json.
+[17:09:54 TRACE game] Disconnected: ClosedGame
+[17:09:54 TRACE SMAPI] Disposing...
+[17:09:54 TRACE SMAPI] Disposing the content coordinator. Content managers will no longer be usable after this point.

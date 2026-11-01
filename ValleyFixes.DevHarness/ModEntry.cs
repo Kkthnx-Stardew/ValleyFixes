@@ -69,7 +69,8 @@ namespace ValleyFixes.DevHarness
                 Game1.options.pauseWhenOutOfFocus = false;
 
             // volume is set on the audio categories only, so nothing is written to the saved options
-            if (!_muted && Game1.musicCategory != null && Game1.soundCategory != null)
+            // re-applied every half second, because the game raises the category volumes again when music is switched on
+            if ((!_muted || _ticks % 30 == 0) && Game1.musicCategory != null && Game1.soundCategory != null)
             {
                 _muted = true;
                 Game1.musicCategory.SetVolume(0f);
@@ -89,8 +90,15 @@ namespace ValleyFixes.DevHarness
             {
                 if (Game1.activeClickableMenu is TitleMenu title && _ticks > 240)
                 {
-                    StartFarm(title);
-                    _run = Scenarios();
+                    if (Environment.GetEnvironmentVariable("VFH_ONLY") == "title")
+                    {
+                        _run = TitleScenario(title).GetEnumerator();
+                    }
+                    else
+                    {
+                        StartFarm(title);
+                        _run = Scenarios();
+                    }
                 }
                 else if (_ticks > 3600)
                     Finish("timeout waiting for the title menu");
@@ -168,6 +176,22 @@ namespace ValleyFixes.DevHarness
                 yield break;
             }
 
+            if (Environment.GetEnvironmentVariable("VFH_ONLY") == "stale")
+            {
+                var st = new Dictionary<string, object?>();
+                _results["stale_participants"] = st;
+                foreach (int w in StaleParticipantScenario(st)) yield return w;
+                yield break;
+            }
+
+            if (Environment.GetEnvironmentVariable("VFH_ONLY") == "qibeans")
+            {
+                var qi = new Dictionary<string, object?>();
+                _results["quest_items"] = qi;
+                foreach (int w in QuestItemScenario(qi)) yield return w;
+                yield break;
+            }
+
             if (Environment.GetEnvironmentVariable("VFH_ONLY") == "eatstates")
             {
                 var states = new Dictionary<string, object?>();
@@ -190,6 +214,7 @@ namespace ValleyFixes.DevHarness
             Guard("bundles", BundleScenario);
             Guard("missing_string", MissingStringScenario);
             Guard("names", NameRoundTripScenario);
+            Guard("george", GeorgeScenario);
 
             Farmer p = Game1.player;
 
@@ -670,6 +695,184 @@ namespace ValleyFixes.DevHarness
                 retainedMBAfter = Math.Round(afterWorld / 1048576.0, 1)
             };
             rows.Add(Snapshot(-1));
+        }
+
+        // title screen: mute the music, open the About screen (the ? button), come back, and see whether the music and the button agree
+        private IEnumerable<int> TitleScenario(TitleMenu title)
+        {
+            var rows = new List<object>();
+            _results["title_music"] = rows;
+
+            object Snap(string step) => new
+            {
+                step,
+                musicVolumeLevel = Game1.options.musicVolumeLevel,
+                musicPlayerVolume = Game1.musicPlayerVolume,
+                buttonIconX = title.muteMusicButton.sourceRect.X,
+                buttonShowsMuted = title.muteMusicButton.sourceRect.X == 137,
+                startMutedSaved = title.startupPreferences.startMuted,
+                subMenu = TitleMenu.subMenu?.GetType().Name,
+                song = Game1.currentSong?.Name
+            };
+
+            // wait for the title screen to finish its intro
+            for (int t = 0; t < 1800 && !(title.HasActiveUser && title.muteMusicButton != null && TitleMenu.subMenu == null && !title.isTransitioningButtons); t++)
+                yield return 1;
+            yield return 300;
+
+            bool startedMuted = Game1.options.musicVolumeLevel == 0f;
+            rows.Add(Snap("start"));
+            var mute = title.muteMusicButton.bounds.Center;
+            var about = title.aboutButton.bounds.Center;
+
+            // 1. end up muted by clicking the real button (one click first if the game started muted)
+            if (startedMuted)
+            {
+                title.receiveLeftClick(mute.X, mute.Y, playSound: false);
+                yield return 30;
+                rows.Add(Snap("unmuted first"));
+            }
+            title.receiveLeftClick(mute.X, mute.Y, playSound: false);
+            yield return 30;
+            rows.Add(Snap("after mute click"));
+
+            // 2. open About, wait, close it with the back path
+            title.receiveLeftClick(about.X, about.Y, playSound: false);
+            yield return 30;
+            // the real click is ignored until the title buttons finish sliding in, so the menu is opened the way the click does if needed
+            bool clickOpened = TitleMenu.subMenu is AboutMenu;
+            if (!clickOpened)
+                TitleMenu.subMenu = new AboutMenu();
+            _results["title_about_opened_by_click"] = clickOpened;
+            yield return 90;
+            rows.Add(Snap("About open"));
+            title.backButtonPressed();
+            yield return 180;
+            rows.Add(Snap("after About closed"));
+
+            // 3. the same trip once more, to see if it flips again
+            TitleMenu.subMenu = new AboutMenu();
+            yield return 120;
+            title.backButtonPressed();
+            yield return 180;
+            rows.Add(Snap("after second About trip"));
+
+            // 4. the load menu: its save scan resets the game state the same way. First get back to a state where music and icon agree
+            if (Game1.options.musicVolumeLevel != 0f && title.muteMusicButton.sourceRect.X == 137)
+                Utility.disableMusic();
+            yield return 30;
+            rows.Add(Snap("before load menu"));
+            TitleMenu.subMenu = new LoadGameMenu();
+            yield return 420;
+            rows.Add(Snap("load menu open"));
+            title.backButtonPressed();
+            yield return 180;
+            rows.Add(Snap("after load menu closed"));
+
+            // put things back the way they were, through the same real button
+            bool nowMuted = title.muteMusicButton.sourceRect.X == 137;
+            if (nowMuted != startedMuted)
+            {
+                title.receiveLeftClick(mute.X, mute.Y, playSound: false);
+                yield return 30;
+            }
+            rows.Add(Snap("restored"));
+            _results["title_started_muted"] = startedMuted;
+        }
+
+        // VF-046: two finished special orders after their rewards were claimed. One still lists a player id this world does not have
+        // (made up, a real deleted farmhand needs a multiplayer farm). The other lists nobody and is the control.
+        private IEnumerable<int> StaleParticipantScenario(Dictionary<string, object?> into)
+        {
+            var team = Game1.player.team;
+            var keys = DataLoader.SpecialOrders(Game1.content).Keys.ToList();
+            var made = new List<StardewValley.SpecialOrders.SpecialOrder>();
+            foreach (string key in keys)
+            {
+                if (made.Count == 2)
+                    break;
+                var order = StardewValley.SpecialOrders.SpecialOrder.GetSpecialOrder(key, 1234 + made.Count);
+                if (order != null)
+                    made.Add(order);
+            }
+            into["ordersMade"] = made.Select(o => o.questKey.Value).ToList();
+
+            const long fakeId = 999999999999L;
+            var stale = made[0];
+            var control = made[1];
+            foreach (var o in new[] { stale, control })
+            {
+                o.questState.Value = StardewValley.SpecialOrders.SpecialOrderStatus.Complete;
+                o.participants.Clear();
+                o.unclaimedRewards.Clear();
+            }
+            stale.participants[fakeId] = true;
+            stale.unclaimedRewards[fakeId] = true;
+            team.specialOrders.Add(stale);
+            team.specialOrders.Add(control);
+
+            into["before"] = new { staleListed = team.specialOrders.Contains(stale), staleParticipants = stale.participants.Length, controlListed = team.specialOrders.Contains(control), controlParticipants = control.participants.Length };
+
+            // let the game's own per-tick order update run for a while, then a real overnight
+            yield return 120;
+            into["afterTicks"] = new { staleListed = team.specialOrders.Contains(stale), controlListed = team.specialOrders.Contains(control) };
+
+            Game1.player.isInBed.Value = true;
+            Game1.NewDay(0f);
+            int guard = 0;
+            while ((Game1.newDay || Game1.fadeToBlack || Game1.activeClickableMenu != null || !Context.CanPlayerMove) && guard++ < 4000)
+                yield return 1;
+            yield return 240;
+
+            into["afterNight"] = new { staleListed = team.specialOrders.Contains(stale), staleParticipants = stale.participants.Length, controlListed = team.specialOrders.Contains(control) };
+        }
+
+        // VF-044: Qi Beans in every place the game sweeps, plus ground drops made two ways, then a real overnight
+        private IEnumerable<int> QuestItemScenario(Dictionary<string, object?> into)
+        {
+            Farmer p = Game1.player;
+            GameLocation farm = Game1.getFarm();
+
+            int GroundBeans() => farm.debris.Count(d => (d.item?.QualifiedItemId ?? d.itemId.Value) == "(O)890");
+            int ItemBeans() => p.Items.Where(i => i?.QualifiedItemId == "(O)890").Sum(i => i.Stack);
+
+            // what is on the ground before: drops made the way crates, trees, monsters and fishing make them
+            Game1.createObjectDebris("(O)890", 40, 30, -1, 0, 1f, farm);
+            Game1.createMultipleObjectDebris("(O)890", 42, 30, 3, p.UniqueMultiplayerID, farm);
+            farm.debris.Add(new Debris(ItemRegistry.Create("(O)890", 2), new Microsoft.Xna.Framework.Vector2(44 * 64, 30 * 64)));
+            // control: another item on the ground that must stay
+            Game1.createObjectDebris("(O)388", 46, 30, -1, 0, 1f, farm);
+
+            p.addItemToInventoryBool(ItemRegistry.Create("(O)890", 5));
+            var chest = new StardewValley.Objects.Chest(true);
+            chest.Items.Add(ItemRegistry.Create("(O)890", 4));
+            var chestTile = Enumerable.Range(20, 40).Select(x => new Microsoft.Xna.Framework.Vector2(x, 36)).First(t => !farm.objects.ContainsKey(t) && !farm.terrainFeatures.ContainsKey(t));
+            chest.TileLocation = chestTile;
+            farm.objects.Add(chestTile, chest);
+
+            var shapes = farm.debris.Select(d => new { id = d.itemId.Value, hasItem = d.item != null, stack = d.item?.Stack }).ToList();
+            into["groundDebrisBefore"] = shapes;
+            into["groundBeansBefore"] = GroundBeans();
+            into["inventoryBeansBefore"] = ItemBeans();
+            into["chestBeansBefore"] = chest.Items.Sum(i => i?.QualifiedItemId == "(O)890" ? i.Stack : 0);
+            into["controlBefore"] = farm.debris.Count(d => (d.item?.QualifiedItemId ?? d.itemId.Value) == "(O)388");
+
+            // the same list the end of the Qi Bean quest adds
+            Game1.player.team.itemsToRemoveOvernight.Add("890");
+            Game1.player.team.itemsToRemoveOvernight.Add("889");
+            Game1.player.isInBed.Value = true;
+            Game1.NewDay(0f);
+            int guard = 0;
+            while ((Game1.newDay || Game1.fadeToBlack || Game1.activeClickableMenu != null || !Context.CanPlayerMove) && guard++ < 4000)
+                yield return 1;
+            yield return 120;
+
+            farm = Game1.getFarm();
+            into["groundBeansAfter"] = GroundBeans();
+            into["inventoryBeansAfter"] = ItemBeans();
+            into["chestBeansAfter"] = (farm.objects.Values.OfType<StardewValley.Objects.Chest>().SelectMany(c => c.Items).Sum(i => i?.QualifiedItemId == "(O)890" ? i.Stack : 0));
+            into["controlAfter"] = farm.debris.Count(d => (d.item?.QualifiedItemId ?? d.itemId.Value) == "(O)388");
+            into["groundDebrisAfter"] = farm.debris.Select(d => new { id = d.itemId.Value, hasItem = d.item != null }).ToList();
         }
 
         // VF-004: eats in states a real player can be in, and reports which ones orphan the 20 second freeze
@@ -1215,6 +1418,25 @@ namespace ValleyFixes.DevHarness
 
             _results["trash_bear_sardine"] = sardine;
             _results["trash_bear_sequences"] = sequences;
+        }
+
+        // VF-047: how many pixels of George's wheel area in each of the four walking up frames differ from the first frame, as the game loads the sheet
+        private void GeorgeScenario()
+        {
+            var tex = Game1.content.Load<Microsoft.Xna.Framework.Graphics.Texture2D>("Characters\\George");
+            Microsoft.Xna.Framework.Color[] Read(int column)
+            {
+                var area = new Microsoft.Xna.Framework.Rectangle(column * 16, 2 * 32 + 18, 16, 14);
+                var data = new Microsoft.Xna.Framework.Color[area.Width * area.Height];
+                tex.GetData(0, area, data, 0, data.Length);
+                return data;
+            }
+
+            var first = Read(0);
+            var counts = new List<int>();
+            for (int c = 0; c < 4; c++)
+                counts.Add(Read(c).Where((px, i) => px != first[i]).Count());
+            _results["george_up_wheel_pixels_different_from_frame0"] = counts;
         }
 
         private void FairScenario()

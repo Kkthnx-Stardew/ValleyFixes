@@ -1,0 +1,112 @@
+{
+  "title_music": [
+    {
+      "step": "start",
+      "musicVolumeLevel": 0,
+      "musicPlayerVolume": 0,
+      "buttonIconX": 137,
+      "buttonShowsMuted": true,
+      "startMutedSaved": true,
+      "subMenu": null,
+      "song": "spring_day_ambient"
+    },
+    {
+      "step": "unmuted first",
+      "musicVolumeLevel": 0.75,
+      "musicPlayerVolume": 0.75,
+      "buttonIconX": 128,
+      "buttonShowsMuted": false,
+      "startMutedSaved": false,
+      "subMenu": null,
+      "song": "spring_day_ambient"
+    },
+    {
+      "step": "after mute click",
+      "musicVolumeLevel": 0,
+      "musicPlayerVolume": 0,
+      "buttonIconX": 137,
+      "buttonShowsMuted": true,
+      "startMutedSaved": true,
+      "subMenu": null,
+      "song": "spring_day_ambient"
+    },
+    {
+      "step": "About open",
+      "musicVolumeLevel": 0,
+      "musicPlayerVolume": 0,
+      "buttonIconX": 137,
+      "buttonShowsMuted": true,
+      "startMutedSaved": true,
+      "subMenu": "AboutMenu",
+      "song": "spring_day_ambient"
+    },
+    {
+      "step": "after About closed",
+      "musicVolumeLevel": 0.75,
+      "musicPlayerVolume": 0.7599996,
+      "buttonIconX": 137,
+      "buttonShowsMuted": true,
+      "startMutedSaved": true,
+      "subMenu": null,
+      "song": "spring_day_ambient"
+    },
+    {
+      "step": "after second About trip",
+      "musicVolumeLevel": 0.75,
+      "musicPlayerVolume": 0.7599996,
+      "buttonIconX": 137,
+      "buttonShowsMuted": true,
+      "startMutedSaved": true,
+      "subMenu": null,
+      "song": "spring_day_ambient"
+    },
+    {
+      "step": "before load menu",
+      "musicVolumeLevel": 0,
+      "musicPlayerVolume": 0,
+      "buttonIconX": 137,
+      "buttonShowsMuted": true,
+      "startMutedSaved": true,
+      "subMenu": null,
+      "song": "spring_day_ambient"
+    },
+    {
+      "step": "load menu open",
+      "musicVolumeLevel": 0.75,
+      "musicPlayerVolume": 0.7599996,
+      "buttonIconX": 137,
+      "buttonShowsMuted": true,
+      "startMutedSaved": true,
+      "subMenu": "LoadGameMenu",
+      "song": "spring_day_ambient"
+    },
+    {
+      "step": "after load menu closed",
+      "musicVolumeLevel": 0.75,
+      "musicPlayerVolume": 0.7599996,
+      "buttonIconX": 137,
+      "buttonShowsMuted": true,
+      "startMutedSaved": true,
+      "subMenu": null,
+      "song": "spring_day_ambient"
+    },
+    {
+      "step": "restored",
+      "musicVolumeLevel": 0.75,
+      "musicPlayerVolume": 0.7599996,
+      "buttonIconX": 137,
+      "buttonShowsMuted": true,
+      "startMutedSaved": true,
+      "subMenu": null,
+      "song": "spring_day_ambient"
+    }
+  ],
+  "title_about_opened_by_click": false,
+  "title_started_muted": true,
+  "note": null,
+  "mods": [
+    "SMAPI.ConsoleCommands 4.5.2",
+    "Kkthnx.ValleyFixes 0.1.0",
+    "Kkthnx.ValleyFixes.DevHarness 0.1.0"
+  ]
+}

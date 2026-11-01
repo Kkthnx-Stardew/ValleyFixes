@@ -67,9 +67,9 @@
   },
   "bundles": {
     "remixedWorlds": 120,
-    "worldsWithChefBundle": 55,
+    "worldsWithChefBundle": 63,
     "remixedChefRewards": {
-      "O 221 3": 55
+      "O 221 3": 63
     },
     "classicChefReward": [
       "O 221 3"
@@ -136,6 +136,12 @@
       "farmNameLoadedLength": 3,
       "farmhandCanLeaveMenu": true
     }
+  ],
+  "george_up_wheel_pixels_different_from_frame0": [
+    0,
+    36,
+    0,
+    36
   ],
   "eat_normal": {
     "during": {
@@ -610,51 +616,51 @@
     "no_lumberjack": {
       "trees": 60,
       "treesStillStanding": 0,
-      "hardwoodTotal": 550,
-      "perTree": 9.17
+      "hardwoodTotal": 530,
+      "perTree": 8.83
     },
     "lumberjack": {
       "trees": 60,
       "treesStillStanding": 0,
-      "hardwoodTotal": 604,
-      "perTree": 10.07
+      "hardwoodTotal": 622,
+      "perTree": 10.37
     }
   },
   "perf_idle_farm": {
     "ticks": 1800,
     "seconds": 30,
-    "allocatedMBPerSecond": 3.59,
-    "gen0": 3,
-    "gen1": 3,
+    "allocatedMBPerSecond": 3.56,
+    "gen0": 2,
+    "gen1": 2,
     "gen2": 0,
     "frameMsMedian": 16.67,
-    "frameMsP99": 16.74,
-    "frameMsMax": 29.2,
-    "framesOver25ms": 2,
+    "frameMsP99": 16.72,
+    "frameMsMax": 26.49,
+    "framesOver25ms": 1,
     "framesOver50ms": 0,
-    "workingSetMB": 1134,
-    "gcHeapMB": 156
+    "workingSetMB": 1054,
+    "gcHeapMB": 182
   },
   "stress": {
     "farm_empty": {
       "seconds": 15,
-      "processCpuMsPerFrame": 4.05,
-      "processCpuPercentOfOneCore": 24,
+      "processCpuMsPerFrame": 2.69,
+      "processCpuPercentOfOneCore": 16,
       "update": {
         "frames": 900,
         "meanMs": 0.12,
-        "medianMs": 0.11,
-        "p99Ms": 0.18,
-        "maxMs": 4.58,
+        "medianMs": 0.1,
+        "p99Ms": 0.32,
+        "maxMs": 4.12,
         "over8ms": 0,
         "over16ms": 0
       },
       "render": {
         "frames": 900,
         "meanMs": 0.53,
-        "medianMs": 0.52,
-        "p99Ms": 0.66,
-        "maxMs": 1,
+        "medianMs": 0.51,
+        "p99Ms": 0.68,
+        "maxMs": 0.92,
         "over8ms": 0,
         "over16ms": 0
       },
@@ -662,28 +668,28 @@
       "gen0": 1,
       "gen1": 1,
       "gen2": 0,
-      "heapMB": 162
+      "heapMB": 187
     },
-    "heavy_farm_objects": 1571,
+    "heavy_farm_objects": 1562,
     "farm_heavy": {
       "seconds": 15,
-      "processCpuMsPerFrame": 2.92,
-      "processCpuPercentOfOneCore": 18,
+      "processCpuMsPerFrame": 4.06,
+      "processCpuPercentOfOneCore": 24,
       "update": {
         "frames": 900,
         "meanMs": 0.12,
         "medianMs": 0.11,
-        "p99Ms": 0.53,
-        "maxMs": 0.84,
+        "p99Ms": 0.51,
+        "maxMs": 0.71,
         "over8ms": 0,
         "over16ms": 0
       },
       "render": {
         "frames": 900,
-        "meanMs": 0.82,
-        "medianMs": 0.8,
-        "p99Ms": 1.04,
-        "maxMs": 1.13,
+        "meanMs": 0.81,
+        "medianMs": 0.79,
+        "p99Ms": 0.98,
+        "maxMs": 1.07,
         "over8ms": 0,
         "over16ms": 0
       },
@@ -691,28 +697,28 @@
       "gen0": 1,
       "gen1": 1,
       "gen2": 0,
-      "heapMB": 209
+      "heapMB": 186
     },
     "town_location": "Town",
     "town_characters": 1,
     "town": {
       "seconds": 15,
-      "processCpuMsPerFrame": 3.73,
-      "processCpuPercentOfOneCore": 22,
+      "processCpuMsPerFrame": 2.64,
+      "processCpuPercentOfOneCore": 16,
       "update": {
         "frames": 900,
         "meanMs": 0.11,
-        "medianMs": 0.1,
-        "p99Ms": 0.14,
-        "maxMs": 2.74,
+        "medianMs": 0.09,
+        "p99Ms": 0.13,
+        "maxMs": 5.78,
         "over8ms": 0,
         "over16ms": 0
       },
       "render": {
         "frames": 900,
-        "meanMs": 0.49,
-        "medianMs": 0.47,
-        "p99Ms": 0.61,
+        "meanMs": 0.47,
+        "medianMs": 0.46,
+        "p99Ms": 0.57,
         "maxMs": 3.64,
         "over8ms": 0,
         "over16ms": 0
@@ -727,23 +733,23 @@
     "mine_monsters": 1,
     "mine_130": {
       "seconds": 15,
-      "processCpuMsPerFrame": 3.4,
-      "processCpuPercentOfOneCore": 20,
+      "processCpuMsPerFrame": 2.52,
+      "processCpuPercentOfOneCore": 15,
       "update": {
         "frames": 900,
         "meanMs": 0.1,
         "medianMs": 0.1,
-        "p99Ms": 0.15,
-        "maxMs": 2.2,
+        "p99Ms": 0.25,
+        "maxMs": 2.22,
         "over8ms": 0,
         "over16ms": 0
       },
       "render": {
         "frames": 900,
-        "meanMs": 0.28,
-        "medianMs": 0.27,
-        "p99Ms": 0.35,
-        "maxMs": 0.53,
+        "meanMs": 0.34,
+        "medianMs": 0.33,
+        "p99Ms": 0.41,
+        "maxMs": 0.48,
         "over8ms": 0,
         "over16ms": 0
       },
@@ -751,45 +757,45 @@
       "gen0": 1,
       "gen1": 1,
       "gen2": 0,
-      "heapMB": 191
+      "heapMB": 192
     },
     "farm_heavy_DayUpdate": {
-      "ms": 20.1,
-      "allocatedMB": 1.8
+      "ms": 21.5,
+      "allocatedMB": 1.9
     },
     "farm_dayupdate_growth": [
       {
         "afterUpdates": 10,
-        "retainedMB": 166.9,
-        "objects": 1459,
-        "terrainFeatures": 1828,
+        "retainedMB": 167.1,
+        "objects": 1476,
+        "terrainFeatures": 1809,
         "debris": 0,
         "temporarySprites": 0,
         "characters": 0
       },
       {
         "afterUpdates": 20,
-        "retainedMB": 173.9,
-        "objects": 1744,
-        "terrainFeatures": 1626,
+        "retainedMB": 174,
+        "objects": 1739,
+        "terrainFeatures": 1630,
         "debris": 0,
         "temporarySprites": 0,
         "characters": 0
       },
       {
         "afterUpdates": 30,
-        "retainedMB": 180.9,
-        "objects": 1957,
-        "terrainFeatures": 1462,
+        "retainedMB": 181.2,
+        "objects": 1933,
+        "terrainFeatures": 1478,
         "debris": 0,
         "temporarySprites": 0,
         "characters": 0
       },
       {
         "afterUpdates": 40,
-        "retainedMB": 188,
-        "objects": 2092,
-        "terrainFeatures": 1353,
+        "retainedMB": 188.1,
+        "objects": 2103,
+        "terrainFeatures": 1338,
         "debris": 0,
         "temporarySprites": 0,
         "characters": 0
@@ -799,18 +805,18 @@
       "warps": 24,
       "menuOpens": 60,
       "farmDayUpdates": 40,
-      "retainedMBBefore": 159.4,
-      "retainedMBAfter": 188,
-      "retainedMBGrowth": 28.6,
+      "retainedMBBefore": 159.6,
+      "retainedMBAfter": 188.1,
+      "retainedMBGrowth": 28.5,
       "retainedMBCheckpoints": [
-        159.7,
-        159.7,
-        159.7,
-        159.7,
-        159.9
+        160,
+        160,
+        160,
+        160,
+        160.1
       ],
-      "workingSetMBBefore": 1154,
-      "workingSetMBAfter": 1144
+      "workingSetMBBefore": 1076,
+      "workingSetMBAfter": 1064
     },
     "net_queue": {
       "multiplayerMode": 0,
@@ -818,13 +824,13 @@
       "farmRootExists": false,
       "farmRootDirty": null,
       "farmNetFieldsDirty": false,
-      "queueObjects_start": 4932,
-      "queueObjects_afterChurnAndTenSeconds": 8932,
-      "retainedMB_start": 188,
-      "retainedMB_afterChurn": 206.3,
+      "queueObjects_start": 4916,
+      "queueObjects_afterChurnAndTenSeconds": 8916,
+      "retainedMB_start": 188.1,
+      "retainedMB_afterChurn": 206.4,
       "farmRootMarkCleanMs": 0,
-      "queueObjects_afterMarkClean": 8932,
-      "retainedMB_afterMarkClean": 206.3,
+      "queueObjects_afterMarkClean": 8916,
+      "retainedMB_afterMarkClean": 206.4,
       "freedMB": -0,
       "allLocationsMarkClean": {
         "roots": 80,
@@ -833,7 +839,7 @@
     },
     "farm_heavy_SaveGame_Save": {
       "ms": 58,
-      "allocatedMB": 34.1
+      "allocatedMB": 34
     }
   },
   "name_menu": [

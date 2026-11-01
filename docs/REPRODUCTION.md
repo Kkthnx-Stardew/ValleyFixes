@@ -44,6 +44,10 @@ Each pass starts the game, creates a throwaway farm called "VFTest" with no menu
 | Memory soak | 24 warps, 60 menu opens, then 40 day updates, with memory read after a full collection. Heap dumps (`-HeapDumps`) before and after, compared with `dotnet-gcdump report` |
 | Overnights | `-Only natural -Days 12`: 12 real overnight transitions on a default farm. Records the location change queue size and retained memory each morning, reads the nightly save back from disk and compares it with the live farm, then clears the queues and measures what comes back. Add `-Heavy` to fill the farm with about 1,560 crops, fences, kegs, sprinklers and trees first (used with `-Days 40`) |
 | Skull Cavern | `-Only skull`: floors 121, 150, 200 and 300, 15 seconds each with the floor's own monsters, then 15 seconds after adding 40 monsters from the floor's generator |
+| Quest items | `-Only qibeans`: Qi Beans in the inventory, a chest and four kinds of ground drops, then a real overnight with the Qi Bean quest items queued. Counts what is left and a control item |
+| Title screen | `-Only title`: clicks the real mute button, opens the About screen and the load menu and closes them, reading the music volume, the button icon and the saved setting each time. Your `startup_preferences` file is saved first and put back afterwards |
+| Special orders | `-Only stale`: two finished special orders, one with a made-up participant id and one with none, then the game's updates and a real overnight |
+| George | Part of the full run: compares the four walking up frames of George's wheel area as the game loads the sheet |
 | Eating states | `-Only eatstates`: eats while an emote plays, after and during a monster hit, while sitting, during a clock update, with an item pick-up message and during a warp, and records which ones orphan the freeze |
 
 ## Stress and memory results are machine specific

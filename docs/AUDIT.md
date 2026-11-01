@@ -1,21 +1,21 @@
 # ValleyFixes audit
 
-Audit date: 2026-11-01. Only VF-001, VF-004, VF-006, VF-007, VF-012, VF-022, VF-030, VF-036 and VF-043 were run in the live game (see "Runtime test"). Every other "confirmed" is a code or data reading only, marked `CODE_CONFIRMED_TEST_PENDING`.
+Audit date: 2026-11-01. Only VF-001, VF-004, VF-006, VF-007, VF-012, VF-022, VF-030, VF-036, VF-043, VF-044, VF-045, VF-046 (made-up id) and VF-047 were run in the live game (see "Runtime test"). Every other "confirmed" is a code or data reading only, marked `CODE_CONFIRMED_TEST_PENDING`.
 
 ## Summary
 
-43 reports were audited (VF-001 to VF-043) against the installed game 1.6.15 build 24356. Eight were fixed and tested in the running game and ship in 0.1.0. One more only logs.
+57 reports were audited (VF-001 to VF-057) against the installed game 1.6.15 build 24356. Twelve were fixed and tested in the running game and ship in 0.1.0. One more only logs.
 
 | Result | Count | Items |
 |---|---|---|
-| FIXED_AND_TESTED, shipped | 8 | VF-001, VF-006 (opt-in), VF-007, VF-012, VF-022, VF-030, VF-036, VF-043 |
+| FIXED_AND_TESTED, shipped | 12 | VF-001, VF-006 (opt-in), VF-007, VF-012, VF-022, VF-030, VF-036, VF-043, VF-044 (opt-in), VF-045, VF-046 (log on, repair opt-in), VF-047 |
 | CONFIRMED_PENDING_FIX | 2 | VF-004 (logging shipped, no behavior change), VF-003 (harmless, would need a transpiler) |
 | CODE_CONFIRMED_TEST_PENDING | 3 | VF-002, VF-013, VF-014 (design or balance calls, or unreproduced) |
 | INTENTIONAL_OR_BALANCE | 5 | VF-005, VF-015, VF-016, VF-034, VF-039 |
-| UPSTREAM_FIX_PLANNED | 2 | VF-027, VF-028 |
+| UPSTREAM_FIX_PLANNED | 3 | VF-027, VF-028, VF-057 |
 | OUT_OF_SCOPE | 5 | VF-029, VF-031, VF-032, VF-037, VF-041 |
 | CANNOT_REPRODUCE | 1 | VF-038 |
-| REPORTED_UNCONFIRMED | 17 | Mostly multiplayer, save, desert festival and crash reports with no usable evidence or a risk to saves |
+| REPORTED_UNCONFIRMED | 26 | Mostly multiplayer, save, desert festival and crash reports with no usable evidence or a risk to saves. VF-048 to VF-056 were added in round three |
 
 Shipped fixes and their settings are in `README.md`. How each one hooks in, and the limits, are in `COMPATIBILITY.md`. How it was tested is in `REPRODUCTION.md`.
 
@@ -36,7 +36,7 @@ Lessons from the audit: three forum claims were wrong or only half right (VF-001
 
 Caveat: the installed `Mods` folder holds roughly 100 mods. All runtime tests need a separate clean profile (SMAPI only). None have been run.
 
-## Table, VF-001 to VF-043
+## Table, VF-001 to VF-057
 
 "Decompiled" means I read the installed code or data for that item. "No" means only the forum report exists.
 
@@ -85,6 +85,20 @@ Caveat: the installed `Mods` folder holds roughly 100 mods. All runtime tests ne
 | VF-041 | No | OUT_OF_SCOPE | REJECT | `IsFloorableTile` does not do what its name says. It only matters to map makers and mods |
 | VF-042 | No | REPORTED_UNCONFIRMED | DEFER | Crash using the incubator, seed maker or mushroom log on GOG. The attached error file is not readable from here |
 | VF-043 | Yes | FIXED_AND_TESTED | SHIP (memory only) | Found while measuring memory, not from a report. In single player every object or terrain feature added to or removed from a location is queued for a network send that never happens, so removed objects stay in memory. Queues are cleared once each morning. 82% less memory growth over 40 nights on a late-game style farm |
+| VF-044 | Yes | FIXED_AND_TESTED | SHIP (opt-in) | Quest cleanup (Qi Beans, Calico Eggs) leaves ground drops that were made from an item id, because the sweep only checks drops that carry an item object. Reproduced, fixed, off by default |
+| VF-045 | Yes | FIXED_AND_TESTED | SHIP | Closing the About screen or the load menu on the title screen resets the options and turns the music back on while the mute button still shows muted. Reproduced and fixed |
+| VF-046 | Yes | FIXED_AND_TESTED (simulated id) | SHIP (log on, repair opt-in) | A special order is removed only when its participant list is empty, so an id of a deleted farmhand keeps it forever. Found by reading, reproduced with a made-up id, the host logs it and can remove it |
+| VF-047 | Yes | FIXED_AND_TESTED | SHIP | George's wheels do not turn when he walks up. Four identical frames in `Characters/George`, two different ones in the winter sheet. Frames copied from the winter sheet at load time |
+| VF-048 | Partly | REPORTED_UNCONFIRMED | DEFER | Desert Festival makeover and dye. `ReceiveMakeOver` equips the new outfit and the old pieces are not returned anywhere I could find. The reported dye loss is not reproduced |
+| VF-049 | Partly | REPORTED_UNCONFIRMED | DEFER | Willy fishing challenge without Calico Eggs after leaving the festival early. Needs a live festival day |
+| VF-050 | No | REPORTED_UNCONFIRMED | DEFER | Desert Festival bus entrance blocked by NPCs. Schedule and collision, not inspected |
+| VF-051 | No | REPORTED_UNCONFIRMED | DEFER | Farm lighting at a map boundary. Not inspected |
+| VF-052 | No | REPORTED_UNCONFIRMED | DEFER | Overnight host crash on Sundays. Needs the stack trace |
+| VF-053 | No | REPORTED_UNCONFIRMED | DEFER | Emily bulletin board introduction quest cannot finish while Robin is busy. NPC availability, not inspected |
+| VF-054 | Partly | REPORTED_UNCONFIRMED | DEFER | Horse passes through fences. The gate code adds temporary passable tiles to the rider (`Fence.cs`), the likely path. No repro steps available |
+| VF-055 | No | REPORTED_UNCONFIRMED | DEFER | Money sent to an offline farmhand lost after a save. Needs a multiplayer farm |
+| VF-056 | No | REPORTED_UNCONFIRMED | DEFER | Multiplayer masteries, powers and upgrades lost. Needs a multiplayer farm and saves |
+| VF-057 | No | UPSTREAM_FIX_PLANNED | REJECT | Fruit trees give mixed quality fruit after aging. Developer says 1.6.16 fixes it |
 
 ## Evidence for the inspected items
 
@@ -170,17 +184,17 @@ Diagnostic first: the same prefix can log a one-line stack trace whenever `isEat
 
 ## Implementation status (0.1.0)
 
-Built: `ValleyFixes/ValleyFixes.csproj`, net6.0, ModBuildConfig 4.4.0, 0 warnings, 0 errors. The zip holds only `manifest.json` and `ValleyFixes.dll`. 59 unit tests pass.
+Built: `ValleyFixes/ValleyFixes.csproj`, net6.0, ModBuildConfig 4.4.0, 0 warnings, 0 errors. The zip holds only `manifest.json` and `ValleyFixes.dll`. 69 unit tests pass.
 
 ## Release build 0.1.0
 
 | Item | Value |
 |---|---|
 | Zip | `ValleyFixes/bin/Release/net6.0/ValleyFixes 0.1.0.zip` (manifest.json and ValleyFixes.dll only) |
-| ValleyFixes.dll SHA-256 | d80d09d83e57399f19055b17fea4be1799b2cd6fa77cb54faa30f61094190aa0 |
-| Zip SHA-256 | 495c9834b4a390e27a3304a4fafbbd52987f96d93606bdea73cb335713116709 (the zip stores file times, so every build gives a new zip hash for the same DLL. Compare the DLL hash) |
-| Unit tests | 59 pass |
-| Last in-game pass | `defaults` (the config a new install gets) using this exact DLL (checked by hash against the test profile copy), 2026-11-01 16:45: Fair 250, movie text fixed, Trash Bear summer Sardine 0, remixed Chef's reward `O 221 3` in all 55 worlds with the bundle, blank names blocked, Portuguese `(solteiro)` and `(solteira)`, no mahogany bonus applied (opt-in off, 9.17 and 10.07 per tree, within the roll noise of the baseline 8.95 and 9.93), normal eating clean, no ValleyFixes errors |
+| ValleyFixes.dll SHA-256 | 5725070c9cbc4fbac10c9f757a29ccb2cf3900689a3af8974e1ffad5228b7df1 |
+| Zip SHA-256 | 39db651741f059c2ebda113062ab46bb94ae0edd128ee879b770147495cac234 (the zip stores file times, so every build gives a new zip hash for the same DLL. Compare the DLL hash) |
+| Unit tests | 69 pass |
+| Last in-game pass | `defaults` (the config a new install gets) using this exact DLL (checked by hash against the test profile copy), 2026-11-01 17:28, with George's wheel frames fixed, the Special order check logging and leaving the stale id alone, and the earlier results below unchanged: Fair 250, movie text fixed, Trash Bear summer Sardine 0, remixed Chef's reward `O 221 3` in all 55 worlds with the bundle, blank names blocked, Portuguese `(solteiro)` and `(solteira)`, no mahogany bonus applied (opt-in off, 9.17 and 10.07 per tree, within the roll noise of the baseline 8.95 and 9.93), normal eating clean, no ValleyFixes errors |
 
 ## Runtime test, 2026-11-01
 
@@ -376,6 +390,66 @@ The fix (`LocationBacklogTrim`, setting `TrimLocationChangeBacklog`, default on)
 
 Not covered: multiplayer (the fix steps aside), a real played late-game save, sessions longer than 40 in-game days, and mods that read `outgoingChanges` (none known). The memory soak in the stress section calls `DayUpdate` directly, which does not raise `DayStarted`, so it does not show this fix. The overnight runs do.
 
+### VF-044, quest items left on the ground
+
+Code: the end of a quest queues item ids in `team.itemsToRemoveOvernight` (`RemoveSpecialRule` adds `890` and `889` for the Qi Bean order, the Desert Festival adds `CalicoEgg`). Overnight `Game1._PerformRemoveNormalItemFromWorldOvernight` sweeps every location, and for ground drops it runs `l.debris.RemoveWhere(d => d.item != null && ...)`. A drop made from an id (`Game1.createObjectDebris`, crates, trees, monsters) is created through `Debris.InitializeItem`, which for an object-type item stores only `itemId` and leaves `item` null. So the sweep skips it.
+
+Runtime, a real overnight with `890` and `889` queued, Release DLL, fix off versus on (`-Only qibeans`):
+
+| Where the beans were | Before | After, fix off | After, fix on |
+|---|---|---|---|
+| Inventory | 5 | 0 | 0 |
+| Chest | 4 | 0 | 0 |
+| Ground, made from an item object (`new Debris(item)`) | 1 drop | 0 | 0 |
+| Ground, made from an id (`createObjectDebris`, `createMultipleObjectDebris`) | 4 drops | **4 (survive)** | 0 |
+| Control, a Sardine drop that must stay | 1 | 1 | 1 |
+
+The fix (`QuestItemDebrisFix`, setting `FixQuestItemGroundDrops`, **off by default**): a Harmony postfix on `Game1._RecursiveRemoveThisNormalItemLocation` that removes drops with no item object whose `itemId` matches the queued id. It is off because it takes away items a player could otherwise pick up and keep, which some players treat as a harmless quirk. Not run: a real Qi Bean quest, a real crate or monster drop (the test uses the same game calls they use), multiplayer.
+
+### VF-045, title screen music
+
+Code: `TitleMenu.applyPreferences` mutes with `Utility.toggleMuteMusic`, and the mute button sets `startupPreferences.startMuted`. Closing the About screen calls `TitleMenu.ReturnToMainTitleScreen`, which calls `Game1.ResetGameStateOnTitleScreen`, which does `options = new Options()` and so sets the music volume back to 0.75. Nothing re-applies the mute. The load menu does the same in `LoadGameMenu.saveFileScanComplete`. The exit-to-title path is fine because it calls `applyPreferences` after the reset.
+
+Runtime on the real title screen (`-Only title`, the harness clicks the real mute button, and puts your `startup_preferences` back afterwards):
+
+| Step | Volume, fix off | Icon | Volume, fix on | Icon |
+|---|---|---|---|---|
+| Mute clicked | 0 | muted | 0 | muted |
+| About open | 0 | muted | 0 | muted |
+| About closed | **0.75** | muted | 0 | muted |
+| Second About trip | 0.75 | muted | 0 | muted |
+| Load menu open | **0.75** | muted | 0 | muted |
+
+So the report is right: the music comes back while the button says muted, and the next click on it does the opposite of the icon. The fix (`TitleMusicMuteFix`, setting `FixTitleMusicMute`, default on): a postfix on `ReturnToMainTitleScreen` and `saveFileScanComplete` that mutes again only when the title screen is showing and the button shows muted and the volume is not already 0. The About open step was done by assigning the sub menu the way the click does, because the real click is ignored while the buttons slide in. Not run: gamepad, other languages, the 1.6.16 behavior (the forum mentions a related fix there).
+
+### VF-046, special order participants
+
+Code: `SpecialOrder.participants` (saved as `participantsIDs`) holds the ids of players who still have to claim. Each player removes themselves in `RemoveFromParticipants` or `OnMoneyRewardClaimed`. The host's per-tick `Update` removes an order only when `participants.Length == 0` (`MarkForRemovalIfEmpty`). `FarmerTeam.cs` refuses to add an order whose key is already in `specialOrders`. A farmhand deleted before claiming leaves an id nobody can remove, so the order stays in the team list and the same order cannot come back. This matches the forum report with two attached saves (not opened here).
+
+Runtime (`-Only stale`): two finished orders, one with a made-up participant id (the world has no such player) and a control with nobody. The game's own update and a real overnight ran.
+
+| | Control order | Order with the stale id, fix off | Order with the stale id, fix on |
+|---|---|---|---|
+| Still listed after the game's update | removed | **listed** | listed |
+| Still listed after the next morning | removed | **listed, 1 participant** | removed |
+
+The module (`StaleOrderParticipantsCheck`): each morning the host compares every order's participant and unclaimed reward ids with `Game1.getAllFarmers()`. `CheckStaleOrderParticipants` (on) only logs a warning with the order key. `RepairStaleOrderParticipants` (**off**) removes only those ids and leaves the game to remove an emptied order. Four unit tests cover the id comparison. Not run: a real multiplayer farm with a deleted cabin, the Walnut Room board refusing the order, split screen. The id was made up, so this proves the logic and the game's removal, not that the report's saves hit exactly this path.
+
+### VF-047, George's wheelchair
+
+Data: `Characters/George.png` is 4 by 6 frames of 16 by 32. In the up row all four frames are pixel identical. `Characters/George_Winter.png` has the wheel in two positions in the same row (36 pixels differ between neighbouring frames). For the frames that should match, the wheel art in both sheets is the same (frames 1 and 3 of the up row are the only ones that differ). The down and side rows turn in both sheets.
+
+| Up row, pixels of the wheel area that differ from frame 1 | Frame 1 | 2 | 3 | 4 |
+|---|---|---|---|---|
+| Fix off (as the game loads it) | 0 | 0 | 0 | 0 |
+| Fix on | 0 | 36 | 0 | 36 |
+
+The fix (`GeorgeWheelchairFix`, setting `FixGeorgeWheelchair`, default on): at load, copy the wheel rows of frames 2 and 4 from the winter sheet, but only when the normal sheet is still frozen, frames 1 and 3 match the winter sheet exactly and the winter sheet moves. Anything else (a sprite replacement pack) is left alone. The mod ships no art. Six unit tests cover the decision. Not run: seeing George walk up in the town, the iOS report.
+
+### Round three triage, 2026-11-01
+
+Two more research briefs (about 25 reports, many repeats of items already above) were checked against this audit. Already covered: VF-001, VF-002, VF-003, VF-004, VF-005, VF-007, VF-012, VF-013, VF-014, VF-015, VF-016, VF-022, VF-027. New and fixed above: VF-044 to VF-047. New and not fixed: VF-048 to VF-057 in the table. VF-005 was read again: `MineShaft.lowestLevelReached` returns the order-scoped value while a hard Mines order runs and the order sets it to 0 when it ends, so the Skills page shows 0 until the order is removed at the end of the day. `deepestMineLevel` is never touched. That is the reported symptom, and it is transient.
+
 ### Performance sample
 
 One idle 30 second sample on the Farm, clean profile (SMAPI, this mod and the test tool), Windows 11, 60 fps:
@@ -462,6 +536,10 @@ Automated checks run on 2026-11-01 against the installed game, to find bugs nobo
 | VF-030 | `ChefBundleRewardFix` | FIXED_AND_TESTED | Remixed Chef's reward `O 221 1` in 59 of 59 worlds, then `O 221 3` in 65 of 65 | Classic bundle unchanged, no other bundle touched | A real remixed new game. Existing worlds are not changed |
 | VF-036 | `PortugueseSingleStatusFix` | FIXED_AND_TESTED | Male farmer shown `(solteira)`, then `(solteiro)` | Female farmer text unchanged. The fix skips itself if the strings change | Social page itself. Italian and Russian |
 | VF-043 | `LocationBacklogTrim` | FIXED_AND_TESTED | Queues of 2,418 and 2,641 entries and 44.7 MB growth over 40 nights, then queues near 0 and 8.2 MB | Save read back from disk matches the live farm. No visible change. Skips itself in multiplayer | Multiplayer. A real played late-game save. Sessions over 40 days |
+| VF-044 | `QuestItemDebrisFix` (opt-in) | FIXED_AND_TESTED | 4 id-made bean drops survived a real overnight, then 0 | Inventory, chest and item-object drops already cleared. A non-quest drop stays | Real quest. Multiplayer |
+| VF-045 | `TitleMusicMuteFix` | FIXED_AND_TESTED | Volume 0.75 with the icon muted after About and the load menu, then 0 | Mute and unmute by the real button unchanged. Prefs file restored | Gamepad. Other languages |
+| VF-046 | `StaleOrderParticipantsCheck` (log on, repair opt-in) | FIXED_AND_TESTED (made-up id) | Order kept forever, then removed the next morning | Control order removed by the game as before | A real deleted farmhand. Multiplayer |
+| VF-047 | `GeorgeWheelchairFix` | FIXED_AND_TESTED | Wheel frames 0, 0, 0, 0 then 0, 36, 0, 36 | Skips when the sheets are not vanilla | George walking in town |
 | VF-012 | `BlankNameFix` | FIXED_AND_TESTED | OK allowed for a space-only name, then blocked | Normal names, outer spaces, blank favorite thing and the dye menu unchanged | Real OK click. Farmhand join. Repairing farms already affected |
 
 ## Ordered shortlist

@@ -1,0 +1,30 @@
+{
+  "world": "ready in FarmHouse, tick 405",
+  "stale_participants": {
+    "ordersMade": [
+      "Willy",
+      "Pam"
+    ],
+    "before": {
+      "staleListed": true,
+      "staleParticipants": 1,
+      "controlListed": true,
+      "controlParticipants": 0
+    },
+    "afterTicks": {
+      "staleListed": true,
+      "controlListed": false
+    },
+    "afterNight": {
+      "staleListed": true,
+      "staleParticipants": 1,
+      "controlListed": false
+    }
+  },
+  "note": null,
+  "mods": [
+    "SMAPI.ConsoleCommands 4.5.2",
+    "Kkthnx.ValleyFixes 0.1.0",
+    "Kkthnx.ValleyFixes.DevHarness 0.1.0"
+  ]
+}
