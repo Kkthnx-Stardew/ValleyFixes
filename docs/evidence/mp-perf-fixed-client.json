@@ -1,0 +1,74 @@
+{
+  "world": "client ready in FarmHouseddfaa04a-21c6-49fe-a81b-405f6de989e7, id 2220420183345688796",
+  "perf": {
+    "world": {
+      "date": "spring 1 y1",
+      "online": 2,
+      "farmObjects": 1022,
+      "farmTerrainFeatures": 536,
+      "objectQueue": 0,
+      "terrainQueue": 0,
+      "farmRoot": true
+    },
+    "idle_together": {
+      "seconds": 30,
+      "processCpuMsPerFrame": 3.6,
+      "processCpuPercentOfOneCore": 22,
+      "update": {
+        "frames": 1800,
+        "meanMs": 0.1,
+        "medianMs": 0.08,
+        "p99Ms": 0.21,
+        "maxMs": 9.21,
+        "over8ms": 1,
+        "over16ms": 0
+      },
+      "render": {
+        "frames": 1800,
+        "meanMs": 0.56,
+        "medianMs": 0.54,
+        "p99Ms": 0.74,
+        "maxMs": 1.57,
+        "over8ms": 0,
+        "over16ms": 0
+      },
+      "allocatedMBPerSecond": 3.71,
+      "gen0": 3,
+      "gen1": 2,
+      "gen2": 1,
+      "heapMB": 156
+    },
+    "walking_together": {
+      "seconds": 15,
+      "update": {
+        "frames": 900,
+        "meanMs": 0.1,
+        "medianMs": 0.09,
+        "p99Ms": 0.28,
+        "maxMs": 1.79,
+        "over8ms": 0,
+        "over16ms": 0
+      },
+      "render": {
+        "frames": 900,
+        "meanMs": 0.59,
+        "medianMs": 0.57,
+        "p99Ms": 0.81,
+        "maxMs": 1.25,
+        "over8ms": 0,
+        "over16ms": 0
+      },
+      "allocatedMBPerSecond": 3.75
+    },
+    "memory": {
+      "retainedMB": 124.2,
+      "workingSetMB": 1196
+    }
+  },
+  "note": null,
+  "mods": [
+    "SMAPI.ConsoleCommands 4.5.2",
+    "Kkthnx.ValleyFixes 0.1.0",
+    "Kkthnx.ValleyFixes.DevHarness 0.1.0"
+  ]
+}

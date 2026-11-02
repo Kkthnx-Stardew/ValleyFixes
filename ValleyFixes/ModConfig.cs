@@ -42,6 +42,9 @@ namespace ValleyFixes
         /// <summary>VF-047: George's wheelchair wheels do not turn when he walks up. The missing wheel frames are copied from his winter sprite sheet when the sheets are unmodified.</summary>
         public bool FixGeorgeWheelchair { get; set; } = true;
 
+        /// <summary>VF-055: with separate wallets, gold sent to or earned for a farmhand who is not in the game is lost at the next save and reload. The host copies the shared wallet into the saved copy before each save. Host only, does nothing without separate wallets.</summary>
+        public bool FixOfflineFarmhandWallets { get; set; } = true;
+
         /// <summary>VF-004: writes a short log entry when something cuts the eating animation short. Changes nothing in the game.</summary>
         public bool LogEatInterrupts { get; set; } = true;
     }

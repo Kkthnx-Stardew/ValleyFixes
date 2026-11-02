@@ -1,0 +1,16 @@
+{
+  "world": "host ready in FarmHouse, multiplayerMode 2, server True",
+  "cabin": "ready for -835894963134749425",
+  "clientJoined": true,
+  "goldreload": {
+    "hostSeparateWallets": true,
+    "hostTeamIndividualForFarmhand": 500,
+    "hostMoney": 7000
+  },
+  "note": null,
+  "mods": [
+    "SMAPI.ConsoleCommands 4.5.2",
+    "Kkthnx.ValleyFixes 0.1.0",
+    "Kkthnx.ValleyFixes.DevHarness 0.1.0"
+  ]
+}

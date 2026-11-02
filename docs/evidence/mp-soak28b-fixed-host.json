@@ -1,0 +1,737 @@
+{
+  "world": "host ready in FarmHouse, multiplayerMode 2, server True",
+  "cabin": "ready for 5612914768566653426",
+  "clientJoined": true,
+  "soak": [
+    {
+      "night": 0,
+      "world": {
+        "date": "spring 1 y1",
+        "online": 2,
+        "farmObjects": 1027,
+        "farmTerrainFeatures": 536,
+        "objectQueue": 0,
+        "terrainQueue": 0,
+        "all": {
+          "locations": 81,
+          "objects": 1872,
+          "features": 719,
+          "large": 696,
+          "debris": 0,
+          "queued": 1223
+        },
+        "farmRoot": true
+      },
+      "memory": {
+        "retainedMB": 114.8,
+        "workingSetMB": 1135
+      }
+    },
+    {
+      "night": 1,
+      "dayOfWeek": "Tue",
+      "world": {
+        "date": "spring 2 y1",
+        "online": 2,
+        "farmObjects": 1037,
+        "farmTerrainFeatures": 560,
+        "objectQueue": 0,
+        "terrainQueue": 0,
+        "all": {
+          "locations": 81,
+          "objects": 1946,
+          "features": 739,
+          "large": 696,
+          "debris": 0,
+          "queued": 1339
+        },
+        "farmRoot": true
+      },
+      "memory": {
+        "retainedMB": 116.8,
+        "workingSetMB": 1130
+      }
+    },
+    {
+      "night": 2,
+      "dayOfWeek": "Wed",
+      "world": {
+        "date": "spring 3 y1",
+        "online": 2,
+        "farmObjects": 1055,
+        "farmTerrainFeatures": 582,
+        "objectQueue": 0,
+        "terrainQueue": 0,
+        "all": {
+          "locations": 81,
+          "objects": 2008,
+          "features": 779,
+          "large": 696,
+          "debris": 0,
+          "queued": 1481
+        },
+        "farmRoot": true
+      },
+      "memory": {
+        "retainedMB": 118.1,
+        "workingSetMB": 1120
+      }
+    },
+    {
+      "night": 3,
+      "dayOfWeek": "Thu",
+      "world": {
+        "date": "spring 4 y1",
+        "online": 2,
+        "farmObjects": 1060,
+        "farmTerrainFeatures": 605,
+        "objectQueue": 0,
+        "terrainQueue": 0,
+        "all": {
+          "locations": 81,
+          "objects": 2044,
+          "features": 783,
+          "large": 696,
+          "debris": 0,
+          "queued": 1571
+        },
+        "farmRoot": true
+      },
+      "memory": {
+        "retainedMB": 118.8,
+        "workingSetMB": 1120
+      }
+    },
+    {
+      "night": 4,
+      "dayOfWeek": "Fri",
+      "world": {
+        "date": "spring 5 y1",
+        "online": 2,
+        "farmObjects": 1066,
+        "farmTerrainFeatures": 633,
+        "objectQueue": 0,
+        "terrainQueue": 0,
+        "all": {
+          "locations": 81,
+          "objects": 2065,
+          "features": 808,
+          "large": 696,
+          "debris": 0,
+          "queued": 1623
+        },
+        "farmRoot": true
+      },
+      "memory": {
+        "retainedMB": 119.4,
+        "workingSetMB": 1116
+      }
+    },
+    {
+      "night": 5,
+      "dayOfWeek": "Sat",
+      "world": {
+        "date": "spring 6 y1",
+        "online": 2,
+        "farmObjects": 1075,
+        "farmTerrainFeatures": 656,
+        "objectQueue": 0,
+        "terrainQueue": 0,
+        "all": {
+          "locations": 81,
+          "objects": 2087,
+          "features": 832,
+          "large": 696,
+          "debris": 0,
+          "queued": 1688
+        },
+        "farmRoot": true
+      },
+      "memory": {
+        "retainedMB": 119.8,
+        "workingSetMB": 1120
+      }
+    },
+    {
+      "night": 6,
+      "dayOfWeek": "Sun",
+      "world": {
+        "date": "spring 7 y1",
+        "online": 2,
+        "farmObjects": 1082,
+        "farmTerrainFeatures": 677,
+        "objectQueue": 0,
+        "terrainQueue": 0,
+        "all": {
+          "locations": 81,
+          "objects": 2081,
+          "features": 857,
+          "large": 696,
+          "debris": 0,
+          "queued": 1849
+        },
+        "farmRoot": true
+      },
+      "memory": {
+        "retainedMB": 120.8,
+        "workingSetMB": 1120
+      }
+    },
+    {
+      "night": 7,
+      "dayOfWeek": "Mon",
+      "world": {
+        "date": "spring 8 y1",
+        "online": 2,
+        "farmObjects": 1090,
+        "farmTerrainFeatures": 698,
+        "objectQueue": 0,
+        "terrainQueue": 0,
+        "all": {
+          "locations": 81,
+          "objects": 2106,
+          "features": 884,
+          "large": 696,
+          "debris": 0,
+          "queued": 1910
+        },
+        "farmRoot": true
+      },
+      "memory": {
+        "retainedMB": 121.4,
+        "workingSetMB": 1132
+      }
+    },
+    {
+      "night": 8,
+      "dayOfWeek": "Tue",
+      "world": {
+        "date": "spring 9 y1",
+        "online": 2,
+        "farmObjects": 1097,
+        "farmTerrainFeatures": 722,
+        "objectQueue": 0,
+        "terrainQueue": 0,
+        "all": {
+          "locations": 81,
+          "objects": 2137,
+          "features": 918,
+          "large": 696,
+          "debris": 0,
+          "queued": 1995
+        },
+        "farmRoot": true
+      },
+      "memory": {
+        "retainedMB": 122.1,
+        "workingSetMB": 1128
+      }
+    },
+    {
+      "night": 9,
+      "dayOfWeek": "Wed",
+      "world": {
+        "date": "spring 10 y1",
+        "online": 2,
+        "farmObjects": 1111,
+        "farmTerrainFeatures": 738,
+        "objectQueue": 0,
+        "terrainQueue": 0,
+        "all": {
+          "locations": 81,
+          "objects": 2184,
+          "features": 932,
+          "large": 696,
+          "debris": 0,
+          "queued": 2108
+        },
+        "farmRoot": true
+      },
+      "memory": {
+        "retainedMB": 123.1,
+        "workingSetMB": 1128
+      }
+    },
+    {
+      "night": 10,
+      "dayOfWeek": "Thu",
+      "world": {
+        "date": "spring 11 y1",
+        "online": 2,
+        "farmObjects": 1127,
+        "farmTerrainFeatures": 758,
+        "objectQueue": 0,
+        "terrainQueue": 0,
+        "all": {
+          "locations": 81,
+          "objects": 2218,
+          "features": 943,
+          "large": 696,
+          "debris": 0,
+          "queued": 2187
+        },
+        "farmRoot": true
+      },
+      "memory": {
+        "retainedMB": 123.8,
+        "workingSetMB": 1132
+      }
+    },
+    {
+      "night": 11,
+      "dayOfWeek": "Fri",
+      "world": {
+        "date": "spring 12 y1",
+        "online": 2,
+        "farmObjects": 1131,
+        "farmTerrainFeatures": 775,
+        "objectQueue": 0,
+        "terrainQueue": 0,
+        "all": {
+          "locations": 81,
+          "objects": 2235,
+          "features": 970,
+          "large": 696,
+          "debris": 0,
+          "queued": 2258
+        },
+        "farmRoot": true
+      },
+      "memory": {
+        "retainedMB": 124.3,
+        "workingSetMB": 1130
+      }
+    },
+    {
+      "night": 12,
+      "dayOfWeek": "Sat",
+      "world": {
+        "date": "spring 13 y1",
+        "online": 2,
+        "farmObjects": 1137,
+        "farmTerrainFeatures": 797,
+        "objectQueue": 0,
+        "terrainQueue": 0,
+        "all": {
+          "locations": 81,
+          "objects": 2257,
+          "features": 985,
+          "large": 696,
+          "debris": 0,
+          "queued": 2333
+        },
+        "farmRoot": true
+      },
+      "memory": {
+        "retainedMB": 124.8,
+        "workingSetMB": 1130
+      }
+    },
+    {
+      "night": 13,
+      "dayOfWeek": "Sun",
+      "world": {
+        "date": "spring 14 y1",
+        "online": 2,
+        "farmObjects": 1144,
+        "farmTerrainFeatures": 810,
+        "objectQueue": 0,
+        "terrainQueue": 0,
+        "all": {
+          "locations": 81,
+          "objects": 2246,
+          "features": 999,
+          "large": 696,
+          "debris": 0,
+          "queued": 2497
+        },
+        "farmRoot": true
+      },
+      "memory": {
+        "retainedMB": 125.7,
+        "workingSetMB": 1068
+      }
+    },
+    {
+      "night": 14,
+      "dayOfWeek": "Mon",
+      "world": {
+        "date": "spring 15 y1",
+        "online": 2,
+        "farmObjects": 1164,
+        "farmTerrainFeatures": 826,
+        "objectQueue": 0,
+        "terrainQueue": 0,
+        "all": {
+          "locations": 81,
+          "objects": 2300,
+          "features": 1005,
+          "large": 696,
+          "debris": 0,
+          "queued": 2587
+        },
+        "farmRoot": true
+      },
+      "memory": {
+        "retainedMB": 126.6,
+        "workingSetMB": 1070
+      }
+    },
+    {
+      "night": 15,
+      "dayOfWeek": "Tue",
+      "world": {
+        "date": "spring 16 y1",
+        "online": 2,
+        "farmObjects": 1173,
+        "farmTerrainFeatures": 839,
+        "objectQueue": 0,
+        "terrainQueue": 0,
+        "all": {
+          "locations": 81,
+          "objects": 2322,
+          "features": 1025,
+          "large": 696,
+          "debris": 0,
+          "queued": 2638
+        },
+        "farmRoot": true
+      },
+      "memory": {
+        "retainedMB": 127.1,
+        "workingSetMB": 1072
+      }
+    },
+    {
+      "night": 16,
+      "dayOfWeek": "Wed",
+      "world": {
+        "date": "spring 17 y1",
+        "online": 2,
+        "farmObjects": 1178,
+        "farmTerrainFeatures": 859,
+        "objectQueue": 0,
+        "terrainQueue": 0,
+        "all": {
+          "locations": 81,
+          "objects": 2342,
+          "features": 1039,
+          "large": 696,
+          "debris": 0,
+          "queued": 2691
+        },
+        "farmRoot": true
+      },
+      "memory": {
+        "retainedMB": 127.4,
+        "workingSetMB": 1072
+      }
+    },
+    {
+      "night": 17,
+      "dayOfWeek": "Thu",
+      "world": {
+        "date": "spring 18 y1",
+        "online": 2,
+        "farmObjects": 1184,
+        "farmTerrainFeatures": 871,
+        "objectQueue": 0,
+        "terrainQueue": 0,
+        "all": {
+          "locations": 81,
+          "objects": 2364,
+          "features": 1050,
+          "large": 696,
+          "debris": 0,
+          "queued": 2734
+        },
+        "farmRoot": true
+      },
+      "memory": {
+        "retainedMB": 127.8,
+        "workingSetMB": 1074
+      }
+    },
+    {
+      "night": 18,
+      "dayOfWeek": "Fri",
+      "world": {
+        "date": "spring 19 y1",
+        "online": 2,
+        "farmObjects": 1187,
+        "farmTerrainFeatures": 886,
+        "objectQueue": 0,
+        "terrainQueue": 0,
+        "all": {
+          "locations": 81,
+          "objects": 2376,
+          "features": 1065,
+          "large": 696,
+          "debris": 0,
+          "queued": 2767
+        },
+        "farmRoot": true
+      },
+      "memory": {
+        "retainedMB": 128.1,
+        "workingSetMB": 1075
+      }
+    },
+    {
+      "night": 19,
+      "dayOfWeek": "Sat",
+      "world": {
+        "date": "spring 20 y1",
+        "online": 2,
+        "farmObjects": 1190,
+        "farmTerrainFeatures": 901,
+        "objectQueue": 0,
+        "terrainQueue": 0,
+        "all": {
+          "locations": 81,
+          "objects": 2386,
+          "features": 1094,
+          "large": 696,
+          "debris": 0,
+          "queued": 2820
+        },
+        "farmRoot": true
+      },
+      "memory": {
+        "retainedMB": 128.6,
+        "workingSetMB": 1078
+      }
+    },
+    {
+      "night": 20,
+      "dayOfWeek": "Sun",
+      "world": {
+        "date": "spring 21 y1",
+        "online": 2,
+        "farmObjects": 1200,
+        "farmTerrainFeatures": 911,
+        "objectQueue": 0,
+        "terrainQueue": 0,
+        "all": {
+          "locations": 81,
+          "objects": 2368,
+          "features": 1114,
+          "large": 696,
+          "debris": 0,
+          "queued": 2990
+        },
+        "farmRoot": true
+      },
+      "memory": {
+        "retainedMB": 129.4,
+        "workingSetMB": 1079
+      }
+    },
+    {
+      "night": 21,
+      "dayOfWeek": "Mon",
+      "world": {
+        "date": "spring 22 y1",
+        "online": 2,
+        "farmObjects": 1205,
+        "farmTerrainFeatures": 923,
+        "objectQueue": 0,
+        "terrainQueue": 0,
+        "all": {
+          "locations": 81,
+          "objects": 2395,
+          "features": 1114,
+          "large": 696,
+          "debris": 0,
+          "queued": 3082
+        },
+        "farmRoot": true
+      },
+      "memory": {
+        "retainedMB": 130.1,
+        "workingSetMB": 1080
+      }
+    },
+    {
+      "night": 22,
+      "dayOfWeek": "Tue",
+      "world": {
+        "date": "spring 23 y1",
+        "online": 2,
+        "farmObjects": 1208,
+        "farmTerrainFeatures": 936,
+        "objectQueue": 0,
+        "terrainQueue": 0,
+        "all": {
+          "locations": 81,
+          "objects": 2424,
+          "features": 1133,
+          "large": 696,
+          "debris": 0,
+          "queued": 3160
+        },
+        "farmRoot": true
+      },
+      "memory": {
+        "retainedMB": 130.7,
+        "workingSetMB": 1080
+      }
+    },
+    {
+      "night": 23,
+      "dayOfWeek": "Wed",
+      "world": {
+        "date": "spring 24 y1",
+        "online": 2,
+        "farmObjects": 1211,
+        "farmTerrainFeatures": 946,
+        "objectQueue": 0,
+        "terrainQueue": 0,
+        "all": {
+          "locations": 81,
+          "objects": 2447,
+          "features": 1137,
+          "large": 696,
+          "debris": 0,
+          "queued": 3238
+        },
+        "farmRoot": true
+      },
+      "memory": {
+        "retainedMB": 131.2,
+        "workingSetMB": 1083
+      }
+    },
+    {
+      "night": 24,
+      "dayOfWeek": "Thu",
+      "world": {
+        "date": "spring 25 y1",
+        "online": 2,
+        "farmObjects": 1215,
+        "farmTerrainFeatures": 964,
+        "objectQueue": 0,
+        "terrainQueue": 0,
+        "all": {
+          "locations": 81,
+          "objects": 2460,
+          "features": 1150,
+          "large": 696,
+          "debris": 0,
+          "queued": 3302
+        },
+        "farmRoot": true
+      },
+      "memory": {
+        "retainedMB": 131.7,
+        "workingSetMB": 1084
+      }
+    },
+    {
+      "night": 25,
+      "dayOfWeek": "Fri",
+      "world": {
+        "date": "spring 26 y1",
+        "online": 2,
+        "farmObjects": 1220,
+        "farmTerrainFeatures": 973,
+        "objectQueue": 0,
+        "terrainQueue": 0,
+        "all": {
+          "locations": 81,
+          "objects": 2476,
+          "features": 1165,
+          "large": 696,
+          "debris": 0,
+          "queued": 3365
+        },
+        "farmRoot": true
+      },
+      "memory": {
+        "retainedMB": 132.2,
+        "workingSetMB": 1090
+      }
+    },
+    {
+      "night": 26,
+      "dayOfWeek": "Sat",
+      "world": {
+        "date": "spring 27 y1",
+        "online": 2,
+        "farmObjects": 1223,
+        "farmTerrainFeatures": 989,
+        "objectQueue": 0,
+        "terrainQueue": 0,
+        "all": {
+          "locations": 81,
+          "objects": 2495,
+          "features": 1179,
+          "large": 696,
+          "debris": 0,
+          "queued": 3427
+        },
+        "farmRoot": true
+      },
+      "memory": {
+        "retainedMB": 132.5,
+        "workingSetMB": 1089
+      }
+    },
+    {
+      "night": 27,
+      "dayOfWeek": "Sun",
+      "world": {
+        "date": "spring 28 y1",
+        "online": 2,
+        "farmObjects": 1228,
+        "farmTerrainFeatures": 999,
+        "objectQueue": 0,
+        "terrainQueue": 0,
+        "all": {
+          "locations": 81,
+          "objects": 2490,
+          "features": 1188,
+          "large": 696,
+          "debris": 0,
+          "queued": 3596
+        },
+        "farmRoot": true
+      },
+      "memory": {
+        "retainedMB": 133.5,
+        "workingSetMB": 1090
+      }
+    },
+    {
+      "night": 28,
+      "dayOfWeek": "Mon",
+      "world": {
+        "date": "summer 1 y1",
+        "online": 2,
+        "farmObjects": 1291,
+        "farmTerrainFeatures": 1012,
+        "objectQueue": 0,
+        "terrainQueue": 0,
+        "all": {
+          "locations": 81,
+          "objects": 2580,
+          "features": 1195,
+          "large": 696,
+          "debris": 0,
+          "queued": 3823
+        },
+        "farmRoot": true
+      },
+      "memory": {
+        "retainedMB": 135.6,
+        "workingSetMB": 1090
+      }
+    }
+  ],
+  "note": null,
+  "mods": [
+    "SMAPI.ConsoleCommands 4.5.2",
+    "Kkthnx.ValleyFixes 0.1.0",
+    "Kkthnx.ValleyFixes.DevHarness 0.1.0"
+  ]
+}

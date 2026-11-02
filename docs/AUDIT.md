@@ -1,21 +1,21 @@
 # ValleyFixes audit
 
-Audit date: 2026-11-01. Only VF-001, VF-004, VF-006, VF-007, VF-012, VF-022, VF-030, VF-036, VF-043, VF-044, VF-045, VF-046 (made-up id) and VF-047 were run in the live game (see "Runtime test"). Every other "confirmed" is a code or data reading only, marked `CODE_CONFIRMED_TEST_PENDING`.
+Audit date: 2026-11-01. Only VF-001, VF-004, VF-006, VF-007, VF-012, VF-022, VF-030, VF-036, VF-043, VF-044, VF-045, VF-046 (made-up id), VF-047, VF-048, VF-055 and VF-056 were run in the live game (see "Runtime test"). Every other "confirmed" is a code or data reading only, marked `CODE_CONFIRMED_TEST_PENDING`.
 
 ## Summary
 
-57 reports were audited (VF-001 to VF-057) against the installed game 1.6.15 build 24356. Twelve were fixed and tested in the running game and ship in 0.1.0. One more only logs.
+57 reports were audited (VF-001 to VF-057) against the installed game 1.6.15 build 24356. Thirteen were fixed and tested in the running game and ship in 0.1.0. One more only logs.
 
 | Result | Count | Items |
 |---|---|---|
-| FIXED_AND_TESTED, shipped | 12 | VF-001, VF-006 (opt-in), VF-007, VF-012, VF-022, VF-030, VF-036, VF-043, VF-044 (opt-in), VF-045, VF-046 (log on, repair opt-in), VF-047 |
+| FIXED_AND_TESTED, shipped | 13 | VF-001, VF-006 (opt-in), VF-007, VF-012, VF-022, VF-030, VF-036, VF-043, VF-044 (opt-in), VF-045, VF-046 (log on, repair opt-in), VF-047, VF-055 |
 | CONFIRMED_PENDING_FIX | 2 | VF-004 (logging shipped, no behavior change), VF-003 (harmless, would need a transpiler) |
 | CODE_CONFIRMED_TEST_PENDING | 3 | VF-002, VF-013, VF-014 (design or balance calls, or unreproduced) |
 | INTENTIONAL_OR_BALANCE | 5 | VF-005, VF-015, VF-016, VF-034, VF-039 |
 | UPSTREAM_FIX_PLANNED | 3 | VF-027, VF-028, VF-057 |
 | OUT_OF_SCOPE | 5 | VF-029, VF-031, VF-032, VF-037, VF-041 |
-| CANNOT_REPRODUCE | 1 | VF-038 |
-| REPORTED_UNCONFIRMED | 26 | Mostly multiplayer, save, desert festival and crash reports with no usable evidence or a risk to saves. VF-048 to VF-056 were added in round three |
+| CANNOT_REPRODUCE | 3 | VF-038, VF-048, VF-056 |
+| REPORTED_UNCONFIRMED | 23 | Mostly multiplayer, save, desert festival and crash reports with no usable evidence or a risk to saves. VF-048 to VF-056 were added in round three |
 
 Shipped fixes and their settings are in `README.md`. How each one hooks in, and the limits, are in `COMPATIBILITY.md`. How it was tested is in `REPRODUCTION.md`.
 
@@ -84,20 +84,20 @@ Caveat: the installed `Mods` folder holds roughly 100 mods. All runtime tests ne
 | VF-040 | No | REPORTED_UNCONFIRMED | DEFER | Starfruit in a keg sometimes explodes. No bomb or explosion in `Data/Machines`, one report, no log |
 | VF-041 | No | OUT_OF_SCOPE | REJECT | `IsFloorableTile` does not do what its name says. It only matters to map makers and mods |
 | VF-042 | No | REPORTED_UNCONFIRMED | DEFER | Crash using the incubator, seed maker or mushroom log on GOG. The attached error file is not readable from here |
-| VF-043 | Yes | FIXED_AND_TESTED | SHIP (memory only) | Found while measuring memory, not from a report. In single player every object or terrain feature added to or removed from a location is queued for a network send that never happens, so removed objects stay in memory. Queues are cleared once each morning. 82% less memory growth over 40 nights on a late-game style farm |
+| VF-043 | Yes | FIXED_AND_TESTED | SHIP (memory only) | Found while measuring memory, not from a report. Every object or terrain feature added to or removed from a location is queued for a network send. In single player that send never happens, and for a multiplayer host it only happens for locations with a network root, so removed objects stay in memory. Queues of locations without a root are cleared once each morning. 82% less memory growth over 40 nights on a late-game style farm, and 44% less over 20 nights as a multiplayer host |
 | VF-044 | Yes | FIXED_AND_TESTED | SHIP (opt-in) | Quest cleanup (Qi Beans, Calico Eggs) leaves ground drops that were made from an item id, because the sweep only checks drops that carry an item object. Reproduced, fixed, off by default |
 | VF-045 | Yes | FIXED_AND_TESTED | SHIP | Closing the About screen or the load menu on the title screen resets the options and turns the music back on while the mute button still shows muted. Reproduced and fixed |
 | VF-046 | Yes | FIXED_AND_TESTED (simulated id) | SHIP (log on, repair opt-in) | A special order is removed only when its participant list is empty, so an id of a deleted farmhand keeps it forever. Found by reading, reproduced with a made-up id, the host logs it and can remove it |
 | VF-047 | Yes | FIXED_AND_TESTED | SHIP | George's wheels do not turn when he walks up. Four identical frames in `Characters/George`, two different ones in the winter sheet. Frames copied from the winter sheet at load time |
-| VF-048 | Partly | REPORTED_UNCONFIRMED | DEFER | Desert Festival makeover and dye. `ReceiveMakeOver` equips the new outfit and the old pieces are not returned anywhere I could find. The reported dye loss is not reproduced |
+| VF-048 | Yes | CANNOT_REPRODUCE | REJECT | Desert Festival makeover and dye. Dyed pants and a dyed shirt went into the inventory with their colors unchanged, for a single player and for a joiner as the host sees them |
 | VF-049 | Partly | REPORTED_UNCONFIRMED | DEFER | Willy fishing challenge without Calico Eggs after leaving the festival early. Needs a live festival day |
 | VF-050 | No | REPORTED_UNCONFIRMED | DEFER | Desert Festival bus entrance blocked by NPCs. Schedule and collision, not inspected |
 | VF-051 | No | REPORTED_UNCONFIRMED | DEFER | Farm lighting at a map boundary. Not inspected |
-| VF-052 | No | REPORTED_UNCONFIRMED | DEFER | Overnight host crash on Sundays. Needs the stack trace |
+| VF-052 | No | REPORTED_UNCONFIRMED | DEFER | Overnight host crash on Sundays. Needs the stack trace. Over 200 host nights with a joiner online across about 14 soak runs, Sundays included, gave no crash or null reference. The game's own freeze at the new day save (see the multiplayer section) is a different symptom |
 | VF-053 | No | REPORTED_UNCONFIRMED | DEFER | Emily bulletin board introduction quest cannot finish while Robin is busy. NPC availability, not inspected |
 | VF-054 | Partly | REPORTED_UNCONFIRMED | DEFER | Horse passes through fences. The gate code adds temporary passable tiles to the rider (`Fence.cs`), the likely path. No repro steps available |
-| VF-055 | No | REPORTED_UNCONFIRMED | DEFER | Money sent to an offline farmhand lost after a save. Needs a multiplayer farm |
-| VF-056 | No | REPORTED_UNCONFIRMED | DEFER | Multiplayer masteries, powers and upgrades lost. Needs a multiplayer farm and saves |
+| VF-055 | Yes | FIXED_AND_TESTED | SHIP | Separate wallets: gold sent to an offline farmhand, or paid for their shipping bin, is lost at the next save and reload. A saved farmhand has a private team, the save writes its stale wallet. Reproduced and fixed with a real second game |
+| VF-056 | Yes | CANNOT_REPRODUCE | REJECT | Multiplayer masteries, powers and upgrades lost. A joiner earned professions, mail (powers), mastery experience, a skill level, recipes, a tool upgrade, a house upgrade and keys. All of it was in the host's save file after the joiner left. Only the report's own trigger is missing |
 | VF-057 | No | UPSTREAM_FIX_PLANNED | REJECT | Fruit trees give mixed quality fruit after aging. Developer says 1.6.16 fixes it |
 
 ## Evidence for the inspected items
@@ -191,10 +191,10 @@ Built: `ValleyFixes/ValleyFixes.csproj`, net6.0, ModBuildConfig 4.4.0, 0 warning
 | Item | Value |
 |---|---|
 | Zip | `ValleyFixes/bin/Release/net6.0/ValleyFixes 0.1.0.zip` (manifest.json and ValleyFixes.dll only) |
-| ValleyFixes.dll SHA-256 | 5725070c9cbc4fbac10c9f757a29ccb2cf3900689a3af8974e1ffad5228b7df1 |
-| Zip SHA-256 | 39db651741f059c2ebda113062ab46bb94ae0edd128ee879b770147495cac234 (the zip stores file times, so every build gives a new zip hash for the same DLL. Compare the DLL hash) |
+| ValleyFixes.dll SHA-256 | 14d330781a5a7748037b9318493f637c8be0f58d80b69250a32c0da92e852986 |
+| Zip SHA-256 | 48043a7c810120e571fdf92d43721da9ca719090d8a317121a8f1b0cf001777a (the zip stores file times, so every build gives a new zip hash for the same DLL. Compare the DLL hash) |
 | Unit tests | 69 pass |
-| Last in-game pass | `defaults` (the config a new install gets) using this exact DLL (checked by hash against the test profile copy), 2026-11-01 17:28, with George's wheel frames fixed, the Special order check logging and leaving the stale id alone, and the earlier results below unchanged: Fair 250, movie text fixed, Trash Bear summer Sardine 0, remixed Chef's reward `O 221 3` in all 55 worlds with the bundle, blank names blocked, Portuguese `(solteiro)` and `(solteira)`, no mahogany bonus applied (opt-in off, 9.17 and 10.07 per tree, within the roll noise of the baseline 8.95 and 9.93), normal eating clean, no ValleyFixes errors |
+| Last in-game pass | `defaults` (the config a new install gets) using this exact DLL (checked by hash against the test profile copy), 2026-11-01 19:05, with George's wheel frames fixed, the Special order check logging and leaving the stale id alone, and the earlier results below unchanged. After it, a 12 night single player run (queues 0 every morning, 5.1 MB growth) and the offline farmhand gold test (3,950g in the file) were run with this DLL: Fair 250, movie text fixed, Trash Bear summer Sardine 0, remixed Chef's reward `O 221 3` in all 55 worlds with the bundle, blank names blocked, Portuguese `(solteiro)` and `(solteira)`, no mahogany bonus applied (opt-in off, 9.17 and 10.07 per tree, within the roll noise of the baseline 8.95 and 9.93), normal eating clean, no ValleyFixes errors |
 
 ## Runtime test, 2026-11-01
 
@@ -450,6 +450,67 @@ The fix (`GeorgeWheelchairFix`, setting `FixGeorgeWheelchair`, default on): at l
 
 Two more research briefs (about 25 reports, many repeats of items already above) were checked against this audit. Already covered: VF-001, VF-002, VF-003, VF-004, VF-005, VF-007, VF-012, VF-013, VF-014, VF-015, VF-016, VF-022, VF-027. New and fixed above: VF-044 to VF-047. New and not fixed: VF-048 to VF-057 in the table. VF-005 was read again: `MineShaft.lowestLevelReached` returns the order-scoped value while a hard Mines order runs and the order sets it to 0 when it ends, so the Skills page shows 0 until the order is removed at the end of the day. `deepestMineLevel` is never touched. That is the reported symptom, and it is transient.
 
+### Multiplayer test setup and results, 2026-11-01
+
+Setup: `tools/Run-Multiplayer.ps1` starts two real game processes on this PC. The first creates a throwaway farm in multiplayer mode, builds a cabin and a customized farmhand, and hosts. The second connects to localhost and joins through the real farmhand menu. Each side runs its half of a scenario and the two wait for each other at named points. Both ran the same ValleyFixes build and setting. Not covered: split screen, three or more players, another PC or internet play, a dedicated server.
+
+#### VF-055, gold sent to an offline farmhand
+
+Code: with separate wallets the host keeps each player's gold in `team.individualMoney`. `ManorHouse.sendMoney` and the overnight payment for a farmhand's shipping bin both add to that list. A farmhand who has not joined since the world was loaded is a saved copy with a private team of its own. The save writes the private copy's wallet (`Farmer._money` reads `teamRoot`), and on the next load the world reads that value back into the shared list. So the gold lives in the game until the next save and reload.
+
+Runtime, host only with the farmhand offline (`-Only gold`): separate wallets on, 3,000g sent from the Manor ledger, 20 parsnips in the farmhand's shipping bin (700g), one night. Then a kept world was loaded in a fresh game and the farmhand joined (`goldreload`):
+
+| | Fix off | Fix on |
+|---|---|---|
+| Shared wallet for the farmhand after the night | 3,950g | 3,950g |
+| Farmhand's own copy after the night | 500g | 3,950g |
+| Wallet written to the save file | **500g** | 3,950g |
+| Gold the joining player has after a fresh load | **500g** | 3,950g |
+
+So 3,450g vanished, including the shipping bin money. The fix (`OfflineFarmhandWalletFix`, setting `FixOfflineFarmhandWallets`, default on): before each save the host sets the saved copy's wallet to the shared value for every farmhand who does not share the host's team. It only sets, never adds, so running it twice changes nothing. Not run: three players, a farmhand who joined and left in the same session (they share the host team and were already right).
+
+#### VF-043 in multiplayer, memory
+
+In single player no location has a network root. A multiplayer host still has locations no joiner has been sent, and the game empties a location's queue only when it has a root. The host's queues for Forest, IslandWest, Town, BugLand, Railroad, Mountain, IslandNorth and others kept growing (`hasRoot` false in every one).
+
+| Host with one joiner online | Fix off | Fix on |
+|---|---|---|
+| 12 nights, three runs: memory growth | 10.0 and 9.8 MB | 5.8, 6.4 and 6.2 MB |
+| 12 nights: unsent entries, first to last night | 1,182 to 2,268 | 0 to 0 |
+| 20 nights: memory growth | 14.8 MB | 8.3 MB |
+| 20 nights: unsent entries | 1,178 to 2,989 | 0 |
+| 28 nights before the change, for comparison | 20.8 MB, 1,223 to 3,823 | (single player with the fix: 9.2 MB) |
+
+The joiner's own copy grew 5.8 MB over 28 nights and its queue stayed at 1,183 to 1,193. The fix (`TrimLocationChangeBacklog` now clears every location that has no network root, main player only): 76 of 81 locations cleared, 5 with a root left to the game. Integrity check after 20 nights: the joiner walked into Town, Forest, Mountain, Railroad, BusStop, Beach and IslandWest and counted what it saw. Objects, terrain features and large features matched the host in all seven, with the fix on and off (Town read 2 objects higher on the joiner in both runs, so that is not from the fix).
+
+#### VF-056, character progression across sessions
+
+A joiner earned two professions, a power-style mail flag, a mastery experience stat, a skill level and experience, a crafting and a cooking recipe, an Axe upgrade to level 2, a house upgrade, an inventory size, the Rusty and Skull keys, a seen event, a secret note, a fish record and an achievement. A night saved the world with the joiner online, the joiner left, the host slept alone, and the file was read. The farmer was serialized the way the game saves it and compared element by element, as sets.
+
+The only differences were values that change on their own: play time, the swing counters of tools, `songsHeard` and `triggerActionsRun`, the disconnect position, and recipes and a pending level-up that the host's night granted for the skill level the test set. Every progression field was in the file. The upgrade level 2 on the Axe, the mastery experience, the professions and the mail all matched. Not run: a joiner who joins an older save, a host crash during a night, a farmhand deleted and recreated. The report's own trigger is unknown.
+
+#### VF-048, makeover
+
+Dyed pants `(P)3` (green) and a dyed shirt were worn, `DesertFestival.ReceiveMakeOver` was called, and the old pieces were found in the inventory with the same colors (`4278241280` and `4281467080` both before and after). The host, watching the joiner, saw the same two items with the same colors. Not run: the full event on a festival day, starter shorts from a very old save.
+
+#### Multiplayer performance
+
+Idle on the Farm for 30 seconds, then walking, host and joiner together, fix on. Single player on the same machine for comparison (empty farm, fix on):
+
+| | Update mean / p99 (ms) | Render mean / p99 (ms) | Allocation |
+|---|---|---|---|
+| Single player, empty farm | 0.12 / 0.33 | 0.54 / 0.68 | 3.6 MB/s |
+| Host, idle | 0.13 / 0.33 | 0.62 / 0.85 | 3.7 MB/s |
+| Host, both walking | 0.13 / 0.34 | 0.65 / 0.87 | 3.8 MB/s |
+| Joiner, idle | 0.10 / 0.21 | 0.56 / 0.74 | 3.7 MB/s |
+| Joiner, both walking | 0.10 / 0.28 | 0.59 / 0.81 | 3.8 MB/s |
+
+A second player adds under 0.1 ms per frame on the host. No stutter or allocation problem in these samples. The only multiplayer cost found was the memory leak above.
+
+#### A freeze in the game's own new day save
+
+Twice in about 20 two-player runs the host stopped in the new day save for good (log ends at "before save", no error, joiner carried on). One of the two was a run with every ValleyFixes fix turned off, at the same night (7), so it is not caused by this mod. It may come from the test (both players call the sleep routine at the same moment) or from the game. It is not fixed and not proven to be a game bug. The runner now stops a run that makes no progress for four minutes.
+
 ### Performance sample
 
 One idle 30 second sample on the Farm, clean profile (SMAPI, this mod and the test tool), Windows 11, 60 fps:
@@ -540,6 +601,7 @@ Automated checks run on 2026-11-01 against the installed game, to find bugs nobo
 | VF-045 | `TitleMusicMuteFix` | FIXED_AND_TESTED | Volume 0.75 with the icon muted after About and the load menu, then 0 | Mute and unmute by the real button unchanged. Prefs file restored | Gamepad. Other languages |
 | VF-046 | `StaleOrderParticipantsCheck` (log on, repair opt-in) | FIXED_AND_TESTED (made-up id) | Order kept forever, then removed the next morning | Control order removed by the game as before | A real deleted farmhand. Multiplayer |
 | VF-047 | `GeorgeWheelchairFix` | FIXED_AND_TESTED | Wheel frames 0, 0, 0, 0 then 0, 36, 0, 36 | Skips when the sheets are not vanilla | George walking in town |
+| VF-055 | `OfflineFarmhandWalletFix` | FIXED_AND_TESTED | Save file said 500g and the joiner had 500g after a fresh load, then 3,950g | Shared wallet and the host's own money unchanged. Only sets, never adds | Three players. A farmhand who left in the same session |
 | VF-012 | `BlankNameFix` | FIXED_AND_TESTED | OK allowed for a space-only name, then blocked | Normal names, outer spaces, blank favorite thing and the dye menu unchanged | Real OK click. Farmhand join. Repairing farms already affected |
 
 ## Ordered shortlist

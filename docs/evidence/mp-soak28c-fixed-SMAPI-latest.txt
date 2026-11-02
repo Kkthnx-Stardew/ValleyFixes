@@ -1,0 +1,133 @@
+[18:07:01 INFO  SMAPI] SMAPI 4.5.2 with Stardew Valley 1.6.15 build 24356 on Windows 11 (10.0.26200.0)
+[18:07:01 INFO  SMAPI] Mods go here: ~\Documents\GitHub\ValleyFixes\testprofile\Mods
+[18:07:01 TRACE SMAPI] (Using custom --mods-path argument. Game folder: D:\SteamLibrary\steamapps\common\Stardew Valley.)
+[18:07:01 TRACE SMAPI] Log started at 2026-11-01T23:07:01 UTC
+[18:07:04 WARN  SMAPI] Writing to the terminal is disabled because the --no-terminal argument was received. This usually means launching the terminal failed.
+[18:07:04 DEBUG SMAPI] Waiting for game to launch...
+[18:07:05 TRACE game] Instance_Initialize() finished, elapsed = '00:00:00.2648664'
+[18:07:05 TRACE SMAPI] Scanning for malicious files...
+[18:07:05 DEBUG SMAPI] Loading mod metadata...
+[18:07:05 DEBUG SMAPI] Loading mods...
+[18:07:05 TRACE SMAPI]    Console Commands (from Mods\ConsoleCommands\ConsoleCommands.dll, ID: SMAPI.ConsoleCommands, assembly version: 4.5.2)...
+[18:07:05 TRACE SMAPI]    ValleyFixes (from Mods\ValleyFixes\ValleyFixes.dll, ID: Kkthnx.ValleyFixes, assembly version: 0.1.0)...
+[18:07:05 TRACE SMAPI]       Detected game patcher in assembly ValleyFixes.dll.
+[18:07:05 TRACE SMAPI]    ValleyFixes DevHarness (from Mods\ValleyFixes.DevHarness\ValleyFixes.DevHarness.dll, ID: Kkthnx.ValleyFixes.DevHarness, assembly version: 0.1.0)...
+[18:07:05 INFO  SMAPI] Loaded 3 mods:
+[18:07:05 INFO  SMAPI]    Console Commands 4.5.2 by SMAPI | Adds SMAPI console commands that let you manipulate the game.
+[18:07:05 INFO  SMAPI]    ValleyFixes 0.1.0 by Kkthnx | Small, separately switchable fixes for verified Stardew Valley 1.6.15 bugs. Every fix has its own toggle and skips itself if the game data no longer matches.
+[18:07:05 INFO  SMAPI]    ValleyFixes DevHarness 0.1.0 by Kkthnx | Test tool for ValleyFixes. Does nothing unless the VFH_OUT environment variable is set. Never ship this.
+
+[18:07:05 INFO  SMAPI]    Patched game code
+[18:07:05 INFO  SMAPI]    --------------------------------------------------
+[18:07:05 INFO  SMAPI]       These mods directly change the game code. They're more likely to cause errors or bugs in-game; if
+[18:07:05 INFO  SMAPI]       your game has issues, try removing these first. Otherwise you can ignore this warning.
+
+[18:07:05 INFO  SMAPI]       - ValleyFixes
+
+[18:07:05 DEBUG SMAPI]    No update keys
+[18:07:05 DEBUG SMAPI]    --------------------------------------------------
+[18:07:05 DEBUG SMAPI]       These mods have no update keys in their manifest. SMAPI may not notify you about updates for these
+[18:07:05 DEBUG SMAPI]       mods. Consider notifying the mod authors about this problem.
+
+[18:07:05 DEBUG SMAPI]       - ValleyFixes
+[18:07:05 DEBUG SMAPI]       - ValleyFixes DevHarness
+
+[18:07:05 DEBUG SMAPI] Launching mods...
+[18:07:05 DEBUG SMAPI] Mods loaded and ready!
+[18:07:05 TRACE SMAPI] Checking for known software conflicts...
+[18:07:05 WARN  SMAPI] Found MSI Afterburner and RivaTuner Statistics Server installed, which may conflict with SMAPI. If you experience errors or crashes, try disabling that software or adding an exception for SMAPI and Stardew Valley.
+[18:07:05 TRACE SMAPI] Checking for updates...
+[18:07:05 TRACE SMAPI] ValleyFixes edited Strings/StringsFromCSFiles.
+[18:07:05 TRACE game] setGameMode( 'titleScreenGameMode (0)' )
+[18:07:05 TRACE SMAPI] ValleyFixes edited Strings/StringsFromCSFiles.
+[18:07:05 TRACE SMAPI]    SMAPI okay.
+[18:07:05 TRACE SMAPI]    Checking for updates to 2 mods...
+[18:07:05 TRACE SMAPI] Running on GPU: NVIDIA GeForce RTX 5070/PCIe/SSE2
+[18:07:05 TRACE game] Instance_LoadContent() finished, elapsed = '00:00:00.7796178'
+[18:07:05 ERROR game] Oops! Steam achievements won't work because Steam isn't loaded. See 'Configure your game client' in the install guide for more info: https://smapi.io/install.
+[18:07:05 INFO  SMAPI] Type 'help' for help, or 'help <cmd>' for a command's usage
+[18:07:05 TRACE SMAPI]    All mods up to date.
+[18:07:05 TRACE game] Window_ClientSizeChanged(); Window.ClientBounds={X:0 Y:0 Width:2560 Height:1440}
+[18:07:06 TRACE SMAPI]    Mod blacklist OK.
+[18:07:10 TRACE game] Successfully loaded ContentHashes.json containing 3560 file(s);
+[18:07:10 TRACE game] EnsureManifestInitialized() finished, elapsed = '00:00:00.0040509'
+[18:07:10 TRACE ValleyFixes] Movie reaction fix changed 3 of 3 expected scripts.
+[18:07:10 TRACE SMAPI] ValleyFixes edited Data/MoviesReactions.
+[18:07:10 TRACE ValleyFixes] George wheelchair fix copied 2 of 2 missing wheel frames.
+[18:07:10 TRACE SMAPI] ValleyFixes edited Characters/George.
+[18:07:10 TRACE game] setGameMode( 'playingGameMode (3)' )
+[18:07:10 TRACE game] Window_ClientSizeChanged(); Window.ClientBounds={X:0 Y:0 Width:2560 Height:1440}
+[18:07:10 TRACE game] Starting server. Protocol version: 1.6.15
+[18:07:10 TRACE game] Starting LAN server
+[18:07:10 TRACE game] Window_ClientSizeChanged(); Window.ClientBounds={X:0 Y:0 Width:2560 Height:1440}
+[18:07:10 TRACE SMAPI] Synchronizing 'NewDay' task...
+[18:07:10 TRACE ValleyFixes] Lumberjack hardwood fix changed 2 of 2 expected tree entries.
+[18:07:10 TRACE SMAPI] ValleyFixes edited Data/WildTrees.
+[18:07:11 TRACE SMAPI]    task complete.
+[18:07:11 TRACE SMAPI] Context: before save creation.
+[18:07:11 TRACE game] SaveGame.Save() called.
+[18:07:11 TRACE SMAPI] Synchronizing 'Save' task...
+[18:07:11 TRACE game] Saving without compression...
+[18:07:12 TRACE SMAPI]    task complete.
+[18:07:12 TRACE game] SaveGame.Save() completed without exceptions.
+[18:07:13 TRACE SMAPI] Context: after save creation, starting spring 1 Y1.
+[18:07:13 TRACE SMAPI] Context: loaded save 'VFTest_453251221', starting spring 1 Y1, locale set to . Main player with 1 player online.
+[18:07:13 TRACE ValleyFixes] Cleared the unsent change queues of 80 locations (0 with a network root left to the game).
+[18:07:30 TRACE game] Sending available farmhands to connection ID L_-1486224629133343532
+[18:07:31 TRACE SMAPI] Received context for farmhand 2163041454765400322 running SMAPI 4.5.2 with 3 mods.
+[18:07:31 TRACE game] Approved request for farmhand 2163041454765400322
+[18:07:37 TRACE SMAPI] Synchronizing 'NewDay' task...
+[18:07:39 TRACE SMAPI]    task complete.
+[18:07:39 TRACE SMAPI] Context: before save.
+[18:07:39 TRACE game] SaveGame.Save() called.
+[18:07:39 TRACE SMAPI] Synchronizing 'Save' task...
+[18:07:39 TRACE game] Saving without compression...
+[18:07:39 TRACE SMAPI]    task complete.
+[18:07:39 TRACE game] SaveGame.Save() completed without exceptions.
+[18:07:41 TRACE SMAPI] Context: after save, starting spring 2 Y1.
+[18:07:41 TRACE ValleyFixes] Cleared the unsent change queues of 76 locations (5 with a network root left to the game).
+[18:07:45 TRACE SMAPI] Synchronizing 'NewDay' task...
+[18:07:46 TRACE SMAPI]    task complete.
+[18:07:46 TRACE SMAPI] Context: before save.
+[18:07:46 TRACE game] SaveGame.Save() called.
+[18:07:46 TRACE SMAPI] Synchronizing 'Save' task...
+[18:07:46 TRACE game] Saving without compression...
+[18:07:46 TRACE SMAPI]    task complete.
+[18:07:46 TRACE game] SaveGame.Save() completed without exceptions.
+[18:07:48 TRACE SMAPI] Context: after save, starting spring 3 Y1.
+[18:07:48 TRACE ValleyFixes] Cleared the unsent change queues of 76 locations (5 with a network root left to the game).
+[18:07:52 TRACE SMAPI] Synchronizing 'NewDay' task...
+[18:07:53 TRACE SMAPI]    task complete.
+[18:07:53 TRACE SMAPI] Context: before save.
+[18:07:53 TRACE game] SaveGame.Save() called.
+[18:07:54 TRACE SMAPI] Synchronizing 'Save' task...
+[18:07:54 TRACE game] Saving without compression...
+[18:07:54 TRACE SMAPI]    task complete.
+[18:07:54 TRACE game] SaveGame.Save() completed without exceptions.
+[18:07:56 TRACE SMAPI] Context: after save, starting spring 4 Y1.
+[18:07:56 TRACE ValleyFixes] Cleared the unsent change queues of 76 locations (5 with a network root left to the game).
+[18:08:00 TRACE SMAPI] Synchronizing 'NewDay' task...
+[18:08:01 TRACE SMAPI]    task complete.
+[18:08:01 TRACE SMAPI] Context: before save.
+[18:08:01 TRACE game] SaveGame.Save() called.
+[18:08:01 TRACE SMAPI] Synchronizing 'Save' task...
+[18:08:01 TRACE game] Saving without compression...
+[18:08:01 TRACE SMAPI]    task complete.
+[18:08:01 TRACE game] SaveGame.Save() completed without exceptions.
+[18:08:03 TRACE SMAPI] Context: after save, starting spring 5 Y1.
+[18:08:03 TRACE ValleyFixes] Cleared the unsent change queues of 76 locations (5 with a network root left to the game).
+[18:08:07 TRACE SMAPI] Synchronizing 'NewDay' task...
+[18:08:08 TRACE SMAPI]    task complete.
+[18:08:08 TRACE SMAPI] Context: before save.
+[18:08:08 TRACE game] SaveGame.Save() called.
+[18:08:08 TRACE SMAPI] Synchronizing 'Save' task...
+[18:08:08 TRACE game] Saving without compression...
+[18:08:08 TRACE SMAPI]    task complete.
+[18:08:08 TRACE game] SaveGame.Save() completed without exceptions.
+[18:08:11 TRACE SMAPI] Context: after save, starting spring 6 Y1.
+[18:08:11 TRACE ValleyFixes] Cleared the unsent change queues of 76 locations (5 with a network root left to the game).
+[18:08:15 TRACE SMAPI] Synchronizing 'NewDay' task...
+[18:08:16 TRACE SMAPI]    task complete.
+[18:08:21 TRACE SMAPI] Synchronizing 'NewDay' task...
+[18:08:21 TRACE SMAPI]    task complete.
+[18:08:21 TRACE SMAPI] Context: before save.

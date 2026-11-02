@@ -1,0 +1,53 @@
+{
+  "world": "host ready in FarmHouse, multiplayerMode 2, server True",
+  "cabin": "ready for -2457161033238221024",
+  "clientJoined": true,
+  "makeover": {
+    "worn_before": {
+      "pants": "(P)3",
+      "pantsColor": 4278241280,
+      "shirt": "(S)1000",
+      "shirtColor": 4281467080
+    },
+    "locationExists": true,
+    "worn_after": {
+      "pants": "(P)0",
+      "shirt": "(S)1183",
+      "hat": null
+    },
+    "inventory_clothes_after": [
+      {
+        "id": "(S)1000",
+        "color": 4281467080,
+        "dyeable": false
+      },
+      {
+        "id": "(P)3",
+        "color": 4278241280,
+        "dyeable": true
+      }
+    ],
+    "inventory_hats_after": [],
+    "hostSeesClientWorn": {
+      "pants": "(P)0",
+      "shirt": "(S)1183",
+      "hat": null,
+      "inventoryClothes": [
+        {
+          "id": "(S)1000",
+          "color": 4281467080
+        },
+        {
+          "id": "(P)3",
+          "color": 4278241280
+        }
+      ]
+    }
+  },
+  "note": null,
+  "mods": [
+    "SMAPI.ConsoleCommands 4.5.2",
+    "Kkthnx.ValleyFixes 0.1.0",
+    "Kkthnx.ValleyFixes.DevHarness 0.1.0"
+  ]
+}

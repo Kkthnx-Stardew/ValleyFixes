@@ -1,0 +1,5045 @@
+{
+  "world": "client ready in FarmHoused40a0406-2469-4b59-8fbd-73abd31a6759, id 5296013937231383296",
+  "soak": [
+    {
+      "night": 0,
+      "world": {
+        "date": "spring 1 y1",
+        "online": 2,
+        "farmObjects": 1018,
+        "farmTerrainFeatures": 529,
+        "objectQueue": 0,
+        "terrainQueue": 0,
+        "all": {
+          "locations": 88,
+          "objects": 1992,
+          "features": 690,
+          "large": 696,
+          "debris": 0,
+          "queued": 1185
+        },
+        "queuedByLocation": [
+          {
+            "name": "Town",
+            "queued": 116,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "SeedShop",
+            "queued": 1,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Beach",
+            "queued": 2,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "BeachNightMarket",
+            "queued": 4,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Mountain",
+            "queued": 68,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Forest",
+            "queued": 199,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "BusStop",
+            "queued": 4,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Mine",
+            "queued": 1,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "BugLand",
+            "queued": 176,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Desert",
+            "queued": 13,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "WizardHouseBasement",
+            "queued": 1,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Railroad",
+            "queued": 53,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "WitchSwamp",
+            "queued": 1,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "FishShop",
+            "queued": 1,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "BathHouse_Entry",
+            "queued": 2,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Backwoods",
+            "queued": 3,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Cellar",
+            "queued": 33,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "IslandWest",
+            "queued": 247,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "IslandNorth",
+            "queued": 10,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "IslandFarmHouse",
+            "queued": 9,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "IslandShrine",
+            "queued": 4,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "DesertFestival",
+            "queued": 5,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "LewisBasement",
+            "queued": 1,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Cellar2",
+            "queued": 33,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Cellar3",
+            "queued": 33,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Cellar4",
+            "queued": 33,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Cellar5",
+            "queued": 33,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Cellar6",
+            "queued": 33,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Cellar7",
+            "queued": 33,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Cellar8",
+            "queued": 33,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          }
+        ],
+        "farmRoot": true
+      },
+      "memory": {
+        "retainedMB": 122.5,
+        "workingSetMB": 1002
+      }
+    },
+    {
+      "night": 1,
+      "dayOfWeek": "Tue",
+      "world": {
+        "date": "spring 2 y1",
+        "online": 2,
+        "farmObjects": 1026,
+        "farmTerrainFeatures": 557,
+        "objectQueue": 0,
+        "terrainQueue": 0,
+        "all": {
+          "locations": 88,
+          "objects": 2000,
+          "features": 718,
+          "large": 696,
+          "debris": 0,
+          "queued": 1185
+        },
+        "queuedByLocation": [
+          {
+            "name": "Town",
+            "queued": 116,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "SeedShop",
+            "queued": 1,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Beach",
+            "queued": 2,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "BeachNightMarket",
+            "queued": 4,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Mountain",
+            "queued": 68,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Forest",
+            "queued": 199,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "BusStop",
+            "queued": 4,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Mine",
+            "queued": 1,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "BugLand",
+            "queued": 176,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Desert",
+            "queued": 13,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "WizardHouseBasement",
+            "queued": 1,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Railroad",
+            "queued": 53,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "WitchSwamp",
+            "queued": 1,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "FishShop",
+            "queued": 1,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "BathHouse_Entry",
+            "queued": 2,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Backwoods",
+            "queued": 3,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Cellar",
+            "queued": 33,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "IslandWest",
+            "queued": 247,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "IslandNorth",
+            "queued": 10,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "IslandFarmHouse",
+            "queued": 9,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "IslandShrine",
+            "queued": 4,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "DesertFestival",
+            "queued": 5,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "LewisBasement",
+            "queued": 1,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Cellar2",
+            "queued": 33,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Cellar3",
+            "queued": 33,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Cellar4",
+            "queued": 33,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Cellar5",
+            "queued": 33,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Cellar6",
+            "queued": 33,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Cellar7",
+            "queued": 33,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Cellar8",
+            "queued": 33,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          }
+        ],
+        "farmRoot": true
+      },
+      "memory": {
+        "retainedMB": 123.5,
+        "workingSetMB": 1171
+      }
+    },
+    {
+      "night": 2,
+      "dayOfWeek": "Wed",
+      "world": {
+        "date": "spring 3 y1",
+        "online": 2,
+        "farmObjects": 1041,
+        "farmTerrainFeatures": 585,
+        "objectQueue": 0,
+        "terrainQueue": 0,
+        "all": {
+          "locations": 88,
+          "objects": 2015,
+          "features": 746,
+          "large": 696,
+          "debris": 0,
+          "queued": 1185
+        },
+        "queuedByLocation": [
+          {
+            "name": "Town",
+            "queued": 116,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "SeedShop",
+            "queued": 1,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Beach",
+            "queued": 2,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "BeachNightMarket",
+            "queued": 4,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Mountain",
+            "queued": 68,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Forest",
+            "queued": 199,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "BusStop",
+            "queued": 4,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Mine",
+            "queued": 1,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "BugLand",
+            "queued": 176,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Desert",
+            "queued": 13,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "WizardHouseBasement",
+            "queued": 1,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Railroad",
+            "queued": 53,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "WitchSwamp",
+            "queued": 1,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "FishShop",
+            "queued": 1,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "BathHouse_Entry",
+            "queued": 2,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Backwoods",
+            "queued": 3,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Cellar",
+            "queued": 33,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "IslandWest",
+            "queued": 247,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "IslandNorth",
+            "queued": 10,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "IslandFarmHouse",
+            "queued": 9,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "IslandShrine",
+            "queued": 4,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "DesertFestival",
+            "queued": 5,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "LewisBasement",
+            "queued": 1,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Cellar2",
+            "queued": 33,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Cellar3",
+            "queued": 33,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Cellar4",
+            "queued": 33,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Cellar5",
+            "queued": 33,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Cellar6",
+            "queued": 33,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Cellar7",
+            "queued": 33,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Cellar8",
+            "queued": 33,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          }
+        ],
+        "farmRoot": true
+      },
+      "memory": {
+        "retainedMB": 123.8,
+        "workingSetMB": 1172
+      }
+    },
+    {
+      "night": 3,
+      "dayOfWeek": "Thu",
+      "world": {
+        "date": "spring 4 y1",
+        "online": 2,
+        "farmObjects": 1050,
+        "farmTerrainFeatures": 603,
+        "objectQueue": 0,
+        "terrainQueue": 0,
+        "all": {
+          "locations": 88,
+          "objects": 2024,
+          "features": 764,
+          "large": 696,
+          "debris": 0,
+          "queued": 1185
+        },
+        "queuedByLocation": [
+          {
+            "name": "Town",
+            "queued": 116,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "SeedShop",
+            "queued": 1,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Beach",
+            "queued": 2,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "BeachNightMarket",
+            "queued": 4,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Mountain",
+            "queued": 68,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Forest",
+            "queued": 199,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "BusStop",
+            "queued": 4,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Mine",
+            "queued": 1,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "BugLand",
+            "queued": 176,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Desert",
+            "queued": 13,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "WizardHouseBasement",
+            "queued": 1,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Railroad",
+            "queued": 53,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "WitchSwamp",
+            "queued": 1,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "FishShop",
+            "queued": 1,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "BathHouse_Entry",
+            "queued": 2,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Backwoods",
+            "queued": 3,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Cellar",
+            "queued": 33,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "IslandWest",
+            "queued": 247,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "IslandNorth",
+            "queued": 10,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "IslandFarmHouse",
+            "queued": 9,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "IslandShrine",
+            "queued": 4,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "DesertFestival",
+            "queued": 5,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "LewisBasement",
+            "queued": 1,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Cellar2",
+            "queued": 33,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Cellar3",
+            "queued": 33,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Cellar4",
+            "queued": 33,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Cellar5",
+            "queued": 33,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Cellar6",
+            "queued": 33,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Cellar7",
+            "queued": 33,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Cellar8",
+            "queued": 33,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          }
+        ],
+        "farmRoot": true
+      },
+      "memory": {
+        "retainedMB": 123.6,
+        "workingSetMB": 1168
+      }
+    },
+    {
+      "night": 4,
+      "dayOfWeek": "Fri",
+      "world": {
+        "date": "spring 5 y1",
+        "online": 2,
+        "farmObjects": 1060,
+        "farmTerrainFeatures": 633,
+        "objectQueue": 0,
+        "terrainQueue": 0,
+        "all": {
+          "locations": 88,
+          "objects": 2034,
+          "features": 794,
+          "large": 696,
+          "debris": 0,
+          "queued": 1185
+        },
+        "queuedByLocation": [
+          {
+            "name": "Town",
+            "queued": 116,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "SeedShop",
+            "queued": 1,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Beach",
+            "queued": 2,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "BeachNightMarket",
+            "queued": 4,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Mountain",
+            "queued": 68,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Forest",
+            "queued": 199,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "BusStop",
+            "queued": 4,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Mine",
+            "queued": 1,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "BugLand",
+            "queued": 176,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Desert",
+            "queued": 13,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "WizardHouseBasement",
+            "queued": 1,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Railroad",
+            "queued": 53,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "WitchSwamp",
+            "queued": 1,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "FishShop",
+            "queued": 1,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "BathHouse_Entry",
+            "queued": 2,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Backwoods",
+            "queued": 3,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Cellar",
+            "queued": 33,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "IslandWest",
+            "queued": 247,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "IslandNorth",
+            "queued": 10,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "IslandFarmHouse",
+            "queued": 9,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "IslandShrine",
+            "queued": 4,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "DesertFestival",
+            "queued": 5,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "LewisBasement",
+            "queued": 1,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Cellar2",
+            "queued": 33,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Cellar3",
+            "queued": 33,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Cellar4",
+            "queued": 33,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Cellar5",
+            "queued": 33,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Cellar6",
+            "queued": 33,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Cellar7",
+            "queued": 33,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Cellar8",
+            "queued": 33,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          }
+        ],
+        "farmRoot": true
+      },
+      "memory": {
+        "retainedMB": 123.9,
+        "workingSetMB": 1169
+      }
+    },
+    {
+      "night": 5,
+      "dayOfWeek": "Sat",
+      "world": {
+        "date": "spring 6 y1",
+        "online": 2,
+        "farmObjects": 1067,
+        "farmTerrainFeatures": 649,
+        "objectQueue": 0,
+        "terrainQueue": 0,
+        "all": {
+          "locations": 88,
+          "objects": 2041,
+          "features": 810,
+          "large": 696,
+          "debris": 0,
+          "queued": 1185
+        },
+        "queuedByLocation": [
+          {
+            "name": "Town",
+            "queued": 116,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "SeedShop",
+            "queued": 1,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Beach",
+            "queued": 2,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "BeachNightMarket",
+            "queued": 4,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Mountain",
+            "queued": 68,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Forest",
+            "queued": 199,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "BusStop",
+            "queued": 4,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Mine",
+            "queued": 1,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "BugLand",
+            "queued": 176,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Desert",
+            "queued": 13,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "WizardHouseBasement",
+            "queued": 1,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Railroad",
+            "queued": 53,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "WitchSwamp",
+            "queued": 1,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "FishShop",
+            "queued": 1,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "BathHouse_Entry",
+            "queued": 2,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Backwoods",
+            "queued": 3,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Cellar",
+            "queued": 33,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "IslandWest",
+            "queued": 247,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "IslandNorth",
+            "queued": 10,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "IslandFarmHouse",
+            "queued": 9,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "IslandShrine",
+            "queued": 4,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "DesertFestival",
+            "queued": 5,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "LewisBasement",
+            "queued": 1,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Cellar2",
+            "queued": 33,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Cellar3",
+            "queued": 33,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Cellar4",
+            "queued": 33,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Cellar5",
+            "queued": 33,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Cellar6",
+            "queued": 33,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Cellar7",
+            "queued": 33,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Cellar8",
+            "queued": 33,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          }
+        ],
+        "farmRoot": true
+      },
+      "memory": {
+        "retainedMB": 124.1,
+        "workingSetMB": 1169
+      }
+    },
+    {
+      "night": 6,
+      "dayOfWeek": "Sun",
+      "world": {
+        "date": "spring 7 y1",
+        "online": 2,
+        "farmObjects": 1075,
+        "farmTerrainFeatures": 669,
+        "objectQueue": 0,
+        "terrainQueue": 0,
+        "all": {
+          "locations": 88,
+          "objects": 2049,
+          "features": 830,
+          "large": 696,
+          "debris": 0,
+          "queued": 1185
+        },
+        "queuedByLocation": [
+          {
+            "name": "Town",
+            "queued": 116,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "SeedShop",
+            "queued": 1,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Beach",
+            "queued": 2,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "BeachNightMarket",
+            "queued": 4,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Mountain",
+            "queued": 68,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Forest",
+            "queued": 199,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "BusStop",
+            "queued": 4,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Mine",
+            "queued": 1,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "BugLand",
+            "queued": 176,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Desert",
+            "queued": 13,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "WizardHouseBasement",
+            "queued": 1,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Railroad",
+            "queued": 53,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "WitchSwamp",
+            "queued": 1,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "FishShop",
+            "queued": 1,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "BathHouse_Entry",
+            "queued": 2,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Backwoods",
+            "queued": 3,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Cellar",
+            "queued": 33,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "IslandWest",
+            "queued": 247,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "IslandNorth",
+            "queued": 10,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "IslandFarmHouse",
+            "queued": 9,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "IslandShrine",
+            "queued": 4,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "DesertFestival",
+            "queued": 5,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "LewisBasement",
+            "queued": 1,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Cellar2",
+            "queued": 33,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Cellar3",
+            "queued": 33,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Cellar4",
+            "queued": 33,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Cellar5",
+            "queued": 33,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Cellar6",
+            "queued": 33,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Cellar7",
+            "queued": 33,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Cellar8",
+            "queued": 33,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          }
+        ],
+        "farmRoot": true
+      },
+      "memory": {
+        "retainedMB": 124.4,
+        "workingSetMB": 1169
+      }
+    },
+    {
+      "night": 7,
+      "dayOfWeek": "Mon",
+      "world": {
+        "date": "spring 8 y1",
+        "online": 2,
+        "farmObjects": 1079,
+        "farmTerrainFeatures": 691,
+        "objectQueue": 0,
+        "terrainQueue": 0,
+        "all": {
+          "locations": 88,
+          "objects": 2053,
+          "features": 852,
+          "large": 696,
+          "debris": 0,
+          "queued": 1185
+        },
+        "queuedByLocation": [
+          {
+            "name": "Town",
+            "queued": 116,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "SeedShop",
+            "queued": 1,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Beach",
+            "queued": 2,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "BeachNightMarket",
+            "queued": 4,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Mountain",
+            "queued": 68,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Forest",
+            "queued": 199,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "BusStop",
+            "queued": 4,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Mine",
+            "queued": 1,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "BugLand",
+            "queued": 176,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Desert",
+            "queued": 13,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "WizardHouseBasement",
+            "queued": 1,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Railroad",
+            "queued": 53,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "WitchSwamp",
+            "queued": 1,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "FishShop",
+            "queued": 1,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "BathHouse_Entry",
+            "queued": 2,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Backwoods",
+            "queued": 3,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Cellar",
+            "queued": 33,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "IslandWest",
+            "queued": 247,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "IslandNorth",
+            "queued": 10,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "IslandFarmHouse",
+            "queued": 9,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "IslandShrine",
+            "queued": 4,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "DesertFestival",
+            "queued": 5,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "LewisBasement",
+            "queued": 1,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Cellar2",
+            "queued": 33,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Cellar3",
+            "queued": 33,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Cellar4",
+            "queued": 33,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Cellar5",
+            "queued": 33,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Cellar6",
+            "queued": 33,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Cellar7",
+            "queued": 33,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Cellar8",
+            "queued": 33,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          }
+        ],
+        "farmRoot": true
+      },
+      "memory": {
+        "retainedMB": 124.3,
+        "workingSetMB": 1169
+      }
+    },
+    {
+      "night": 8,
+      "dayOfWeek": "Tue",
+      "world": {
+        "date": "spring 9 y1",
+        "online": 2,
+        "farmObjects": 1089,
+        "farmTerrainFeatures": 716,
+        "objectQueue": 0,
+        "terrainQueue": 0,
+        "all": {
+          "locations": 88,
+          "objects": 2063,
+          "features": 877,
+          "large": 696,
+          "debris": 0,
+          "queued": 1185
+        },
+        "queuedByLocation": [
+          {
+            "name": "Town",
+            "queued": 116,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "SeedShop",
+            "queued": 1,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Beach",
+            "queued": 2,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "BeachNightMarket",
+            "queued": 4,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Mountain",
+            "queued": 68,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Forest",
+            "queued": 199,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "BusStop",
+            "queued": 4,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Mine",
+            "queued": 1,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "BugLand",
+            "queued": 176,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Desert",
+            "queued": 13,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "WizardHouseBasement",
+            "queued": 1,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Railroad",
+            "queued": 53,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "WitchSwamp",
+            "queued": 1,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "FishShop",
+            "queued": 1,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "BathHouse_Entry",
+            "queued": 2,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Backwoods",
+            "queued": 3,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Cellar",
+            "queued": 33,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "IslandWest",
+            "queued": 247,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "IslandNorth",
+            "queued": 10,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "IslandFarmHouse",
+            "queued": 9,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "IslandShrine",
+            "queued": 4,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "DesertFestival",
+            "queued": 5,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "LewisBasement",
+            "queued": 1,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Cellar2",
+            "queued": 33,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Cellar3",
+            "queued": 33,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Cellar4",
+            "queued": 33,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Cellar5",
+            "queued": 33,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Cellar6",
+            "queued": 33,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Cellar7",
+            "queued": 33,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Cellar8",
+            "queued": 33,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          }
+        ],
+        "farmRoot": true
+      },
+      "memory": {
+        "retainedMB": 124.6,
+        "workingSetMB": 1169
+      }
+    },
+    {
+      "night": 9,
+      "dayOfWeek": "Wed",
+      "world": {
+        "date": "spring 10 y1",
+        "online": 2,
+        "farmObjects": 1103,
+        "farmTerrainFeatures": 738,
+        "objectQueue": 0,
+        "terrainQueue": 0,
+        "all": {
+          "locations": 88,
+          "objects": 2077,
+          "features": 899,
+          "large": 696,
+          "debris": 0,
+          "queued": 1185
+        },
+        "queuedByLocation": [
+          {
+            "name": "Town",
+            "queued": 116,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "SeedShop",
+            "queued": 1,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Beach",
+            "queued": 2,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "BeachNightMarket",
+            "queued": 4,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Mountain",
+            "queued": 68,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Forest",
+            "queued": 199,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "BusStop",
+            "queued": 4,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Mine",
+            "queued": 1,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "BugLand",
+            "queued": 176,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Desert",
+            "queued": 13,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "WizardHouseBasement",
+            "queued": 1,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Railroad",
+            "queued": 53,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "WitchSwamp",
+            "queued": 1,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "FishShop",
+            "queued": 1,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "BathHouse_Entry",
+            "queued": 2,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Backwoods",
+            "queued": 3,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Cellar",
+            "queued": 33,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "IslandWest",
+            "queued": 247,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "IslandNorth",
+            "queued": 10,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "IslandFarmHouse",
+            "queued": 9,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "IslandShrine",
+            "queued": 4,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "DesertFestival",
+            "queued": 5,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "LewisBasement",
+            "queued": 1,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Cellar2",
+            "queued": 33,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Cellar3",
+            "queued": 33,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Cellar4",
+            "queued": 33,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Cellar5",
+            "queued": 33,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Cellar6",
+            "queued": 33,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Cellar7",
+            "queued": 33,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Cellar8",
+            "queued": 33,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          }
+        ],
+        "farmRoot": true
+      },
+      "memory": {
+        "retainedMB": 125,
+        "workingSetMB": 1169
+      }
+    },
+    {
+      "night": 10,
+      "dayOfWeek": "Thu",
+      "world": {
+        "date": "spring 11 y1",
+        "online": 2,
+        "farmObjects": 1111,
+        "farmTerrainFeatures": 759,
+        "objectQueue": 0,
+        "terrainQueue": 0,
+        "all": {
+          "locations": 88,
+          "objects": 2085,
+          "features": 920,
+          "large": 696,
+          "debris": 0,
+          "queued": 1185
+        },
+        "queuedByLocation": [
+          {
+            "name": "Town",
+            "queued": 116,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "SeedShop",
+            "queued": 1,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Beach",
+            "queued": 2,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "BeachNightMarket",
+            "queued": 4,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Mountain",
+            "queued": 68,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Forest",
+            "queued": 199,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "BusStop",
+            "queued": 4,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Mine",
+            "queued": 1,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "BugLand",
+            "queued": 176,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Desert",
+            "queued": 13,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "WizardHouseBasement",
+            "queued": 1,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Railroad",
+            "queued": 53,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "WitchSwamp",
+            "queued": 1,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "FishShop",
+            "queued": 1,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "BathHouse_Entry",
+            "queued": 2,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Backwoods",
+            "queued": 3,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Cellar",
+            "queued": 33,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "IslandWest",
+            "queued": 247,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "IslandNorth",
+            "queued": 10,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "IslandFarmHouse",
+            "queued": 9,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "IslandShrine",
+            "queued": 4,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "DesertFestival",
+            "queued": 5,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "LewisBasement",
+            "queued": 1,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Cellar2",
+            "queued": 33,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Cellar3",
+            "queued": 33,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Cellar4",
+            "queued": 33,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Cellar5",
+            "queued": 33,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Cellar6",
+            "queued": 33,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Cellar7",
+            "queued": 33,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Cellar8",
+            "queued": 33,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          }
+        ],
+        "farmRoot": true
+      },
+      "memory": {
+        "retainedMB": 125.2,
+        "workingSetMB": 1169
+      }
+    },
+    {
+      "night": 11,
+      "dayOfWeek": "Fri",
+      "world": {
+        "date": "spring 12 y1",
+        "online": 2,
+        "farmObjects": 1115,
+        "farmTerrainFeatures": 783,
+        "objectQueue": 0,
+        "terrainQueue": 0,
+        "all": {
+          "locations": 88,
+          "objects": 2089,
+          "features": 944,
+          "large": 696,
+          "debris": 0,
+          "queued": 1185
+        },
+        "queuedByLocation": [
+          {
+            "name": "Town",
+            "queued": 116,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "SeedShop",
+            "queued": 1,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Beach",
+            "queued": 2,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "BeachNightMarket",
+            "queued": 4,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Mountain",
+            "queued": 68,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Forest",
+            "queued": 199,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "BusStop",
+            "queued": 4,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Mine",
+            "queued": 1,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "BugLand",
+            "queued": 176,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Desert",
+            "queued": 13,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "WizardHouseBasement",
+            "queued": 1,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Railroad",
+            "queued": 53,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "WitchSwamp",
+            "queued": 1,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "FishShop",
+            "queued": 1,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "BathHouse_Entry",
+            "queued": 2,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Backwoods",
+            "queued": 3,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Cellar",
+            "queued": 33,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "IslandWest",
+            "queued": 247,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "IslandNorth",
+            "queued": 10,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "IslandFarmHouse",
+            "queued": 9,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "IslandShrine",
+            "queued": 4,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "DesertFestival",
+            "queued": 5,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "LewisBasement",
+            "queued": 1,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Cellar2",
+            "queued": 33,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Cellar3",
+            "queued": 33,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Cellar4",
+            "queued": 33,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Cellar5",
+            "queued": 33,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Cellar6",
+            "queued": 33,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Cellar7",
+            "queued": 33,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Cellar8",
+            "queued": 33,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          }
+        ],
+        "farmRoot": true
+      },
+      "memory": {
+        "retainedMB": 125.1,
+        "workingSetMB": 1169
+      }
+    },
+    {
+      "night": 12,
+      "dayOfWeek": "Sat",
+      "world": {
+        "date": "spring 13 y1",
+        "online": 2,
+        "farmObjects": 1125,
+        "farmTerrainFeatures": 799,
+        "objectQueue": 0,
+        "terrainQueue": 0,
+        "all": {
+          "locations": 88,
+          "objects": 2099,
+          "features": 960,
+          "large": 696,
+          "debris": 0,
+          "queued": 1185
+        },
+        "queuedByLocation": [
+          {
+            "name": "Town",
+            "queued": 116,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "SeedShop",
+            "queued": 1,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Beach",
+            "queued": 2,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "BeachNightMarket",
+            "queued": 4,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Mountain",
+            "queued": 68,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Forest",
+            "queued": 199,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "BusStop",
+            "queued": 4,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Mine",
+            "queued": 1,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "BugLand",
+            "queued": 176,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Desert",
+            "queued": 13,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "WizardHouseBasement",
+            "queued": 1,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Railroad",
+            "queued": 53,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "WitchSwamp",
+            "queued": 1,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "FishShop",
+            "queued": 1,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "BathHouse_Entry",
+            "queued": 2,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Backwoods",
+            "queued": 3,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Cellar",
+            "queued": 33,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "IslandWest",
+            "queued": 247,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "IslandNorth",
+            "queued": 10,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "IslandFarmHouse",
+            "queued": 9,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "IslandShrine",
+            "queued": 4,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "DesertFestival",
+            "queued": 5,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "LewisBasement",
+            "queued": 1,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Cellar2",
+            "queued": 33,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Cellar3",
+            "queued": 33,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Cellar4",
+            "queued": 33,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Cellar5",
+            "queued": 33,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Cellar6",
+            "queued": 33,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Cellar7",
+            "queued": 33,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Cellar8",
+            "queued": 33,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          }
+        ],
+        "farmRoot": true
+      },
+      "memory": {
+        "retainedMB": 125.3,
+        "workingSetMB": 1169
+      }
+    },
+    {
+      "night": 13,
+      "dayOfWeek": "Sun",
+      "world": {
+        "date": "spring 14 y1",
+        "online": 2,
+        "farmObjects": 1134,
+        "farmTerrainFeatures": 824,
+        "objectQueue": 0,
+        "terrainQueue": 0,
+        "all": {
+          "locations": 88,
+          "objects": 2108,
+          "features": 985,
+          "large": 696,
+          "debris": 0,
+          "queued": 1185
+        },
+        "queuedByLocation": [
+          {
+            "name": "Town",
+            "queued": 116,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "SeedShop",
+            "queued": 1,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Beach",
+            "queued": 2,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "BeachNightMarket",
+            "queued": 4,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Mountain",
+            "queued": 68,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Forest",
+            "queued": 199,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "BusStop",
+            "queued": 4,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Mine",
+            "queued": 1,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "BugLand",
+            "queued": 176,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Desert",
+            "queued": 13,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "WizardHouseBasement",
+            "queued": 1,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Railroad",
+            "queued": 53,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "WitchSwamp",
+            "queued": 1,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "FishShop",
+            "queued": 1,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "BathHouse_Entry",
+            "queued": 2,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Backwoods",
+            "queued": 3,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Cellar",
+            "queued": 33,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "IslandWest",
+            "queued": 247,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "IslandNorth",
+            "queued": 10,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "IslandFarmHouse",
+            "queued": 9,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "IslandShrine",
+            "queued": 4,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "DesertFestival",
+            "queued": 5,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "LewisBasement",
+            "queued": 1,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Cellar2",
+            "queued": 33,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Cellar3",
+            "queued": 33,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Cellar4",
+            "queued": 33,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Cellar5",
+            "queued": 33,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Cellar6",
+            "queued": 33,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Cellar7",
+            "queued": 33,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Cellar8",
+            "queued": 33,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          }
+        ],
+        "farmRoot": true
+      },
+      "memory": {
+        "retainedMB": 125.6,
+        "workingSetMB": 1169
+      }
+    },
+    {
+      "night": 14,
+      "dayOfWeek": "Mon",
+      "world": {
+        "date": "spring 15 y1",
+        "online": 2,
+        "farmObjects": 1138,
+        "farmTerrainFeatures": 841,
+        "objectQueue": 0,
+        "terrainQueue": 0,
+        "all": {
+          "locations": 88,
+          "objects": 2112,
+          "features": 1002,
+          "large": 696,
+          "debris": 0,
+          "queued": 1185
+        },
+        "queuedByLocation": [
+          {
+            "name": "Town",
+            "queued": 116,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "SeedShop",
+            "queued": 1,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Beach",
+            "queued": 2,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "BeachNightMarket",
+            "queued": 4,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Mountain",
+            "queued": 68,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Forest",
+            "queued": 199,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "BusStop",
+            "queued": 4,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Mine",
+            "queued": 1,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "BugLand",
+            "queued": 176,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Desert",
+            "queued": 13,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "WizardHouseBasement",
+            "queued": 1,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Railroad",
+            "queued": 53,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "WitchSwamp",
+            "queued": 1,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "FishShop",
+            "queued": 1,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "BathHouse_Entry",
+            "queued": 2,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Backwoods",
+            "queued": 3,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Cellar",
+            "queued": 33,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "IslandWest",
+            "queued": 247,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "IslandNorth",
+            "queued": 10,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "IslandFarmHouse",
+            "queued": 9,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "IslandShrine",
+            "queued": 4,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "DesertFestival",
+            "queued": 5,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "LewisBasement",
+            "queued": 1,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Cellar2",
+            "queued": 33,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Cellar3",
+            "queued": 33,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Cellar4",
+            "queued": 33,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Cellar5",
+            "queued": 33,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Cellar6",
+            "queued": 33,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Cellar7",
+            "queued": 33,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Cellar8",
+            "queued": 33,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          }
+        ],
+        "farmRoot": true
+      },
+      "memory": {
+        "retainedMB": 125.6,
+        "workingSetMB": 1166
+      }
+    },
+    {
+      "night": 15,
+      "dayOfWeek": "Tue",
+      "world": {
+        "date": "spring 16 y1",
+        "online": 2,
+        "farmObjects": 1143,
+        "farmTerrainFeatures": 865,
+        "objectQueue": 0,
+        "terrainQueue": 0,
+        "all": {
+          "locations": 88,
+          "objects": 2117,
+          "features": 1026,
+          "large": 696,
+          "debris": 0,
+          "queued": 1185
+        },
+        "queuedByLocation": [
+          {
+            "name": "Town",
+            "queued": 116,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "SeedShop",
+            "queued": 1,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Beach",
+            "queued": 2,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "BeachNightMarket",
+            "queued": 4,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Mountain",
+            "queued": 68,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Forest",
+            "queued": 199,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "BusStop",
+            "queued": 4,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Mine",
+            "queued": 1,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "BugLand",
+            "queued": 176,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Desert",
+            "queued": 13,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "WizardHouseBasement",
+            "queued": 1,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Railroad",
+            "queued": 53,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "WitchSwamp",
+            "queued": 1,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "FishShop",
+            "queued": 1,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "BathHouse_Entry",
+            "queued": 2,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Backwoods",
+            "queued": 3,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Cellar",
+            "queued": 33,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "IslandWest",
+            "queued": 247,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "IslandNorth",
+            "queued": 10,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "IslandFarmHouse",
+            "queued": 9,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "IslandShrine",
+            "queued": 4,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "DesertFestival",
+            "queued": 5,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "LewisBasement",
+            "queued": 1,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Cellar2",
+            "queued": 33,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Cellar3",
+            "queued": 33,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Cellar4",
+            "queued": 33,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Cellar5",
+            "queued": 33,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Cellar6",
+            "queued": 33,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Cellar7",
+            "queued": 33,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Cellar8",
+            "queued": 33,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          }
+        ],
+        "farmRoot": true
+      },
+      "memory": {
+        "retainedMB": 125.8,
+        "workingSetMB": 1167
+      }
+    },
+    {
+      "night": 16,
+      "dayOfWeek": "Wed",
+      "world": {
+        "date": "spring 17 y1",
+        "online": 2,
+        "farmObjects": 1146,
+        "farmTerrainFeatures": 880,
+        "objectQueue": 0,
+        "terrainQueue": 0,
+        "all": {
+          "locations": 88,
+          "objects": 2120,
+          "features": 1041,
+          "large": 696,
+          "debris": 0,
+          "queued": 1185
+        },
+        "queuedByLocation": [
+          {
+            "name": "Town",
+            "queued": 116,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "SeedShop",
+            "queued": 1,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Beach",
+            "queued": 2,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "BeachNightMarket",
+            "queued": 4,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Mountain",
+            "queued": 68,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Forest",
+            "queued": 199,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "BusStop",
+            "queued": 4,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Mine",
+            "queued": 1,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "BugLand",
+            "queued": 176,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Desert",
+            "queued": 13,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "WizardHouseBasement",
+            "queued": 1,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Railroad",
+            "queued": 53,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "WitchSwamp",
+            "queued": 1,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "FishShop",
+            "queued": 1,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "BathHouse_Entry",
+            "queued": 2,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Backwoods",
+            "queued": 3,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Cellar",
+            "queued": 33,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "IslandWest",
+            "queued": 247,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "IslandNorth",
+            "queued": 10,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "IslandFarmHouse",
+            "queued": 9,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "IslandShrine",
+            "queued": 4,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "DesertFestival",
+            "queued": 5,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "LewisBasement",
+            "queued": 1,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Cellar2",
+            "queued": 33,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Cellar3",
+            "queued": 33,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Cellar4",
+            "queued": 33,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Cellar5",
+            "queued": 33,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Cellar6",
+            "queued": 33,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Cellar7",
+            "queued": 33,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Cellar8",
+            "queued": 33,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          }
+        ],
+        "farmRoot": true
+      },
+      "memory": {
+        "retainedMB": 125.9,
+        "workingSetMB": 1166
+      }
+    },
+    {
+      "night": 17,
+      "dayOfWeek": "Thu",
+      "world": {
+        "date": "spring 18 y1",
+        "online": 2,
+        "farmObjects": 1156,
+        "farmTerrainFeatures": 902,
+        "objectQueue": 0,
+        "terrainQueue": 0,
+        "all": {
+          "locations": 88,
+          "objects": 2130,
+          "features": 1063,
+          "large": 696,
+          "debris": 0,
+          "queued": 1185
+        },
+        "queuedByLocation": [
+          {
+            "name": "Town",
+            "queued": 116,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "SeedShop",
+            "queued": 1,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Beach",
+            "queued": 2,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "BeachNightMarket",
+            "queued": 4,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Mountain",
+            "queued": 68,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Forest",
+            "queued": 199,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "BusStop",
+            "queued": 4,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Mine",
+            "queued": 1,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "BugLand",
+            "queued": 176,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Desert",
+            "queued": 13,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "WizardHouseBasement",
+            "queued": 1,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Railroad",
+            "queued": 53,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "WitchSwamp",
+            "queued": 1,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "FishShop",
+            "queued": 1,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "BathHouse_Entry",
+            "queued": 2,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Backwoods",
+            "queued": 3,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Cellar",
+            "queued": 33,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "IslandWest",
+            "queued": 247,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "IslandNorth",
+            "queued": 10,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "IslandFarmHouse",
+            "queued": 9,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "IslandShrine",
+            "queued": 4,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "DesertFestival",
+            "queued": 5,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "LewisBasement",
+            "queued": 1,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Cellar2",
+            "queued": 33,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Cellar3",
+            "queued": 33,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Cellar4",
+            "queued": 33,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Cellar5",
+            "queued": 33,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Cellar6",
+            "queued": 33,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Cellar7",
+            "queued": 33,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Cellar8",
+            "queued": 33,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          }
+        ],
+        "farmRoot": true
+      },
+      "memory": {
+        "retainedMB": 126.2,
+        "workingSetMB": 1166
+      }
+    },
+    {
+      "night": 18,
+      "dayOfWeek": "Fri",
+      "world": {
+        "date": "spring 19 y1",
+        "online": 2,
+        "farmObjects": 1163,
+        "farmTerrainFeatures": 921,
+        "objectQueue": 0,
+        "terrainQueue": 0,
+        "all": {
+          "locations": 88,
+          "objects": 2137,
+          "features": 1082,
+          "large": 696,
+          "debris": 0,
+          "queued": 1185
+        },
+        "queuedByLocation": [
+          {
+            "name": "Town",
+            "queued": 116,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "SeedShop",
+            "queued": 1,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Beach",
+            "queued": 2,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "BeachNightMarket",
+            "queued": 4,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Mountain",
+            "queued": 68,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Forest",
+            "queued": 199,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "BusStop",
+            "queued": 4,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Mine",
+            "queued": 1,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "BugLand",
+            "queued": 176,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Desert",
+            "queued": 13,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "WizardHouseBasement",
+            "queued": 1,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Railroad",
+            "queued": 53,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "WitchSwamp",
+            "queued": 1,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "FishShop",
+            "queued": 1,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "BathHouse_Entry",
+            "queued": 2,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Backwoods",
+            "queued": 3,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Cellar",
+            "queued": 33,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "IslandWest",
+            "queued": 247,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "IslandNorth",
+            "queued": 10,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "IslandFarmHouse",
+            "queued": 9,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "IslandShrine",
+            "queued": 4,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "DesertFestival",
+            "queued": 5,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "LewisBasement",
+            "queued": 1,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Cellar2",
+            "queued": 33,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Cellar3",
+            "queued": 33,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Cellar4",
+            "queued": 33,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Cellar5",
+            "queued": 33,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Cellar6",
+            "queued": 33,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Cellar7",
+            "queued": 33,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Cellar8",
+            "queued": 33,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          }
+        ],
+        "farmRoot": true
+      },
+      "memory": {
+        "retainedMB": 126.4,
+        "workingSetMB": 1166
+      }
+    },
+    {
+      "night": 19,
+      "dayOfWeek": "Sat",
+      "world": {
+        "date": "spring 20 y1",
+        "online": 2,
+        "farmObjects": 1168,
+        "farmTerrainFeatures": 939,
+        "objectQueue": 0,
+        "terrainQueue": 0,
+        "all": {
+          "locations": 88,
+          "objects": 2142,
+          "features": 1100,
+          "large": 696,
+          "debris": 0,
+          "queued": 1185
+        },
+        "queuedByLocation": [
+          {
+            "name": "Town",
+            "queued": 116,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "SeedShop",
+            "queued": 1,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Beach",
+            "queued": 2,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "BeachNightMarket",
+            "queued": 4,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Mountain",
+            "queued": 68,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Forest",
+            "queued": 199,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "BusStop",
+            "queued": 4,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Mine",
+            "queued": 1,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "BugLand",
+            "queued": 176,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Desert",
+            "queued": 13,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "WizardHouseBasement",
+            "queued": 1,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Railroad",
+            "queued": 53,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "WitchSwamp",
+            "queued": 1,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "FishShop",
+            "queued": 1,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "BathHouse_Entry",
+            "queued": 2,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Backwoods",
+            "queued": 3,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Cellar",
+            "queued": 33,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "IslandWest",
+            "queued": 247,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "IslandNorth",
+            "queued": 10,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "IslandFarmHouse",
+            "queued": 9,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "IslandShrine",
+            "queued": 4,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "DesertFestival",
+            "queued": 5,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "LewisBasement",
+            "queued": 1,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Cellar2",
+            "queued": 33,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Cellar3",
+            "queued": 33,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Cellar4",
+            "queued": 33,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Cellar5",
+            "queued": 33,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Cellar6",
+            "queued": 33,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Cellar7",
+            "queued": 33,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Cellar8",
+            "queued": 33,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          }
+        ],
+        "farmRoot": true
+      },
+      "memory": {
+        "retainedMB": 126.4,
+        "workingSetMB": 1166
+      }
+    },
+    {
+      "night": 20,
+      "dayOfWeek": "Sun",
+      "world": {
+        "date": "spring 21 y1",
+        "online": 2,
+        "farmObjects": 1172,
+        "farmTerrainFeatures": 961,
+        "objectQueue": 0,
+        "terrainQueue": 0,
+        "all": {
+          "locations": 88,
+          "objects": 2146,
+          "features": 1122,
+          "large": 696,
+          "debris": 0,
+          "queued": 1185
+        },
+        "queuedByLocation": [
+          {
+            "name": "Town",
+            "queued": 116,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "SeedShop",
+            "queued": 1,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Beach",
+            "queued": 2,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "BeachNightMarket",
+            "queued": 4,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Mountain",
+            "queued": 68,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Forest",
+            "queued": 199,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "BusStop",
+            "queued": 4,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Mine",
+            "queued": 1,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "BugLand",
+            "queued": 176,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Desert",
+            "queued": 13,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "WizardHouseBasement",
+            "queued": 1,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Railroad",
+            "queued": 53,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "WitchSwamp",
+            "queued": 1,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "FishShop",
+            "queued": 1,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "BathHouse_Entry",
+            "queued": 2,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Backwoods",
+            "queued": 3,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Cellar",
+            "queued": 33,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "IslandWest",
+            "queued": 247,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "IslandNorth",
+            "queued": 10,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "IslandFarmHouse",
+            "queued": 9,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "IslandShrine",
+            "queued": 4,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "DesertFestival",
+            "queued": 5,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "LewisBasement",
+            "queued": 1,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Cellar2",
+            "queued": 33,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Cellar3",
+            "queued": 33,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Cellar4",
+            "queued": 33,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Cellar5",
+            "queued": 33,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Cellar6",
+            "queued": 33,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Cellar7",
+            "queued": 33,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          },
+          {
+            "name": "Cellar8",
+            "queued": 33,
+            "hasRoot": false,
+            "structure": false,
+            "farmersHere": 0
+          }
+        ],
+        "farmRoot": true
+      },
+      "memory": {
+        "retainedMB": 126.6,
+        "workingSetMB": 1171
+      }
+    }
+  ],
+  "visits": [
+    {
+      "name": "Town",
+      "objects": 116,
+      "features": 17,
+      "large": 156,
+      "hasRoot": true,
+      "here": "Town"
+    },
+    {
+      "name": "Forest",
+      "objects": 229,
+      "features": 77,
+      "large": 227,
+      "hasRoot": true,
+      "here": "Forest"
+    },
+    {
+      "name": "Mountain",
+      "objects": 141,
+      "features": 11,
+      "large": 47,
+      "hasRoot": true,
+      "here": "Mountain"
+    },
+    {
+      "name": "Railroad",
+      "objects": 113,
+      "features": 6,
+      "large": 14,
+      "hasRoot": true,
+      "here": "Railroad"
+    },
+    {
+      "name": "BusStop",
+      "objects": 0,
+      "features": 4,
+      "large": 20,
+      "hasRoot": true,
+      "here": "BusStop"
+    },
+    {
+      "name": "Beach",
+      "objects": 6,
+      "features": 0,
+      "large": 0,
+      "hasRoot": true,
+      "here": "Beach"
+    },
+    {
+      "name": "IslandWest",
+      "objects": 236,
+      "features": 31,
+      "large": 73,
+      "hasRoot": true,
+      "here": "IslandWest"
+    }
+  ],
+  "note": null,
+  "mods": [
+    "SMAPI.ConsoleCommands 4.5.2",
+    "Kkthnx.ValleyFixes 0.1.0",
+    "Kkthnx.ValleyFixes.DevHarness 0.1.0"
+  ]
+}

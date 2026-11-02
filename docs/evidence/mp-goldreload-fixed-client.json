@@ -1,0 +1,13 @@
+{
+  "world": "client ready in FarmHousea6bb7f5e-a81d-4c38-9d5a-c8413fd073f4, id 1601199415209630887",
+  "goldreload": {
+    "clientMoney": 3950,
+    "clientSeparateWallets": true
+  },
+  "note": null,
+  "mods": [
+    "SMAPI.ConsoleCommands 4.5.2",
+    "Kkthnx.ValleyFixes 0.1.0",
+    "Kkthnx.ValleyFixes.DevHarness 0.1.0"
+  ]
+}

@@ -37,6 +37,9 @@ namespace ValleyFixes
             if (config.FixGeorgeWheelchair)
                 Start("George wheelchair", () => new GeorgeWheelchairFix(Monitor, helper.GameContent).Register(helper.Events));
 
+            if (config.FixOfflineFarmhandWallets)
+                Start("Offline farmhand wallets", () => new OfflineFarmhandWalletFix(Monitor).Register(helper.Events));
+
             if (config.FixPortugueseSingleStatus)
                 Start("Portuguese single status", () => new PortugueseSingleStatusFix(Monitor).Register(helper.Events));
 

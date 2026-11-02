@@ -1,0 +1,52 @@
+{
+  "world": "host ready in FarmHouse, multiplayerMode 2, server True",
+  "cabin": "ready for 1601199415209630887",
+  "gold": {
+    "farmhand": "Client 1601199415209630887",
+    "farmhandOnline": false,
+    "afterSeparateWallets": {
+      "handMoneyGetter": 500,
+      "hostTeamIndividual": 250,
+      "handPrivateTeamValue": 500,
+      "handSharesTheHostTeam": false,
+      "separateWallets": true
+    },
+    "afterSendMoney": {
+      "host": 7000,
+      "view": {
+        "handMoneyGetter": 500,
+        "hostTeamIndividual": 3250,
+        "handPrivateTeamValue": 500,
+        "handSharesTheHostTeam": false,
+        "separateWallets": true
+      }
+    },
+    "shippingBinItems": 1,
+    "afterNight": {
+      "host": 7000,
+      "view": {
+        "handMoneyGetter": 3950,
+        "hostTeamIndividual": 3950,
+        "handPrivateTeamValue": 3950,
+        "handSharesTheHostTeam": false,
+        "separateWallets": true
+      },
+      "binLeft": 0
+    },
+    "saveFolder": "VFTest_453249992",
+    "farmhandId": 1601199415209630887,
+    "saveFile": {
+      "readError": null,
+      "recovered": false,
+      "savedFarmhandMoney": 3950,
+      "savedHostMoney": 7000,
+      "savedSeparateWallets": false
+    }
+  },
+  "note": null,
+  "mods": [
+    "SMAPI.ConsoleCommands 4.5.2",
+    "Kkthnx.ValleyFixes 0.1.0",
+    "Kkthnx.ValleyFixes.DevHarness 0.1.0"
+  ]
+}

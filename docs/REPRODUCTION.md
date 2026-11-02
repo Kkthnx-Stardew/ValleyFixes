@@ -48,6 +48,7 @@ Each pass starts the game, creates a throwaway farm called "VFTest" with no menu
 | Title screen | `-Only title`: clicks the real mute button, opens the About screen and the load menu and closes them, reading the music volume, the button icon and the saved setting each time. Your `startup_preferences` file is saved first and put back afterwards |
 | Special orders | `-Only stale`: two finished special orders, one with a made-up participant id and one with none, then the game's updates and a real overnight |
 | George | Part of the full run: compares the four walking up frames of George's wheel area as the game loads the sheet |
+| Two players | `tools/Run-Multiplayer.ps1`: one game process hosts a throwaway farm, a second one joins as a farmhand through the real farmhand menu. They wait for each other at named points through small files. Scenarios: `join`, `perf`, `soak` (nights with both online, add `-Visit` to have the joiner walk into locations afterwards, `-HeapDumps` for dumps), `roundtrip` (progress, nights, the joiner leaves, the file is read), `gold`, `goldreload` (a kept world is loaded in a fresh game and the farmhand joins), `makeover`. The runner stops a run that makes no progress for 4 minutes |
 | Eating states | `-Only eatstates`: eats while an emote plays, after and during a monster hit, while sitting, during a clock update, with an item pick-up message and during a warp, and records which ones orphan the freeze |
 
 ## Stress and memory results are machine specific
@@ -57,7 +58,7 @@ Frame times, CPU and memory above depend on this PC (2560 by 1440, 60 fps). The 
 ## What was not tested
 
 - A human playing: no controller, no keyboard play-through, no window focus changes.
-- Multiplayer, split screen, another operating system, any mod beyond the test tool.
+- Split screen, three or more players, a joiner on another PC or over the internet, another operating system, any mod beyond the test tool.
 - Languages other than English and Portuguese in the running game.
 - A real Grange award, a full movie screening, a real axe on a tree, a real Trash Bear conversation, the real OK click in the menus.
 - Real fights in Skull Cavern, a real played late-game save, sessions of many hours.

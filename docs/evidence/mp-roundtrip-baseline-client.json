@@ -1,0 +1,61 @@
+{
+  "world": "client ready in FarmHouseda4b743c-6842-47cc-82c4-b729ea6b9809, id -3180639460693463232",
+  "roundtrip": {
+    "clientBefore": {
+      "Name": "Client",
+      "id": -3180639460693463232,
+      "money": 500,
+      "professions": [
+        12,
+        14
+      ],
+      "mail": true,
+      "recipeChest": true,
+      "masteryExp": 3000,
+      "testStat": 777,
+      "farmingLevel": 6,
+      "items388": 25,
+      "itemCount": 6,
+      "tools": [
+        "Axe:2",
+        "Hoe:0",
+        "Watering Can:0",
+        "Pickaxe:0",
+        "Scythe:0"
+      ],
+      "separateWallets": false,
+      "individualMoney": -1
+    },
+    "clientAfterNight": {
+      "Name": "Client",
+      "id": -3180639460693463232,
+      "money": 500,
+      "professions": [
+        12,
+        14
+      ],
+      "mail": true,
+      "recipeChest": true,
+      "masteryExp": 3000,
+      "testStat": 777,
+      "farmingLevel": 6,
+      "items388": 25,
+      "itemCount": 6,
+      "tools": [
+        "Axe:2",
+        "Hoe:0",
+        "Watering Can:0",
+        "Pickaxe:0",
+        "Scythe:0"
+      ],
+      "separateWallets": false,
+      "individualMoney": -1
+    }
+  },
+  "note": null,
+  "mods": [
+    "SMAPI.ConsoleCommands 4.5.2",
+    "Kkthnx.ValleyFixes 0.1.0",
+    "Kkthnx.ValleyFixes.DevHarness 0.1.0"
+  ]
+}

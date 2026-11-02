@@ -1,0 +1,505 @@
+{
+  "world": "host ready in FarmHouse, multiplayerMode 2, server True",
+  "cabin": "ready for 7689757396719680006",
+  "clientJoined": true,
+  "soak": [
+    {
+      "night": 0,
+      "world": {
+        "date": "spring 1 y1",
+        "online": 2,
+        "farmObjects": 1015,
+        "farmTerrainFeatures": 534,
+        "objectQueue": 0,
+        "terrainQueue": 0,
+        "farmRoot": true
+      },
+      "memory": {
+        "retainedMB": 114.7,
+        "workingSetMB": 1046
+      }
+    },
+    {
+      "night": 1,
+      "dayOfWeek": "Tue",
+      "world": {
+        "date": "spring 2 y1",
+        "online": 2,
+        "farmObjects": 1024,
+        "farmTerrainFeatures": 561,
+        "objectQueue": 0,
+        "terrainQueue": 0,
+        "farmRoot": true
+      },
+      "memory": {
+        "retainedMB": 116.6,
+        "workingSetMB": 1040
+      }
+    },
+    {
+      "night": 2,
+      "dayOfWeek": "Wed",
+      "world": {
+        "date": "spring 3 y1",
+        "online": 2,
+        "farmObjects": 1042,
+        "farmTerrainFeatures": 590,
+        "objectQueue": 0,
+        "terrainQueue": 0,
+        "farmRoot": true
+      },
+      "memory": {
+        "retainedMB": 117.9,
+        "workingSetMB": 1046
+      }
+    },
+    {
+      "night": 3,
+      "dayOfWeek": "Thu",
+      "world": {
+        "date": "spring 4 y1",
+        "online": 2,
+        "farmObjects": 1049,
+        "farmTerrainFeatures": 622,
+        "objectQueue": 0,
+        "terrainQueue": 0,
+        "farmRoot": true
+      },
+      "memory": {
+        "retainedMB": 118.6,
+        "workingSetMB": 1037
+      }
+    },
+    {
+      "night": 4,
+      "dayOfWeek": "Fri",
+      "world": {
+        "date": "spring 5 y1",
+        "online": 2,
+        "farmObjects": 1059,
+        "farmTerrainFeatures": 640,
+        "objectQueue": 0,
+        "terrainQueue": 0,
+        "farmRoot": true
+      },
+      "memory": {
+        "retainedMB": 119.3,
+        "workingSetMB": 1037
+      }
+    },
+    {
+      "night": 5,
+      "dayOfWeek": "Sat",
+      "world": {
+        "date": "spring 6 y1",
+        "online": 2,
+        "farmObjects": 1065,
+        "farmTerrainFeatures": 662,
+        "objectQueue": 0,
+        "terrainQueue": 0,
+        "farmRoot": true
+      },
+      "memory": {
+        "retainedMB": 119.8,
+        "workingSetMB": 1042
+      }
+    },
+    {
+      "night": 6,
+      "dayOfWeek": "Sun",
+      "world": {
+        "date": "spring 7 y1",
+        "online": 2,
+        "farmObjects": 1073,
+        "farmTerrainFeatures": 684,
+        "objectQueue": 0,
+        "terrainQueue": 0,
+        "farmRoot": true
+      },
+      "memory": {
+        "retainedMB": 120.6,
+        "workingSetMB": 1043
+      }
+    },
+    {
+      "night": 7,
+      "dayOfWeek": "Mon",
+      "world": {
+        "date": "spring 8 y1",
+        "online": 2,
+        "farmObjects": 1085,
+        "farmTerrainFeatures": 706,
+        "objectQueue": 0,
+        "terrainQueue": 0,
+        "farmRoot": true
+      },
+      "memory": {
+        "retainedMB": 121.4,
+        "workingSetMB": 1046
+      }
+    },
+    {
+      "night": 8,
+      "dayOfWeek": "Tue",
+      "world": {
+        "date": "spring 9 y1",
+        "online": 2,
+        "farmObjects": 1093,
+        "farmTerrainFeatures": 729,
+        "objectQueue": 0,
+        "terrainQueue": 0,
+        "farmRoot": true
+      },
+      "memory": {
+        "retainedMB": 122,
+        "workingSetMB": 1046
+      }
+    },
+    {
+      "night": 9,
+      "dayOfWeek": "Wed",
+      "world": {
+        "date": "spring 10 y1",
+        "online": 2,
+        "farmObjects": 1100,
+        "farmTerrainFeatures": 745,
+        "objectQueue": 0,
+        "terrainQueue": 0,
+        "farmRoot": true
+      },
+      "memory": {
+        "retainedMB": 122.5,
+        "workingSetMB": 1049
+      }
+    },
+    {
+      "night": 10,
+      "dayOfWeek": "Thu",
+      "world": {
+        "date": "spring 11 y1",
+        "online": 2,
+        "farmObjects": 1109,
+        "farmTerrainFeatures": 768,
+        "objectQueue": 0,
+        "terrainQueue": 0,
+        "farmRoot": true
+      },
+      "memory": {
+        "retainedMB": 123.2,
+        "workingSetMB": 1050
+      }
+    },
+    {
+      "night": 11,
+      "dayOfWeek": "Fri",
+      "world": {
+        "date": "spring 12 y1",
+        "online": 2,
+        "farmObjects": 1115,
+        "farmTerrainFeatures": 790,
+        "objectQueue": 0,
+        "terrainQueue": 0,
+        "farmRoot": true
+      },
+      "memory": {
+        "retainedMB": 123.7,
+        "workingSetMB": 1058
+      }
+    },
+    {
+      "night": 12,
+      "dayOfWeek": "Sat",
+      "world": {
+        "date": "spring 13 y1",
+        "online": 2,
+        "farmObjects": 1123,
+        "farmTerrainFeatures": 807,
+        "objectQueue": 0,
+        "terrainQueue": 0,
+        "farmRoot": true
+      },
+      "memory": {
+        "retainedMB": 124.2,
+        "workingSetMB": 1054
+      }
+    },
+    {
+      "night": 13,
+      "dayOfWeek": "Sun",
+      "world": {
+        "date": "spring 14 y1",
+        "online": 2,
+        "farmObjects": 1125,
+        "farmTerrainFeatures": 828,
+        "objectQueue": 0,
+        "terrainQueue": 0,
+        "farmRoot": true
+      },
+      "memory": {
+        "retainedMB": 125,
+        "workingSetMB": 1055
+      }
+    },
+    {
+      "night": 14,
+      "dayOfWeek": "Mon",
+      "world": {
+        "date": "spring 15 y1",
+        "online": 2,
+        "farmObjects": 1135,
+        "farmTerrainFeatures": 855,
+        "objectQueue": 0,
+        "terrainQueue": 0,
+        "farmRoot": true
+      },
+      "memory": {
+        "retainedMB": 125.6,
+        "workingSetMB": 1056
+      }
+    },
+    {
+      "night": 15,
+      "dayOfWeek": "Tue",
+      "world": {
+        "date": "spring 16 y1",
+        "online": 2,
+        "farmObjects": 1148,
+        "farmTerrainFeatures": 878,
+        "objectQueue": 0,
+        "terrainQueue": 0,
+        "farmRoot": true
+      },
+      "memory": {
+        "retainedMB": 126.4,
+        "workingSetMB": 1060
+      }
+    },
+    {
+      "night": 16,
+      "dayOfWeek": "Wed",
+      "world": {
+        "date": "spring 17 y1",
+        "online": 2,
+        "farmObjects": 1152,
+        "farmTerrainFeatures": 894,
+        "objectQueue": 0,
+        "terrainQueue": 0,
+        "farmRoot": true
+      },
+      "memory": {
+        "retainedMB": 127,
+        "workingSetMB": 1061
+      }
+    },
+    {
+      "night": 17,
+      "dayOfWeek": "Thu",
+      "world": {
+        "date": "spring 18 y1",
+        "online": 2,
+        "farmObjects": 1160,
+        "farmTerrainFeatures": 908,
+        "objectQueue": 0,
+        "terrainQueue": 0,
+        "farmRoot": true
+      },
+      "memory": {
+        "retainedMB": 127.5,
+        "workingSetMB": 1062
+      }
+    },
+    {
+      "night": 18,
+      "dayOfWeek": "Fri",
+      "world": {
+        "date": "spring 19 y1",
+        "online": 2,
+        "farmObjects": 1165,
+        "farmTerrainFeatures": 924,
+        "objectQueue": 0,
+        "terrainQueue": 0,
+        "farmRoot": true
+      },
+      "memory": {
+        "retainedMB": 128,
+        "workingSetMB": 1063
+      }
+    },
+    {
+      "night": 19,
+      "dayOfWeek": "Sat",
+      "world": {
+        "date": "spring 20 y1",
+        "online": 2,
+        "farmObjects": 1173,
+        "farmTerrainFeatures": 935,
+        "objectQueue": 0,
+        "terrainQueue": 0,
+        "farmRoot": true
+      },
+      "memory": {
+        "retainedMB": 128.4,
+        "workingSetMB": 1065
+      }
+    },
+    {
+      "night": 20,
+      "dayOfWeek": "Sun",
+      "world": {
+        "date": "spring 21 y1",
+        "online": 2,
+        "farmObjects": 1184,
+        "farmTerrainFeatures": 955,
+        "objectQueue": 0,
+        "terrainQueue": 0,
+        "farmRoot": true
+      },
+      "memory": {
+        "retainedMB": 129.6,
+        "workingSetMB": 1067
+      }
+    },
+    {
+      "night": 21,
+      "dayOfWeek": "Mon",
+      "world": {
+        "date": "spring 22 y1",
+        "online": 2,
+        "farmObjects": 1189,
+        "farmTerrainFeatures": 968,
+        "objectQueue": 0,
+        "terrainQueue": 0,
+        "farmRoot": true
+      },
+      "memory": {
+        "retainedMB": 130.1,
+        "workingSetMB": 1069
+      }
+    },
+    {
+      "night": 22,
+      "dayOfWeek": "Tue",
+      "world": {
+        "date": "spring 23 y1",
+        "online": 2,
+        "farmObjects": 1198,
+        "farmTerrainFeatures": 984,
+        "objectQueue": 0,
+        "terrainQueue": 0,
+        "farmRoot": true
+      },
+      "memory": {
+        "retainedMB": 130.7,
+        "workingSetMB": 1071
+      }
+    },
+    {
+      "night": 23,
+      "dayOfWeek": "Wed",
+      "world": {
+        "date": "spring 24 y1",
+        "online": 2,
+        "farmObjects": 1202,
+        "farmTerrainFeatures": 999,
+        "objectQueue": 0,
+        "terrainQueue": 0,
+        "farmRoot": true
+      },
+      "memory": {
+        "retainedMB": 131.1,
+        "workingSetMB": 1073
+      }
+    },
+    {
+      "night": 24,
+      "dayOfWeek": "Thu",
+      "world": {
+        "date": "spring 25 y1",
+        "online": 2,
+        "farmObjects": 1211,
+        "farmTerrainFeatures": 1009,
+        "objectQueue": 0,
+        "terrainQueue": 0,
+        "farmRoot": true
+      },
+      "memory": {
+        "retainedMB": 131.8,
+        "workingSetMB": 1074
+      }
+    },
+    {
+      "night": 25,
+      "dayOfWeek": "Fri",
+      "world": {
+        "date": "spring 26 y1",
+        "online": 2,
+        "farmObjects": 1216,
+        "farmTerrainFeatures": 1018,
+        "objectQueue": 0,
+        "terrainQueue": 0,
+        "farmRoot": true
+      },
+      "memory": {
+        "retainedMB": 132.3,
+        "workingSetMB": 1078
+      }
+    },
+    {
+      "night": 26,
+      "dayOfWeek": "Sat",
+      "world": {
+        "date": "spring 27 y1",
+        "online": 2,
+        "farmObjects": 1219,
+        "farmTerrainFeatures": 1027,
+        "objectQueue": 0,
+        "terrainQueue": 0,
+        "farmRoot": true
+      },
+      "memory": {
+        "retainedMB": 132.8,
+        "workingSetMB": 1078
+      }
+    },
+    {
+      "night": 27,
+      "dayOfWeek": "Sun",
+      "world": {
+        "date": "spring 28 y1",
+        "online": 2,
+        "farmObjects": 1224,
+        "farmTerrainFeatures": 1038,
+        "objectQueue": 0,
+        "terrainQueue": 0,
+        "farmRoot": true
+      },
+      "memory": {
+        "retainedMB": 133.5,
+        "workingSetMB": 1080
+      }
+    },
+    {
+      "night": 28,
+      "dayOfWeek": "Mon",
+      "world": {
+        "date": "summer 1 y1",
+        "online": 2,
+        "farmObjects": 1277,
+        "farmTerrainFeatures": 1053,
+        "objectQueue": 0,
+        "terrainQueue": 0,
+        "farmRoot": true
+      },
+      "memory": {
+        "retainedMB": 135.3,
+        "workingSetMB": 1080
+      }
+    }
+  ],
+  "note": null,
+  "mods": [
+    "SMAPI.ConsoleCommands 4.5.2",
+    "Kkthnx.ValleyFixes 0.1.0",
+    "Kkthnx.ValleyFixes.DevHarness 0.1.0"
+  ]
+}

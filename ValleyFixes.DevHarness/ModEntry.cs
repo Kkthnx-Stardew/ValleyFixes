@@ -14,7 +14,7 @@ namespace ValleyFixes.DevHarness
     /// Runs the ValleyFixes scenarios inside the real game and writes the results to the file named by VFH_OUT.
     /// It starts a throwaway farm by itself, so no menu clicking is needed. It does nothing when VFH_OUT is not set.
     /// </summary>
-    public class ModEntry : Mod
+    public partial class ModEntry : Mod
     {
         private const int WorldTimeoutTicks = 3600;
         private const int FreezeCapTicks = 1700;
@@ -90,7 +90,22 @@ namespace ValleyFixes.DevHarness
             {
                 if (Game1.activeClickableMenu is TitleMenu title && _ticks > 240)
                 {
-                    if (Environment.GetEnvironmentVariable("VFH_ONLY") == "title")
+                    if (Role != "")
+                    {
+                        if (IsHost)
+                        {
+                            if (!string.IsNullOrEmpty(Environment.GetEnvironmentVariable("VFH_LOAD")))
+                                LoadHostFarm(title, Environment.GetEnvironmentVariable("VFH_LOAD")!);
+                            else
+                                StartHostFarm(title);
+                            _run = HostMain().GetEnumerator();
+                        }
+                        else
+                        {
+                            _run = ClientMain(title).GetEnumerator();
+                        }
+                    }
+                    else if (Environment.GetEnvironmentVariable("VFH_ONLY") == "title")
                     {
                         _run = TitleScenario(title).GetEnumerator();
                     }
@@ -605,6 +620,7 @@ namespace ValleyFixes.DevHarness
                     farmTerrainFeatures = farm.terrainFeatures.Count(),
                     objectQueue = OutgoingCount(farm.netObjects),
                     terrainQueue = OutgoingCount(farm.terrainFeatures),
+                    all = AllCounts(),
                     retainedMB = Math.Round(GC.GetTotalMemory(true) / 1048576.0, 1),
                     workingSetMB = Math.Round(proc.WorkingSet64 / 1048576.0, 0)
                 };
@@ -1023,6 +1039,28 @@ namespace ValleyFixes.DevHarness
 
             p.maxHealth = 100;
             p.health = 100;
+        }
+
+        // everything the world holds, summed over every location the game knows, and how many unsent change entries wait in all of them
+        private static object AllCounts()
+        {
+            int locations = 0, objects = 0, features = 0, large = 0, debris = 0, queued = 0;
+            Utility.ForEachLocation(l =>
+            {
+                locations++;
+                objects += l.objects.Count();
+                features += l.terrainFeatures.Count();
+                large += l.largeTerrainFeatures.Count;
+                debris += l.debris.Count;
+                foreach (var field in l.NetFields.GetFields())
+                {
+                    int q = OutgoingCount(field);
+                    if (q > 0)
+                        queued += q;
+                }
+                return true;
+            }, includeInteriors: true, includeGenerated: true);
+            return new { locations, objects, features, large, debris, queued };
         }
 
         private static int OutgoingCount(object dictionary)

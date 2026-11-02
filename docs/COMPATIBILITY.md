@@ -17,6 +17,7 @@ Tested against Stardew Valley 1.6.15 build 24356 with SMAPI 4.5.2 on Windows 11.
 | `CheckStaleOrderParticipants` | `DayStarted` event, host only, log only | Reads `team.specialOrders` | on |
 | `RepairStaleOrderParticipants` | Same event, removes ids that belong to no player | `participants` and `unclaimedRewards` of special orders | **off** |
 | `FixQuestItemGroundDrops` | Harmony postfix | `Game1._RecursiveRemoveThisNormalItemLocation` | **off** |
+| `FixOfflineFarmhandWallets` | `Saving` event, host only | The wallet of the saved copy of each farmhand who is not in the game | on |
 | `FixBlankNames` | Harmony postfix | `CharacterCustomization.canLeaveMenu` | on |
 | `FixTrashBearSardine` | Harmony postfix | `Utility.getRandomPureSeasonalItem` | on |
 | `LogEatInterrupts` | Harmony prefix, log only | `Farmer.completelyStopAnimatingOrDoingAction` | on |
@@ -38,7 +39,7 @@ No transpilers. No per-tick work. The title screen and ground drop patches run o
 
 ## Multiplayer
 
-Not tested in multiplayer. By design:
+Tested with a host and one joining player, each a separate game process on the same PC (see `REPRODUCTION.md`). Not tested: split screen, three or more players, a joiner on another PC or over the internet, a dedicated server. By design:
 
 - Text and menu fixes are local to each player. Install on every player who should see the corrected text.
 - `FixChefBundleReward` decides the reward when a host creates a new remixed world, so only the host needs it at that moment. Existing worlds keep the bundles they were created with.
@@ -46,7 +47,8 @@ Not tested in multiplayer. By design:
 - `FixLumberjackMahoganyBonus` changes drops on the machine that fells the tree.
 - `CheckStaleOrderParticipants` runs on the host only. `RepairStaleOrderParticipants` edits state that every player shares, was only tested with a made-up id and is off by default.
 - `FixQuestItemGroundDrops` and `FixTitleMusicMute` run on each machine for what that machine sees.
-- `TrimLocationChangeBacklog` returns immediately when `Context.IsMultiplayer` is true (this includes split screen), because there the game sends the changes and clears the queues itself.
+- `TrimLocationChangeBacklog` runs on the main player only. It skips any location that has a network root, because the game empties that queue itself. The ones without a root (locations no joiner has been sent yet, and every location in single player) are cleared. A joiner who walks into one later is sent the whole location. After 20 nights the joiner saw the same object and feature counts as the host in seven visited locations, with and without the fix.
+- `FixOfflineFarmhandWallets` runs on the main player only and only when the world uses separate wallets. It sets the saved copy's wallet to the shared value, it never adds, so a second run changes nothing.
 
 ## Known limits
 
@@ -56,4 +58,5 @@ Not tested in multiplayer. By design:
 - `TrimLocationChangeBacklog` only covers locations. The queues on the player, world state and team were not measured as a problem and are left alone. It was measured over 12 nights on a starter farm and 40 nights on a synthetic late-game style farm, not on a real played save or a session of many hours.
 - `RepairStaleOrderParticipants` removes only ids that belong to no player in the world, but a real deleted farmhand was never tested.
 - `FixGeorgeWheelchair` does nothing if another mod changed either George sheet, by design.
+- A host and a joiner sometimes freeze in the game's own new day save (seen twice in about 20 two-player runs, once with every ValleyFixes fix turned off). Not caused by this mod and not fixed by it.
 - The eating freeze (VF-004) is not fixed. The logger only names the cause when it happens.

@@ -1,0 +1,76 @@
+{
+  "world": "host ready in FarmHouse, multiplayerMode 2, server True",
+  "cabin": "ready for 2220420183345688796",
+  "clientJoined": true,
+  "perf": {
+    "world": {
+      "date": "spring 1 y1",
+      "online": 2,
+      "farmObjects": 1022,
+      "farmTerrainFeatures": 536,
+      "objectQueue": 0,
+      "terrainQueue": 0,
+      "farmRoot": true
+    },
+    "idle_together": {
+      "seconds": 30,
+      "processCpuMsPerFrame": 1.33,
+      "processCpuPercentOfOneCore": 8,
+      "update": {
+        "frames": 1800,
+        "meanMs": 0.13,
+        "medianMs": 0.11,
+        "p99Ms": 0.33,
+        "maxMs": 8.52,
+        "over8ms": 1,
+        "over16ms": 0
+      },
+      "render": {
+        "frames": 1402,
+        "meanMs": 0.62,
+        "medianMs": 0.59,
+        "p99Ms": 0.85,
+        "maxMs": 1.69,
+        "over8ms": 0,
+        "over16ms": 0
+      },
+      "allocatedMBPerSecond": 3.74,
+      "gen0": 2,
+      "gen1": 0,
+      "gen2": 0,
+      "heapMB": 172
+    },
+    "walking_together": {
+      "seconds": 15,
+      "update": {
+        "frames": 900,
+        "meanMs": 0.13,
+        "medianMs": 0.12,
+        "p99Ms": 0.34,
+        "maxMs": 0.79,
+        "over8ms": 0,
+        "over16ms": 0
+      },
+      "render": {
+        "frames": 699,
+        "meanMs": 0.65,
+        "medianMs": 0.62,
+        "p99Ms": 0.87,
+        "maxMs": 1.41,
+        "over8ms": 0,
+        "over16ms": 0
+      },
+      "allocatedMBPerSecond": 3.75
+    },
+    "memory": {
+      "retainedMB": 115.2,
+      "workingSetMB": 1101
+    }
+  },
+  "note": null,
+  "mods": [
+    "SMAPI.ConsoleCommands 4.5.2",
+    "Kkthnx.ValleyFixes 0.1.0",
+    "Kkthnx.ValleyFixes.DevHarness 0.1.0"
+  ]
+}

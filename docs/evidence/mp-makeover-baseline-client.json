@@ -1,0 +1,36 @@
+{
+  "world": "client ready in FarmHousec944f961-24c9-4c0b-9679-de570ed2571c, id -2457161033238221024",
+  "makeover": {
+    "worn_before": {
+      "pants": "(P)3",
+      "pantsColor": 4278241280,
+      "shirt": "(S)1000",
+      "shirtColor": 4281467080
+    },
+    "locationExists": true,
+    "worn_after": {
+      "pants": "(P)0",
+      "shirt": "(S)1183",
+      "hat": null
+    },
+    "inventory_clothes_after": [
+      {
+        "id": "(S)1000",
+        "color": 4281467080,
+        "dyeable": false
+      },
+      {
+        "id": "(P)3",
+        "color": 4278241280,
+        "dyeable": true
+      }
+    ],
+    "inventory_hats_after": []
+  },
+  "note": null,
+  "mods": [
+    "SMAPI.ConsoleCommands 4.5.2",
+    "Kkthnx.ValleyFixes 0.1.0",
+    "Kkthnx.ValleyFixes.DevHarness 0.1.0"
+  ]
+}

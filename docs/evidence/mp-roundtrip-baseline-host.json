@@ -1,0 +1,235 @@
+{
+  "world": "host ready in FarmHouse, multiplayerMode 2, server True",
+  "cabin": "ready for -3180639460693463232",
+  "clientJoined": true,
+  "roundtrip": {
+    "whileOnline_hostFarmhandDataVsClient": [
+      {
+        "element": "items-first-difference",
+        "windows": [
+          "#0 client: \u003E1\u003C/animationSpeedModifier\u003E\u003CswingTicker\u003E462874\u003C/swingTicker\u003E\u003CupgradeLevel\u003E2\u003C/upgradeLevel\u003E\u003CnumAttachmentSlots\u003E || file: \u003E1\u003C/animationSpeedModifier\u003E\u003CswingTicker\u003E898810\u003C/swingTicker\u003E\u003CupgradeLevel\u003E2\u003C/upgradeLevel\u003E\u003CnumAttachmentSlots\u003E",
+          "#1 client: \u003E1\u003C/animationSpeedModifier\u003E\u003CswingTicker\u003E161210\u003C/swingTicker\u003E\u003CupgradeLevel\u003E0\u003C/upgradeLevel\u003E\u003CnumAttachmentSlots\u003E || file: \u003E1\u003C/animationSpeedModifier\u003E\u003CswingTicker\u003E75201\u003C/swingTicker\u003E\u003CupgradeLevel\u003E0\u003C/upgradeLevel\u003E\u003CnumAttachmentSlots\u003E0",
+          "#2 client: \u003E1\u003C/animationSpeedModifier\u003E\u003CswingTicker\u003E420984\u003C/swingTicker\u003E\u003CupgradeLevel\u003E0\u003C/upgradeLevel\u003E\u003CnumAttachmentSlots\u003E || file: \u003E1\u003C/animationSpeedModifier\u003E\u003CswingTicker\u003E56781\u003C/swingTicker\u003E\u003CupgradeLevel\u003E0\u003C/upgradeLevel\u003E\u003CnumAttachmentSlots\u003E0",
+          "#3 client: \u003E1\u003C/animationSpeedModifier\u003E\u003CswingTicker\u003E434823\u003C/swingTicker\u003E\u003CupgradeLevel\u003E0\u003C/upgradeLevel\u003E\u003CnumAttachmentSlots\u003E || file: \u003E1\u003C/animationSpeedModifier\u003E\u003CswingTicker\u003E565659\u003C/swingTicker\u003E\u003CupgradeLevel\u003E0\u003C/upgradeLevel\u003E\u003CnumAttachmentSlots\u003E",
+          "#4 client: \u003E1\u003C/animationSpeedModifier\u003E\u003CswingTicker\u003E782733\u003C/swingTicker\u003E\u003CupgradeLevel\u003E0\u003C/upgradeLevel\u003E\u003CnumAttachmentSlots\u003E || file: \u003E1\u003C/animationSpeedModifier\u003E\u003CswingTicker\u003E208715\u003C/swingTicker\u003E\u003CupgradeLevel\u003E0\u003C/upgradeLevel\u003E\u003CnumAttachmentSlots\u003E"
+        ]
+      },
+      {
+        "element": "items",
+        "leftCount": 12,
+        "rightCount": 12,
+        "onlyOnClient": [
+          "\u003CItem xsi:type=\u0022Axe\u0022 xmlns:xsi=\u0022http://www.w3.org/2001/XMLSchema-instance\u0022\u003E\u003CisLostItem\u003Efalse\u003C/isLostItem\u003E\u003Ccategory\u003E-99\u003C/category\u003E\u003ChasBeenInInventory\u003Etrue\u003C/hasBe...",
+          "\u003CItem xsi:type=\u0022Hoe\u0022 xmlns:xsi=\u0022http://www.w3.org/2001/XMLSchema-instance\u0022\u003E\u003CisLostItem\u003Efalse\u003C/isLostItem\u003E\u003Ccategory\u003E-99\u003C/category\u003E\u003ChasBeenInInventory\u003Efalse\u003C/hasB..."
+        ],
+        "onlyInHostFile": [
+          "\u003CItem xsi:type=\u0022Axe\u0022 xmlns:xsi=\u0022http://www.w3.org/2001/XMLSchema-instance\u0022\u003E\u003CisLostItem\u003Efalse\u003C/isLostItem\u003E\u003Ccategory\u003E-99\u003C/category\u003E\u003ChasBeenInInventory\u003Etrue\u003C/hasBe...",
+          "\u003CItem xsi:type=\u0022Hoe\u0022 xmlns:xsi=\u0022http://www.w3.org/2001/XMLSchema-instance\u0022\u003E\u003CisLostItem\u003Efalse\u003C/isLostItem\u003E\u003Ccategory\u003E-99\u003C/category\u003E\u003ChasBeenInInventory\u003Efalse\u003C/hasB..."
+        ],
+        "plainLeft": "",
+        "plainRight": ""
+      },
+      {
+        "element": "millisecondsPlayed",
+        "leftCount": 0,
+        "rightCount": 0,
+        "onlyOnClient": [],
+        "onlyInHostFile": [],
+        "plainLeft": "\u003CmillisecondsPlayed\u003E11440\u003C/millisecondsPlayed\u003E",
+        "plainRight": "\u003CmillisecondsPlayed\u003E6800\u003C/millisecondsPlayed\u003E"
+      },
+      {
+        "element": "songsHeard",
+        "leftCount": 3,
+        "rightCount": 2,
+        "onlyOnClient": [
+          "\u003Cstring\u003Espring2\u003C/string\u003E"
+        ],
+        "onlyInHostFile": [],
+        "plainLeft": "",
+        "plainRight": ""
+      },
+      {
+        "element": "triggerActionsRun",
+        "leftCount": 1,
+        "rightCount": 0,
+        "onlyOnClient": [
+          "\u003Cstring\u003EMail_Willy_ResendSpring21\u003C/string\u003E"
+        ],
+        "onlyInHostFile": [],
+        "plainLeft": "",
+        "plainRight": "\u003CtriggerActionsRun /\u003E"
+      }
+    ],
+    "whileOnline_fileVsClient": [
+      {
+        "element": "items-first-difference",
+        "windows": [
+          "#0 client: \u003E1\u003C/animationSpeedModifier\u003E\u003CswingTicker\u003E462874\u003C/swingTicker\u003E\u003CupgradeLevel\u003E2\u003C/upgradeLevel\u003E\u003CnumAttachmentSlots\u003E || file: \u003E1\u003C/animationSpeedModifier\u003E\u003CswingTicker\u003E898810\u003C/swingTicker\u003E\u003CupgradeLevel\u003E2\u003C/upgradeLevel\u003E\u003CnumAttachmentSlots\u003E",
+          "#1 client: \u003E1\u003C/animationSpeedModifier\u003E\u003CswingTicker\u003E161210\u003C/swingTicker\u003E\u003CupgradeLevel\u003E0\u003C/upgradeLevel\u003E\u003CnumAttachmentSlots\u003E || file: \u003E1\u003C/animationSpeedModifier\u003E\u003CswingTicker\u003E75201\u003C/swingTicker\u003E\u003CupgradeLevel\u003E0\u003C/upgradeLevel\u003E\u003CnumAttachmentSlots\u003E0",
+          "#2 client: \u003E1\u003C/animationSpeedModifier\u003E\u003CswingTicker\u003E420984\u003C/swingTicker\u003E\u003CupgradeLevel\u003E0\u003C/upgradeLevel\u003E\u003CnumAttachmentSlots\u003E || file: \u003E1\u003C/animationSpeedModifier\u003E\u003CswingTicker\u003E56781\u003C/swingTicker\u003E\u003CupgradeLevel\u003E0\u003C/upgradeLevel\u003E\u003CnumAttachmentSlots\u003E0",
+          "#3 client: \u003E1\u003C/animationSpeedModifier\u003E\u003CswingTicker\u003E434823\u003C/swingTicker\u003E\u003CupgradeLevel\u003E0\u003C/upgradeLevel\u003E\u003CnumAttachmentSlots\u003E || file: \u003E1\u003C/animationSpeedModifier\u003E\u003CswingTicker\u003E565659\u003C/swingTicker\u003E\u003CupgradeLevel\u003E0\u003C/upgradeLevel\u003E\u003CnumAttachmentSlots\u003E",
+          "#4 client: \u003E1\u003C/animationSpeedModifier\u003E\u003CswingTicker\u003E782733\u003C/swingTicker\u003E\u003CupgradeLevel\u003E0\u003C/upgradeLevel\u003E\u003CnumAttachmentSlots\u003E || file: \u003E1\u003C/animationSpeedModifier\u003E\u003CswingTicker\u003E208715\u003C/swingTicker\u003E\u003CupgradeLevel\u003E0\u003C/upgradeLevel\u003E\u003CnumAttachmentSlots\u003E"
+        ]
+      },
+      {
+        "element": "items",
+        "leftCount": 12,
+        "rightCount": 12,
+        "onlyOnClient": [
+          "\u003CItem xsi:type=\u0022Axe\u0022 xmlns:xsi=\u0022http://www.w3.org/2001/XMLSchema-instance\u0022\u003E\u003CisLostItem\u003Efalse\u003C/isLostItem\u003E\u003Ccategory\u003E-99\u003C/category\u003E\u003ChasBeenInInventory\u003Etrue\u003C/hasBe...",
+          "\u003CItem xsi:type=\u0022Hoe\u0022 xmlns:xsi=\u0022http://www.w3.org/2001/XMLSchema-instance\u0022\u003E\u003CisLostItem\u003Efalse\u003C/isLostItem\u003E\u003Ccategory\u003E-99\u003C/category\u003E\u003ChasBeenInInventory\u003Efalse\u003C/hasB..."
+        ],
+        "onlyInHostFile": [
+          "\u003CItem xsi:type=\u0022Axe\u0022 xmlns:xsi=\u0022http://www.w3.org/2001/XMLSchema-instance\u0022\u003E\u003CisLostItem\u003Efalse\u003C/isLostItem\u003E\u003Ccategory\u003E-99\u003C/category\u003E\u003ChasBeenInInventory\u003Etrue\u003C/hasBe...",
+          "\u003CItem xsi:type=\u0022Hoe\u0022 xmlns:xsi=\u0022http://www.w3.org/2001/XMLSchema-instance\u0022\u003E\u003CisLostItem\u003Efalse\u003C/isLostItem\u003E\u003Ccategory\u003E-99\u003C/category\u003E\u003ChasBeenInInventory\u003Efalse\u003C/hasB..."
+        ],
+        "plainLeft": "",
+        "plainRight": ""
+      },
+      {
+        "element": "millisecondsPlayed",
+        "leftCount": 0,
+        "rightCount": 0,
+        "onlyOnClient": [],
+        "onlyInHostFile": [],
+        "plainLeft": "\u003CmillisecondsPlayed\u003E11440\u003C/millisecondsPlayed\u003E",
+        "plainRight": "\u003CmillisecondsPlayed\u003E6800\u003C/millisecondsPlayed\u003E"
+      },
+      {
+        "element": "songsHeard",
+        "leftCount": 3,
+        "rightCount": 2,
+        "onlyOnClient": [
+          "\u003Cstring\u003Espring2\u003C/string\u003E"
+        ],
+        "onlyInHostFile": [],
+        "plainLeft": "",
+        "plainRight": ""
+      },
+      {
+        "element": "triggerActionsRun",
+        "leftCount": 1,
+        "rightCount": 0,
+        "onlyOnClient": [
+          "\u003Cstring\u003EMail_Willy_ResendSpring21\u003C/string\u003E"
+        ],
+        "onlyInHostFile": [],
+        "plainLeft": "",
+        "plainRight": "\u003CtriggerActionsRun /\u003E"
+      }
+    ],
+    "otherFarmersAfterLeave": 0,
+    "afterLeaving_fileVsClient": [
+      {
+        "element": "cookingRecipes",
+        "leftCount": 1,
+        "rightCount": 2,
+        "onlyOnClient": [],
+        "onlyInHostFile": [
+          "\u003Citem\u003E\u003Ckey\u003E\u003Cstring\u003EFarmer\u0027s Lunch\u003C/string\u003E\u003C/key\u003E\u003Cvalue\u003E\u003Cint\u003E0\u003C/int\u003E\u003C/value\u003E\u003C/item\u003E"
+        ],
+        "plainLeft": "",
+        "plainRight": ""
+      },
+      {
+        "element": "craftingRecipes",
+        "leftCount": 11,
+        "rightCount": 24,
+        "onlyOnClient": [],
+        "onlyInHostFile": [
+          "\u003Citem\u003E\u003Ckey\u003E\u003Cstring\u003EStone Fence\u003C/string\u003E\u003C/key\u003E\u003Cvalue\u003E\u003Cint\u003E0\u003C/int\u003E\u003C/value\u003E\u003C/item\u003E",
+          "\u003Citem\u003E\u003Ckey\u003E\u003Cstring\u003EIron Fence\u003C/string\u003E\u003C/key\u003E\u003Cvalue\u003E\u003Cint\u003E0\u003C/int\u003E\u003C/value\u003E\u003C/item\u003E"
+        ],
+        "plainLeft": "",
+        "plainRight": ""
+      },
+      {
+        "element": "disconnectDay",
+        "leftCount": 0,
+        "rightCount": 0,
+        "onlyOnClient": [],
+        "onlyInHostFile": [],
+        "plainLeft": "\u003CdisconnectDay\u003E-1\u003C/disconnectDay\u003E",
+        "plainRight": "\u003CdisconnectDay\u003E2\u003C/disconnectDay\u003E"
+      },
+      {
+        "element": "disconnectLocation",
+        "leftCount": 0,
+        "rightCount": 0,
+        "onlyOnClient": [],
+        "onlyInHostFile": [],
+        "plainLeft": "(missing)",
+        "plainRight": "\u003CdisconnectLocation\u003EFarmHouseda4b743c-6842-47cc-82c4-b729ea6b9809\u003C/disconnectLocation\u003E"
+      },
+      {
+        "element": "disconnectPosition",
+        "leftCount": 2,
+        "rightCount": 2,
+        "onlyOnClient": [
+          "\u003CX\u003E0\u003C/X\u003E",
+          "\u003CY\u003E0\u003C/Y\u003E"
+        ],
+        "onlyInHostFile": [
+          "\u003CX\u003E576\u003C/X\u003E",
+          "\u003CY\u003E608\u003C/Y\u003E"
+        ],
+        "plainLeft": "",
+        "plainRight": ""
+      },
+      {
+        "element": "items-first-difference",
+        "windows": [
+          "#0 client: \u003E1\u003C/animationSpeedModifier\u003E\u003CswingTicker\u003E462874\u003C/swingTicker\u003E\u003CupgradeLevel\u003E2\u003C/upgradeLevel\u003E\u003CnumAttachmentSlots\u003E || file: \u003E1\u003C/animationSpeedModifier\u003E\u003CswingTicker\u003E203290\u003C/swingTicker\u003E\u003CupgradeLevel\u003E2\u003C/upgradeLevel\u003E\u003CnumAttachmentSlots\u003E",
+          "#1 client: \u003E1\u003C/animationSpeedModifier\u003E\u003CswingTicker\u003E161210\u003C/swingTicker\u003E\u003CupgradeLevel\u003E0\u003C/upgradeLevel\u003E\u003CnumAttachmentSlots\u003E || file: \u003E1\u003C/animationSpeedModifier\u003E\u003CswingTicker\u003E933555\u003C/swingTicker\u003E\u003CupgradeLevel\u003E0\u003C/upgradeLevel\u003E\u003CnumAttachmentSlots\u003E",
+          "#2 client: 1\u003C/animationSpeedModifier\u003E\u003CswingTicker\u003E420984\u003C/swingTicker\u003E\u003CupgradeLevel\u003E0\u003C/upgradeLevel\u003E\u003CnumAttachmentSlots\u003E0 || file: 1\u003C/animationSpeedModifier\u003E\u003CswingTicker\u003E460616\u003C/swingTicker\u003E\u003CupgradeLevel\u003E0\u003C/upgradeLevel\u003E\u003CnumAttachmentSlots\u003E0",
+          "#3 client: \u003E1\u003C/animationSpeedModifier\u003E\u003CswingTicker\u003E434823\u003C/swingTicker\u003E\u003CupgradeLevel\u003E0\u003C/upgradeLevel\u003E\u003CnumAttachmentSlots\u003E || file: \u003E1\u003C/animationSpeedModifier\u003E\u003CswingTicker\u003E79932\u003C/swingTicker\u003E\u003CupgradeLevel\u003E0\u003C/upgradeLevel\u003E\u003CnumAttachmentSlots\u003E0",
+          "#4 client: \u003E1\u003C/animationSpeedModifier\u003E\u003CswingTicker\u003E782733\u003C/swingTicker\u003E\u003CupgradeLevel\u003E0\u003C/upgradeLevel\u003E\u003CnumAttachmentSlots\u003E || file: \u003E1\u003C/animationSpeedModifier\u003E\u003CswingTicker\u003E987744\u003C/swingTicker\u003E\u003CupgradeLevel\u003E0\u003C/upgradeLevel\u003E\u003CnumAttachmentSlots\u003E"
+        ]
+      },
+      {
+        "element": "items",
+        "leftCount": 12,
+        "rightCount": 12,
+        "onlyOnClient": [
+          "\u003CItem xsi:type=\u0022Axe\u0022 xmlns:xsi=\u0022http://www.w3.org/2001/XMLSchema-instance\u0022\u003E\u003CisLostItem\u003Efalse\u003C/isLostItem\u003E\u003Ccategory\u003E-99\u003C/category\u003E\u003ChasBeenInInventory\u003Etrue\u003C/hasBe...",
+          "\u003CItem xsi:type=\u0022Hoe\u0022 xmlns:xsi=\u0022http://www.w3.org/2001/XMLSchema-instance\u0022\u003E\u003CisLostItem\u003Efalse\u003C/isLostItem\u003E\u003Ccategory\u003E-99\u003C/category\u003E\u003ChasBeenInInventory\u003Efalse\u003C/hasB..."
+        ],
+        "onlyInHostFile": [
+          "\u003CItem xsi:type=\u0022Axe\u0022 xmlns:xsi=\u0022http://www.w3.org/2001/XMLSchema-instance\u0022\u003E\u003CisLostItem\u003Efalse\u003C/isLostItem\u003E\u003Ccategory\u003E-99\u003C/category\u003E\u003ChasBeenInInventory\u003Etrue\u003C/hasBe...",
+          "\u003CItem xsi:type=\u0022Hoe\u0022 xmlns:xsi=\u0022http://www.w3.org/2001/XMLSchema-instance\u0022\u003E\u003CisLostItem\u003Efalse\u003C/isLostItem\u003E\u003Ccategory\u003E-99\u003C/category\u003E\u003ChasBeenInInventory\u003Efalse\u003C/hasB..."
+        ],
+        "plainLeft": "",
+        "plainRight": ""
+      },
+      {
+        "element": "millisecondsPlayed",
+        "leftCount": 0,
+        "rightCount": 0,
+        "onlyOnClient": [],
+        "onlyInHostFile": [],
+        "plainLeft": "\u003CmillisecondsPlayed\u003E11440\u003C/millisecondsPlayed\u003E",
+        "plainRight": "\u003CmillisecondsPlayed\u003E12256\u003C/millisecondsPlayed\u003E"
+      },
+      {
+        "element": "newLevels",
+        "leftCount": 0,
+        "rightCount": 1,
+        "onlyOnClient": [],
+        "onlyInHostFile": [
+          "\u003CPoint\u003E\u003CX\u003E0\u003C/X\u003E\u003CY\u003E5\u003C/Y\u003E\u003C/Point\u003E"
+        ],
+        "plainLeft": "\u003CnewLevels /\u003E",
+        "plainRight": ""
+      }
+    ],
+    "saveFolder": "VFTest_453254281",
+    "farmhandId": -3180639460693463232
+  },
+  "note": null,
+  "mods": [
+    "SMAPI.ConsoleCommands 4.5.2",
+    "Kkthnx.ValleyFixes 0.1.0",
+    "Kkthnx.ValleyFixes.DevHarness 0.1.0"
+  ]
+}

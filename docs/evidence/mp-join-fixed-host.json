@@ -1,0 +1,34 @@
+{
+  "world": "host ready in FarmHouse, multiplayerMode 2, server True",
+  "cabin": "ready for 6513839931484970383",
+  "clientJoined": true,
+  "join": {
+    "role": "host",
+    "isMultiplayer": true,
+    "contextIsMultiplayer": true,
+    "isMasterGame": true,
+    "online": [
+      "VFTest",
+      "Client"
+    ],
+    "all": [
+      "VFTest",
+      "Client"
+    ],
+    "world": {
+      "date": "spring 1 y1",
+      "online": 2,
+      "farmObjects": 1022,
+      "farmTerrainFeatures": 536,
+      "objectQueue": 0,
+      "terrainQueue": 0,
+      "farmRoot": true
+    }
+  },
+  "note": null,
+  "mods": [
+    "SMAPI.ConsoleCommands 4.5.2",
+    "Kkthnx.ValleyFixes 0.1.0",
+    "Kkthnx.ValleyFixes.DevHarness 0.1.0"
+  ]
+}
