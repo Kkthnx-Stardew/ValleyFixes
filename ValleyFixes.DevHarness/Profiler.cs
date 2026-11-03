@@ -16,6 +16,7 @@ namespace ValleyFixes.DevHarness
         internal sealed class Row
         {
             public long Ticks;
+            public long Bytes;
             public long Calls;
             public long MaxTicks;
         }
@@ -35,12 +36,26 @@ namespace ValleyFixes.DevHarness
             Wrap(harmony, monitor, typeof(FarmAnimal), "behaviors");
             Wrap(harmony, monitor, typeof(PathFindController), "findPath", new[] { typeof(Microsoft.Xna.Framework.Point), typeof(Microsoft.Xna.Framework.Point), typeof(PathFindController.isAtEnd), typeof(GameLocation), typeof(Character), typeof(int) });
             Wrap(harmony, monitor, typeof(Game1), "performTenMinuteClockUpdate");
+            Wrap(harmony, monitor, typeof(Game1), "shouldTimePass");
+            Wrap(harmony, monitor, typeof(Game1), "_update");
+            Wrap(harmony, monitor, typeof(Game1), "_draw");
             InstallNet(harmony, monitor);
+            AssetTracer.Install(harmony, monitor);
+            LocationProfiler.Install(harmony, monitor);
         }
 
         private static void Wrap(Harmony harmony, IMonitor monitor, Type type, string name, Type[]? args = null)
         {
-            var method = args is null ? AccessTools.Method(type, name) : AccessTools.Method(type, name, args);
+            MethodBase? method;
+            try
+            {
+                method = args is null ? AccessTools.Method(type, name) : AccessTools.Method(type, name, args);
+            }
+            catch (Exception ex)
+            {
+                monitor.Log($"[profiler] {type.Name}.{name} skipped: {ex.Message}", LogLevel.Warn);
+                return;
+            }
             if (method is null)
             {
                 monitor.Log($"[profiler] {type.Name}.{name} not found", LogLevel.Warn);
@@ -53,19 +68,21 @@ namespace ValleyFixes.DevHarness
 
         private static readonly Dictionary<MethodBase, string> Labels = new();
 
-        private static void Start(out long __state) => __state = Active ? Stopwatch.GetTimestamp() : 0;
+        private static void Start(out LocationProfiler.State __state) => __state = Active ? new LocationProfiler.State { Ticks = Stopwatch.GetTimestamp(), Bytes = GC.GetAllocatedBytesForCurrentThread() } : default;
 
-        private static void Stop(MethodBase __originalMethod, long __state)
+        private static void Stop(MethodBase __originalMethod, LocationProfiler.State __state)
         {
-            if (__state == 0)
+            if (__state.Ticks == 0)
                 return;
-            long elapsed = Stopwatch.GetTimestamp() - __state;
+            long elapsed = Stopwatch.GetTimestamp() - __state.Ticks;
+            long allocated = GC.GetAllocatedBytesForCurrentThread() - __state.Bytes;
             string label = Labels.TryGetValue(__originalMethod, out var l) ? l : __originalMethod.Name;
             lock (Gate)
             {
                 if (!Rows.TryGetValue(label, out var row))
                     Rows[label] = row = new Row();
                 row.Ticks += elapsed;
+                row.Bytes += allocated;
                 row.Calls++;
                 if (elapsed > row.MaxTicks)
                     row.MaxTicks = elapsed;
@@ -156,6 +173,7 @@ namespace ValleyFixes.DevHarness
                     {
                         msPerFrame = Math.Round(r.Value.Ticks * toMs / Math.Max(1, frames), 3),
                         calls = r.Value.Calls,
+                        kbPerCall = Math.Round(r.Value.Bytes / 1024.0 / Math.Max(1, r.Value.Calls), 2),
                         meanUs = Math.Round(r.Value.Ticks * toMs * 1000.0 / Math.Max(1, r.Value.Calls), 1),
                         maxMs = Math.Round(r.Value.MaxTicks * toMs, 2)
                     });

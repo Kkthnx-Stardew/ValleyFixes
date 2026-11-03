@@ -14,6 +14,7 @@ The Stardew Valley folder. Defaults to the Steam library on D:.
 #>
 param(
     [switch] $NoLaunch,
+    [string] $ModsName = 'Mods',
     [string] $GamePath = 'D:\SteamLibrary\steamapps\common\Stardew Valley',
     [ValidateSet('Debug', 'Release')][string] $Configuration = 'Debug'
 )
@@ -21,7 +22,7 @@ param(
 $ErrorActionPreference = 'Stop'
 
 $repo = Split-Path -Parent $PSScriptRoot
-$mods = Join-Path $repo 'testprofile\Mods'
+$mods = Join-Path $repo ("testprofile\" + $ModsName)
 $target = Join-Path $mods 'ValleyFixes'
 $built = Join-Path $repo "ValleyFixes\bin\$Configuration\net6.0"
 

@@ -26,6 +26,9 @@ param(
     [switch] $Heavy,
     [switch] $Profile,
     [string] $OutName = '',
+    [string] $ModsName = 'Mods',
+    [string] $LoadSave = '',
+    [string[]] $Enable = @(),
     [string] $GamePath = 'D:\SteamLibrary\steamapps\common\Stardew Valley',
     [ValidateSet('Debug', 'Release')][string] $Configuration = 'Debug'
 )
@@ -33,11 +36,11 @@ param(
 $ErrorActionPreference = 'Stop'
 
 $repo = Split-Path -Parent $PSScriptRoot
-$mods = Join-Path $repo 'testprofile\Mods'
+$mods = Join-Path $repo (Join-Path 'testprofile' $ModsName)
 $results = Join-Path $repo 'testprofile\results'
 New-Item -ItemType Directory -Force $results | Out-Null
 
-& (Join-Path $PSScriptRoot 'Run-CleanProfile.ps1') -NoLaunch -GamePath $GamePath -Configuration $Configuration
+& (Join-Path $PSScriptRoot 'Run-CleanProfile.ps1') -NoLaunch -GamePath $GamePath -Configuration $Configuration -ModsName $ModsName
 
 dotnet build (Join-Path $repo 'ValleyFixes.DevHarness\ValleyFixes.DevHarness.csproj') -c Debug --nologo -v q
 if ($LASTEXITCODE -ne 0) { throw 'Harness build failed.' }
@@ -51,8 +54,15 @@ if ($Label -eq 'defaults') {
     Remove-Item $configFile -ErrorAction SilentlyContinue
 } else {
     $on = $Label -eq 'fixed'
-    $config = [ordered]@{ FixFairThirdPlaceText = $on; FixMovieReactionScripts = $on; FixLumberjackMahoganyBonus = $on; FixBlankNames = $on; FixChefBundleReward = $on; FixPortugueseSingleStatus = $on; TrimLocationChangeBacklog = $on; FixQuestItemGroundDrops = $on; FixTitleMusicMute = $on; FixGeorgeWheelchair = $on; FixOfflineFarmhandWallets = $on; CheckStaleOrderParticipants = $on; RepairStaleOrderParticipants = $on; FixTrashBearSardine = $on; SyncCoalCarts = $on; FixStardropInterrupt = $on; FixStaleMapOverrides = $on; LogEatInterrupts = $on } | ConvertTo-Json
+    $config = [ordered]@{ FixFairThirdPlaceText = $on; FixMovieReactionScripts = $on; FixLumberjackMahoganyBonus = $on; FixBlankNames = $on; FixChefBundleReward = $on; FixPortugueseSingleStatus = $on; TrimLocationChangeBacklog = $on; FixQuestItemGroundDrops = $on; FixTitleMusicMute = $on; FixGeorgeWheelchair = $on; FixOfflineFarmhandWallets = $on; CheckStaleOrderParticipants = $on; RepairStaleOrderParticipants = $on; FixTrashBearSardine = $on; SyncCoalCarts = $on; FixStardropInterrupt = $on; FixStaleMapOverrides = $on; CacheAssetNames = $on; SkipEmptyLocationUpdates = $on; PauseIdleLocationMonsters = $on; LogEatInterrupts = $on } | ConvertTo-Json
     Set-Content $configFile $config
+    if ($Enable.Count -gt 0) {
+        # only the listed fixes are on, so one change can be measured by itself
+        $c = Get-Content $configFile -Raw | ConvertFrom-Json
+        foreach ($p in $c.PSObject.Properties.Name) { $c.$p = $false }
+        foreach ($e in ($Enable | ForEach-Object { $_ -split "," })) { $c.($e.Trim()) = $true }
+        Set-Content $configFile ($c | ConvertTo-Json)
+    }
 }
 
 if (-not $OutName) { $OutName = $Label }
@@ -70,6 +80,7 @@ if (Test-Path $prefs) { $prefsBackup = Get-Content $prefs -Raw }
 if ($HeapDumps) { $env:VFH_HOLD = '1' }
 if ($Profile) { $env:VFH_PROFILE = "1" } else { Remove-Item Env:VFH_PROFILE -ErrorAction SilentlyContinue }
 if ($Heavy) { $env:VFH_HEAVY = '1' } else { Remove-Item Env:VFH_HEAVY -ErrorAction SilentlyContinue }
+if ($LoadSave) { $env:VFH_LOAD = $LoadSave } else { Remove-Item Env:VFH_LOAD -ErrorAction SilentlyContinue }
 if ($Only) { $env:VFH_ONLY = $Only; $env:VFH_DAYS = "$Days" } else { Remove-Item Env:VFH_ONLY, Env:VFH_DAYS -ErrorAction SilentlyContinue }
 $proc = Start-Process -FilePath (Join-Path $GamePath 'StardewModdingAPI.exe') -ArgumentList '--no-terminal', '--mods-path', "`"$mods`"" -WorkingDirectory $GamePath -PassThru
 # with -HeapDumps a heap dump is taken whenever the harness announces a hold point, then it continues

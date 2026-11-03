@@ -29,6 +29,7 @@ param(
     [switch] $Profile,
     [string] $LoadSave = '',
     [string] $OutName = '',
+    [string] $ModsName = 'Mods',
     [int] $TimeoutSeconds = 900,
     [int] $StallSeconds = 240,
     [string] $GamePath = 'D:\SteamLibrary\steamapps\common\Stardew Valley',
@@ -38,13 +39,13 @@ param(
 $ErrorActionPreference = 'Stop'
 
 $repo = Split-Path -Parent $PSScriptRoot
-$mods = Join-Path $repo 'testprofile\Mods'
-$modsClient = Join-Path $repo 'testprofile\ModsClient'
+$mods = Join-Path $repo (Join-Path 'testprofile' $ModsName)
+$modsClient = Join-Path $repo (Join-Path 'testprofile' ($ModsName + 'Client'))
 $results = Join-Path $repo 'testprofile\results'
 New-Item -ItemType Directory -Force $results | Out-Null
 if (-not $OutName) { $OutName = "mp-$Scenario-$Label" }
 
-& (Join-Path $PSScriptRoot 'Run-CleanProfile.ps1') -NoLaunch -GamePath $GamePath -Configuration $Configuration
+& (Join-Path $PSScriptRoot 'Run-CleanProfile.ps1') -NoLaunch -GamePath $GamePath -Configuration $Configuration -ModsName $ModsName
 
 dotnet build (Join-Path $repo 'ValleyFixes.DevHarness\ValleyFixes.DevHarness.csproj') -c Debug --nologo -v q
 if ($LASTEXITCODE -ne 0) { throw 'Harness build failed.' }
@@ -58,13 +59,21 @@ if ($Label -eq 'defaults') {
     Remove-Item $configFile -ErrorAction SilentlyContinue
 } else {
     $on = $Label -eq 'fixed'
-    $config = [ordered]@{ FixFairThirdPlaceText = $on; FixMovieReactionScripts = $on; FixLumberjackMahoganyBonus = $on; FixBlankNames = $on; FixChefBundleReward = $on; FixPortugueseSingleStatus = $on; TrimLocationChangeBacklog = $on; FixQuestItemGroundDrops = $on; FixTitleMusicMute = $on; FixGeorgeWheelchair = $on; FixOfflineFarmhandWallets = $on; CheckStaleOrderParticipants = $on; RepairStaleOrderParticipants = $on; FixTrashBearSardine = $on; SyncCoalCarts = $on; FixStardropInterrupt = $on; FixStaleMapOverrides = $on; LogEatInterrupts = $on } | ConvertTo-Json
+    $config = [ordered]@{ FixFairThirdPlaceText = $on; FixMovieReactionScripts = $on; FixLumberjackMahoganyBonus = $on; FixBlankNames = $on; FixChefBundleReward = $on; FixPortugueseSingleStatus = $on; TrimLocationChangeBacklog = $on; FixQuestItemGroundDrops = $on; FixTitleMusicMute = $on; FixGeorgeWheelchair = $on; FixOfflineFarmhandWallets = $on; CheckStaleOrderParticipants = $on; RepairStaleOrderParticipants = $on; FixTrashBearSardine = $on; SyncCoalCarts = $on; FixStardropInterrupt = $on; FixStaleMapOverrides = $on; CacheAssetNames = $on; SkipEmptyLocationUpdates = $on; PauseIdleLocationMonsters = $on; LogEatInterrupts = $on } | ConvertTo-Json
     Set-Content $configFile $config
 }
 
-# the joining player gets its own copy of the same Mods folder
-if (Test-Path $modsClient) { Remove-Item $modsClient -Recurse -Force }
-Copy-Item $mods $modsClient -Recurse
+
+# the joining player gets its own copy of the same Mods folder. A big real Mods copy is made once, then only our own folders are refreshed
+if ($ModsName -ne 'Mods' -and (Test-Path $modsClient)) {
+    foreach ($own in 'ValleyFixes', 'ValleyFixes.DevHarness') {
+        if (Test-Path (Join-Path $modsClient $own)) { Remove-Item (Join-Path $modsClient $own) -Recurse -Force }
+        if (Test-Path (Join-Path $mods $own)) { Copy-Item (Join-Path $mods $own) (Join-Path $modsClient $own) -Recurse }
+    }
+} else {
+    if (Test-Path $modsClient) { Remove-Item $modsClient -Recurse -Force }
+    Copy-Item $mods $modsClient -Recurse
+}
 
 $prefs = Join-Path $env:APPDATA 'StardewValley\startup_preferences'
 $prefsBackup = $null

@@ -46,7 +46,10 @@ namespace ValleyFixes.DevHarness
                 Profiler.Install(new HarmonyLib.Harmony("Kkthnx.ValleyFixes.DevHarness.Profiler"), Monitor);
             if (Environment.GetEnvironmentVariable("VFH_PROFILE") == "1")
                 Profiler.Active = true;
+            if (Environment.GetEnvironmentVariable("VFH_PROFILE") == "1")
+                ModSampler.Start(Monitor);
 
+            WatchDayEvents(helper);
             helper.Events.GameLoop.UpdateTicked += OnUpdateTicked;
 
             // per-frame cost: update is UpdateTicking to UpdateTicked, render is Rendering to Rendered
@@ -67,6 +70,10 @@ namespace ValleyFixes.DevHarness
         private void OnUpdateTicked(object? sender, UpdateTickedEventArgs e)
         {
             _ticks++;
+            if (Environment.GetEnvironmentVariable("VFH_PROFILE") == "1" && (_ticks == 10 || _ticks % 600 == 0))
+                EventProfiler.Install(Monitor);
+            if (_ticks == 12 && Environment.GetEnvironmentVariable("VFH_PROFILE") == "1")
+                AllocationSampler.Start();
 
             // the game skips its whole update while its window is not active, which silently ruins every timed scenario.
             // This is a runtime flag only, it is not written to the saved options.
@@ -109,6 +116,16 @@ namespace ValleyFixes.DevHarness
                         {
                             _run = ClientMain(title).GetEnumerator();
                         }
+                    }
+                    else if (Environment.GetEnvironmentVariable("VFH_ONLY") == "realfocus")
+                    {
+                        LoadSinglePlayer(title, Environment.GetEnvironmentVariable("VFH_LOAD")!);
+                        _run = RealFocusMain().GetEnumerator();
+                    }
+                    else if (Environment.GetEnvironmentVariable("VFH_ONLY") == "realsp")
+                    {
+                        LoadSinglePlayer(title, Environment.GetEnvironmentVariable("VFH_LOAD")!);
+                        _run = RealSinglePlayerMain().GetEnumerator();
                     }
                     else if (Environment.GetEnvironmentVariable("VFH_ONLY") == "title")
                     {
@@ -1110,6 +1127,11 @@ namespace ValleyFixes.DevHarness
             _updateMs.Clear();
             _renderMs.Clear();
             Profiler.Reset();
+            ModSampler.Reset();
+            LocationProfiler.Reset();
+            EventProfiler.Reset();
+            AllocationSampler.Reset();
+            AssetTracer.Reset();
             Profiler.Active = Environment.GetEnvironmentVariable("VFH_PROFILE") == "1";
             long bytes0 = GC.GetAllocatedBytesForCurrentThread();
             int g0 = GC.CollectionCount(0), g1 = GC.CollectionCount(1), g2 = GC.CollectionCount(2);
@@ -1136,7 +1158,12 @@ namespace ValleyFixes.DevHarness
                 gen1 = GC.CollectionCount(1) - g1,
                 gen2 = GC.CollectionCount(2) - g2,
                 heapMB = Math.Round(GC.GetTotalMemory(false) / 1048576.0, 0),
-                profile = Profiler.Active ? Profiler.Snapshot(_updateMs.Count) : null
+                profile = Profiler.Active ? Profiler.Snapshot(_updateMs.Count) : null,
+                mods = Profiler.Active ? ModSampler.Snapshot(_updateMs.Count, seconds) : null,
+                locations = Profiler.Active ? LocationProfiler.Snapshot(_updateMs.Count, seconds) : null,
+                events = Profiler.Active ? EventProfiler.Snapshot(_updateMs.Count, seconds) : null,
+                allocTypes = Profiler.Active ? AllocationSampler.Snapshot(seconds) : null,
+                assets = Profiler.Active ? AssetTracer.Snapshot(_updateMs.Count, seconds) : null
             };
         }
 
