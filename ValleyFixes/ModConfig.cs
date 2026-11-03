@@ -45,6 +45,9 @@ namespace ValleyFixes
         /// <summary>VF-055: with separate wallets, gold sent to or earned for a farmhand who is not in the game is lost at the next save and reload. The host copies the shared wallet into the saved copy before each save. Host only, does nothing without separate wallets.</summary>
         public bool FixOfflineFarmhandWallets { get; set; } = true;
 
+        /// <summary>VF-058: in multiplayer, a coal cart a farmhand empties stays full for everyone else, and for that farmhand after they leave the floor and return, so it can be emptied again and again. The host keeps the list of emptied carts and shares it. Needs the mod on every player's machine. Does nothing in single player.</summary>
+        public bool SyncCoalCarts { get; set; } = true;
+
         /// <summary>VF-004: writes a short log entry when something cuts the eating animation short. Changes nothing in the game.</summary>
         public bool LogEatInterrupts { get; set; } = true;
     }

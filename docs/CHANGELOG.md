@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.2.0-alpha.1
+
+- VF-058: in multiplayer, a coal cart a farmhand empties now stays empty for the host, for every other player, and for that farmhand after they leave the floor and return (`SyncCoalCarts`). The host keeps the list, shares it, and saves it with the world. Needs the mod on every player's machine. Tested with a host and a joining player: three visits gave coal once instead of three times.
+
 ## 0.1.0
 
 - VF-007: corrects the Fair third place speech from 200 to 250 star tokens.

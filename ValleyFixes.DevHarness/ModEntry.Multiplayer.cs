@@ -192,6 +192,9 @@ namespace ValleyFixes.DevHarness
                 case "goldreload":
                     foreach (int w in GoldReloadScenario()) yield return w;
                     break;
+                case "cart":
+                    foreach (int w in CartScenario()) yield return w;
+                    break;
                 default:
                     _results["scenario_error"] = "unknown scenario " + name;
                     break;
@@ -256,7 +259,11 @@ namespace ValleyFixes.DevHarness
             start!.Invoke(Game1.currentLocation, null);
 
             for (int t = 0; t < 9000 && Game1.Date.TotalDays == day0; t += 5)
+            {
+                if (t % 600 == 0)
+                    Monitor.Log($"[harness] sleeping: t={t} loc={Game1.currentLocation?.NameOrUniqueName} inBed={p.isInBed.Value} time={Game1.timeOfDay} menu={Game1.activeClickableMenu?.GetType().Name} fade={Game1.fadeToBlack} newDay={Game1.newDay} ready={Game1.player.team.sleepAnnounceMode.Value}", LogLevel.Info);
                 yield return 5;
+            }
             int guard = 0;
             while ((Game1.newDay || Game1.fadeToBlack || Game1.activeClickableMenu != null || !Context.CanPlayerMove) && guard++ < 6000)
                 yield return 2;

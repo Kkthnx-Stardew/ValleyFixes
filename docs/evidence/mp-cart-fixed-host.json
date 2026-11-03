@@ -1,0 +1,25 @@
+{
+  "world": "host ready in FarmHouse, multiplayerMode 2, server True",
+  "cabin": "ready for 6124603113279955801",
+  "clientJoined": true,
+  "cart": [
+    {
+      "tag": "host-visit-after-client",
+      "role": "host",
+      "level": 12,
+      "cartTile": "67,12",
+      "tileBefore": 195,
+      "interacted": false,
+      "tileAfter": 195,
+      "coalCartsLeft": null,
+      "coalOnGround": 0
+    }
+  ],
+  "cartFloor": 12,
+  "note": null,
+  "mods": [
+    "SMAPI.ConsoleCommands 4.5.2",
+    "Kkthnx.ValleyFixes 0.2.0-alpha.1",
+    "Kkthnx.ValleyFixes.DevHarness 0.1.0"
+  ]
+}

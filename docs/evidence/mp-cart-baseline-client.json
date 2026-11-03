@@ -1,0 +1,77 @@
+{
+  "world": "client ready in FarmHouse95b55d7d-e247-47cd-8083-8b1a283f5960, id -1209701907213245975",
+  "cart": [
+    {
+      "tag": "client-visit-0",
+      "role": "client",
+      "level": 12,
+      "cartTile": "67,12",
+      "tileBefore": 194,
+      "interacted": true,
+      "tileAfter": 195,
+      "coalCartsLeft": 0,
+      "coalOnGround": 6
+    },
+    {
+      "tag": "client-after-pick-0",
+      "role": "client",
+      "level": 12,
+      "cartTile": "67,12",
+      "tileBefore": 195,
+      "interacted": false,
+      "tileAfter": 195,
+      "coalCartsLeft": 0,
+      "coalOnGround": 6
+    },
+    {
+      "tag": "client-visit-1",
+      "role": "client",
+      "level": 12,
+      "cartTile": "67,12",
+      "tileBefore": 194,
+      "interacted": true,
+      "tileAfter": 195,
+      "coalCartsLeft": -1,
+      "coalOnGround": 12
+    },
+    {
+      "tag": "client-after-pick-1",
+      "role": "client",
+      "level": 12,
+      "cartTile": "67,12",
+      "tileBefore": 195,
+      "interacted": false,
+      "tileAfter": 195,
+      "coalCartsLeft": -1,
+      "coalOnGround": 12
+    },
+    {
+      "tag": "client-visit-2",
+      "role": "client",
+      "level": 12,
+      "cartTile": "67,12",
+      "tileBefore": 194,
+      "interacted": true,
+      "tileAfter": 195,
+      "coalCartsLeft": -2,
+      "coalOnGround": 6
+    },
+    {
+      "tag": "client-after-pick-2",
+      "role": "client",
+      "level": 12,
+      "cartTile": "67,12",
+      "tileBefore": 195,
+      "interacted": false,
+      "tileAfter": 195,
+      "coalCartsLeft": -2,
+      "coalOnGround": 6
+    }
+  ],
+  "note": null,
+  "mods": [
+    "SMAPI.ConsoleCommands 4.5.2",
+    "Kkthnx.ValleyFixes 0.1.0",
+    "Kkthnx.ValleyFixes.DevHarness 0.1.0"
+  ]
+}

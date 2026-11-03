@@ -50,7 +50,7 @@ namespace ValleyFixes
                 Start("Lumberjack mahogany bonus", () => new LumberjackHardwoodFix(Monitor).Register(helper.Events));
 
             // one Harmony instance for every code patch, created only if a patching fix is on
-            Harmony? harmony = config.FixBlankNames || config.FixTrashBearSardine || config.LogEatInterrupts || config.FixQuestItemGroundDrops || config.FixTitleMusicMute ? new Harmony(ModManifest.UniqueID) : null;
+            Harmony? harmony = config.FixBlankNames || config.FixTrashBearSardine || config.LogEatInterrupts || config.FixQuestItemGroundDrops || config.FixTitleMusicMute || config.SyncCoalCarts ? new Harmony(ModManifest.UniqueID) : null;
 
             if (config.FixBlankNames)
                 Start("Blank name check", () => BlankNameFix.Apply(harmony!, Monitor));
@@ -63,6 +63,9 @@ namespace ValleyFixes
 
             if (config.FixTitleMusicMute)
                 Start("Title screen mute", () => TitleMusicMuteFix.Apply(harmony!, Monitor));
+
+            if (config.SyncCoalCarts)
+                Start("Coal cart sync", () => new CoalCartSyncFix(Monitor, helper, ModManifest.UniqueID).Register(harmony!));
 
             if (config.LogEatInterrupts)
                 Start("Eat interrupt logging", () => EatInterruptLogger.Apply(harmony!, Monitor));
