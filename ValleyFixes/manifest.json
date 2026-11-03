@@ -1,10 +1,16 @@
 {
     "Name": "ValleyFixes",
     "Author": "Kkthnx",
-    "Version": "0.1.0",
+    "Version": "0.2.0-alpha.1",
     "Description": "Small, separately switchable fixes for verified Stardew Valley 1.6.15 bugs. Every fix has its own toggle and skips itself if the game data no longer matches.",
     "UniqueID": "Kkthnx.ValleyFixes",
     "EntryDll": "ValleyFixes.dll",
     "MinimumApiVersion": "4.2.1",
-    "MinimumGameVersion": "1.6.15"
+    "MinimumGameVersion": "1.6.15",
+    "Dependencies": [
+        {
+            "UniqueID": "spacechase0.GenericModConfigMenu",
+            "IsRequired": false
+        }
+    ]
 }

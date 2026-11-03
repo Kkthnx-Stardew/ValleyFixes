@@ -5,7 +5,7 @@
 		<ImplicitUsings>enable</ImplicitUsings>
 		<RootNamespace>ValleyFixes</RootNamespace>
 		<AssemblyName>ValleyFixes</AssemblyName>
-		<Version>0.1.0</Version>
+		<Version>0.2.0-alpha.1</Version>
 		<EnableHarmony>true</EnableHarmony>
 		<!-- builds never copy into the live Mods folder, which holds a large unrelated mod list -->
 		<EnableModDeploy>false</EnableModDeploy>

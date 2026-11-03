@@ -2,6 +2,7 @@ using HarmonyLib;
 using StardewModdingAPI;
 using ValleyFixes.Diagnostics;
 using ValleyFixes.Fixes;
+using ValleyFixes.Integration;
 
 namespace ValleyFixes
 {
@@ -20,6 +21,8 @@ namespace ValleyFixes
                 config = new ModConfig();
                 Monitor.Log($"Could not read config.json, so the default settings are used. Fix it or delete it. ({ex.Message})", LogLevel.Warn);
             }
+
+            helper.Events.GameLoop.GameLaunched += (_, _) => ConfigMenu.Register(helper, ModManifest, config, Monitor);
 
             // each fix starts on its own, so one that fails to start never takes the others down with it
             if (config.FixFairThirdPlaceText)
