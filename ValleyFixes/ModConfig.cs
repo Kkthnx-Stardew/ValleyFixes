@@ -48,6 +48,15 @@ namespace ValleyFixes
         /// <summary>VF-058: in multiplayer, a coal cart a farmhand empties stays full for everyone else, and for that farmhand after they leave the floor and return, so it can be emptied again and again. The host keeps the list of emptied carts and shares it. Needs the mod on every player's machine. Does nothing in single player.</summary>
         public bool SyncCoalCarts { get; set; } = true;
 
+        /// <summary>VF-062: the game runs the background update of every location every frame, even locations nobody is in and that hold nothing. In a big mod list that is hundreds of locations. A location that has had nobody in it for 60 frames in a row, holds no characters, animals, buildings or temporary sprites and has no event is skipped. Host or single player only. No visible change. Skipped if another mod patches the same game method.</summary>
+        public bool SkipEmptyLocationUpdates { get; set; } = true;
+
+        /// <summary>VF-062: monsters in an outdoor location nobody has been in for 60 frames are not updated, so they stand still until a player arrives. Expansion mods can leave hundreds of monsters in locations nobody visits. Villagers and animals are never affected, and neither are the Farm, buildings, mines and the volcano. Host or single player only.</summary>
+        public bool PauseIdleLocationMonsters { get; set; } = true;
+
+        /// <summary>VF-061: SMAPI builds a new asset name object, several strings and two delegates every time any mod asks it to parse an asset name, and some mods do so for every sprite drawn (thousands of times a frame in a big mod list). The answers are kept and handed back, which removes most of the garbage the game has to collect. No visible change. Skipped if another mod already patches the same SMAPI method.</summary>
+        public bool CacheAssetNames { get; set; } = true;
+
         /// <summary>VF-060: a farmhand keeps seeing festival map changes (the SquidFest booth and sign) after the festival is over, because the game's own check for taking the booth away looks at the wrong tilesheet name and the farmhand's rebuilt Beach has an empty list of applied changes. The booth tile is now looked up on the right tilesheet. Works on the farmhand's machine alone.</summary>
         public bool FixStaleMapOverrides { get; set; } = true;
 

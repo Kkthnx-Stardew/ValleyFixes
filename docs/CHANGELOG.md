@@ -5,6 +5,8 @@
 - VF-058: in multiplayer, a coal cart a farmhand empties now stays empty for the host, for every other player, and for that farmhand after they leave the floor and return (`SyncCoalCarts`). The host keeps the list, shares it, and saves it with the world. Needs the mod on every player's machine. Tested with a host and a joining player: three visits gave coal once instead of three times.
 - VF-059: a stardrop whose eating is cut short now still gives its energy bonus (`FixStardropInterrupt`). Tested by cutting the eat short in game: maximum energy rose by 0 before and by 34 after.
 - VF-060: a farmhand no longer keeps seeing the SquidFest booth and sign the day after the festival (`FixStaleMapOverrides`, farmhand side only). Tested from a real winter 13 save with a joining player.
+- VF-061: SMAPI asset names are cached (`CacheAssetNames`). On a real save with 101 mods, garbage fell from 97 to 36 MB/s and render time from 3.14 to 1.56 ms.
+- VF-062: locations nobody is in are no longer updated every frame (`SkipEmptyLocationUpdates`), and neither are monsters in them (`PauseIdleLocationMonsters`). Update time fell from 5.05 to 3.79 ms on the same save.
 - Optional Generic Mod Config Menu page with every setting.
 
 ## 0.1.0

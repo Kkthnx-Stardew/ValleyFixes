@@ -44,6 +44,9 @@ namespace ValleyFixes.Integration
                 api.AddSectionTitle(manifest, () => "Logging");
                 Add(api, manifest, "Stardrop cut short", "VF-059. A stardrop whose eating is cut short gave nothing and was used up. The energy bonus is now applied at once.", () => config.FixStardropInterrupt, v => config.FixStardropInterrupt = v);
                 Add(api, manifest, "Festival map leftovers", "VF-060. A farmhand keeps seeing festival booths and signs after the festival ends. Farmhand side only.", () => config.FixStaleMapOverrides, v => config.FixStaleMapOverrides = v);
+                Add(api, manifest, "Cache asset names", "VF-061. SMAPI builds new strings and objects every time a mod parses an asset name, and some mods do it for every sprite drawn. The answers are kept. Removes most of the garbage in big mod lists, no visible change.", () => config.CacheAssetNames, v => config.CacheAssetNames = v);
+                Add(api, manifest, "Skip empty location updates", "VF-062. Locations nobody has been in for 60 frames that hold nothing are not updated every frame. Host or single player only.", () => config.SkipEmptyLocationUpdates, v => config.SkipEmptyLocationUpdates = v);
+                Add(api, manifest, "Pause idle location monsters", "VF-062. Monsters in outdoor locations nobody is in are not updated. They move again when a player arrives. Host or single player only.", () => config.PauseIdleLocationMonsters, v => config.PauseIdleLocationMonsters = v);
                 Add(api, manifest, "Log eating interrupts", "VF-004. Writes a log line when something cuts the eating animation short. Changes nothing in the game.", () => config.LogEatInterrupts, v => config.LogEatInterrupts = v);
             }
             catch (Exception ex)

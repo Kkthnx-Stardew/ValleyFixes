@@ -53,7 +53,7 @@ namespace ValleyFixes
                 Start("Lumberjack mahogany bonus", () => new LumberjackHardwoodFix(Monitor).Register(helper.Events));
 
             // one Harmony instance for every code patch, created only if a patching fix is on
-            Harmony? harmony = config.FixBlankNames || config.FixTrashBearSardine || config.LogEatInterrupts || config.FixQuestItemGroundDrops || config.FixTitleMusicMute || config.SyncCoalCarts || config.FixStardropInterrupt || config.FixStaleMapOverrides ? new Harmony(ModManifest.UniqueID) : null;
+            Harmony? harmony = config.FixBlankNames || config.FixTrashBearSardine || config.LogEatInterrupts || config.FixQuestItemGroundDrops || config.FixTitleMusicMute || config.SyncCoalCarts || config.FixStardropInterrupt || config.FixStaleMapOverrides || config.CacheAssetNames || config.SkipEmptyLocationUpdates || config.PauseIdleLocationMonsters ? new Harmony(ModManifest.UniqueID) : null;
 
             if (config.FixBlankNames)
                 Start("Blank name check", () => BlankNameFix.Apply(harmony!, Monitor));
@@ -75,6 +75,12 @@ namespace ValleyFixes
 
             if (config.FixStaleMapOverrides)
                 Start("Stale map changes", () => StaleMapOverrideFix.Apply(harmony!, Monitor));
+
+            if (config.CacheAssetNames)
+                Start("Asset name cache", () => AssetNameCacheFix.Apply(harmony!, Monitor));
+
+            if (config.SkipEmptyLocationUpdates || config.PauseIdleLocationMonsters)
+                Start("Idle location updates", () => IdleLocationFix.Apply(harmony!, Monitor, config.SkipEmptyLocationUpdates, config.PauseIdleLocationMonsters));
 
             if (config.LogEatInterrupts)
                 Start("Eat interrupt logging", () => EatInterruptLogger.Apply(harmony!, Monitor));
