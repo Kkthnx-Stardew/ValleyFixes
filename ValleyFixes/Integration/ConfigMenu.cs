@@ -42,6 +42,7 @@ namespace ValleyFixes.Integration
                 Add(api, manifest, "Remove quest items from the ground", "VF-044. Qi Beans and Calico Eggs dropped on the ground are removed overnight like the ones in bags and chests.", () => config.FixQuestItemGroundDrops, v => config.FixQuestItemGroundDrops = v);
 
                 api.AddSectionTitle(manifest, () => "Logging");
+                Add(api, manifest, "Stardrop cut short", "VF-059. A stardrop whose eating is cut short gave nothing and was used up. The energy bonus is now applied at once.", () => config.FixStardropInterrupt, v => config.FixStardropInterrupt = v);
                 Add(api, manifest, "Log eating interrupts", "VF-004. Writes a log line when something cuts the eating animation short. Changes nothing in the game.", () => config.LogEatInterrupts, v => config.LogEatInterrupts = v);
             }
             catch (Exception ex)
