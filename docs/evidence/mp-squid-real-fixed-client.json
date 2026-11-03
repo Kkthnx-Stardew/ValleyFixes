@@ -1,0 +1,90 @@
+{
+  "world": "client ready in FarmHousee226a267-6b4b-498a-8091-1e9911501f88, id 6565558509971316113",
+  "squid": [
+    {
+      "tag": "date-client",
+      "date": "winter 13"
+    },
+    {
+      "tag": "day13-on-beach",
+      "role": "client",
+      "date": "winter 13",
+      "boothTile": -1,
+      "boothTileAnySheet": 45,
+      "boothTileAddedSheet": 45,
+      "signTile": 29,
+      "overrides": [
+        "Beach_SquidFest"
+      ],
+      "squidContestants": 12,
+      "farmersHere": 2,
+      "cache": {
+        "beachObject": 15114481,
+        "beachMap": 23969675,
+        "cacheEntry": false,
+        "cacheMap": 0,
+        "cacheOverrides": null,
+        "cacheMapPath": null,
+        "beachMapPath": "Maps\\Beach",
+        "cachedLocations": 1
+      }
+    },
+    {
+      "tag": "home-client",
+      "location": "FarmHousee226a267-6b4b-498a-8091-1e9911501f88",
+      "inBed": true
+    },
+    {
+      "tag": "day14-before-entry",
+      "role": "client",
+      "date": "winter 14",
+      "boothTile": -1,
+      "boothTileAnySheet": 45,
+      "boothTileAddedSheet": 45,
+      "signTile": 29,
+      "overrides": [],
+      "squidContestants": 0,
+      "farmersHere": 0,
+      "cache": {
+        "beachObject": 61083978,
+        "beachMap": 23969675,
+        "cacheEntry": true,
+        "cacheMap": 23969675,
+        "cacheOverrides": [
+          "Beach_SquidFest"
+        ],
+        "cacheMapPath": "Maps\\Beach",
+        "beachMapPath": "Maps\\Beach",
+        "cachedLocations": 2
+      }
+    },
+    {
+      "tag": "day14-after-entry",
+      "role": "client",
+      "date": "winter 14",
+      "boothTile": -1,
+      "boothTileAnySheet": -1,
+      "boothTileAddedSheet": -1,
+      "signTile": 154,
+      "overrides": [],
+      "squidContestants": 0,
+      "farmersHere": 2,
+      "cache": {
+        "beachObject": 11631514,
+        "beachMap": 23969675,
+        "cacheEntry": false,
+        "cacheMap": 0,
+        "cacheOverrides": null,
+        "cacheMapPath": null,
+        "beachMapPath": "Maps\\Beach",
+        "cachedLocations": 1
+      }
+    }
+  ],
+  "note": null,
+  "mods": [
+    "SMAPI.ConsoleCommands 4.5.2",
+    "Kkthnx.ValleyFixes 0.2.0-alpha.1",
+    "Kkthnx.ValleyFixes.DevHarness 0.1.0"
+  ]
+}

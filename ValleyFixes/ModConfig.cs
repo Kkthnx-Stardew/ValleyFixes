@@ -48,6 +48,9 @@ namespace ValleyFixes
         /// <summary>VF-058: in multiplayer, a coal cart a farmhand empties stays full for everyone else, and for that farmhand after they leave the floor and return, so it can be emptied again and again. The host keeps the list of emptied carts and shares it. Needs the mod on every player's machine. Does nothing in single player.</summary>
         public bool SyncCoalCarts { get; set; } = true;
 
+        /// <summary>VF-060: a farmhand keeps seeing festival map changes (the SquidFest booth and sign) after the festival is over, because the game's own check for taking the booth away looks at the wrong tilesheet name and the farmhand's rebuilt Beach has an empty list of applied changes. The booth tile is now looked up on the right tilesheet. Works on the farmhand's machine alone.</summary>
+        public bool FixStaleMapOverrides { get; set; } = true;
+
         /// <summary>VF-059: a stardrop that something cuts short while you eat it gives nothing, and the stardrop is already used up. When this is on, the energy bonus is applied the moment the eating is cut short. Other food is not changed.</summary>
         public bool FixStardropInterrupt { get; set; } = true;
 

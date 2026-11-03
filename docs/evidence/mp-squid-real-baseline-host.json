@@ -1,0 +1,62 @@
+{
+  "world": "host ready in FarmHouse, multiplayerMode 2, server True",
+  "cabin": "ready for 6565558509971316113",
+  "clientJoined": true,
+  "squid": [
+    {
+      "tag": "date-host",
+      "date": "winter 13"
+    },
+    {
+      "tag": "day13-on-beach",
+      "role": "host",
+      "date": "winter 13",
+      "boothTile": -1,
+      "boothTileAnySheet": 45,
+      "signTile": 29,
+      "overrides": [
+        "Beach_SquidFest"
+      ],
+      "squidContestants": 12,
+      "farmersHere": 2,
+      "cache": null
+    },
+    {
+      "tag": "home-host",
+      "location": "FarmHouse",
+      "inBed": true
+    },
+    {
+      "tag": "day14-before-entry",
+      "role": "host",
+      "date": "winter 14",
+      "boothTile": -1,
+      "boothTileAnySheet": 45,
+      "signTile": 29,
+      "overrides": [
+        "Beach_SquidFest"
+      ],
+      "squidContestants": 0,
+      "farmersHere": 0,
+      "cache": null
+    },
+    {
+      "tag": "day14-after-entry",
+      "role": "host",
+      "date": "winter 14",
+      "boothTile": -1,
+      "boothTileAnySheet": -1,
+      "signTile": 154,
+      "overrides": [],
+      "squidContestants": 0,
+      "farmersHere": 2,
+      "cache": null
+    }
+  ],
+  "note": null,
+  "mods": [
+    "SMAPI.ConsoleCommands 4.5.2",
+    "Kkthnx.ValleyFixes 0.2.0-alpha.1",
+    "Kkthnx.ValleyFixes.DevHarness 0.1.0"
+  ]
+}

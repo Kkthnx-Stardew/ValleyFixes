@@ -1,0 +1,1 @@
+[17:39:24 INFO  ValleyFixes] Beach still shows Beach_SquidFest although its list of applied map changes did not have it, so it was added and the game will take it away if the festival is over.
