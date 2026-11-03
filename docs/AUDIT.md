@@ -674,3 +674,26 @@ Multiplayer traffic, two real game processes, bytes the host writes:
 Bandwidth is not a bottleneck here, so a bigger network buffer (brief item 71) answers no measured problem. Not measured: a join onto a farm that is already heavy, other PCs, a real played late-game save, an HDD. These numbers come from a fast machine and show where cost scales, not what a low end PC feels.
 
 A harness fact worth keeping: a warp from outside straight onto a bed tile is refused by the game and leaves the player in the doorway. Then the game starts the new day without the screen fade and the day never begins. The sleep scenarios now enter first and step onto the bed.
+
+### Performance on a real save with the real mod list (2026-11-03)
+
+A copy of a played save (101 mods registered, 467 locations, 1,581 characters, 218 villagers, 1,357 monsters) was loaded with a copy of the real Mods folder. The original save and Mods folder were never touched. A stopwatch profiler, per mod handler timing and an allocation type sampler were used. The clean profile measured earlier (update 0.8 ms, 4.5 MB/s) was not representative of this setup.
+
+| Finding | Evidence |
+|---|---|
+| Most garbage came from `SpriteBatch.Draw`. Content Patcher Animations 1.2.4 parses the texture's asset name after every draw | 2,029 to 2,386 `AssetName.Parse` calls a frame. Strings, delegates and asset names were about 75% of 83 to 97 MB/s |
+| VF-061 asset name cache | Farm, only this fix on: allocation 97 to 36.5 MB/s, gen0 1,471 to 543 in 30 s, render 3.14 to 1.56 ms, `Game1._draw` 994 to 19 KB a frame. Beach: 102 to 37 MB/s, render 3.12 to 1.36 ms |
+| 321 empty locations and 26 monster locations were updated every frame | Background update 3.83 ms a frame. Empty locations 0.97 ms, monsters 0.94 ms (Crimson Badlands 546, Highlands 314) |
+| VF-062 idle location skips | Only these on: update mean 5.05 to 3.79 ms, median 4.75 to 3.49 ms. 40 watched monsters did not move while nobody was there with the fix off either, and moved again on arrival with it on (27 of 40 off, 28 of 40 on). Villagers in empty locations moved the same both ways (4 of 40) |
+| All three fixes, 13 stop tour | Mean update plus render across stops 9.02 to 5.36 ms (41% less). Allocation 100 to 157 MB/s down to 29 to 39 MB/s. Gen0 collections about 70% fewer. No errors in the fixed log that the baseline log did not also have |
+| NPC updates cost little | All villagers together 0.28 to 0.49 ms a frame. An NPC throttler would save little on this save |
+| Mod event handlers cost little | NPCMapLocations 0.14 ms (50 KB per tick), SpaceCore 0.14 ms, UIInfoSuite2 0.08 ms, Content Patcher 0.02 ms. About 0.45 ms a frame in all |
+| Nothing else patches the methods VF-062 patches | Patch map: only the test profiler patches `updateEvenIfFarmerIsntHere`, `updateCharacters`, `NPC.update` and `Monster.update` |
+
+Not done or not known:
+- The night took 212 seconds in this tour with the fixes off and on, and 12.6 seconds in a shorter run. The phase stamps show the day ending at 1.5 s, saving at 3.5 s and saved at 7.4 s in the long run too, so the rest is time after the day started. The cause was not found. It is not caused by the fixes.
+- About 13 MB/s of the garbage that is left comes from SMAPI's own world state tracking (`ChestTracker` and `IWatcher` enumerators). Its time cost was not measured. About 8 MB/s is the test profiler itself.
+- The ten minute update costs about 13 ms in steady state plus 8 ms for Content Patcher's `TimeChanged` handler. Its first call in a session took 26 to 92 ms.
+- Multiplayer was not run with the real mods. Both new fixes only act on the host or in single player.
+- Only one save and one PC were used. A final clean profile run with default settings was started and stopped, so it is not part of this evidence.
+- Background Tick Throttler, UltraSmooth, Stardropium and SteamDew were studied from their pages and public source. None are installed here and none were run, so nothing is claimed against them beyond what their pages say.
