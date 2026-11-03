@@ -627,3 +627,50 @@ Automated checks run on 2026-11-01 against the installed game, to find bugs nobo
 5. Pattern scan done 2026-11-01: a search of the whole decompiled game for qualified versus unqualified item id comparisons found only `Tree.cs` line 557 (VF-006). The other hits (`Farmer.cs` line 2617, `TV.cs` line 387) are correct.
 6. Community scan 2026-11-01: the first 8 pages of the non-modded bug forum were read and filtered to PC reports. New items found are VF-030 to VF-035. Most other recent threads are console or mobile only (out of scope).
 7. Deeper forum scan 2026-11-01 (pages 9 to 30, PC reports from 2026): new items VF-036 to VF-042. Other recent PC threads are crashes with no logs, hardware or driver problems, rendering at unusual zoom levels, and the reports already in this audit.
+
+## Round five (2026-11-03): the verified research brief
+
+The brief is `Stardew bug and performance fix research, verified.md`. Its own rule is that every item needs a repro on build 24356 before code. These rows were run in the game, before and after. Evidence is in `docs/evidence/`.
+
+| ID | Brief item | Verdict | Decision | One line |
+|---|---|---|---|---|
+| VF-058 | 28 | FIXED_AND_TESTED | SHIP | A farmhand took coal from the same Mines cart on every visit. Counter went to -2 and the host still saw a full cart. The host now keeps and shares the list of emptied carts. Needs the mod on every player |
+| VF-059 | 4 | FIXED_AND_TESTED (mechanism) | SHIP | The stardrop's energy bonus is applied only when the eating animation ends, and the stardrop is already used up. Cutting the eat short gave +0 before and +34 after. The report's own trigger (tabbing out, then spamming input) was not reproduced |
+| VF-060 | 29 | FIXED_AND_TESTED | SHIP | A farmhand keeps seeing the SquidFest booth and sign on winter 14. Reproduced from a real winter 13 save with a joining player. The game's own revert looks for the booth on tilesheet "16" but the override puts it on "zzzzz_Beach_SquidFest_16", and the farmhand's rebuilt Beach has an empty applied list. The fix looks on the right tilesheet. Farmhand side only |
+
+How VF-060 was found, because it is not the first idea. A date set by hand on a new farm did not show the bug, because the farmhand never got the festival map. A real winter 13 save loaded by the host, with the joiner entering later, did. Probes then showed three facts on the farmhand overnight. The Beach object is replaced. The map object is the same shared one that already holds the festival tiles. The object's applied list is empty. A first fix that restored the list from the game's own map cache did not work, because the cache entry is already gone when the game applies the changes. The tile itself is the evidence that holds.
+
+Not run, so no verdict: items 2 (rarecrow hats), 3 (child bed), 13, 17, 23, 27 and 53. Items 8, 19 and 21 wait for the announced 1.6.16 fixes.
+
+### Performance research (measured, clean profile, this PC)
+
+Frame budget at 60 fps is 16.7 ms. Update and render are timed inside the game loop. A profiler wraps the game's own update, NPC, animal, pathfinding and draw methods. The numbers include its small overhead.
+
+| Case, 10 second samples | Update mean (ms) | Render mean (ms) | Allocation |
+|---|---|---|---|
+| Farm by day, no animals | 0.79 | 0.71 | 4.5 MB/s |
+| 100 animals outside | 1.19 | 0.94 | 5.6 MB/s |
+| 200 animals outside | 1.47 | 1.13 | 6.5 MB/s |
+| Farm at night, no torches | 0.95 | 0.75 | 4.6 MB/s |
+| 300 torches at night | 0.99 | 1.00 | 9.7 MB/s |
+| Town at noon | 0.64 | 0.57 | 4.6 MB/s |
+
+What it says:
+- All vanilla NPC updates together cost about 0.05 ms a frame, around 1.2 microseconds each. An NPC throttler cannot save a visible amount here (brief items 55 and the gap it names).
+- Animals cost about 3 microseconds each a frame. `PathFindController.findPath` never ran while animals wandered by day, so animal pathfinding is not shown to be a cost (brief item 56). Animals walking home at 5 pm were not measured.
+- 300 torches add 0.2 ms of draw time and double the garbage, 4.6 to 9.7 MB/s. This is the only candidate with a measurable cost. Not built.
+- The game's ten minute clock update takes 1 to 6 ms. Its first call took 26 ms, the only spike in the runs.
+
+Multiplayer traffic, two real game processes, bytes the host writes:
+
+| Phase | Host sends |
+|---|---|
+| Join and load (fresh farm) | about 57 KB, mostly 4 location messages and 1 server message |
+| Both idle, 30 s | about 0.01 KB/s |
+| Both walking, 15 s | 0.8 KB/s, about 10 messages a second of 80 bytes |
+| Host places 1,559 objects at once | one 27 KB message |
+| One night | about 20 KB |
+
+Bandwidth is not a bottleneck here, so a bigger network buffer (brief item 71) answers no measured problem. Not measured: a join onto a farm that is already heavy, other PCs, a real played late-game save, an HDD. These numbers come from a fast machine and show where cost scales, not what a low end PC feels.
+
+A harness fact worth keeping: a warp from outside straight onto a bed tile is refused by the game and leaves the player in the doorway. Then the game starts the new day without the screen fade and the day never begins. The sleep scenarios now enter first and step onto the bed.
