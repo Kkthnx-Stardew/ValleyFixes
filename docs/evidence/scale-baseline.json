@@ -1,0 +1,689 @@
+{
+  "world": "ready in FarmHouse, tick 405",
+  "scale": {
+    "farm_day_0_animals": {
+      "seconds": 10,
+      "processCpuMsPerFrame": 8.33,
+      "processCpuPercentOfOneCore": 50,
+      "update": {
+        "frames": 600,
+        "meanMs": 0.79,
+        "medianMs": 0.69,
+        "p99Ms": 1.22,
+        "maxMs": 27.32,
+        "over8ms": 1,
+        "over16ms": 1
+      },
+      "render": {
+        "frames": 600,
+        "meanMs": 0.71,
+        "medianMs": 0.68,
+        "p99Ms": 1.08,
+        "maxMs": 1.24,
+        "over8ms": 0,
+        "over16ms": 0
+      },
+      "allocatedMBPerSecond": 4.54,
+      "gen0": 23,
+      "gen1": 1,
+      "gen2": 0,
+      "heapMB": 137,
+      "profile": {
+        "GameLocation.updateEvenIfFarmerIsntHere": {
+          "msPerFrame": 0.297,
+          "calls": 48000,
+          "meanUs": 3.7,
+          "maxMs": 0.54
+        },
+        "GameLocation.UpdateWhenCurrentLocation": {
+          "msPerFrame": 0.265,
+          "calls": 600,
+          "meanUs": 265,
+          "maxMs": 0.59
+        },
+        "GameLocation.updateCharacters": {
+          "msPerFrame": 0.161,
+          "calls": 48000,
+          "meanUs": 2,
+          "maxMs": 0.54
+        },
+        "GameLocation.draw": {
+          "msPerFrame": 0.125,
+          "calls": 600,
+          "meanUs": 124.7,
+          "maxMs": 0.25
+        },
+        "Game1.performTenMinuteClockUpdate": {
+          "msPerFrame": 0.044,
+          "calls": 1,
+          "meanUs": 26549.8,
+          "maxMs": 26.55
+        },
+        "NPC.update": {
+          "msPerFrame": 0.041,
+          "calls": 23400,
+          "meanUs": 1,
+          "maxMs": 0.42
+        }
+      }
+    },
+    "farm_day_25_animals": {
+      "seconds": 10,
+      "processCpuMsPerFrame": 8.85,
+      "processCpuPercentOfOneCore": 53,
+      "update": {
+        "frames": 600,
+        "meanMs": 0.82,
+        "medianMs": 0.77,
+        "p99Ms": 1.32,
+        "maxMs": 4.16,
+        "over8ms": 0,
+        "over16ms": 0
+      },
+      "render": {
+        "frames": 600,
+        "meanMs": 0.77,
+        "medianMs": 0.74,
+        "p99Ms": 1.09,
+        "maxMs": 1.25,
+        "over8ms": 0,
+        "over16ms": 0
+      },
+      "allocatedMBPerSecond": 4.83,
+      "gen0": 24,
+      "gen1": 1,
+      "gen2": 0,
+      "heapMB": 137,
+      "profile": {
+        "GameLocation.UpdateWhenCurrentLocation": {
+          "msPerFrame": 0.346,
+          "calls": 600,
+          "meanUs": 346.3,
+          "maxMs": 3.64
+        },
+        "GameLocation.updateEvenIfFarmerIsntHere": {
+          "msPerFrame": 0.297,
+          "calls": 48600,
+          "meanUs": 3.7,
+          "maxMs": 0.43
+        },
+        "GameLocation.updateCharacters": {
+          "msPerFrame": 0.159,
+          "calls": 48600,
+          "meanUs": 2,
+          "maxMs": 0.29
+        },
+        "GameLocation.draw": {
+          "msPerFrame": 0.14,
+          "calls": 600,
+          "meanUs": 140.2,
+          "maxMs": 0.29
+        },
+        "NPC.update": {
+          "msPerFrame": 0.04,
+          "calls": 23400,
+          "meanUs": 1,
+          "maxMs": 0.29
+        },
+        "FarmAnimal.behaviors": {
+          "msPerFrame": 0.025,
+          "calls": 15000,
+          "meanUs": 1,
+          "maxMs": 0.27
+        },
+        "Game1.performTenMinuteClockUpdate": {
+          "msPerFrame": 0.003,
+          "calls": 1,
+          "meanUs": 1865.9,
+          "maxMs": 1.87
+        }
+      }
+    },
+    "farm_day_100_animals": {
+      "seconds": 10,
+      "processCpuMsPerFrame": 6.61,
+      "processCpuPercentOfOneCore": 40,
+      "update": {
+        "frames": 600,
+        "meanMs": 1.19,
+        "medianMs": 1.12,
+        "p99Ms": 2.1,
+        "maxMs": 3.46,
+        "over8ms": 0,
+        "over16ms": 0
+      },
+      "render": {
+        "frames": 600,
+        "meanMs": 0.94,
+        "medianMs": 0.9,
+        "p99Ms": 1.54,
+        "maxMs": 1.75,
+        "over8ms": 0,
+        "over16ms": 0
+      },
+      "allocatedMBPerSecond": 5.57,
+      "gen0": 28,
+      "gen1": 1,
+      "gen2": 0,
+      "heapMB": 140,
+      "profile": {
+        "GameLocation.UpdateWhenCurrentLocation": {
+          "msPerFrame": 0.613,
+          "calls": 600,
+          "meanUs": 612.6,
+          "maxMs": 2.98
+        },
+        "GameLocation.updateEvenIfFarmerIsntHere": {
+          "msPerFrame": 0.372,
+          "calls": 48600,
+          "meanUs": 4.6,
+          "maxMs": 0.58
+        },
+        "GameLocation.updateCharacters": {
+          "msPerFrame": 0.2,
+          "calls": 48600,
+          "meanUs": 2.5,
+          "maxMs": 0.58
+        },
+        "GameLocation.draw": {
+          "msPerFrame": 0.18,
+          "calls": 600,
+          "meanUs": 180.3,
+          "maxMs": 0.36
+        },
+        "FarmAnimal.behaviors": {
+          "msPerFrame": 0.105,
+          "calls": 60000,
+          "meanUs": 1.1,
+          "maxMs": 2.38
+        },
+        "NPC.update": {
+          "msPerFrame": 0.046,
+          "calls": 23400,
+          "meanUs": 1.2,
+          "maxMs": 0.57
+        },
+        "Game1.performTenMinuteClockUpdate": {
+          "msPerFrame": 0.003,
+          "calls": 2,
+          "meanUs": 765.4,
+          "maxMs": 0.84
+        }
+      }
+    },
+    "farm_day_200_animals": {
+      "seconds": 10,
+      "processCpuMsPerFrame": 7.37,
+      "processCpuPercentOfOneCore": 44,
+      "update": {
+        "frames": 600,
+        "meanMs": 1.47,
+        "medianMs": 1.49,
+        "p99Ms": 2.25,
+        "maxMs": 3.33,
+        "over8ms": 0,
+        "over16ms": 0
+      },
+      "render": {
+        "frames": 599,
+        "meanMs": 1.13,
+        "medianMs": 1.11,
+        "p99Ms": 1.61,
+        "maxMs": 1.77,
+        "over8ms": 0,
+        "over16ms": 0
+      },
+      "allocatedMBPerSecond": 6.5,
+      "gen0": 31,
+      "gen1": 1,
+      "gen2": 0,
+      "heapMB": 141,
+      "profile": {
+        "GameLocation.UpdateWhenCurrentLocation": {
+          "msPerFrame": 0.917,
+          "calls": 600,
+          "meanUs": 916.9,
+          "maxMs": 2.1
+        },
+        "GameLocation.updateEvenIfFarmerIsntHere": {
+          "msPerFrame": 0.341,
+          "calls": 48600,
+          "meanUs": 4.2,
+          "maxMs": 1.96
+        },
+        "GameLocation.draw": {
+          "msPerFrame": 0.246,
+          "calls": 599,
+          "meanUs": 246.7,
+          "maxMs": 0.49
+        },
+        "FarmAnimal.behaviors": {
+          "msPerFrame": 0.2,
+          "calls": 120000,
+          "meanUs": 1,
+          "maxMs": 0.57
+        },
+        "GameLocation.updateCharacters": {
+          "msPerFrame": 0.184,
+          "calls": 48600,
+          "meanUs": 2.3,
+          "maxMs": 1.95
+        },
+        "NPC.update": {
+          "msPerFrame": 0.046,
+          "calls": 23400,
+          "meanUs": 1.2,
+          "maxMs": 1.95
+        },
+        "Game1.performTenMinuteClockUpdate": {
+          "msPerFrame": 0.001,
+          "calls": 1,
+          "meanUs": 793.4,
+          "maxMs": 0.79
+        }
+      }
+    },
+    "farm_night_0_torches": {
+      "seconds": 10,
+      "processCpuMsPerFrame": 5.7,
+      "processCpuPercentOfOneCore": 34,
+      "update": {
+        "frames": 600,
+        "meanMs": 0.95,
+        "medianMs": 1,
+        "p99Ms": 1.43,
+        "maxMs": 7.2,
+        "over8ms": 0,
+        "over16ms": 0
+      },
+      "render": {
+        "frames": 599,
+        "meanMs": 0.75,
+        "medianMs": 0.69,
+        "p99Ms": 1.34,
+        "maxMs": 1.52,
+        "over8ms": 0,
+        "over16ms": 0
+      },
+      "allocatedMBPerSecond": 4.58,
+      "gen0": 23,
+      "gen1": 1,
+      "gen2": 0,
+      "heapMB": 142,
+      "profile": {
+        "GameLocation.updateEvenIfFarmerIsntHere": {
+          "msPerFrame": 0.442,
+          "calls": 48600,
+          "meanUs": 5.5,
+          "maxMs": 0.67
+        },
+        "GameLocation.UpdateWhenCurrentLocation": {
+          "msPerFrame": 0.287,
+          "calls": 600,
+          "meanUs": 287.5,
+          "maxMs": 0.82
+        },
+        "GameLocation.updateCharacters": {
+          "msPerFrame": 0.236,
+          "calls": 48600,
+          "meanUs": 2.9,
+          "maxMs": 0.34
+        },
+        "GameLocation.draw": {
+          "msPerFrame": 0.129,
+          "calls": 599,
+          "meanUs": 129.2,
+          "maxMs": 0.3
+        },
+        "NPC.update": {
+          "msPerFrame": 0.052,
+          "calls": 23400,
+          "meanUs": 1.3,
+          "maxMs": 0.34
+        },
+        "Game1.performTenMinuteClockUpdate": {
+          "msPerFrame": 0.012,
+          "calls": 2,
+          "meanUs": 3704.6,
+          "maxMs": 6.43
+        }
+      }
+    },
+    "farm_night_100_torches": {
+      "seconds": 10,
+      "processCpuMsPerFrame": 5.52,
+      "processCpuPercentOfOneCore": 33,
+      "update": {
+        "frames": 600,
+        "meanMs": 0.97,
+        "medianMs": 1.03,
+        "p99Ms": 1.43,
+        "maxMs": 1.85,
+        "over8ms": 0,
+        "over16ms": 0
+      },
+      "render": {
+        "frames": 600,
+        "meanMs": 0.89,
+        "medianMs": 0.81,
+        "p99Ms": 1.52,
+        "maxMs": 1.69,
+        "over8ms": 0,
+        "over16ms": 0
+      },
+      "allocatedMBPerSecond": 7.08,
+      "gen0": 36,
+      "gen1": 1,
+      "gen2": 0,
+      "heapMB": 142,
+      "profile": {
+        "GameLocation.updateEvenIfFarmerIsntHere": {
+          "msPerFrame": 0.45,
+          "calls": 48600,
+          "meanUs": 5.6,
+          "maxMs": 0.45
+        },
+        "GameLocation.UpdateWhenCurrentLocation": {
+          "msPerFrame": 0.31,
+          "calls": 600,
+          "meanUs": 310,
+          "maxMs": 0.6
+        },
+        "GameLocation.updateCharacters": {
+          "msPerFrame": 0.243,
+          "calls": 48600,
+          "meanUs": 3,
+          "maxMs": 0.45
+        },
+        "GameLocation.draw": {
+          "msPerFrame": 0.236,
+          "calls": 600,
+          "meanUs": 236.4,
+          "maxMs": 0.87
+        },
+        "NPC.update": {
+          "msPerFrame": 0.054,
+          "calls": 23400,
+          "meanUs": 1.4,
+          "maxMs": 0.44
+        },
+        "Game1.performTenMinuteClockUpdate": {
+          "msPerFrame": 0.001,
+          "calls": 1,
+          "meanUs": 631.1,
+          "maxMs": 0.63
+        }
+      }
+    },
+    "farm_night_300_torches": {
+      "seconds": 10,
+      "processCpuMsPerFrame": 6.72,
+      "processCpuPercentOfOneCore": 40,
+      "update": {
+        "frames": 600,
+        "meanMs": 0.99,
+        "medianMs": 1.05,
+        "p99Ms": 1.48,
+        "maxMs": 1.59,
+        "over8ms": 0,
+        "over16ms": 0
+      },
+      "render": {
+        "frames": 599,
+        "meanMs": 1,
+        "medianMs": 0.94,
+        "p99Ms": 1.6,
+        "maxMs": 1.97,
+        "over8ms": 0,
+        "over16ms": 0
+      },
+      "allocatedMBPerSecond": 9.71,
+      "gen0": 48,
+      "gen1": 1,
+      "gen2": 0,
+      "heapMB": 145,
+      "profile": {
+        "GameLocation.updateEvenIfFarmerIsntHere": {
+          "msPerFrame": 0.43,
+          "calls": 48600,
+          "meanUs": 5.3,
+          "maxMs": 0.37
+        },
+        "GameLocation.UpdateWhenCurrentLocation": {
+          "msPerFrame": 0.347,
+          "calls": 600,
+          "meanUs": 346.9,
+          "maxMs": 0.68
+        },
+        "GameLocation.draw": {
+          "msPerFrame": 0.329,
+          "calls": 599,
+          "meanUs": 329.7,
+          "maxMs": 0.87
+        },
+        "GameLocation.updateCharacters": {
+          "msPerFrame": 0.232,
+          "calls": 48600,
+          "meanUs": 2.9,
+          "maxMs": 0.33
+        },
+        "NPC.update": {
+          "msPerFrame": 0.051,
+          "calls": 23400,
+          "meanUs": 1.3,
+          "maxMs": 0.33
+        },
+        "Game1.performTenMinuteClockUpdate": {
+          "msPerFrame": 0.003,
+          "calls": 2,
+          "meanUs": 777.2,
+          "maxMs": 0.89
+        }
+      }
+    },
+    "town_noon": {
+      "seconds": 10,
+      "processCpuMsPerFrame": 5.94,
+      "processCpuPercentOfOneCore": 36,
+      "update": {
+        "frames": 600,
+        "meanMs": 0.64,
+        "medianMs": 0.54,
+        "p99Ms": 1.19,
+        "maxMs": 2.15,
+        "over8ms": 0,
+        "over16ms": 0
+      },
+      "render": {
+        "frames": 600,
+        "meanMs": 0.57,
+        "medianMs": 0.5,
+        "p99Ms": 1.17,
+        "maxMs": 1.29,
+        "over8ms": 0,
+        "over16ms": 0
+      },
+      "allocatedMBPerSecond": 4.57,
+      "gen0": 24,
+      "gen1": 1,
+      "gen2": 0,
+      "heapMB": 144,
+      "profile": {
+        "GameLocation.updateEvenIfFarmerIsntHere": {
+          "msPerFrame": 0.399,
+          "calls": 48600,
+          "meanUs": 4.9,
+          "maxMs": 0.46
+        },
+        "GameLocation.updateCharacters": {
+          "msPerFrame": 0.213,
+          "calls": 48600,
+          "meanUs": 2.6,
+          "maxMs": 0.46
+        },
+        "GameLocation.draw": {
+          "msPerFrame": 0.052,
+          "calls": 600,
+          "meanUs": 52.2,
+          "maxMs": 0.11
+        },
+        "GameLocation.UpdateWhenCurrentLocation": {
+          "msPerFrame": 0.052,
+          "calls": 600,
+          "meanUs": 52.2,
+          "maxMs": 0.15
+        },
+        "NPC.update": {
+          "msPerFrame": 0.046,
+          "calls": 23400,
+          "meanUs": 1.2,
+          "maxMs": 0.05
+        },
+        "Game1.performTenMinuteClockUpdate": {
+          "msPerFrame": 0.003,
+          "calls": 1,
+          "meanUs": 1608.4,
+          "maxMs": 1.61
+        }
+      }
+    },
+    "beach_noon": {
+      "seconds": 10,
+      "processCpuMsPerFrame": 4.58,
+      "processCpuPercentOfOneCore": 28,
+      "update": {
+        "frames": 600,
+        "meanMs": 0.67,
+        "medianMs": 0.65,
+        "p99Ms": 1.19,
+        "maxMs": 1.49,
+        "over8ms": 0,
+        "over16ms": 0
+      },
+      "render": {
+        "frames": 599,
+        "meanMs": 0.45,
+        "medianMs": 0.39,
+        "p99Ms": 0.82,
+        "maxMs": 0.94,
+        "over8ms": 0,
+        "over16ms": 0
+      },
+      "allocatedMBPerSecond": 4.56,
+      "gen0": 23,
+      "gen1": 1,
+      "gen2": 0,
+      "heapMB": 122,
+      "profile": {
+        "GameLocation.updateEvenIfFarmerIsntHere": {
+          "msPerFrame": 0.455,
+          "calls": 48600,
+          "meanUs": 5.6,
+          "maxMs": 0.59
+        },
+        "GameLocation.updateCharacters": {
+          "msPerFrame": 0.241,
+          "calls": 48600,
+          "meanUs": 3,
+          "maxMs": 0.38
+        },
+        "NPC.update": {
+          "msPerFrame": 0.05,
+          "calls": 23400,
+          "meanUs": 1.3,
+          "maxMs": 0.07
+        },
+        "GameLocation.draw": {
+          "msPerFrame": 0.036,
+          "calls": 599,
+          "meanUs": 36.3,
+          "maxMs": 0.07
+        },
+        "GameLocation.UpdateWhenCurrentLocation": {
+          "msPerFrame": 0.014,
+          "calls": 600,
+          "meanUs": 14.1,
+          "maxMs": 0.04
+        },
+        "Game1.performTenMinuteClockUpdate": {
+          "msPerFrame": 0.001,
+          "calls": 1,
+          "meanUs": 861.4,
+          "maxMs": 0.86
+        }
+      }
+    },
+    "mountain_noon": {
+      "seconds": 10,
+      "processCpuMsPerFrame": 5.03,
+      "processCpuPercentOfOneCore": 30,
+      "update": {
+        "frames": 600,
+        "meanMs": 0.69,
+        "medianMs": 0.65,
+        "p99Ms": 1.13,
+        "maxMs": 1.68,
+        "over8ms": 0,
+        "over16ms": 0
+      },
+      "render": {
+        "frames": 599,
+        "meanMs": 0.55,
+        "medianMs": 0.46,
+        "p99Ms": 1.12,
+        "maxMs": 1.16,
+        "over8ms": 0,
+        "over16ms": 0
+      },
+      "allocatedMBPerSecond": 4.57,
+      "gen0": 23,
+      "gen1": 1,
+      "gen2": 0,
+      "heapMB": 123,
+      "profile": {
+        "GameLocation.updateEvenIfFarmerIsntHere": {
+          "msPerFrame": 0.449,
+          "calls": 48600,
+          "meanUs": 5.5,
+          "maxMs": 0.3
+        },
+        "GameLocation.updateCharacters": {
+          "msPerFrame": 0.239,
+          "calls": 48600,
+          "meanUs": 3,
+          "maxMs": 0.26
+        },
+        "NPC.update": {
+          "msPerFrame": 0.05,
+          "calls": 23400,
+          "meanUs": 1.3,
+          "maxMs": 0.05
+        },
+        "GameLocation.draw": {
+          "msPerFrame": 0.042,
+          "calls": 599,
+          "meanUs": 41.6,
+          "maxMs": 0.1
+        },
+        "GameLocation.UpdateWhenCurrentLocation": {
+          "msPerFrame": 0.036,
+          "calls": 600,
+          "meanUs": 36.2,
+          "maxMs": 0.19
+        },
+        "Game1.performTenMinuteClockUpdate": {
+          "msPerFrame": 0.002,
+          "calls": 1,
+          "meanUs": 1027.2,
+          "maxMs": 1.03
+        }
+      }
+    }
+  },
+  "note": null,
+  "mods": [
+    "SMAPI.ConsoleCommands 4.5.2",
+    "Kkthnx.ValleyFixes 0.2.0-alpha.1",
+    "Kkthnx.ValleyFixes.DevHarness 0.1.0"
+  ]
+}

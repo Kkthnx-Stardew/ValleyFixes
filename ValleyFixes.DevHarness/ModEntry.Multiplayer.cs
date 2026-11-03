@@ -195,6 +195,18 @@ namespace ValleyFixes.DevHarness
                 case "cart":
                     foreach (int w in CartScenario()) yield return w;
                     break;
+                case "sleeponly":
+                    foreach (int w in SleepOnlyScenario()) yield return w;
+                    break;
+                case "mkwinter13":
+                    foreach (int w in MakeWinter13Scenario()) yield return w;
+                    break;
+                case "netperf":
+                    foreach (int w in NetPerfScenario()) yield return w;
+                    break;
+                case "squid":
+                    foreach (int w in SquidScenario()) yield return w;
+                    break;
                 default:
                     _results["scenario_error"] = "unknown scenario " + name;
                     break;
@@ -261,7 +273,7 @@ namespace ValleyFixes.DevHarness
             for (int t = 0; t < 9000 && Game1.Date.TotalDays == day0; t += 5)
             {
                 if (t % 600 == 0)
-                    Monitor.Log($"[harness] sleeping: t={t} loc={Game1.currentLocation?.NameOrUniqueName} inBed={p.isInBed.Value} time={Game1.timeOfDay} menu={Game1.activeClickableMenu?.GetType().Name} fade={Game1.fadeToBlack} newDay={Game1.newDay} ready={Game1.player.team.sleepAnnounceMode.Value}", LogLevel.Info);
+                    Monitor.Log($"[harness] sleeping: t={t} loc={Game1.currentLocation?.NameOrUniqueName} inBed={p.isInBed.Value} tile={p.TilePoint.X},{p.TilePoint.Y} bedProp={Game1.currentLocation?.doesTileHaveProperty(p.TilePoint.X, p.TilePoint.Y, "Bed", "Back") != null} tempBed={p.sleptInTemporaryBed.Value} time={Game1.timeOfDay} menu={Game1.activeClickableMenu?.GetType().Name} fade={Game1.fadeToBlack} newDay={Game1.newDay} ready={Game1.player.team.sleepAnnounceMode.Value} nonWarpFade={Game1.nonWarpFade} pauseTime={Game1.pauseTime} eventUp={Game1.eventUp} dialogueUp={Game1.dialogueUp} locEvent={Game1.currentLocation?.currentEvent != null} passedOut={Game1.player.passedOut} canMove={Game1.player.CanMove} newDaySync={Game1.newDaySync.hasInstance()} warping={Game1.isWarping} request={Game1.locationRequest != null} paused={Game1.paused} shouldTimePass={Game1.shouldTimePass()}", LogLevel.Info);
                 yield return 5;
             }
             int guard = 0;

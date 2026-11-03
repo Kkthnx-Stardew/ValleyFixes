@@ -26,6 +26,7 @@ param(
     [switch] $KeepSave,
     [switch] $HeapDumps,
     [switch] $Visit,
+    [switch] $Profile,
     [string] $LoadSave = '',
     [string] $OutName = '',
     [int] $TimeoutSeconds = 900,
@@ -57,7 +58,7 @@ if ($Label -eq 'defaults') {
     Remove-Item $configFile -ErrorAction SilentlyContinue
 } else {
     $on = $Label -eq 'fixed'
-    $config = [ordered]@{ FixFairThirdPlaceText = $on; FixMovieReactionScripts = $on; FixLumberjackMahoganyBonus = $on; FixBlankNames = $on; FixChefBundleReward = $on; FixPortugueseSingleStatus = $on; TrimLocationChangeBacklog = $on; FixQuestItemGroundDrops = $on; FixTitleMusicMute = $on; FixGeorgeWheelchair = $on; FixOfflineFarmhandWallets = $on; CheckStaleOrderParticipants = $on; RepairStaleOrderParticipants = $on; FixTrashBearSardine = $on; SyncCoalCarts = $on; FixStardropInterrupt = $on; LogEatInterrupts = $on } | ConvertTo-Json
+    $config = [ordered]@{ FixFairThirdPlaceText = $on; FixMovieReactionScripts = $on; FixLumberjackMahoganyBonus = $on; FixBlankNames = $on; FixChefBundleReward = $on; FixPortugueseSingleStatus = $on; TrimLocationChangeBacklog = $on; FixQuestItemGroundDrops = $on; FixTitleMusicMute = $on; FixGeorgeWheelchair = $on; FixOfflineFarmhandWallets = $on; CheckStaleOrderParticipants = $on; RepairStaleOrderParticipants = $on; FixTrashBearSardine = $on; SyncCoalCarts = $on; FixStardropInterrupt = $on; FixStaleMapOverrides = $on; LogEatInterrupts = $on } | ConvertTo-Json
     Set-Content $configFile $config
 }
 
@@ -77,6 +78,8 @@ Remove-Item (Join-Path $results "$OutName-*.json") -ErrorAction SilentlyContinue
 $env:VFH_ONLY = $Scenario
 $env:VFH_DAYS = "$Days"
 $env:VFH_SYNC = $sync
+$env:VFH_SLEEPTIME = $env:VFH_SLEEPTIME
+if ($Profile) { $env:VFH_PROFILE = '1' } else { Remove-Item Env:VFH_PROFILE -ErrorAction SilentlyContinue }
 if ($Visit) { $env:VFH_VISIT = '1' } else { Remove-Item Env:VFH_VISIT -ErrorAction SilentlyContinue }
 if ($HeapDumps) { $env:VFH_HOLD = '1' } else { Remove-Item Env:VFH_HOLD -ErrorAction SilentlyContinue }
 if ($LoadSave) { $env:VFH_LOAD = $LoadSave } else { Remove-Item Env:VFH_LOAD -ErrorAction SilentlyContinue }
@@ -134,7 +137,7 @@ while ((Get-Date) -lt $deadline) {
 foreach ($proc in @($hostProc, $clientProc)) {
     if ($proc -and -not $proc.HasExited) { Write-Warning "Timed out after $TimeoutSeconds seconds, stopping process $($proc.Id)."; Stop-Process -Id $proc.Id -Force }
 }
-Remove-Item Env:VFH_HOLD, Env:VFH_VISIT -ErrorAction SilentlyContinue
+Remove-Item Env:VFH_HOLD, Env:VFH_VISIT, Env:VFH_PROFILE -ErrorAction SilentlyContinue
 Remove-Item Env:VFH_ONLY, Env:VFH_DAYS, Env:VFH_SYNC, Env:VFH_HEAVY, Env:VFH_HOSTONLY, Env:VFH_LOAD -ErrorAction SilentlyContinue
 
 # the throwaway farm and its farmhand are written to the shared Saves folder, so remove only the VFTest_* folders

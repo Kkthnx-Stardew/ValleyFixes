@@ -9,6 +9,7 @@
 		<!-- a test tool only: it is never deployed to the live Mods folder and never zipped -->
 		<EnableModDeploy>false</EnableModDeploy>
 		<EnableModZip>false</EnableModZip>
+		<EnableHarmony>true</EnableHarmony>
 	</PropertyGroup>
 
 	<ItemGroup>

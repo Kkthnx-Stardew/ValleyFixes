@@ -42,6 +42,11 @@ namespace ValleyFixes.DevHarness
                 return;
             }
 
+            if (Environment.GetEnvironmentVariable("VFH_PROFILE") == "1")
+                Profiler.Install(new HarmonyLib.Harmony("Kkthnx.ValleyFixes.DevHarness.Profiler"), Monitor);
+            if (Environment.GetEnvironmentVariable("VFH_PROFILE") == "1")
+                Profiler.Active = true;
+
             helper.Events.GameLoop.UpdateTicked += OnUpdateTicked;
 
             // per-frame cost: update is UpdateTicking to UpdateTicked, render is Rendering to Rendered
@@ -212,6 +217,18 @@ namespace ValleyFixes.DevHarness
                 var states = new Dictionary<string, object?>();
                 _results["eat_states"] = states;
                 foreach (int w in EatStatesScenario(states)) yield return w;
+                yield break;
+            }
+
+            if (Environment.GetEnvironmentVariable("VFH_ONLY") == "scale")
+            {
+                foreach (int w in ScaleScenario()) yield return w;
+                yield break;
+            }
+
+            if (Environment.GetEnvironmentVariable("VFH_ONLY") == "bed")
+            {
+                foreach (int w in BedScenario()) yield return w;
                 yield break;
             }
 
@@ -1092,6 +1109,8 @@ namespace ValleyFixes.DevHarness
         {
             _updateMs.Clear();
             _renderMs.Clear();
+            Profiler.Reset();
+            Profiler.Active = Environment.GetEnvironmentVariable("VFH_PROFILE") == "1";
             long bytes0 = GC.GetAllocatedBytesForCurrentThread();
             int g0 = GC.CollectionCount(0), g1 = GC.CollectionCount(1), g2 = GC.CollectionCount(2);
             var proc = System.Diagnostics.Process.GetCurrentProcess();
@@ -1116,7 +1135,8 @@ namespace ValleyFixes.DevHarness
                 gen0 = GC.CollectionCount(0) - g0,
                 gen1 = GC.CollectionCount(1) - g1,
                 gen2 = GC.CollectionCount(2) - g2,
-                heapMB = Math.Round(GC.GetTotalMemory(false) / 1048576.0, 0)
+                heapMB = Math.Round(GC.GetTotalMemory(false) / 1048576.0, 0),
+                profile = Profiler.Active ? Profiler.Snapshot(_updateMs.Count) : null
             };
         }
 

@@ -1,0 +1,146 @@
+{
+  "world": "client ready in FarmHouse55cdae1e-3ec2-4626-87f6-9934fb37c002, id 7667650895069324266",
+  "netperf": {
+    "join_and_load": {
+      "bytesByType": {
+        "playerIntroduction": {
+          "kbPerSecond": 6.88,
+          "totalKB": 6.9,
+          "messages": 1,
+          "meanBytes": 7042,
+          "maxKB": 6.9
+        },
+        "locationDelta": {
+          "kbPerSecond": 0.61,
+          "totalKB": 0.6,
+          "messages": 2,
+          "meanBytes": 310,
+          "maxKB": 0.3
+        },
+        "farmerDelta": {
+          "kbPerSecond": 0.52,
+          "totalKB": 0.5,
+          "messages": 1,
+          "meanBytes": 532,
+          "maxKB": 0.5
+        },
+        "type255": {
+          "kbPerSecond": 0.34,
+          "totalKB": 0.3,
+          "messages": 1,
+          "meanBytes": 344,
+          "maxKB": 0.3
+        }
+      }
+    },
+    "idle_together_30s": {
+      "seconds": 30,
+      "bytesByType": {
+        "farmerDelta": {
+          "kbPerSecond": 0.01,
+          "totalKB": 0.3,
+          "messages": 4,
+          "meanBytes": 65,
+          "maxKB": 0.1
+        }
+      }
+    },
+    "walking_together_15s": {
+      "seconds": 15,
+      "bytesByType": {
+        "farmerDelta": {
+          "kbPerSecond": 0.78,
+          "totalKB": 11.7,
+          "messages": 150,
+          "meanBytes": 80,
+          "maxKB": 0.1
+        }
+      }
+    },
+    "host_builds_farm_10s": {
+      "seconds": 10,
+      "bytesByType": {
+        "locationDelta": {
+          "kbPerSecond": 0.15,
+          "totalKB": 1.5,
+          "messages": 2,
+          "meanBytes": 744,
+          "maxKB": 1.4
+        },
+        "farmerDelta": {
+          "kbPerSecond": 0.01,
+          "totalKB": 0.1,
+          "messages": 1,
+          "meanBytes": 65,
+          "maxKB": 0.1
+        }
+      }
+    },
+    "joiner_enters_heavy_farm": {
+      "seconds": 6.7,
+      "bytesByType": {
+        "farmerDelta": {
+          "kbPerSecond": 0.02,
+          "totalKB": 0.1,
+          "messages": 2,
+          "meanBytes": 75,
+          "maxKB": 0.1
+        }
+      }
+    },
+    "in_bed_client": true,
+    "one_night": {
+      "seconds": 5.3,
+      "bytesByType": {
+        "farmerDelta": {
+          "kbPerSecond": 1.62,
+          "totalKB": 8.6,
+          "messages": 8,
+          "meanBytes": 1101,
+          "maxKB": 7.7
+        },
+        "locationDelta": {
+          "kbPerSecond": 0.12,
+          "totalKB": 0.6,
+          "messages": 3,
+          "meanBytes": 219,
+          "maxKB": 0.3
+        },
+        "newDaySync": {
+          "kbPerSecond": 0.11,
+          "totalKB": 0.6,
+          "messages": 21,
+          "meanBytes": 28,
+          "maxKB": 0
+        },
+        "teamDelta": {
+          "kbPerSecond": 0.06,
+          "totalKB": 0.3,
+          "messages": 4,
+          "meanBytes": 78,
+          "maxKB": 0.1
+        },
+        "readySync": {
+          "kbPerSecond": 0.01,
+          "totalKB": 0,
+          "messages": 2,
+          "meanBytes": 22,
+          "maxKB": 0
+        },
+        "chatInfoMessage": {
+          "kbPerSecond": 0.01,
+          "totalKB": 0,
+          "messages": 1,
+          "meanBytes": 32,
+          "maxKB": 0
+        }
+      }
+    }
+  },
+  "note": null,
+  "mods": [
+    "SMAPI.ConsoleCommands 4.5.2",
+    "Kkthnx.ValleyFixes 0.2.0-alpha.1",
+    "Kkthnx.ValleyFixes.DevHarness 0.1.0"
+  ]
+}
