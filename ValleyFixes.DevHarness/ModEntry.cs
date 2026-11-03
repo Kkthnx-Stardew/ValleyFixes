@@ -215,6 +215,12 @@ namespace ValleyFixes.DevHarness
                 yield break;
             }
 
+            if (Environment.GetEnvironmentVariable("VFH_ONLY") == "stardrop")
+            {
+                foreach (int w in StardropScenario()) yield return w;
+                yield break;
+            }
+
             if (Environment.GetEnvironmentVariable("VFH_ONLY") == "skull")
             {
                 var skull = new Dictionary<string, object?>();

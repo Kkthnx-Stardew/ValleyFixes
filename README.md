@@ -2,7 +2,7 @@
 
 Small, separately switchable fixes for verified Stardew Valley 1.6.15 bugs. Every fix has its own toggle in `config.json`, and each one skips itself when the game data no longer matches what it expects.
 
-Status: 0.1.0. Twelve fixes were tested before and after in the running game (Stardew Valley 1.6.15 build 24356, SMAPI 4.5.2, Windows 11, English and Portuguese, single player, plus a host with one joining player on the same PC for the multiplayer fixes). Split screen, three or more players and other mods were not tested. See `docs/AUDIT.md` for what was and was not covered.
+Status: 0.2.0-alpha.1 (the table lists every fix, 0.1.0 tested twelve of them). Twelve fixes were tested before and after in the running game (Stardew Valley 1.6.15 build 24356, SMAPI 4.5.2, Windows 11, English and Portuguese, single player, plus a host with one joining player on the same PC for the multiplayer fixes). Split screen, three or more players and other mods were not tested. See `docs/AUDIT.md` for what was and was not covered.
 
 ## Install
 
@@ -28,6 +28,7 @@ Status: 0.1.0. Twelve fixes were tested before and after in the running game (St
 | `SyncCoalCarts` | VF-058 | In multiplayer a farmhand can empty the same Mines coal cart again and again, because the game keeps its list of emptied carts on each machine and never shares it. The host now keeps the list, shares it, and saves it with the world. Needs the mod on every player's machine. Does nothing in single player. |
 | `FixBlankNames` | VF-012 | The new farm and new farmhand menus let you finish with a name made only of spaces. A space-only farm name reads back empty after saving and then blocks new farmhands from joining. The OK button is now blocked for such names. It does not repair farms already affected. |
 | `FixLumberjackMahoganyBonus` | VF-006 | **Off by default.** The tree code gives Lumberjack players 25% extra hardwood from mahogany trees, but a mismatched id means it never applies. Turning this on makes it apply, which raises their mahogany hardwood by about a quarter. |
+| `FixStardropInterrupt` | VF-059 | The stardrop's energy bonus is applied only when the eating animation ends, and the stardrop is already used up by then. If something cuts the eating short (a menu, a warp, a stray input), the bonus was lost for good. When that happens the bonus is now applied at once. Other food is not changed. |
 | `LogEatInterrupts` | VF-004 | Writes a log line with the calling code when something cuts the eating animation short. This only logs. It changes nothing in the game. |
 
 ## What is not fixed

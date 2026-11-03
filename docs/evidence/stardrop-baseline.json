@@ -1,0 +1,149 @@
+{
+  "world": "ready in FarmHouse, tick 405",
+  "stardrop": [
+    {
+      "tag": "plain",
+      "interrupt": false,
+      "maxBefore": 270,
+      "maxAfter": 304,
+      "gained": 34,
+      "during": {
+        "tick": 468,
+        "isEating": true,
+        "freezePause": 19952,
+        "CanMove": false,
+        "pauseForSingle": true,
+        "frame": 84,
+        "heldItem": "Stardrop",
+        "activeItem": null,
+        "menu": null,
+        "UsingTool": false,
+        "eventUp": false
+      },
+      "after": {
+        "tick": 1068,
+        "isEating": false,
+        "freezePause": 1552,
+        "CanMove": false,
+        "pauseForSingle": false,
+        "frame": 0,
+        "heldItem": null,
+        "activeItem": null,
+        "menu": "DialogueBox",
+        "UsingTool": false,
+        "eventUp": false
+      },
+      "muchLater": {
+        "tick": 1968,
+        "isEating": false,
+        "freezePause": 0,
+        "CanMove": false,
+        "pauseForSingle": false,
+        "frame": 0,
+        "heldItem": null,
+        "activeItem": null,
+        "menu": "DialogueBox",
+        "UsingTool": false,
+        "eventUp": false
+      }
+    },
+    {
+      "tag": "interrupted",
+      "interrupt": true,
+      "maxBefore": 270,
+      "maxAfter": 270,
+      "gained": 0,
+      "during": {
+        "tick": 2031,
+        "isEating": true,
+        "freezePause": 19952,
+        "CanMove": false,
+        "pauseForSingle": true,
+        "frame": 84,
+        "heldItem": "Stardrop",
+        "activeItem": null,
+        "menu": "DialogueBox",
+        "UsingTool": false,
+        "eventUp": false
+      },
+      "after": {
+        "tick": 2631,
+        "isEating": false,
+        "freezePause": 10352,
+        "CanMove": false,
+        "pauseForSingle": false,
+        "frame": 0,
+        "heldItem": "Stardrop",
+        "activeItem": null,
+        "menu": "DialogueBox",
+        "UsingTool": false,
+        "eventUp": false
+      },
+      "muchLater": {
+        "tick": 3531,
+        "isEating": false,
+        "freezePause": 0,
+        "CanMove": false,
+        "pauseForSingle": false,
+        "frame": 0,
+        "heldItem": "Stardrop",
+        "activeItem": null,
+        "menu": "DialogueBox",
+        "UsingTool": false,
+        "eventUp": false
+      }
+    },
+    {
+      "tag": "plain-again",
+      "interrupt": false,
+      "maxBefore": 270,
+      "maxAfter": 304,
+      "gained": 34,
+      "during": {
+        "tick": 3594,
+        "isEating": true,
+        "freezePause": 19952,
+        "CanMove": false,
+        "pauseForSingle": true,
+        "frame": 84,
+        "heldItem": "Stardrop",
+        "activeItem": null,
+        "menu": "DialogueBox",
+        "UsingTool": false,
+        "eventUp": false
+      },
+      "after": {
+        "tick": 4194,
+        "isEating": false,
+        "freezePause": 1552,
+        "CanMove": false,
+        "pauseForSingle": false,
+        "frame": 0,
+        "heldItem": null,
+        "activeItem": null,
+        "menu": "DialogueBox",
+        "UsingTool": false,
+        "eventUp": false
+      },
+      "muchLater": {
+        "tick": 5094,
+        "isEating": false,
+        "freezePause": 0,
+        "CanMove": false,
+        "pauseForSingle": false,
+        "frame": 0,
+        "heldItem": null,
+        "activeItem": null,
+        "menu": "DialogueBox",
+        "UsingTool": false,
+        "eventUp": false
+      }
+    }
+  ],
+  "note": null,
+  "mods": [
+    "SMAPI.ConsoleCommands 4.5.2",
+    "Kkthnx.ValleyFixes 0.2.0-alpha.1",
+    "Kkthnx.ValleyFixes.DevHarness 0.1.0"
+  ]
+}

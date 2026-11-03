@@ -3,6 +3,7 @@
 ## 0.2.0-alpha.1
 
 - VF-058: in multiplayer, a coal cart a farmhand empties now stays empty for the host, for every other player, and for that farmhand after they leave the floor and return (`SyncCoalCarts`). The host keeps the list, shares it, and saves it with the world. Needs the mod on every player's machine. Tested with a host and a joining player: three visits gave coal once instead of three times.
+- VF-059: a stardrop whose eating is cut short now still gives its energy bonus (`FixStardropInterrupt`). Tested by cutting the eat short in game: maximum energy rose by 0 before and by 34 after.
 - Optional Generic Mod Config Menu page with every setting.
 
 ## 0.1.0
