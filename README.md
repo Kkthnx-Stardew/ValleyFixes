@@ -2,7 +2,7 @@
 
 Small, separately switchable fixes for verified Stardew Valley 1.6.15 bugs. Every fix has its own toggle in `config.json`, and each one skips itself when the game data no longer matches what it expects.
 
-Status: 0.2.0-alpha.1 (the table lists every fix, 0.1.0 tested twelve of them). Twelve fixes were tested before and after in the running game (Stardew Valley 1.6.15 build 24356, SMAPI 4.5.2, Windows 11, English and Portuguese, single player, plus a host with one joining player on the same PC for the multiplayer fixes). Split screen, three or more players and other mods were not tested. See `docs/AUDIT.md` for what was and was not covered.
+Status: 0.2.0-alpha.6 (the table lists every fix, 0.1.0 tested twelve of them). Twelve fixes were tested before and after in the running game (Stardew Valley 1.6.15 build 24356, SMAPI 4.5.2, Windows 11, English and Portuguese, single player, plus a host with one joining player on the same PC for the multiplayer fixes). Split screen, three or more players and other mods were not tested. See `docs/AUDIT.md` for what was and was not covered.
 
 ## Install
 
