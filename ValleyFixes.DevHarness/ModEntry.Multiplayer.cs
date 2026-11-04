@@ -29,6 +29,8 @@ namespace ValleyFixes.DevHarness
         /// <summary>Waits until the other process has reached the same named point. Gives up after about two minutes of game time.</summary>
         private IEnumerable<int> Barrier(string name, int limitTicks = 7200)
         {
+            if (HostOnly)
+                yield break;
             Mark(name);
             for (int t = 0; t < limitTicks && !OtherHas(name); t += 5)
                 yield return 5;
@@ -222,6 +224,14 @@ namespace ValleyFixes.DevHarness
                     break;
                 case "realnet":
                     foreach (int w in RealNetScenario()) yield return w;
+                    break;
+                case "rj36":
+                case "rj38":
+                case "rj39":
+                case "rj40":
+                case "rj41":
+                case "rj42":
+                    foreach (int w in RejoinScenario(name)) yield return w;
                     break;
                 default:
                     _results["scenario_error"] = "unknown scenario " + name;
