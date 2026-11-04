@@ -1,0 +1,31 @@
+{
+  "world": "host ready in FarmHouse, multiplayerMode 2, server True",
+  "cabin": "ready for -5127663077257136549",
+  "rj38": {
+    "start": "spring 1 y1 600",
+    "dropIn": true,
+    "before_sleep": {
+      "minutes": 6000,
+      "held": "(O)350",
+      "ready": false
+    },
+    "d2_morning": {
+      "minutes": 4400,
+      "held": "(O)350",
+      "ready": false
+    },
+    "after_reload": {
+      "minutes": 4400,
+      "held": "(O)350",
+      "ready": false
+    },
+    "menusSeen_host": {},
+    "end": "spring 2 y1"
+  },
+  "note": null,
+  "mods": [
+    "SMAPI.ConsoleCommands 4.5.2",
+    "Kkthnx.ValleyFixes 0.2.0-alpha.1",
+    "Kkthnx.ValleyFixes.DevHarness 0.1.0"
+  ]
+}

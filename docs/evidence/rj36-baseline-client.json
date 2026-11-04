@@ -1,0 +1,302 @@
+{
+  "join_to_ready_ms": 2170,
+  "world": "client ready in FarmHouseeb77eb13-5190-4397-9eb9-0ea04bcfa5f4, id -1169323720680345363",
+  "rj36": {
+    "d1_before_sleep_self": {
+      "name": "Client",
+      "money": 500,
+      "levels": [
+        0,
+        2,
+        0,
+        0,
+        0,
+        0
+      ],
+      "xp": [
+        0,
+        380,
+        0,
+        0,
+        0,
+        0
+      ],
+      "newLevels": [
+        "1:1",
+        "1:2"
+      ],
+      "craftingRecipes": [
+        "Campfire",
+        "Chest",
+        "Cobblestone Path",
+        "Gate",
+        "Gravel Path",
+        "Stone Sign",
+        "Text Sign",
+        "Torch",
+        "Wood Fence",
+        "Wood Path",
+        "Wood Sign"
+      ],
+      "cookingRecipes": [
+        "Fried Egg"
+      ],
+      "mailReceived": [
+        "button_tut_1",
+        "harness_flag_now"
+      ],
+      "mailForTomorrow": [],
+      "mailbox": [
+        "harness_unique_letter"
+      ],
+      "basicShipped": {},
+      "toolBeingUpgraded": null,
+      "daysLeftForToolUpgrade": 0,
+      "toolsInInventory": [
+        "(T)Axe:0",
+        "(T)Hoe:0",
+        "(T)WateringCan:0",
+        "(T)Pickaxe:0",
+        "(W)47:0"
+      ],
+      "houseUpgradeLevel": 0,
+      "daysUntilHouseUpgrade": -1,
+      "questLog": [
+        "9"
+      ],
+      "fridge": [],
+      "homeName": "FarmHouseeb77eb13-5190-4397-9eb9-0ea04bcfa5f4",
+      "homeUpgradeLevel": 0
+    },
+    "d2_morning_self": {
+      "name": "Client",
+      "money": 675,
+      "levels": [
+        0,
+        2,
+        0,
+        0,
+        0,
+        0
+      ],
+      "xp": [
+        0,
+        380,
+        0,
+        0,
+        0,
+        0
+      ],
+      "newLevels": [],
+      "craftingRecipes": [
+        "Bait",
+        "Campfire",
+        "Chest",
+        "Cobblestone Path",
+        "Gate",
+        "Gravel Path",
+        "Stone Sign",
+        "Text Sign",
+        "Torch",
+        "Wood Fence",
+        "Wood Path",
+        "Wood Sign"
+      ],
+      "cookingRecipes": [
+        "Fried Egg"
+      ],
+      "mailReceived": [
+        "button_tut_1",
+        "harness_flag_now"
+      ],
+      "mailForTomorrow": [
+        "fishing2"
+      ],
+      "mailbox": [
+        "harness_unique_letter",
+        "spring_2_1"
+      ],
+      "basicShipped": {
+        "24": 5
+      },
+      "toolBeingUpgraded": null,
+      "daysLeftForToolUpgrade": 0,
+      "toolsInInventory": [
+        "(T)Axe:0",
+        "(T)Hoe:0",
+        "(T)WateringCan:0",
+        "(T)Pickaxe:0",
+        "(W)47:0"
+      ],
+      "houseUpgradeLevel": 0,
+      "daysUntilHouseUpgrade": -1,
+      "questLog": [
+        "9"
+      ],
+      "fridge": [],
+      "homeName": "FarmHouseeb77eb13-5190-4397-9eb9-0ea04bcfa5f4",
+      "homeUpgradeLevel": 0
+    },
+    "d2_after_host_reload_self": {
+      "name": "Client",
+      "money": 675,
+      "levels": [
+        0,
+        2,
+        0,
+        0,
+        0,
+        0
+      ],
+      "xp": [
+        0,
+        380,
+        0,
+        0,
+        0,
+        0
+      ],
+      "newLevels": [],
+      "craftingRecipes": [
+        "Bait",
+        "Campfire",
+        "Chest",
+        "Cobblestone Path",
+        "Gate",
+        "Gravel Path",
+        "Stone Sign",
+        "Text Sign",
+        "Torch",
+        "Wood Fence",
+        "Wood Path",
+        "Wood Sign"
+      ],
+      "cookingRecipes": [
+        "Fried Egg"
+      ],
+      "mailReceived": [
+        "button_tut_1",
+        "harness_flag_now"
+      ],
+      "mailForTomorrow": [
+        "fishing2"
+      ],
+      "mailbox": [
+        "harness_unique_letter",
+        "spring_2_1"
+      ],
+      "basicShipped": {
+        "24": 5
+      },
+      "toolBeingUpgraded": null,
+      "daysLeftForToolUpgrade": 0,
+      "toolsInInventory": [
+        "(T)Axe:0",
+        "(T)Hoe:0",
+        "(T)WateringCan:0",
+        "(T)Pickaxe:0",
+        "(W)47:0"
+      ],
+      "houseUpgradeLevel": 0,
+      "daysUntilHouseUpgrade": -1,
+      "questLog": [
+        "9"
+      ],
+      "fridge": [],
+      "homeName": "FarmHouseeb77eb13-5190-4397-9eb9-0ea04bcfa5f4",
+      "homeUpgradeLevel": 0
+    },
+    "d3_morning_self": {
+      "name": "Client",
+      "money": 675,
+      "levels": [
+        0,
+        2,
+        0,
+        0,
+        0,
+        0
+      ],
+      "xp": [
+        0,
+        380,
+        0,
+        0,
+        0,
+        0
+      ],
+      "newLevels": [],
+      "craftingRecipes": [
+        "Bait",
+        "Campfire",
+        "Chest",
+        "Cobblestone Path",
+        "Gate",
+        "Gravel Path",
+        "Stone Sign",
+        "Text Sign",
+        "Torch",
+        "Wood Fence",
+        "Wood Path",
+        "Wood Sign"
+      ],
+      "cookingRecipes": [
+        "Fried Egg"
+      ],
+      "mailReceived": [
+        "button_tut_1",
+        "harness_flag_now"
+      ],
+      "mailForTomorrow": [],
+      "mailbox": [
+        "harness_unique_letter",
+        "spring_2_1",
+        "fishing2"
+      ],
+      "basicShipped": {
+        "24": 5
+      },
+      "toolBeingUpgraded": null,
+      "daysLeftForToolUpgrade": 0,
+      "toolsInInventory": [
+        "(T)Axe:0",
+        "(T)Hoe:0",
+        "(T)WateringCan:0",
+        "(T)Pickaxe:0",
+        "(W)47:0"
+      ],
+      "houseUpgradeLevel": 0,
+      "daysUntilHouseUpgrade": -1,
+      "questLog": [
+        "9"
+      ],
+      "fridge": [],
+      "homeName": "FarmHouseeb77eb13-5190-4397-9eb9-0ea04bcfa5f4",
+      "homeUpgradeLevel": 0
+    },
+    "DIFF_d1_before_sleep_to_d2_morning_self": [
+      "money: 500 -\u003E 675",
+      "newLevels: [\u00221:1\u0022,\u00221:2\u0022] -\u003E []",
+      "craftingRecipes: [\u0022Campfire\u0022,\u0022Chest\u0022,\u0022Cobblestone Path\u0022,\u0022Gate\u0022,\u0022Gravel Path\u0022,\u0022Stone Sign\u0022,\u0022Text Sign\u0022,\u0022Torch\u0022,\u0022Wood Fence\u0022,\u0022Wood Path\u0022,\u0022Wood Sign\u0022] -\u003E [\u0022Bait\u0022,\u0022Campfire\u0022,\u0022Chest\u0022,\u0022Cobblestone Path\u0022,\u0022Gate\u0022,\u0022Gravel Path\u0022,\u0022Stone Sign\u0022,\u0022Text Sign\u0022,\u0022Torch\u0022,\u0022Wood Fence\u0022,\u0022Wood Path\u0022,\u0022Wood Sign\u0022]",
+      "mailForTomorrow: [] -\u003E [\u0022fishing2\u0022]",
+      "mailbox: [\u0022harness_unique_letter\u0022] -\u003E [\u0022harness_unique_letter\u0022,\u0022spring_2_1\u0022]",
+      "basicShipped: {} -\u003E {\u002224\u0022:5}"
+    ],
+    "DIFF_d2_morning_to_d2_after_host_reload_self": [],
+    "DIFF_d2_after_host_reload_to_d3_morning_self": [
+      "mailForTomorrow: [\u0022fishing2\u0022] -\u003E []",
+      "mailbox: [\u0022harness_unique_letter\u0022,\u0022spring_2_1\u0022] -\u003E [\u0022harness_unique_letter\u0022,\u0022spring_2_1\u0022,\u0022fishing2\u0022]"
+    ],
+    "menusSeen_client": {
+      "LevelUpMenu": 2,
+      "ShippingMenu": 251
+    },
+    "end": "spring 3 y1"
+  },
+  "note": null,
+  "mods": [
+    "SMAPI.ConsoleCommands 4.5.2",
+    "Kkthnx.ValleyFixes 0.2.0-alpha.1",
+    "Kkthnx.ValleyFixes.DevHarness 0.1.0"
+  ]
+}

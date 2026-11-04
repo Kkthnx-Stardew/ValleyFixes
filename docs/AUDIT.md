@@ -748,3 +748,25 @@ Limits of this measurement:
 - The joiner's working set is 3.9 to 4.4 GB against 2.4 GB for the host, with a similar managed heap. The cause is not known.
 - A forced full collection takes about a second on this heap. The first version of the scenario forced one between steps and reported its own pause as a game stall. That was found by matching the stall times to the step changes, and the final runs use a count that does not force one.
 - One save, one PC, one sample per case. A difference of a second in the night or the join is inside the noise seen between runs.
+
+### Disconnect and rejoin batch, brief items 36 to 43 (2026-11-03)
+
+Clean profile (vanilla plus ValleyFixes with every toggle off), a new farm, a host and one joining farmhand on this PC, game build 24356. The farmhand's whole state (skills, recipes, mail, shipped items, quests, tool and house upgrades, cabin fridge) was written out before and after each event and compared. The joiner leaves with "exit to title" and joins again, or the host quits to the title and loads its save again while the joiner is online. Evidence is `docs/evidence/rj*-baseline-*.json`, read with `tools\Summarize-Rejoin.ps1`.
+
+| Item | What was done | Result |
+|---|---|---|
+| 36, 37 | Fishing xp to level 2, five parsnips in the bin, a unique letter, all on day 1. Sleep. The host quits and reloads at the start of day 2. Sleep again | Nothing lost. The skill level, the Bait recipe, the shipped parsnips, the money and the letters were the same before and after the reload. The level-up list was empty after night one and no second level-up menu came on night two. NOT REPRODUCED |
+| 38 | A keg with a parsnip, one night, host quits and reloads | 6000 minutes, then 4400 after the night, then 4400 after the reload. NOT REPRODUCED |
+| 39 | The farmhand hands a pickaxe to Clint. Leave and join again the same day, then two nights | The tool, the days left and the money were identical after the rejoin. Days left went 2, 1, 0 over the nights. NOT REPRODUCED |
+| 40 | A cabin upgrade is ordered and the farmhand leaves and joins again. The night finishes it. The fridge is stocked, then rejoin, a night, and a host reload | The upgrade finished (level 0 to 1). The fridge kept 20 and 5 items through the rejoin, the night and the reload, on both the host's and the farmhand's side. NOT REPRODUCED |
+| 41 | Cabin: the order above. Barn: ordered by the host, a night, a host reload, a night | The order survived the rejoin and finished. The barn counter went 3, 2, 2 after the reload, 1. NOT REPRODUCED |
+| 42 | Three quests added on day 1. Leave and join again the same day, then a night | All three were still there on both sides. NOT REPRODUCED |
+| 43 | Not run. It needs the bundle completion and its cutscene set up as a real player would reach them | NOT RUN |
+
+Limits:
+- Leaving was "exit to title", which tells the host. A crash or a killed process was not tried, so a change made in the last few frames before a crash is not covered.
+- Quitting a day before it is saved loses everything of that day, including gold, so the "quit before the day ends" wording in item 41 cannot be told apart from that.
+- Robin's whereabouts were checked once (ScienceHouse). The Linus recipe mail in item 37 and level-ups that need a profession choice were not tried.
+- One run per case, a vanilla profile, one PC.
+- The barn was placed with the placement checks skipped, because the checked call refused every tile on a new farm. The days-left counter is what was compared.
+- No fix was made for items 36 to 42. None of them has a reproduction on this build.

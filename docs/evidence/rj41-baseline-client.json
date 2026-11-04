@@ -1,0 +1,14 @@
+{
+  "join_to_ready_ms": 2188,
+  "world": "client ready in FarmHouse76b78192-d7f3-42aa-9efc-1ea58fc8e51a, id 6617035270001700079",
+  "rj41": {
+    "menusSeen_client": {},
+    "end": "spring 3 y1"
+  },
+  "note": null,
+  "mods": [
+    "SMAPI.ConsoleCommands 4.5.2",
+    "Kkthnx.ValleyFixes 0.2.0-alpha.1",
+    "Kkthnx.ValleyFixes.DevHarness 0.1.0"
+  ]
+}

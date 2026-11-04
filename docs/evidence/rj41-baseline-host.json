@@ -1,0 +1,121 @@
+{
+  "world": "host ready in FarmHouse, multiplayerMode 2, server True",
+  "cabin": "ready for 6617035270001700079",
+  "clientJoined": true,
+  "rj41": {
+    "start": "spring 1 y1 630",
+    "ordered": true,
+    "barnDaysLeft": 3,
+    "underConstruction": false,
+    "d2_buildings": [
+      {
+        "Value": "Farmhouse",
+        "left": 0,
+        "upgrade": 0
+      },
+      {
+        "Value": "Greenhouse",
+        "left": 0,
+        "upgrade": 0
+      },
+      {
+        "Value": "Shipping Bin",
+        "left": 0,
+        "upgrade": 0
+      },
+      {
+        "Value": "Pet Bowl",
+        "left": 0,
+        "upgrade": 0
+      },
+      {
+        "Value": "Cabin",
+        "left": 0,
+        "upgrade": 0
+      },
+      {
+        "Value": "Barn",
+        "left": 2,
+        "upgrade": 0
+      }
+    ],
+    "d2_underConstruction": false,
+    "d2_robin": "ScienceHouse",
+    "after_reload_buildings": [
+      {
+        "Value": "Farmhouse",
+        "left": 0,
+        "upgrade": 0
+      },
+      {
+        "Value": "Greenhouse",
+        "left": 0,
+        "upgrade": 0
+      },
+      {
+        "Value": "Shipping Bin",
+        "left": 0,
+        "upgrade": 0
+      },
+      {
+        "Value": "Pet Bowl",
+        "left": 0,
+        "upgrade": 0
+      },
+      {
+        "Value": "Cabin",
+        "left": 0,
+        "upgrade": 0
+      },
+      {
+        "Value": "Barn",
+        "left": 2,
+        "upgrade": 0
+      }
+    ],
+    "after_reload_underConstruction": false,
+    "d3_buildings": [
+      {
+        "Value": "Farmhouse",
+        "left": 0,
+        "upgrade": 0
+      },
+      {
+        "Value": "Greenhouse",
+        "left": 0,
+        "upgrade": 0
+      },
+      {
+        "Value": "Shipping Bin",
+        "left": 0,
+        "upgrade": 0
+      },
+      {
+        "Value": "Pet Bowl",
+        "left": 0,
+        "upgrade": 0
+      },
+      {
+        "Value": "Cabin",
+        "left": 0,
+        "upgrade": 0
+      },
+      {
+        "Value": "Barn",
+        "left": 1,
+        "upgrade": 0
+      }
+    ],
+    "d3_underConstruction": false,
+    "menusSeen_host": {
+      "SaveGameMenu": 1
+    },
+    "end": "spring 3 y1"
+  },
+  "note": null,
+  "mods": [
+    "SMAPI.ConsoleCommands 4.5.2",
+    "Kkthnx.ValleyFixes 0.2.0-alpha.1",
+    "Kkthnx.ValleyFixes.DevHarness 0.1.0"
+  ]
+}
