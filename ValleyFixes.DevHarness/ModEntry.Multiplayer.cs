@@ -86,7 +86,15 @@ namespace ValleyFixes.DevHarness
             _results["cabin"] = cabin is null ? "none" : "ready for " + cabin.owner?.UniqueMultiplayerID;
             if (cabin is null)
                 yield break;
+            // a heavy farm join: the farm is filled before the joiner connects, so the join itself carries it
+            if (Environment.GetEnvironmentVariable("VFH_ONLY") == "realnet" && Environment.GetEnvironmentVariable("VFH_HEAVY") == "1")
+            {
+                _results["heavy_farm_objects_added"] = PopulateHeavyFarm(Game1.getFarm());
+                yield return 60;
+            }
             Mark("hostready");
+            if (Environment.GetEnvironmentVariable("VFH_ONLY") == "realnet")
+                StartGaps();
 
             if (!HostOnly)
             {
@@ -112,16 +120,21 @@ namespace ValleyFixes.DevHarness
             TitleMenu.subMenu = menu;
 
             int sinceTry = 9999;
+            double joinStartMs = -1;
             for (int t = 0; t < 9000 && !(Context.IsWorldReady && Context.CanPlayerMove); t += 15)
             {
                 sinceTry += 15;
                 if (menu.MenuSlots.Count > 0 && sinceTry > 300)
                 {
                     sinceTry = 0;
+                    if (joinStartMs < 0)
+                        joinStartMs = _clock.Elapsed.TotalMilliseconds;
                     menu.MenuSlots[0].Activate();
                 }
                 yield return 15;
             }
+            if (joinStartMs >= 0)
+                _results["join_to_ready_ms"] = Math.Round(_clock.Elapsed.TotalMilliseconds - joinStartMs, 0);
             if (!Context.IsWorldReady)
             {
                 _results["world"] = "client never reached the world";
@@ -206,6 +219,9 @@ namespace ValleyFixes.DevHarness
                     break;
                 case "squid":
                     foreach (int w in SquidScenario()) yield return w;
+                    break;
+                case "realnet":
+                    foreach (int w in RealNetScenario()) yield return w;
                     break;
                 default:
                     _results["scenario_error"] = "unknown scenario " + name;

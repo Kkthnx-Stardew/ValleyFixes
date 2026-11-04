@@ -121,6 +121,62 @@ namespace ValleyFixes.DevHarness
                 row.Calls++;
                 if (length > row.MaxTicks)
                     row.MaxTicks = length;
+
+                // SMAPI mod messages share one type number. The JSON text names the mod that sent it and what kind it is
+                if (srcMsg.MessageType == 254)
+                {
+                    string key = "unparsed";
+                    try
+                    {
+                        var data = (_data ??= srcMsg.GetType().GetProperty("Data"))?.GetValue(srcMsg) as System.Collections.IEnumerable;
+                        string? text = data?.OfType<string>().FirstOrDefault();
+                        if (text != null)
+                        {
+                            // the start of the first message of each kind, so the sender can be read off by eye if the pattern below misses
+                            string head = text.Length > 260 ? text.Substring(0, 260) : text;
+                            ModHead.TryAdd(System.Text.RegularExpressions.Regex.Match(text, "\"Type\":\\s*\"([^\"]+)\"").Groups[1].Value, head);
+                            var mod = System.Text.RegularExpressions.Regex.Match(text, "\"FromModId\":\\s*\"([^\"]+)\"");
+                            var kind = System.Text.RegularExpressions.Regex.Match(text, "\"Type\":\\s*\"([^\"]+)\"");
+                            key = (mod.Success ? mod.Groups[1].Value : "?") + " | " + (kind.Success ? kind.Groups[1].Value : "?");
+                        }
+                    }
+                    catch
+                    {
+                    }
+                    if (!ModNet.TryGetValue(key, out var modRow))
+                        ModNet[key] = modRow = new Row();
+                    modRow.Ticks += length;
+                    modRow.Calls++;
+                    if (length > modRow.MaxTicks)
+                        modRow.MaxTicks = length;
+                }
+            }
+        }
+
+        private static System.Reflection.PropertyInfo? _data;
+        private static readonly Dictionary<string, Row> ModNet = new();
+        private static readonly Dictionary<string, string> ModHead = new();
+
+        public static object ModMessageHeads()
+        {
+            lock (Gate)
+                return new Dictionary<string, string>(ModHead);
+        }
+
+        /// <summary>Bytes written for SMAPI mod messages, by sender mod and message kind.</summary>
+        public static object SnapshotModNet(double seconds)
+        {
+            lock (Gate)
+            {
+                return ModNet.OrderByDescending(r => r.Value.Ticks).Take(10).Select(r => new
+                {
+                    message = r.Key,
+                    kbPerSecond = Math.Round(r.Value.Ticks / 1024.0 / Math.Max(0.1, seconds), 2),
+                    totalKB = Math.Round(r.Value.Ticks / 1024.0, 1),
+                    messages = r.Value.Calls,
+                    meanBytes = r.Value.Calls == 0 ? 0 : r.Value.Ticks / r.Value.Calls,
+                    maxKB = Math.Round(r.Value.MaxTicks / 1024.0, 1)
+                }).ToList();
             }
         }
 
@@ -131,10 +187,32 @@ namespace ValleyFixes.DevHarness
             [14] = "newDaySync", [15] = "chatInfoMessage", [18] = "serverToClientsMessage", [31] = "readySync", [32] = "chestHitSync", [127] = "compressed"
         };
 
+        // the game's own names for the message type numbers, read from its constants so none are guessed
+        private static Dictionary<byte, string>? _reflectedNames;
+
+        private static string NetName(byte type)
+        {
+            if (_reflectedNames is null)
+            {
+                _reflectedNames = new Dictionary<byte, string>();
+                foreach (var f in typeof(StardewValley.Multiplayer).GetFields(System.Reflection.BindingFlags.Public | System.Reflection.BindingFlags.Static))
+                {
+                    if (f.IsLiteral && f.FieldType == typeof(byte) && f.GetRawConstantValue() is byte b && !_reflectedNames.ContainsKey(b))
+                        _reflectedNames[b] = f.Name;
+                }
+            }
+            if (_reflectedNames.TryGetValue(type, out var name))
+                return name;
+            return TypeNames.TryGetValue(type, out var n) ? n : "type" + type;
+        }
+
         public static void ResetNet()
         {
             lock (Gate)
+            {
                 Net.Clear();
+                ModNet.Clear();
+            }
         }
 
         /// <summary>Per message type: total KB, message count, mean bytes and the biggest single message in KB.</summary>
@@ -143,7 +221,7 @@ namespace ValleyFixes.DevHarness
             lock (Gate)
             {
                 return Net.OrderByDescending(r => r.Value.Ticks).ToDictionary(
-                    r => TypeNames.TryGetValue(r.Key, out var n) ? n : "type" + r.Key,
+                    r => NetName(r.Key),
                     r => (object)new
                     {
                         kbPerSecond = Math.Round(r.Value.Ticks / 1024.0 / Math.Max(0.1, seconds), 2),

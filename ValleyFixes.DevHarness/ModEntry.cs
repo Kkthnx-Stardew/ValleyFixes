@@ -50,6 +50,8 @@ namespace ValleyFixes.DevHarness
                 ModSampler.Start(Monitor);
 
             WatchDayEvents(helper);
+            if (Environment.GetEnvironmentVariable("VFH_ONLY") == "realnet")
+                HookModMessages(helper);
             helper.Events.GameLoop.UpdateTicked += OnUpdateTicked;
 
             // per-frame cost: update is UpdateTicking to UpdateTicked, render is Rendering to Rendered
@@ -70,6 +72,7 @@ namespace ValleyFixes.DevHarness
         private void OnUpdateTicked(object? sender, UpdateTickedEventArgs e)
         {
             _ticks++;
+            GapTick();
             if (Environment.GetEnvironmentVariable("VFH_PROFILE") == "1" && (_ticks == 10 || _ticks % 600 == 0))
                 EventProfiler.Install(Monitor);
             if (_ticks == 12 && Environment.GetEnvironmentVariable("VFH_PROFILE") == "1")
@@ -1122,7 +1125,15 @@ namespace ValleyFixes.DevHarness
             yield return 20;
         }
 
-        private IEnumerable<int> Sample(Dictionary<string, object?> into, string label, int ticks)
+        private IEnumerable<int> Sample(Dictionary<string, object?> into, string label, int ticks) => SampleBody(into, label, WaitTicks(ticks));
+
+        private static IEnumerable<int> WaitTicks(int ticks)
+        {
+            yield return ticks;
+        }
+
+        /// <summary>Same as <see cref="Sample"/>, but what happens during the sample is any scenario step, not only waiting.</summary>
+        private IEnumerable<int> SampleBody(Dictionary<string, object?> into, string label, IEnumerable<int> body)
         {
             _updateMs.Clear();
             _renderMs.Clear();
@@ -1139,7 +1150,8 @@ namespace ValleyFixes.DevHarness
             var cpu0 = proc.TotalProcessorTime;
             var wall = System.Diagnostics.Stopwatch.StartNew();
             _sampling = true;
-            yield return ticks;
+            foreach (int w in body)
+                yield return w;
             _sampling = false;
             wall.Stop();
             proc.Refresh();

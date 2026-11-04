@@ -14,5 +14,7 @@
 
 	<ItemGroup>
 		<PackageReference Include="Pathoschild.Stardew.ModBuildConfig" Version="4.4.0" />
+		<!-- SMAPI's own copy, only to measure the size of mod messages -->
+		<Reference Include="Newtonsoft.Json" HintPath="D:\SteamLibrary\steamapps\common\Stardew Valley\smapi-internal\Newtonsoft.Json.dll" Private="false" />
 	</ItemGroup>
 </Project>

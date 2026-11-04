@@ -95,8 +95,12 @@ namespace ValleyFixes.DevHarness
                 {
                     ticks = Stopwatch.GetTimestamp() - ticks;
                     bytes = GC.GetAllocatedBytesForCurrentThread() - bytes;
+                    double elapsedMs = ticks * 1000.0 / Stopwatch.Frequency;
                     lock (Gate)
                     {
+                        // one slow call is a hitch the player feels, even when the mean over a sample looks fine
+                        if (elapsedMs > 40 && Slow.Count < 80)
+                            Slow.Add(new { at = DateTime.Now.ToString("HH:mm:ss.fff"), mod, @event = eventName, ms = Math.Round(elapsedMs, 0) });
                         if (!Rows.TryGetValue(key, out var row))
                             Rows[key] = row = new Row();
                         row.Ticks += ticks;
@@ -107,10 +111,15 @@ namespace ValleyFixes.DevHarness
             };
         }
 
+        private static readonly List<object> Slow = new();
+
         public static void Reset()
         {
             lock (Gate)
+            {
                 Rows.Clear();
+                Slow.Clear();
+            }
         }
 
         public static object Snapshot(int frames, double seconds)
@@ -131,6 +140,7 @@ namespace ValleyFixes.DevHarness
                 return new
                 {
                     handlersWrapped = _wrapped,
+                    slowCalls = Slow.ToList(),
                     totalMsPerFrame = Math.Round(Rows.Values.Sum(r => r.Ticks) * toMs / f, 3),
                     totalMegabytesPerSecond = Math.Round(Rows.Values.Sum(r => r.Bytes) / 1048576.0 / Math.Max(0.1, seconds), 2),
                     topModsByTime = perMod.OrderByDescending(m => m.msPerFrame).Take(12).ToList(),
