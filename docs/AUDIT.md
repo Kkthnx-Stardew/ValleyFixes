@@ -694,6 +694,57 @@ Not done or not known:
 - The night took 212 seconds in this tour with the fixes off and on, and 12.6 seconds in a shorter run. The phase stamps show the day ending at 1.5 s, saving at 3.5 s and saved at 7.4 s in the long run too, so the rest is time after the day started. The cause was not found. It is not caused by the fixes.
 - About 13 MB/s of the garbage that is left comes from SMAPI's own world state tracking (`ChestTracker` and `IWatcher` enumerators). Its time cost was not measured. About 8 MB/s is the test profiler itself.
 - The ten minute update costs about 13 ms in steady state plus 8 ms for Content Patcher's `TimeChanged` handler. Its first call in a session took 26 to 92 ms.
-- Multiplayer was not run with the real mods. Both new fixes only act on the host or in single player.
+- Multiplayer with the real mods was run afterwards. See the section below.
 - Only one save and one PC were used. A final clean profile run with default settings was started and stopped, so it is not part of this evidence.
 - Background Tick Throttler, UltraSmooth, Stardropium and SteamDew were studied from their pages and public source. None are installed here and none were run, so nothing is claimed against them beyond what their pages say.
+
+### Multiplayer with the real mod list (2026-11-03)
+
+Two real game processes, each with its own copy of the real Mods folder (101 mods, ValleyFixes removed and the build under test added). The host loaded a fresh copy of the played save as a multiplayer host. A second process joined as a new farmhand in a cabin. Each case ran twice, once with every ValleyFixes toggle off (baseline) and once with every toggle on (fixed). Both players used the same setting. A fresh save copy was made for every run and deleted after. The original save and the live Mods folder were never touched. Evidence is `docs/evidence/mp-realnet-*.json`, summarized by `tools\Summarize-RealNet.ps1`.
+
+The steps were the join, the joiner's first walk onto the farm, 35 seconds idle together, 20 seconds walking together, the joiner to Town and back, then both players asleep for one night. The heavy variant adds about 2,000 crops, fences, machines, sprinklers and trees to the host's farm before the joiner connects. The played farm itself is light (199 objects, 123 terrain features).
+
+What the host writes to the joiner (identical with the fixes off and on):
+
+| Step | Host sends | Notes |
+|---|---|---|
+| Join, light farm | 480 KB in 59 messages | server introduction 133 KB (one message), location introductions 159 KB (15 messages, largest 60 KB), available farmhands 82 KB (one message), SMAPI mod messages 99 KB |
+| Join, heavy farm | 506 to 513 KB | The extra 2,000 objects cost 21 KB in the location introductions. The farm is not the big part of a join |
+| Joiner sends at join | 118 KB | The farmhand's own data is one 82 KB message |
+| Idle together, 35 s | 660 to 690 KB, 19 KB a second | 89% is one mod. The game's own messages while idle are 6 KB on the light farm and 28 to 31 KB on the heavy farm (location deltas) |
+| Walking, 15 s | 380 to 410 KB | Player position stays 150 messages of 80 bytes, 0.8 KB a second, same as the clean profile |
+| One night | 250 to 290 KB | World delta 63 KB (12 messages), location deltas, farmer deltas |
+
+Who sends the idle traffic, read from the text of the messages on the wire:
+
+| Mod and message | Per 35 s idle | Size |
+|---|---|---|
+| Bouhm.NPCMapLocations `SyncedNpcMarkers` | 586 KB, 70 messages (2 a second) | 8.6 KB each |
+| Spiderbuttons.BETAS `BETAS.NpcCache` | 56 KB, 35 messages | 1.6 KB each |
+| Spiderbuttons.BETAS `TriggerPackage` | 19 KB, 46 messages | 0.4 KB each |
+
+Those are mods, not ValleyFixes. The whole host output is 19 KB a second, so bandwidth is not the limit and a bigger network buffer would answer no measured problem.
+
+Frame cost with both players idle on the farm (35 s, each player's own process):
+
+| Case | Host update | Host render | Host allocation | Joiner update | Joiner render | Joiner allocation |
+|---|---|---|---|---|---|---|
+| Light farm, baseline | 6.31 ms | 3.45 ms | 105.6 MB/s | 1.07 ms | 3.34 ms | 84.4 MB/s |
+| Light farm, fixed | 4.58 ms | 1.64 ms | 37.6 MB/s | 0.99 ms | 1.72 ms | 24.6 MB/s |
+| Heavy farm, baseline | 6.35 ms | 5.92 ms | 135.1 MB/s | 1.08 ms | 4.77 ms | 115.6 MB/s |
+| Heavy farm, fixed | 4.77 ms | 2.06 ms | 37.8 MB/s | 1.01 ms | 2.15 ms | 24.8 MB/s |
+
+Gen0 collections in the 35 s dropped from 1,760 to 542 (host) and 1,346 to 290 (joiner) on the light farm. The joiner's render time and garbage fall about as much as the host's, so the asset name cache (VF-061) helps both. The joiner's update time barely moves (1.07 to 0.99 ms). The joiner holds 218 characters against 1,630 on the host.
+
+Stalls, which do not depend on the fixes:
+- The host freezes for 0.6 to 1.1 seconds twice during a join. The two times match the game's own log lines "Sending available farmhands" and "Approved request for farmhand". No mod event handler was over 40 ms at those moments except BETAS `PeerConnected` at 40 ms. So the cost is in the game's join code, not in a mod.
+- The joiner takes 48 to 52 seconds from clicking the cabin to a playable world. Content Patcher's load stage handler alone takes 19 to 20 seconds on the joiner and 12 to 14 seconds on the host.
+- The joiner's first step onto the farm costs one 0.3 to 0.5 second gap. Walking to Town costs 0.3 to 0.4 seconds, with Content Patcher's `Warped` handler at 103 to 121 ms of it.
+- One night stalls the host for 3.1 seconds and then 8.4 to 9.4 seconds, and the joiner for 2.5 to 3.3 seconds and then 6.7 to 6.9 seconds. Content Patcher's `DayStarted` is 2.6 seconds on the host and 2.1 seconds on the joiner. Farm Type Manager's `DayStarted` is 1.0 second on the host. The fixes did not change the night (host 8.4 to 9.4 s either way, one sample each).
+- The same errors and warnings are in the baseline and fixed logs of every run (the Steam achievements message and unrelated mod warnings). ValleyFixes added only its own start-up lines.
+
+Limits of this measurement:
+- This PC has 15.4 GB of RAM and each process holds 6.2 to 6.6 GB of private memory, so two of them page. The host's working set fell to 350 to 400 MB while the joiner loaded, then grew back to 2.4 GB. The join stalls above can include that paging. The idle, walking and re-entry steps ran at steady state and are not affected.
+- The joiner's working set is 3.9 to 4.4 GB against 2.4 GB for the host, with a similar managed heap. The cause is not known.
+- A forced full collection takes about a second on this heap. The first version of the scenario forced one between steps and reported its own pause as a game stall. That was found by matching the stall times to the step changes, and the final runs use a count that does not force one.
+- One save, one PC, one sample per case. A difference of a second in the night or the join is inside the noise seen between runs.
