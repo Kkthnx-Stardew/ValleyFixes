@@ -52,6 +52,12 @@ namespace ValleyFixes.Integration
                     "The game queues every removed object for a network send that never happens. This clears the queues each morning so memory stops growing. No visible change. (VF-043)");
 
                 api.AddSectionTitle(manifest, () => "Bug fixes");
+                Toggle(api, manifest, config, nameof(ModConfig.FixWeddingSpouseTokens), "Lewis's wedding speech",
+                    "On the day of your wedding the script could not find your spouse, so Lewis's matrimonial speech came out as a broken fragment. The spouse is now found. The game's developers list it as fixed in 1.6.16. (VF-071)");
+                Toggle(api, manifest, config, nameof(ModConfig.FixCookingDeliveryQuestCrash), "Cooking delivery quest crash",
+                    "An item delivery quest asking for a cooked dish crashed the game about a third of the time, on days fixed by your save. The game's developers list it as fixed in 1.6.16. (VF-070)");
+                Toggle(api, manifest, config, nameof(ModConfig.FixPierreDuplicateSeeds), "Pierre duplicate seeds",
+                    "After you give Pierre his stock list, wheat, corn and sunflower seeds were listed twice, once out of season at 1.5 times the price. The dearer copy is dropped. (VF-069)");
                 Toggle(api, manifest, config, nameof(ModConfig.FixStardropInterrupt), "Stardrop cut short",
                     "A stardrop whose eating was cut short gave nothing and was already used up. The energy bonus is now applied at once. (VF-059)");
                 Toggle(api, manifest, config, nameof(ModConfig.FixTrashBearSardine), "Trash Bear summer Sardine",

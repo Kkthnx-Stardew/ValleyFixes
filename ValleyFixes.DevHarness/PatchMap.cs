@@ -80,8 +80,29 @@ namespace ValleyFixes.DevHarness
                     owners[owner] = owners.TryGetValue(owner, out int n) ? n + 1 : 1;
             }
 
+            // every method ValleyFixes patches, with every other owner on it and what kind of patch it is
+            var ours = new List<object>();
+            foreach (var method in Harmony.GetAllPatchedMethods())
+            {
+                var info = Harmony.GetPatchInfo(method);
+                if (info is null || !info.Owners.Any(o => o.StartsWith("Kkthnx.ValleyFixes", StringComparison.Ordinal) && !o.Contains("DevHarness")))
+                    continue;
+                var others = new List<string>();
+                void Add(string kind, IEnumerable<Patch> list)
+                {
+                    foreach (var p in list.Where(p => !p.owner.StartsWith("Kkthnx.ValleyFixes", StringComparison.Ordinal)))
+                        others.Add($"{p.owner} {kind} priority {p.priority}");
+                }
+                Add("prefix", info.Prefixes);
+                Add("postfix", info.Postfixes);
+                Add("transpiler", info.Transpilers);
+                Add("finalizer", info.Finalizers);
+                ours.Add(new { method = $"{method.DeclaringType?.FullName}.{method.Name}", otherPatches = others });
+            }
+
             return new
             {
+                ourMethods = ours.OrderBy(o => ((dynamic)o).method).ToList(),
                 patchedMethods = patched,
                 hotMethods = perMethod,
                 methodsPatchedByOwner = owners.OrderByDescending(o => o.Value).Take(30).ToDictionary(o => o.Key, o => o.Value)

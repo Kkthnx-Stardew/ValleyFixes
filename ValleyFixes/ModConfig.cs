@@ -81,6 +81,15 @@ namespace ValleyFixes
         /// <summary>VF-068: fruit that grew on a tree before it aged to the next quality keeps the old quality when picked. The game's developers called this an unintended change in 1.6 and said 1.6.16 fixes it. Off by default because it raises the quality of some fruit.</summary>
         public bool FixFruitTreeQuality { get; set; } = false;
 
+        /// <summary>VF-069: once Pierre has been given his missing stock list, his shop lists wheat, corn and sunflower seeds twice, one at the normal price and one out of season at 1.5 times the price. The dearer copy is dropped. The game's developers list it as fixed in 1.6.16. Only those six shop entries are touched. Skipped if another mod patches ShopBuilder.GetShopStock.</summary>
+        public bool FixPierreDuplicateSeeds { get; set; } = true;
+
+        /// <summary>VF-070: an item delivery quest that asks for a cooked dish, for anyone but the Wizard, threw a NullReferenceException about a third of the time because one way of writing its text left an array null. Which days it happens on is fixed by the save and the day. The game's developers list it as fixed in 1.6.16. Skipped if another mod patches ItemDeliveryQuest.loadQuestInfo.</summary>
+        public bool FixCookingDeliveryQuestCrash { get; set; } = true;
+
+        /// <summary>VF-071: the wedding script asks the game for the farmer's spouse while the farmer is engaged, and the game only answers for a married farmer. Lewis's matrimonial speech comes out as a fragment and the spouse's position in the script is left unresolved. While the wedding event is built, the engaged spouse is given to the script. The game's developers list Lewis skipping his speech as fixed in 1.6.16. Skipped if another mod patches the same methods.</summary>
+        public bool FixWeddingSpouseTokens { get; set; } = true;
+
         /// <summary>VF-004: writes a short log entry when something cuts the eating animation short. Changes nothing in the game.</summary>
         public bool LogEatInterrupts { get; set; } = true;
     }

@@ -159,7 +159,9 @@ namespace ValleyFixes.DevHarness
             var into = new Dictionary<string, object?>();
             _results["real"] = into;
             foreach (int w in WaitForWorld("real_error")) yield return w;
-            foreach (int w in RealTour(into, null)) yield return w;
+            // VFH_NOTOUR=1 goes straight to the night, for comparing the saved world
+            if (Environment.GetEnvironmentVariable("VFH_NOTOUR") != "1")
+                foreach (int w in RealTour(into, null)) yield return w;
             foreach (int w in RealNight(into)) yield return w;
             yield return 120;
         }

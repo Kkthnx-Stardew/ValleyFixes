@@ -132,6 +132,11 @@ namespace ValleyFixes.DevHarness
                         LoadSinglePlayer(title, Environment.GetEnvironmentVariable("VFH_LOAD")!);
                         _run = RealFocusMain().GetEnumerator();
                     }
+                    else if (Environment.GetEnvironmentVariable("VFH_ONLY") == "realpatches")
+                    {
+                        LoadSinglePlayer(title, Environment.GetEnvironmentVariable("VFH_LOAD")!);
+                        _run = RealPatchesMain().GetEnumerator();
+                    }
                     else if (Environment.GetEnvironmentVariable("VFH_ONLY") == "realclock")
                     {
                         LoadSinglePlayer(title, Environment.GetEnvironmentVariable("VFH_LOAD")!);
@@ -274,6 +279,30 @@ namespace ValleyFixes.DevHarness
             if (Environment.GetEnvironmentVariable("VFH_ONLY") == "configshot")
             {
                 foreach (int w in ConfigShotScenario()) yield return w;
+                yield break;
+            }
+
+            if (Environment.GetEnvironmentVariable("VFH_ONLY") == "weddingplay")
+            {
+                foreach (int w in WeddingPlayScenario()) yield return w;
+                yield break;
+            }
+
+            if (Environment.GetEnvironmentVariable("VFH_ONLY") == "wedding")
+            {
+                foreach (int w in WeddingScenario()) yield return w;
+                yield break;
+            }
+
+            if (Environment.GetEnvironmentVariable("VFH_ONLY") == "pierre")
+            {
+                foreach (int w in PierreScenario()) yield return w;
+                yield break;
+            }
+
+            if (Environment.GetEnvironmentVariable("VFH_ONLY") == "delivery")
+            {
+                foreach (int w in DeliveryScenario()) yield return w;
                 yield break;
             }
 

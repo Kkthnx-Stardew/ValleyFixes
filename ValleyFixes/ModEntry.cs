@@ -97,6 +97,15 @@ namespace ValleyFixes
             if (config.FixFruitTreeQuality)
                 Start("Fruit tree quality", () => FruitTreeQualityFix.Apply(harmony, Monitor));
 
+            if (config.FixPierreDuplicateSeeds)
+                Start("Pierre duplicate seeds", () => PierreSeedDuplicatesFix.Apply(harmony, Monitor));
+
+            if (config.FixWeddingSpouseTokens)
+                Start("Wedding spouse", () => WeddingSpouseFix.Apply(harmony, Monitor));
+
+            if (config.FixCookingDeliveryQuestCrash)
+                Start("Cooking delivery quest crash", () => DeliveryQuestCookingFix.Apply(harmony, Monitor));
+
             if (config.FixMenuBoxShadow)
                 Start("Menu box shadow", () => MenuBoxShadowFix.Apply(harmony, Monitor));
 

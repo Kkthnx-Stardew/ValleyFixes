@@ -1,7 +1,7 @@
 {
     "Name": "ValleyFixes",
     "Author": "Kkthnx",
-    "Version": "0.9.0-beta.1",
+    "Version": "0.9.0-beta.2",
     "Description": "Small, separately switchable fixes for verified Stardew Valley 1.6.15 bugs. Every fix has its own toggle and skips itself if the game data no longer matches.",
     "UniqueID": "Kkthnx.ValleyFixes",
     "EntryDll": "ValleyFixes.dll",
