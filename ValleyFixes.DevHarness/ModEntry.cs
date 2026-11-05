@@ -52,6 +52,8 @@ namespace ValleyFixes.DevHarness
             WatchDayEvents(helper);
             if (Environment.GetEnvironmentVariable("VFH_ONLY") == "realnet")
                 HookModMessages(helper);
+            if (Environment.GetEnvironmentVariable("VFH_JOINPROBE") == "1")
+                JoinProbe.Install(new HarmonyLib.Harmony("Kkthnx.ValleyFixes.DevHarness.JoinProbe"), Monitor);
             helper.Events.GameLoop.UpdateTicked += OnUpdateTicked;
 
             // per-frame cost: update is UpdateTicking to UpdateTicked, render is Rendering to Rendered
@@ -73,6 +75,11 @@ namespace ValleyFixes.DevHarness
         {
             _ticks++;
             GapTick();
+            if (Environment.GetEnvironmentVariable("VFH_JOINPROBE") == "1")
+            {
+                JoinProbe.GapsOn = Context.IsWorldReady;
+                JoinProbe.Tick(Game1.currentLocation?.NameOrUniqueName);
+            }
             if (Environment.GetEnvironmentVariable("VFH_PROFILE") == "1" && (_ticks == 10 || _ticks % 600 == 0))
                 EventProfiler.Install(Monitor);
             if (_ticks == 12 && Environment.GetEnvironmentVariable("VFH_PROFILE") == "1")
@@ -180,6 +187,8 @@ namespace ValleyFixes.DevHarness
         private void Finish(string? note)
         {
             _results["note"] = note;
+            if (Environment.GetEnvironmentVariable("VFH_JOINPROBE") == "1" && !_results.ContainsKey("joinprobe_end"))
+                _results["joinprobe_end"] = JoinProbe.Snapshot();
             _results["mods"] = Helper.ModRegistry.GetAll().Select(m => m.Manifest.UniqueID + " " + m.Manifest.Version).ToList();
             File.WriteAllText(_out!, JsonSerializer.Serialize(_results, new JsonSerializerOptions { WriteIndented = true }));
             Monitor.Log($"Harness results written to {_out}.", LogLevel.Info);

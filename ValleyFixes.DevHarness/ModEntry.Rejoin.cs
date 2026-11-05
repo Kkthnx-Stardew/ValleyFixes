@@ -90,7 +90,7 @@ namespace ValleyFixes.DevHarness
             title.skipToTitleButtons();
             yield return 60;
             var multiplayer = Helper.Reflection.GetField<Multiplayer>(typeof(Game1), "multiplayer").GetValue();
-            var client = multiplayer.InitClient(new LidgrenClient("localhost"));
+            var client = multiplayer.InitClient(new LidgrenClient(Environment.GetEnvironmentVariable("VFH_JOINADDR") ?? "localhost"));
             var menu = new FarmhandMenu(client);
             TitleMenu.subMenu = menu;
 

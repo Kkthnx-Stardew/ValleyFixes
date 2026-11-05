@@ -94,11 +94,18 @@ namespace ValleyFixes.DevHarness
                 _results["heavy_farm_objects_added"] = PopulateHeavyFarm(Game1.getFarm());
                 yield return 60;
             }
+            bool crowd = Environment.GetEnvironmentVariable("VFH_ONLY") == "crowd";
+            if (crowd)
+                _results["cabins_prepared"] = PrepareCabins(CrowdN);
             Mark("hostready");
-            if (Environment.GetEnvironmentVariable("VFH_ONLY") == "realnet")
+            if (Environment.GetEnvironmentVariable("VFH_ONLY") == "realnet" || crowd)
                 StartGaps();
 
-            if (!HostOnly)
+            if (crowd)
+            {
+                foreach (int w in CrowdJoin()) yield return w;
+            }
+            else if (!HostOnly)
             {
                 for (int t = 0; t < 9000 && Game1.otherFarmers.Count == 0; t += 15)
                     yield return 15;
@@ -111,13 +118,24 @@ namespace ValleyFixes.DevHarness
 
         private IEnumerable<int> ClientMain(TitleMenu title)
         {
+            if (Environment.GetEnvironmentVariable("VFH_ONLY") == "discovery")
+            {
+                foreach (int w in DiscoveryClient(title)) yield return w;
+                yield break;
+            }
             title.skipToTitleButtons();
             for (int t = 0; t < 9000 && !OtherHas("hostready"); t += 30)
                 yield return 30;
             yield return 120;
+            // with several joiners the host says who goes next, so they do not pick the same cabin
+            if (Environment.GetEnvironmentVariable("VFH_ONLY") == "crowd")
+            {
+                for (int t = 0; t < 36000 && !OtherHas("go-" + Role); t += 30)
+                    yield return 30;
+            }
 
             var multiplayer = Helper.Reflection.GetField<Multiplayer>(typeof(Game1), "multiplayer").GetValue();
-            var client = multiplayer.InitClient(new LidgrenClient("localhost"));
+            var client = multiplayer.InitClient(new LidgrenClient(Environment.GetEnvironmentVariable("VFH_JOINADDR") ?? "localhost"));
             var menu = new FarmhandMenu(client);
             TitleMenu.subMenu = menu;
 
@@ -143,6 +161,8 @@ namespace ValleyFixes.DevHarness
                 yield break;
             }
             yield return 240;
+            if (Environment.GetEnvironmentVariable("VFH_ONLY") == "crowd")
+                Mark("ready");
             _results["world"] = $"client ready in {Game1.player.currentLocation?.NameOrUniqueName}, id {Game1.player.UniqueMultiplayerID}";
 
             foreach (int w in RunScenario(Environment.GetEnvironmentVariable("VFH_ONLY") ?? "join")) yield return w;
@@ -222,6 +242,18 @@ namespace ValleyFixes.DevHarness
                 case "squid":
                     foreach (int w in SquidScenario()) yield return w;
                     break;
+                case "netcond":
+                    foreach (int w in NetCondScenario()) yield return w;
+                    break;
+                case "deadclient":
+                    foreach (int w in DeadClientScenario()) yield return w;
+                    break;
+                case "discovery":
+                    foreach (int w in DiscoveryHost()) yield return w;
+                    break;
+                case "crowd":
+                    foreach (int w in CrowdScenario()) yield return w;
+                    break;
                 case "realnet":
                     foreach (int w in RealNetScenario()) yield return w;
                     break;
@@ -237,7 +269,7 @@ namespace ValleyFixes.DevHarness
                     _results["scenario_error"] = "unknown scenario " + name;
                     break;
             }
-            if (!HostOnly && name != "roundtrip")
+            if (!HostOnly && name != "roundtrip" && name != "deadclient" && name != "discovery" && name != "crowd")
             {
                 foreach (int w in Barrier("done")) yield return w;
             }

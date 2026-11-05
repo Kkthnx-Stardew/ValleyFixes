@@ -27,6 +27,14 @@ param(
     [switch] $HeapDumps,
     [switch] $Visit,
     [switch] $Profile,
+    [switch] $JoinProbe,
+    [double] $DelayMs = 0,
+    [double] $JitterMs = 0,
+    [double] $LossPct = 0,
+    [double] $DupPct = 0,
+    [switch] $Shape,
+    [int] $Clients = 1,
+    [string] $NetLabel = '',
     [string] $LoadSave = '',
     [string] $OutName = '',
     [string] $ModsName = 'Mods',
@@ -37,6 +45,16 @@ param(
 )
 
 $ErrorActionPreference = 'Stop'
+
+Add-Type -ErrorAction SilentlyContinue @"
+using System;
+using System.Runtime.InteropServices;
+public class VfWin {
+    [DllImport("user32.dll")] public static extern bool SetForegroundWindow(IntPtr h);
+    [DllImport("user32.dll")] public static extern bool ShowWindow(IntPtr h, int cmd);
+    [DllImport("user32.dll")] public static extern void keybd_event(byte vk, byte scan, uint flags, UIntPtr extra);
+}
+"@
 
 $repo = Split-Path -Parent $PSScriptRoot
 $mods = Join-Path $repo (Join-Path 'testprofile' $ModsName)
@@ -59,7 +77,7 @@ if ($Label -eq 'defaults') {
     Remove-Item $configFile -ErrorAction SilentlyContinue
 } else {
     $on = $Label -eq 'fixed'
-    $config = [ordered]@{ FixFairThirdPlaceText = $on; FixMovieReactionScripts = $on; FixLumberjackMahoganyBonus = $on; FixBlankNames = $on; FixChefBundleReward = $on; FixPortugueseSingleStatus = $on; TrimLocationChangeBacklog = $on; FixQuestItemGroundDrops = $on; FixTitleMusicMute = $on; FixGeorgeWheelchair = $on; FixOfflineFarmhandWallets = $on; CheckStaleOrderParticipants = $on; RepairStaleOrderParticipants = $on; FixTrashBearSardine = $on; SyncCoalCarts = $on; FixStardropInterrupt = $on; FixStaleMapOverrides = $on; CacheAssetNames = $on; SkipEmptyLocationUpdates = $on; PauseIdleLocationMonsters = $on; LogEatInterrupts = $on } | ConvertTo-Json
+    $config = [ordered]@{ FixFairThirdPlaceText = $on; FixMovieReactionScripts = $on; FixLumberjackMahoganyBonus = $on; FixBlankNames = $on; FixChefBundleReward = $on; FixPortugueseSingleStatus = $on; TrimLocationChangeBacklog = $on; FixQuestItemGroundDrops = $on; FixTitleMusicMute = $on; FixGeorgeWheelchair = $on; FixOfflineFarmhandWallets = $on; CheckStaleOrderParticipants = $on; RepairStaleOrderParticipants = $on; FixTrashBearSardine = $on; SyncCoalCarts = $on; FixStardropInterrupt = $on; FixStaleMapOverrides = $on; CacheAssetNames = $on; SkipEmptyLocationUpdates = $on; PauseIdleLocationMonsters = $on; RetryLostJoinRequests = $on; LogEatInterrupts = $on } | ConvertTo-Json
     Set-Content $configFile $config
 }
 
@@ -88,12 +106,17 @@ $env:VFH_ONLY = $Scenario
 $env:VFH_DAYS = "$Days"
 $env:VFH_SYNC = $sync
 $env:VFH_SLEEPTIME = $env:VFH_SLEEPTIME
+$env:VFH_NETLABEL = $NetLabel
+$env:VFH_BLACKHOLE = Join-Path $sync 'blackhole'
+$env:VFH_NETCONTROL = Join-Path $sync 'netcontrol'
+$env:VFH_CLIENTS = "$Clients"
 if ($Profile) { $env:VFH_PROFILE = '1' } else { Remove-Item Env:VFH_PROFILE -ErrorAction SilentlyContinue }
 if ($Visit) { $env:VFH_VISIT = '1' } else { Remove-Item Env:VFH_VISIT -ErrorAction SilentlyContinue }
 if ($HeapDumps) { $env:VFH_HOLD = '1' } else { Remove-Item Env:VFH_HOLD -ErrorAction SilentlyContinue }
 if ($LoadSave) { $env:VFH_LOAD = $LoadSave } else { Remove-Item Env:VFH_LOAD -ErrorAction SilentlyContinue }
 if ($HostOnly) { $env:VFH_HOSTONLY = '1' } else { Remove-Item Env:VFH_HOSTONLY -ErrorAction SilentlyContinue }
 if ($Heavy) { $env:VFH_HEAVY = '1' } else { Remove-Item Env:VFH_HEAVY -ErrorAction SilentlyContinue }
+if ($JoinProbe) { $env:VFH_JOINPROBE = '1' } else { Remove-Item Env:VFH_JOINPROBE -ErrorAction SilentlyContinue }
 
 $logDir = Join-Path $env:APPDATA 'StardewValley\ErrorLogs'
 $env:VFH_ROLE = 'host'
@@ -104,16 +127,36 @@ $hostProc = Start-Process -FilePath (Join-Path $GamePath 'StardewModdingAPI.exe'
 $deadline = (Get-Date).AddSeconds($TimeoutSeconds)
 while (-not $hostProc.HasExited -and -not (Test-Path (Join-Path $sync 'hostready.host')) -and (Get-Date) -lt $deadline) { Start-Sleep -Seconds 2 }
 $clientProc = $null
+$extraProcs = @()
 if (-not $HostOnly -and (Test-Path (Join-Path $sync 'hostready.host'))) {
     Start-Sleep -Seconds 3
     $hostLogCopy = Join-Path $results "$OutName-host.startup.log"
     $latest = Join-Path $logDir 'SMAPI-latest.txt'
     if (Test-Path $latest) { Copy-Item $latest $hostLogCopy -Force }
+    # the joiner can connect through tools\NetShaper, which adds one way delay, jitter, loss and duplication in both directions
+    if ($Shape -or $DelayMs -gt 0 -or $JitterMs -gt 0 -or $LossPct -gt 0 -or $DupPct -gt 0) {
+        $shaperDll = Join-Path $repo 'tools\NetShaper\bin\Release\net9.0\NetShaper.dll'
+        if (-not (Test-Path $shaperDll)) { dotnet build (Join-Path $repo 'tools\NetShaper\NetShaper.csproj') -c Release --nologo -v q; if ($LASTEXITCODE -ne 0) { throw 'NetShaper build failed.' } }
+        $shaperStats = Join-Path $results "$OutName-shaper.json"
+        $shaperProc = Start-Process -FilePath 'dotnet' -ArgumentList "`"$shaperDll`"", '--listen', '24700', '--target', '24642', '--delay', "$DelayMs", '--jitter', "$JitterMs", '--loss', "$LossPct", '--dup', "$DupPct", '--stats', "`"$shaperStats`"", '--blackhole', "`"$(Join-Path $sync 'blackhole')`"", '--control', "`"$(Join-Path $sync 'netcontrol')`"" -PassThru -WindowStyle Hidden
+        Start-Sleep -Seconds 2
+        $env:VFH_JOINADDR = 'localhost:24700'
+    }
     $env:VFH_ROLE = 'client'
     $env:VFH_OUT = Join-Path $results "$OutName-client.json"
     $clientProc = Start-Process -FilePath (Join-Path $GamePath 'StardewModdingAPI.exe') -ArgumentList '--no-terminal', '--mods-path', "`"$modsClient`"" -WorkingDirectory $GamePath -PassThru
+    # more joiners for the three and four player scenarios. Each has its own Mods copy, roles client2, client3, and joins when the host says so
+    for ($i = 2; $i -le $Clients; $i++) {
+        $modsExtra = Join-Path $repo (Join-Path 'testprofile' ($ModsName + 'Client' + $i))
+        if (Test-Path $modsExtra) { Remove-Item $modsExtra -Recurse -Force }
+        Copy-Item $mods $modsExtra -Recurse
+        Start-Sleep -Seconds 12
+        $env:VFH_ROLE = "client$i"
+        $env:VFH_OUT = Join-Path $results "$OutName-client$i.json"
+        $extraProcs += Start-Process -FilePath (Join-Path $GamePath 'StardewModdingAPI.exe') -ArgumentList '--no-terminal', '--mods-path', "`"$modsExtra`"" -WorkingDirectory $GamePath -PassThru
+    }
 }
-Remove-Item Env:VFH_ROLE, Env:VFH_OUT -ErrorAction SilentlyContinue
+Remove-Item Env:VFH_ROLE, Env:VFH_OUT, Env:VFH_JOINADDR -ErrorAction SilentlyContinue
 
 # a run that stops making progress is stopped early: progress means a new file in the sync folder, or a growing result or log file
 $lastProgress = Get-Date
@@ -123,8 +166,24 @@ while ((Get-Date) -lt $deadline) {
     $stamp = (Get-ChildItem $sync -File -ErrorAction SilentlyContinue | Measure-Object).Count.ToString() + '/' + ((Get-ChildItem $logDir -File -Filter 'SMAPI-latest*.txt' -ErrorAction SilentlyContinue | Measure-Object -Property Length -Sum).Sum)
     if ($stamp -ne $lastStamp) { $lastStamp = $stamp; $lastProgress = Get-Date }
     elseif (((Get-Date) - $lastProgress).TotalSeconds -gt $StallSeconds) { $stalled = $true; Write-Warning "STALLED: no progress for $StallSeconds seconds, stopping both games."; break }
+    # a game window that is not in front does not finish loading its join, so with several joiners each one is brought to the front while it joins
+    if ($Clients -gt 1) {
+        $joiners = @($clientProc) + $extraProcs
+        for ($i = 0; $i -lt $joiners.Count; $i++) {
+            $role = if ($i -eq 0) { 'client' } else { "client$($i + 1)" }
+            $jp = $joiners[$i]
+            if ($jp -and -not $jp.HasExited -and (Test-Path (Join-Path $sync "go-$role.host")) -and -not (Test-Path (Join-Path $sync "ready.$role"))) {
+                $jp.Refresh()
+                # a tap on Alt lets a background process take the foreground, which Windows otherwise refuses
+                [VfWin]::keybd_event(0x12, 0, 0, [UIntPtr]::Zero)
+                [VfWin]::keybd_event(0x12, 0, 2, [UIntPtr]::Zero)
+                [void][VfWin]::ShowWindow($jp.MainWindowHandle, 9)
+                [void][VfWin]::SetForegroundWindow($jp.MainWindowHandle)
+            }
+        }
+    }
     $hostDone = $hostProc.HasExited
-    $clientDone = ($null -eq $clientProc) -or $clientProc.HasExited
+    $clientDone = (($null -eq $clientProc) -or $clientProc.HasExited) -and (@($extraProcs | Where-Object { -not $_.HasExited }).Count -eq 0)
     if ($hostDone -and $clientDone) { break }
     if ($HeapDumps) {
         foreach ($pair in @(@('host', $hostProc), @('client', $clientProc))) {
@@ -143,10 +202,11 @@ while ((Get-Date) -lt $deadline) {
     }
     Start-Sleep -Seconds 2
 }
-foreach ($proc in @($hostProc, $clientProc)) {
+foreach ($proc in (@($hostProc, $clientProc) + $extraProcs)) {
     if ($proc -and -not $proc.HasExited) { Write-Warning "Timed out after $TimeoutSeconds seconds, stopping process $($proc.Id)."; Stop-Process -Id $proc.Id -Force }
 }
-Remove-Item Env:VFH_HOLD, Env:VFH_VISIT, Env:VFH_PROFILE -ErrorAction SilentlyContinue
+if ($shaperProc -and -not $shaperProc.HasExited) { Stop-Process -Id $shaperProc.Id -Force }
+Remove-Item Env:VFH_HOLD, Env:VFH_VISIT, Env:VFH_PROFILE, Env:VFH_JOINPROBE -ErrorAction SilentlyContinue
 Remove-Item Env:VFH_ONLY, Env:VFH_DAYS, Env:VFH_SYNC, Env:VFH_HEAVY, Env:VFH_HOSTONLY, Env:VFH_LOAD -ErrorAction SilentlyContinue
 
 # the throwaway farm and its farmhand are written to the shared Saves folder, so remove only the VFTest_* folders

@@ -180,6 +180,8 @@ namespace ValleyFixes.DevHarness
             _gapOn = false;
             // everything since the process started: for the host that is the join, for the joiner the join as seen from its side
             rows["join_and_load"] = new { bytesByType = Profiler.SnapshotNet(1), modNet = Profiler.SnapshotModNet(1), modMessagesReceived = ModMsgSnapshot(reset: true), slowHandlers = EventProfiler.Snapshot(1, 1) };
+            if (Environment.GetEnvironmentVariable("VFH_JOINPROBE") == "1")
+                rows["joinprobe"] = JoinProbe.Snapshot();
             rows["memory_light_after_join"] = MemoryLight();
             rows["memory_after_join"] = MemoryForced();
             foreach (int w in Barrier("rn-joined", 14400)) yield return w;
