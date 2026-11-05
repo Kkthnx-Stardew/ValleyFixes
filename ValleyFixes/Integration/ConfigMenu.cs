@@ -1,4 +1,6 @@
+using System.Reflection;
 using StardewModdingAPI;
+using ValleyFixes.Fixes;
 
 namespace ValleyFixes.Integration
 {
@@ -16,40 +18,74 @@ namespace ValleyFixes.Integration
                     return;
 
                 api.Register(manifest, reset: () => Reset(config), save: () => helper.WriteConfig(config));
-                api.AddParagraph(manifest, () => "Changes take effect the next time the game starts. Fixes that sync players need the mod on every player's machine.");
+                api.AddParagraph(manifest, () => "Changes take effect the next time the game starts. Every fix can be switched off on its own. Fixes marked for every player only work fully when each player has ValleyFixes.");
 
-                api.AddSectionTitle(manifest, () => "Multiplayer");
-                Add(api, manifest, "Sync coal carts", "VF-058. A coal cart a farmhand empties stays full for everyone else, and for that farmhand after they leave the floor. The host keeps the list of emptied carts and shares it.", () => config.SyncCoalCarts, v => config.SyncCoalCarts = v);
-                Add(api, manifest, "Retry lost join requests", "VF-063. Joining by IP address or on a local network starts with one UDP packet. If it is lost the game never sends it again and you wait 45 seconds. This sends it again up to three times. Farmhand side only.", () => config.RetryLostJoinRequests, v => config.RetryLostJoinRequests = v);
-                Add(api, manifest, "Offline farmhand wallets", "VF-055. With separate wallets, gold sent to a farmhand who is not in the game is lost at the next save and reload. Host only.", () => config.FixOfflineFarmhandWallets, v => config.FixOfflineFarmhandWallets = v);
-                Add(api, manifest, "Check stale special order players", "VF-046. The host logs special orders held open by a player who no longer exists in this world.", () => config.CheckStaleOrderParticipants, v => config.CheckStaleOrderParticipants = v);
-                Add(api, manifest, "Repair stale special order players", "VF-046. Also remove those stale players from the order. Off by default because it edits shared state.", () => config.RepairStaleOrderParticipants, v => config.RepairStaleOrderParticipants = v);
+                api.AddSectionTitle(manifest, () => "Multiplayer and connection");
+                api.AddNumberOption(manifest, () => config.MultiplayerInterpolationTicks, v => config.MultiplayerInterpolationTicks = v, () => "Multiplayer delay (ticks)",
+                    () => "How long this machine holds back what other players and monsters do, so movement stays smooth. The game uses 15 ticks, which shows them about 250 ms late. 8 shows them 141 ms late and 4 shows them 72 ms late, but 4 froze up to 3.7% of frames on a link with jitter, against up to 1.8% at 15. Only you are affected. (VF-065)",
+                    min: SyncDelayLimits.MinTicks, max: SyncDelayLimits.VanillaTicks, interval: 1);
+                Toggle(api, manifest, config, nameof(ModConfig.RetryLostJoinRequests), "Retry lost join requests",
+                    "Joining by IP address or on a local network sends one packet. If it is lost the game waits 45 seconds and times out. This sends it again up to three times. Joining player only. (VF-063)");
+                Toggle(api, manifest, config, nameof(ModConfig.SyncCoalCarts), "Sync Mines coal carts",
+                    "A coal cart that one player empties stays full for the others. The host now keeps the list and shares it. Needed on every player's machine. (VF-058)");
+                Toggle(api, manifest, config, nameof(ModConfig.FixMiniShippingBinCrash), "Mini-Shipping Bin crash",
+                    "With separate wallets, an empty slot in a farmhand's part of a Mini-Shipping Bin crashed the host when the day ended. Empty slots are removed first. Host only. (VF-067)");
+                Toggle(api, manifest, config, nameof(ModConfig.FixOfflineFarmhandWallets), "Offline farmhand gold",
+                    "With separate wallets, gold sent to a farmhand who is not in the game was lost at the next save and reload. Host only. (VF-055)");
+                Toggle(api, manifest, config, nameof(ModConfig.FixStaleMapOverrides), "Festival leftovers (farmhand)",
+                    "A farmhand kept seeing the SquidFest booth and sign after the festival. Joining player only. (VF-060)");
+                Toggle(api, manifest, config, nameof(ModConfig.CheckStaleOrderParticipants), "Log stale special orders",
+                    "The host writes a log line when a special order is held open by a farmhand who no longer exists. Changes nothing. (VF-046)");
+                Toggle(api, manifest, config, nameof(ModConfig.RepairStaleOrderParticipants), "Repair stale special orders",
+                    "Also removes those deleted players from the order. Off by default because it edits shared multiplayer data. (VF-046)");
 
-                api.AddSectionTitle(manifest, () => "Text and data fixes");
-                Add(api, manifest, "Fair third place text", "VF-007. Lewis says 200 star tokens for third place but the game gives 250.", () => config.FixFairThirdPlaceText, v => config.FixFairThirdPlaceText = v);
-                Add(api, manifest, "Movie reaction scripts", "VF-001. Three movie reactions show an NPC name in place of the reaction text.", () => config.FixMovieReactionScripts, v => config.FixMovieReactionScripts = v);
-                Add(api, manifest, "Chef's bundle reward", "VF-030. The remixed Chef's bundle gives 1 Pink Cake where the classic one gives 3. New remixed worlds only.", () => config.FixChefBundleReward, v => config.FixChefBundleReward = v);
-                Add(api, manifest, "Trash Bear summer Sardine", "VF-022. Trash Bear can ask for a Sardine in summer, when it cannot be caught.", () => config.FixTrashBearSardine, v => config.FixTrashBearSardine = v);
-                Add(api, manifest, "Portuguese single status", "VF-036. Single male farmers show the female single text on the social page in Portuguese.", () => config.FixPortugueseSingleStatus, v => config.FixPortugueseSingleStatus = v);
-                Add(api, manifest, "George's wheelchair", "VF-047. George's wheels do not turn when he walks up. Copies the missing frames from his winter sheet.", () => config.FixGeorgeWheelchair, v => config.FixGeorgeWheelchair = v);
+                api.AddSectionTitle(manifest, () => "Performance");
+                Toggle(api, manifest, config, nameof(ModConfig.CacheAssetNames), "Cache asset names",
+                    "Some mods ask SMAPI to parse an asset name after every sprite drawn, which makes thousands of short lived objects a frame. The answers are kept. Cuts garbage a lot in big mod lists. No visible change. (VF-061)");
+                Toggle(api, manifest, config, nameof(ModConfig.SkipEmptyLocationUpdates), "Skip empty locations",
+                    "A location nobody has been in for 60 frames and that holds nothing is not updated every frame. Host or single player. (VF-062)");
+                Toggle(api, manifest, config, nameof(ModConfig.PauseIdleLocationMonsters), "Pause monsters nobody can see",
+                    "Monsters in outdoor locations nobody is in stand still until a player arrives. Never on the farm, in buildings, mines or the volcano. Host or single player. (VF-062)");
+                Toggle(api, manifest, config, nameof(ModConfig.SkipDefaultTileProperties), "Slim map tiles",
+                    "SMAPI stores a rotation and a flip of 0 on every tile of every Tiled (TMX) mod map. Not storing them saved 125 MB of memory with 101 mods. Nothing looks different. (VF-066)");
+                Toggle(api, manifest, config, nameof(ModConfig.TrimLocationChangeBacklog), "Free removed objects",
+                    "The game queues every removed object for a network send that never happens. This clears the queues each morning so memory stops growing. No visible change. (VF-043)");
 
-                api.AddSectionTitle(manifest, () => "Menus and memory");
-                Add(api, manifest, "Block blank names", "VF-012. The new farm and farmhand menus accept a name made only of spaces. This blocks the OK button for such names.", () => config.FixBlankNames, v => config.FixBlankNames = v);
-                Add(api, manifest, "Title screen mute", "VF-045. The music comes back after the About screen while the mute button still shows muted.", () => config.FixTitleMusicMute, v => config.FixTitleMusicMute = v);
-                Add(api, manifest, "Trim location change queues", "VF-043. Clears network queues nobody reads so removed objects do not pile up in memory. No visible change.", () => config.TrimLocationChangeBacklog, v => config.TrimLocationChangeBacklog = v);
+                api.AddSectionTitle(manifest, () => "Bug fixes");
+                Toggle(api, manifest, config, nameof(ModConfig.FixStardropInterrupt), "Stardrop cut short",
+                    "A stardrop whose eating was cut short gave nothing and was already used up. The energy bonus is now applied at once. (VF-059)");
+                Toggle(api, manifest, config, nameof(ModConfig.FixTrashBearSardine), "Trash Bear summer Sardine",
+                    "Trash Bear could ask for a Sardine in summer, when it cannot be caught. (VF-022)");
+                Toggle(api, manifest, config, nameof(ModConfig.FixChefBundleReward), "Chef's bundle reward",
+                    "The remixed Chef's bundle gave 1 Pink Cake where the classic one gives 3. New remixed worlds only. (VF-030)");
+                Toggle(api, manifest, config, nameof(ModConfig.FixBlankNames), "Block blank names",
+                    "The new farm and farmhand menus accepted a name of only spaces, which can leave a farm nobody can join. The OK button is blocked for such names. (VF-012)");
+                Toggle(api, manifest, config, nameof(ModConfig.FixTitleMusicMute), "Title screen mute",
+                    "The music came back after the About screen while the mute button still showed muted. (VF-045)");
+                Toggle(api, manifest, config, nameof(ModConfig.FixGeorgeWheelchair), "George's wheelchair",
+                    "George's wheels did not turn when he walks up. The missing frames are copied from his winter sheet. (VF-047)");
+                Toggle(api, manifest, config, nameof(ModConfig.FixMenuBoxShadow), "Menu box shadow corner",
+                    "Menu boxes such as item tooltips lacked one corner piece of their drop shadow. The piece is drawn. Cosmetic only. (VF-064)");
 
-                api.AddSectionTitle(manifest, () => "Balance changes (off by default)");
-                Add(api, manifest, "Lumberjack mahogany bonus", "VF-006. Makes the Lumberjack extra hardwood from mahogany trees apply. Raises their mahogany hardwood by about a quarter.", () => config.FixLumberjackMahoganyBonus, v => config.FixLumberjackMahoganyBonus = v);
-                Add(api, manifest, "Remove quest items from the ground", "VF-044. Qi Beans and Calico Eggs dropped on the ground are removed overnight like the ones in bags and chests.", () => config.FixQuestItemGroundDrops, v => config.FixQuestItemGroundDrops = v);
+                api.AddSectionTitle(manifest, () => "Text fixes");
+                Toggle(api, manifest, config, nameof(ModConfig.FixFairThirdPlaceText), "Fair third place speech",
+                    "Lewis says 200 star tokens for third place but the game gives 250. (VF-007)");
+                Toggle(api, manifest, config, nameof(ModConfig.FixMovieReactionScripts), "Movie reactions",
+                    "Three movie reactions showed an NPC name in place of the reaction text. (VF-001)");
+                Toggle(api, manifest, config, nameof(ModConfig.FixPortugueseSingleStatus), "Portuguese single status",
+                    "Single male farmers showed the female single text on the social page in Portuguese. (VF-036)");
 
-                api.AddSectionTitle(manifest, () => "Logging");
-                Add(api, manifest, "Stardrop cut short", "VF-059. A stardrop whose eating is cut short gave nothing and was used up. The energy bonus is now applied at once.", () => config.FixStardropInterrupt, v => config.FixStardropInterrupt = v);
-                Add(api, manifest, "Festival map leftovers", "VF-060. A farmhand keeps seeing festival booths and signs after the festival ends. Farmhand side only.", () => config.FixStaleMapOverrides, v => config.FixStaleMapOverrides = v);
-                Add(api, manifest, "Cache asset names", "VF-061. SMAPI builds new strings and objects every time a mod parses an asset name, and some mods do it for every sprite drawn. The answers are kept. Removes most of the garbage in big mod lists, no visible change.", () => config.CacheAssetNames, v => config.CacheAssetNames = v);
-                Add(api, manifest, "Skip empty location updates", "VF-062. Locations nobody has been in for 60 frames that hold nothing are not updated every frame. Host or single player only.", () => config.SkipEmptyLocationUpdates, v => config.SkipEmptyLocationUpdates = v);
-                Add(api, manifest, "Pause idle location monsters", "VF-062. Monsters in outdoor locations nobody is in are not updated. They move again when a player arrives. Host or single player only.", () => config.PauseIdleLocationMonsters, v => config.PauseIdleLocationMonsters = v);
-                Add(api, manifest, "Menu box shadow corner", "VF-064. Menu boxes such as item tooltips lack one corner piece of their drop shadow, leaving a small notch. The piece is drawn. Cosmetic only.", () => config.FixMenuBoxShadow, v => config.FixMenuBoxShadow = v);
-                Add(api, manifest, "Log eating interrupts", "VF-004. Writes a log line when something cuts the eating animation short. Changes nothing in the game.", () => config.LogEatInterrupts, v => config.LogEatInterrupts = v);
+                api.AddSectionTitle(manifest, () => "Off by default (changes gameplay)");
+                Toggle(api, manifest, config, nameof(ModConfig.FixFruitTreeQuality), "Fruit tree quality",
+                    "Fruit that grew before its tree aged to the next quality kept the old quality when picked. This raises it to the tree's current quality, as it did in 1.5. (VF-068)");
+                Toggle(api, manifest, config, nameof(ModConfig.FixLumberjackMahoganyBonus), "Lumberjack mahogany bonus",
+                    "The extra hardwood the Lumberjack profession is meant to give from mahogany trees never applied. This makes it apply, which raises their mahogany hardwood by about a quarter. (VF-006)");
+                Toggle(api, manifest, config, nameof(ModConfig.FixQuestItemGroundDrops), "Clear quest items on ground",
+                    "Quest items such as Qi Beans lying on the ground survived the overnight cleanup. This removes them like the ones in bags and chests. (VF-044)");
+
+                api.AddSectionTitle(manifest, () => "Diagnostics");
+                Toggle(api, manifest, config, nameof(ModConfig.LogEatInterrupts), "Log eating interrupts",
+                    "Writes a log line naming the code that cuts the eating animation short. Changes nothing in the game. (VF-004)");
             }
             catch (Exception ex)
             {
@@ -58,15 +94,17 @@ namespace ValleyFixes.Integration
             }
         }
 
-        private static void Add(IGenericModConfigMenuApi api, IManifest manifest, string name, string tooltip, Func<bool> get, Action<bool> set)
+        /// <summary>Adds one on/off option bound to a <see cref="ModConfig"/> property by name, so a rename is caught by the compiler.</summary>
+        private static void Toggle(IGenericModConfigMenuApi api, IManifest manifest, ModConfig config, string property, string name, string tooltip)
         {
-            api.AddBoolOption(manifest, get, set, () => name, () => tooltip);
+            PropertyInfo info = typeof(ModConfig).GetProperty(property) ?? throw new InvalidOperationException($"ModConfig has no setting called {property}.");
+            api.AddBoolOption(manifest, () => (bool)info.GetValue(config)!, value => info.SetValue(config, value), () => name, () => tooltip);
         }
 
         private static void Reset(ModConfig config)
         {
             var defaults = new ModConfig();
-            foreach (var property in typeof(ModConfig).GetProperties().Where(p => p.PropertyType == typeof(bool) && p.CanWrite))
+            foreach (var property in typeof(ModConfig).GetProperties().Where(p => (p.PropertyType == typeof(bool) || p.PropertyType == typeof(int)) && p.CanWrite))
                 property.SetValue(config, property.GetValue(defaults));
         }
     }

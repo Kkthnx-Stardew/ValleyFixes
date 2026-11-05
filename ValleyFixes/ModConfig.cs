@@ -66,8 +66,20 @@ namespace ValleyFixes
         /// <summary>VF-059: a stardrop that something cuts short while you eat it gives nothing, and the stardrop is already used up. When this is on, the energy bonus is applied the moment the eating is cut short. Other food is not changed.</summary>
         public bool FixStardropInterrupt { get; set; } = true;
 
-        /// <summary>VF-064: menu boxes (item tooltips, dialogue boxes) draw only three of the four corner pieces of their drop shadow, which leaves a small notch under the top left corner. The missing piece is drawn. Cosmetic only. Skipped if another mod patches the same method, such as Fix Hover Shadows.</summary>
+        /// <summary>VF-064: menu boxes (item tooltips, dialogue boxes) draw only three of the four corner pieces of their drop shadow, which leaves a small notch under the top left corner. The missing piece is drawn. Cosmetic only. Skipped if another mod patches the same method.</summary>
         public bool FixMenuBoxShadow { get; set; } = true;
+
+        /// <summary>VF-065: how many ticks (1/60 s each) this machine delays what other players and monsters do, so movement stays smooth. The game uses 15, which looks about 250 ms late. In the test, 8 looked 141 ms late and 4 looked 72 ms late. On a link with 15 ms jitter and 1% loss, 4 froze up to 3.7% of frames and 15 froze up to 1.8%. Only this player is affected. 15 means no change. Allowed 2 to 15.</summary>
+        public int MultiplayerInterpolationTicks { get; set; } = 15;
+
+        /// <summary>VF-066: SMAPI writes a rotation and a flip property of 0 on every tile of every Tiled (TMX) mod map, which nothing needs. Not storing them freed 125 MB of the managed heap on a real save with 101 mods. A tile with no such property reads back as 0 rotation and no flip, so nothing looks different. Skipped if another mod patches the same SMAPI methods.</summary>
+        public bool SkipDefaultTileProperties { get; set; } = true;
+
+        /// <summary>VF-067: with separate wallets, an empty slot in a farmhand's part of a Mini-Shipping Bin makes the host throw a NullReferenceException when the day ends, so the new day never starts. The game's developers confirmed it and said 1.6.16 cleans every player's part. Empty slots are removed from every part while the day is ending. Skipped if another mod patches Chest.clearNulls.</summary>
+        public bool FixMiniShippingBinCrash { get; set; } = true;
+
+        /// <summary>VF-068: fruit that grew on a tree before it aged to the next quality keeps the old quality when picked. The game's developers called this an unintended change in 1.6 and said 1.6.16 fixes it. Off by default because it raises the quality of some fruit.</summary>
+        public bool FixFruitTreeQuality { get; set; } = false;
 
         /// <summary>VF-004: writes a short log entry when something cuts the eating animation short. Changes nothing in the game.</summary>
         public bool LogEatInterrupts { get; set; } = true;

@@ -52,44 +52,56 @@ namespace ValleyFixes
             if (config.FixLumberjackMahoganyBonus)
                 Start("Lumberjack mahogany bonus", () => new LumberjackHardwoodFix(Monitor).Register(helper.Events));
 
-            // one Harmony instance for every code patch, created only if a patching fix is on
-            Harmony? harmony = config.FixBlankNames || config.FixTrashBearSardine || config.LogEatInterrupts || config.FixQuestItemGroundDrops || config.FixTitleMusicMute || config.SyncCoalCarts || config.FixStardropInterrupt || config.FixStaleMapOverrides || config.CacheAssetNames || config.SkipEmptyLocationUpdates || config.PauseIdleLocationMonsters || config.RetryLostJoinRequests || config.FixMenuBoxShadow ? new Harmony(ModManifest.UniqueID) : null;
+            // one Harmony instance for every code patch. It patches nothing until a fix applies a patch
+            var harmony = new Harmony(ModManifest.UniqueID);
 
             if (config.FixBlankNames)
-                Start("Blank name check", () => BlankNameFix.Apply(harmony!, Monitor));
+                Start("Blank name check", () => BlankNameFix.Apply(harmony, Monitor));
 
             if (config.FixTrashBearSardine)
-                Start("Trash Bear Sardine", () => TrashBearSardineFix.Apply(harmony!, Monitor));
+                Start("Trash Bear Sardine", () => TrashBearSardineFix.Apply(harmony, Monitor));
 
             if (config.FixQuestItemGroundDrops)
-                Start("Quest item ground drops", () => { QuestItemDebrisFix.ModLog = Monitor; QuestItemDebrisFix.Apply(harmony!, Monitor); });
+                Start("Quest item ground drops", () => QuestItemDebrisFix.Apply(harmony, Monitor));
 
             if (config.FixTitleMusicMute)
-                Start("Title screen mute", () => TitleMusicMuteFix.Apply(harmony!, Monitor));
+                Start("Title screen mute", () => TitleMusicMuteFix.Apply(harmony, Monitor));
 
             if (config.SyncCoalCarts)
-                Start("Coal cart sync", () => new CoalCartSyncFix(Monitor, helper, ModManifest.UniqueID).Register(harmony!));
+                Start("Coal cart sync", () => new CoalCartSyncFix(Monitor, helper, ModManifest.UniqueID).Register(harmony));
 
             if (config.FixStardropInterrupt)
-                Start("Stardrop interrupt", () => StardropInterruptFix.Apply(harmony!, Monitor));
+                Start("Stardrop interrupt", () => StardropInterruptFix.Apply(harmony, Monitor));
 
             if (config.FixStaleMapOverrides)
-                Start("Stale map changes", () => StaleMapOverrideFix.Apply(harmony!, Monitor));
+                Start("Stale map changes", () => StaleMapOverrideFix.Apply(harmony, Monitor));
 
             if (config.CacheAssetNames)
-                Start("Asset name cache", () => AssetNameCacheFix.Apply(harmony!, Monitor));
+                Start("Asset name cache", () => AssetNameCacheFix.Apply(harmony, Monitor));
 
             if (config.SkipEmptyLocationUpdates || config.PauseIdleLocationMonsters)
-                Start("Idle location updates", () => IdleLocationFix.Apply(harmony!, Monitor, config.SkipEmptyLocationUpdates, config.PauseIdleLocationMonsters));
+                Start("Idle location updates", () => IdleLocationFix.Apply(harmony, Monitor, config.SkipEmptyLocationUpdates, config.PauseIdleLocationMonsters));
 
             if (config.RetryLostJoinRequests)
-                Start("Join request retry", () => LidgrenDiscoveryRetryFix.Apply(harmony!, Monitor));
+                Start("Join request retry", () => LidgrenDiscoveryRetryFix.Apply(harmony, Monitor));
+
+            if (SyncDelayLimits.Clamp(config.MultiplayerInterpolationTicks) != SyncDelayLimits.VanillaTicks)
+                Start("Multiplayer delay", () => new SyncDelayTuning(Monitor, SyncDelayLimits.Clamp(config.MultiplayerInterpolationTicks)).Register(helper.Events));
+
+            if (config.SkipDefaultTileProperties)
+                Start("Default tile properties", () => TileDefaultPropertiesFix.Apply(harmony, Monitor));
+
+            if (config.FixMiniShippingBinCrash)
+                Start("Mini-Shipping Bin crash", () => MiniShippingBinFix.Apply(harmony, Monitor));
+
+            if (config.FixFruitTreeQuality)
+                Start("Fruit tree quality", () => FruitTreeQualityFix.Apply(harmony, Monitor));
 
             if (config.FixMenuBoxShadow)
-                Start("Menu box shadow", () => MenuBoxShadowFix.Apply(harmony!, Monitor));
+                Start("Menu box shadow", () => MenuBoxShadowFix.Apply(harmony, Monitor));
 
             if (config.LogEatInterrupts)
-                Start("Eat interrupt logging", () => EatInterruptLogger.Apply(harmony!, Monitor));
+                Start("Eat interrupt logging", () => EatInterruptLogger.Apply(harmony, Monitor));
         }
 
         private void Start(string name, Action register)

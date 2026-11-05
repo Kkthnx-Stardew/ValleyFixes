@@ -32,6 +32,7 @@ param(
     [double] $JitterMs = 0,
     [double] $LossPct = 0,
     [double] $DupPct = 0,
+    [int] $Interp = 0,
     [switch] $Shape,
     [int] $Clients = 1,
     [string] $NetLabel = '',
@@ -77,7 +78,9 @@ if ($Label -eq 'defaults') {
     Remove-Item $configFile -ErrorAction SilentlyContinue
 } else {
     $on = $Label -eq 'fixed'
-    $config = [ordered]@{ FixFairThirdPlaceText = $on; FixMovieReactionScripts = $on; FixLumberjackMahoganyBonus = $on; FixBlankNames = $on; FixChefBundleReward = $on; FixPortugueseSingleStatus = $on; TrimLocationChangeBacklog = $on; FixQuestItemGroundDrops = $on; FixTitleMusicMute = $on; FixGeorgeWheelchair = $on; FixOfflineFarmhandWallets = $on; CheckStaleOrderParticipants = $on; RepairStaleOrderParticipants = $on; FixTrashBearSardine = $on; SyncCoalCarts = $on; FixStardropInterrupt = $on; FixStaleMapOverrides = $on; CacheAssetNames = $on; SkipEmptyLocationUpdates = $on; PauseIdleLocationMonsters = $on; RetryLostJoinRequests = $on; FixMenuBoxShadow = $on; LogEatInterrupts = $on } | ConvertTo-Json
+    $config = [ordered]@{ FixFairThirdPlaceText = $on; FixMovieReactionScripts = $on; FixLumberjackMahoganyBonus = $on; FixBlankNames = $on; FixChefBundleReward = $on; FixPortugueseSingleStatus = $on; TrimLocationChangeBacklog = $on; FixQuestItemGroundDrops = $on; FixTitleMusicMute = $on; FixGeorgeWheelchair = $on; FixOfflineFarmhandWallets = $on; CheckStaleOrderParticipants = $on; RepairStaleOrderParticipants = $on; FixTrashBearSardine = $on; SyncCoalCarts = $on; FixStardropInterrupt = $on; FixStaleMapOverrides = $on; CacheAssetNames = $on; SkipEmptyLocationUpdates = $on; PauseIdleLocationMonsters = $on; RetryLostJoinRequests = $on; FixMenuBoxShadow = $on; SkipDefaultTileProperties = $on; FixMiniShippingBinCrash = $on; FixFruitTreeQuality = $on; LogEatInterrupts = $on }
+    if ($Interp -gt 0) { $config.MultiplayerInterpolationTicks = $Interp }
+    $config = $config | ConvertTo-Json
     Set-Content $configFile $config
 }
 

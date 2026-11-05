@@ -12,8 +12,12 @@ namespace ValleyFixes.Fixes
     /// </summary>
     internal static class QuestItemDebrisFix
     {
+        private static IMonitor _monitor = null!; // set in Apply
+
         public static void Apply(Harmony harmony, IMonitor monitor)
         {
+            _monitor = monitor;
+
             var target = AccessTools.Method(typeof(Game1), "_RecursiveRemoveThisNormalItemLocation", new[] { typeof(GameLocation), typeof(string) });
             if (target is null)
             {
@@ -37,10 +41,8 @@ namespace ValleyFixes.Fixes
             catch (Exception ex)
             {
                 // this only tidies leftovers, so a failure must never break the overnight sweep
-                ModLog?.Log($"Quest item ground drop cleanup failed. {ex.Message}", LogLevel.Warn);
+                _monitor.Log($"Quest item ground drop cleanup failed. {ex.Message}", LogLevel.Warn);
             }
         }
-
-        internal static IMonitor? ModLog;
     }
 }

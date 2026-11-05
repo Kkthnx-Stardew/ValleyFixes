@@ -132,6 +132,16 @@ namespace ValleyFixes.DevHarness
                         LoadSinglePlayer(title, Environment.GetEnvironmentVariable("VFH_LOAD")!);
                         _run = RealFocusMain().GetEnumerator();
                     }
+                    else if (Environment.GetEnvironmentVariable("VFH_ONLY") == "realclock")
+                    {
+                        LoadSinglePlayer(title, Environment.GetEnvironmentVariable("VFH_LOAD")!);
+                        _run = RealClockMain().GetEnumerator();
+                    }
+                    else if (Environment.GetEnvironmentVariable("VFH_ONLY") == "realmem")
+                    {
+                        LoadSinglePlayer(title, Environment.GetEnvironmentVariable("VFH_LOAD")!);
+                        _run = RealMemMain().GetEnumerator();
+                    }
                     else if (Environment.GetEnvironmentVariable("VFH_ONLY") == "realsp")
                     {
                         LoadSinglePlayer(title, Environment.GetEnvironmentVariable("VFH_LOAD")!);
@@ -258,6 +268,36 @@ namespace ValleyFixes.DevHarness
             if (Environment.GetEnvironmentVariable("VFH_ONLY") == "bed")
             {
                 foreach (int w in BedScenario()) yield return w;
+                yield break;
+            }
+
+            if (Environment.GetEnvironmentVariable("VFH_ONLY") == "configshot")
+            {
+                foreach (int w in ConfigShotScenario()) yield return w;
+                yield break;
+            }
+
+            if (Environment.GetEnvironmentVariable("VFH_ONLY") == "minibin")
+            {
+                foreach (int w in MiniBinScenario()) yield return w;
+                yield break;
+            }
+
+            if (Environment.GetEnvironmentVariable("VFH_ONLY") == "fruit")
+            {
+                foreach (int w in FruitScenario()) yield return w;
+                yield break;
+            }
+
+            if (Environment.GetEnvironmentVariable("VFH_ONLY") == "emptyboard")
+            {
+                foreach (int w in EmptyBoardScenario()) yield return w;
+                yield break;
+            }
+
+            if (Environment.GetEnvironmentVariable("VFH_ONLY") == "specialorders")
+            {
+                foreach (int w in SpecialOrdersScenario()) yield return w;
                 yield break;
             }
 

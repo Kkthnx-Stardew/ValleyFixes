@@ -242,6 +242,9 @@ namespace ValleyFixes.DevHarness
                 case "squid":
                     foreach (int w in SquidScenario()) yield return w;
                     break;
+                case "nettune":
+                    foreach (int w in NetTuneScenario()) yield return w;
+                    break;
                 case "netcond":
                     foreach (int w in NetCondScenario()) yield return w;
                     break;

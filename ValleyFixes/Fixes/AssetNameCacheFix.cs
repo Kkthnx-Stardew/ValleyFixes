@@ -37,10 +37,7 @@ namespace ValleyFixes.Fixes
                 return;
             }
 
-            var existing = Harmony.GetPatchInfo(target);
-            var others = existing is null
-                ? new List<string>()
-                : existing.Prefixes.Concat(existing.Postfixes).Concat(existing.Transpilers).Concat(existing.Finalizers).Select(p => p.owner).Distinct().ToList();
+            var others = HarmonyOwners.Foreign(target);
             if (others.Count > 0)
             {
                 monitor.Log($"Asset name cache is off: {string.Join(", ", others)} already patches SMAPI's ParseAssetName, and two patches on one method could interfere.", LogLevel.Info);

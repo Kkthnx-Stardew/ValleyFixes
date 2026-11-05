@@ -12,7 +12,7 @@ namespace ValleyFixes.Fixes
     /// has a notch about 8 by 20 pixels (at 4x zoom) just under the top left corner of the box.
     /// This draws the missing piece, in the same place and with the same colour and layer as its three siblings, before the game draws
     /// the rest. It is a prefix that never skips the original, so the draw order matches the game's own. It is skipped if another mod
-    /// already patches the method, which covers the Fix Hover Shadows mod that does the same job.
+    /// already patches the method, which covers other mods that repair the same shadow.
     /// </summary>
     internal static class MenuBoxShadowFix
     {
@@ -28,10 +28,7 @@ namespace ValleyFixes.Fixes
                 return;
             }
 
-            var existing = Harmony.GetPatchInfo(target);
-            var others = existing is null
-                ? new List<string>()
-                : existing.Prefixes.Concat(existing.Postfixes).Concat(existing.Transpilers).Concat(existing.Finalizers).Select(p => p.owner).Distinct().ToList();
+            var others = HarmonyOwners.Foreign(target);
             if (others.Count > 0)
             {
                 monitor.Log($"Menu box shadow fix is off: {string.Join(", ", others)} already patches IClickableMenu.drawTextureBox, and two patches on one method could interfere.", LogLevel.Info);

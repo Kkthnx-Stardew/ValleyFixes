@@ -51,7 +51,7 @@ namespace ValleyFixes.Fixes
                 return;
             }
 
-            var others = OtherOwners(update);
+            var others = HarmonyOwners.Foreign(update);
             if (others.Count > 0)
             {
                 monitor.Log($"Idle location updates are off: {string.Join(", ", others)} already patches GameLocation.updateEvenIfFarmerIsntHere, and two patches on one method could interfere.", LogLevel.Info);
@@ -62,25 +62,12 @@ namespace ValleyFixes.Fixes
 
             if (skipMonsters)
             {
-                var monsterOthers = OtherOwners(monsterUpdate);
+                var monsterOthers = HarmonyOwners.Foreign(monsterUpdate);
                 if (monsterOthers.Count > 0)
                     monitor.Log($"Idle monster updates are off: {string.Join(", ", monsterOthers)} already patches Monster.update.", LogLevel.Info);
                 else
                     harmony.Patch(monsterUpdate, prefix: new HarmonyMethod(typeof(IdleLocationFix), nameof(BeforeMonsterUpdate)));
             }
-        }
-
-        // owners of patches on a method that are not ValleyFixes itself or its test tool
-        private static List<string> OtherOwners(System.Reflection.MethodBase method)
-        {
-            var info = Harmony.GetPatchInfo(method);
-            if (info is null)
-                return new List<string>();
-            return info.Prefixes.Concat(info.Postfixes).Concat(info.Transpilers).Concat(info.Finalizers)
-                .Select(p => p.owner)
-                .Where(o => !o.StartsWith("Kkthnx.ValleyFixes", StringComparison.Ordinal))
-                .Distinct()
-                .ToList();
         }
 
         /// <summary>Counts how many frames in a row a location has been without a player. Called once per location per frame, before the game's own update.</summary>

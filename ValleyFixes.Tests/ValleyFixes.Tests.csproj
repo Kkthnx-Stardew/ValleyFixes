@@ -29,6 +29,7 @@
     <Compile Include="..\ValleyFixes\Fixes\StaleParticipants.cs" Link="StaleParticipants.cs" />
     <Compile Include="..\ValleyFixes\Fixes\SpriteFrames.cs" Link="SpriteFrames.cs" />
     <Compile Include="..\ValleyFixes\Fixes\CoalCartLedger.cs" Link="CoalCartLedger.cs" />
+    <Compile Include="..\ValleyFixes\Fixes\SyncDelayLimits.cs" Link="SyncDelayLimits.cs" />
   </ItemGroup>
 
 </Project>

@@ -42,14 +42,7 @@ namespace ValleyFixes.Fixes
                 return;
             }
 
-            var others = new List<string>();
-            foreach (var method in new System.Reflection.MethodBase[] { ctor, attempt })
-            {
-                var info = Harmony.GetPatchInfo(method);
-                if (info is not null)
-                    others.AddRange(info.Prefixes.Concat(info.Postfixes).Concat(info.Transpilers).Concat(info.Finalizers).Select(p => p.owner));
-            }
-            others = others.Distinct().ToList();
+            var others = HarmonyOwners.Foreign(ctor).Concat(HarmonyOwners.Foreign(attempt)).Distinct().ToList();
             if (others.Count > 0)
             {
                 monitor.Log($"Join retry is off: {string.Join(", ", others)} already patches LidgrenClient, and two patches on one method could interfere.", LogLevel.Info);

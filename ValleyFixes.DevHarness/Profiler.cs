@@ -36,6 +36,8 @@ namespace ValleyFixes.DevHarness
             Wrap(harmony, monitor, typeof(FarmAnimal), "behaviors");
             Wrap(harmony, monitor, typeof(PathFindController), "findPath", new[] { typeof(Microsoft.Xna.Framework.Point), typeof(Microsoft.Xna.Framework.Point), typeof(PathFindController.isAtEnd), typeof(GameLocation), typeof(Character), typeof(int) });
             Wrap(harmony, monitor, typeof(Game1), "performTenMinuteClockUpdate");
+            Wrap(harmony, monitor, typeof(GameLocation), "passTimeForObjects", new[] { typeof(int) });
+            Wrap(harmony, monitor, typeof(GameLocation), "timeUpdate", new[] { typeof(int) });
             Wrap(harmony, monitor, typeof(Game1), "shouldTimePass");
             Wrap(harmony, monitor, typeof(Game1), "_update");
             Wrap(harmony, monitor, typeof(Game1), "_draw");
