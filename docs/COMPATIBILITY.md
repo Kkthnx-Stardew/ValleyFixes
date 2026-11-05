@@ -20,6 +20,7 @@ Tested against Stardew Valley 1.6.15 build 24356 with SMAPI 4.5.2 on Windows 11.
 | `FixOfflineFarmhandWallets` | `Saving` event, host only | The wallet of the saved copy of each farmhand who is not in the game | on |
 | `FixBlankNames` | Harmony postfix | `CharacterCustomization.canLeaveMenu` | on |
 | `FixTrashBearSardine` | Harmony postfix | `Utility.getRandomPureSeasonalItem` | on |
+| `RetryLostJoinRequests` | Harmony postfix on the `LidgrenClient` constructor, prefix on `attemptConnection` | The retry limit and wait of the join request, and the address text restored before each attempt. Skipped if another mod patches either member | on |
 | `LogEatInterrupts` | Harmony prefix, log only | `Farmer.completelyStopAnimatingOrDoingAction` | on |
 
 No transpilers. No per-tick work. The title screen and ground drop patches run only when those menus close or a quest ends, and the order check runs once a morning on the host. The only repeating work is the morning queue clear, about 2 ms across 80 locations. No data is written to saves or to disk beyond `config.json`.
@@ -39,7 +40,7 @@ No transpilers. No per-tick work. The title screen and ground drop patches run o
 
 ## Multiplayer
 
-Tested with a host and one joining player, each a separate game process on the same PC (see `REPRODUCTION.md`). Not tested: split screen, three or more players, a joiner on another PC or over the internet, a dedicated server. By design:
+Tested with a host and one joining player, each a separate game process on the same PC (see `REPRODUCTION.md`), and with two joining players on a clean profile. Not tested: split screen, four players, a joiner on another PC or over the internet, a dedicated server. By design:
 
 - Text and menu fixes are local to each player. Install on every player who should see the corrected text.
 - `FixChefBundleReward` decides the reward when a host creates a new remixed world, so only the host needs it at that moment. Existing worlds keep the bundles they were created with.

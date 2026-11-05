@@ -20,6 +20,7 @@ namespace ValleyFixes.Integration
 
                 api.AddSectionTitle(manifest, () => "Multiplayer");
                 Add(api, manifest, "Sync coal carts", "VF-058. A coal cart a farmhand empties stays full for everyone else, and for that farmhand after they leave the floor. The host keeps the list of emptied carts and shares it.", () => config.SyncCoalCarts, v => config.SyncCoalCarts = v);
+                Add(api, manifest, "Retry lost join requests", "VF-063. Joining by IP address or on a local network starts with one UDP packet. If it is lost the game never sends it again and you wait 45 seconds. This sends it again up to three times. Farmhand side only.", () => config.RetryLostJoinRequests, v => config.RetryLostJoinRequests = v);
                 Add(api, manifest, "Offline farmhand wallets", "VF-055. With separate wallets, gold sent to a farmhand who is not in the game is lost at the next save and reload. Host only.", () => config.FixOfflineFarmhandWallets, v => config.FixOfflineFarmhandWallets = v);
                 Add(api, manifest, "Check stale special order players", "VF-046. The host logs special orders held open by a player who no longer exists in this world.", () => config.CheckStaleOrderParticipants, v => config.CheckStaleOrderParticipants = v);
                 Add(api, manifest, "Repair stale special order players", "VF-046. Also remove those stale players from the order. Off by default because it edits shared state.", () => config.RepairStaleOrderParticipants, v => config.RepairStaleOrderParticipants = v);

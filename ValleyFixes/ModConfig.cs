@@ -48,6 +48,9 @@ namespace ValleyFixes
         /// <summary>VF-058: in multiplayer, a coal cart a farmhand empties stays full for everyone else, and for that farmhand after they leave the floor and return, so it can be emptied again and again. The host keeps the list of emptied carts and shares it. Needs the mod on every player's machine. Does nothing in single player.</summary>
         public bool SyncCoalCarts { get; set; } = true;
 
+        /// <summary>VF-063: joining a host by IP address or on a local network starts with one UDP packet. If it or the host's answer is lost, the game never sends it again and the joiner waits 45 seconds for a timeout. This sends the request again up to three times, three seconds apart, until the host answers. It also keeps a typed port on each attempt. The farmhand's side only, and it changes nothing once the host has answered. Skipped if another mod patches the same game methods.</summary>
+        public bool RetryLostJoinRequests { get; set; } = true;
+
         /// <summary>VF-062: the game runs the background update of every location every frame, even locations nobody is in and that hold nothing. In a big mod list that is hundreds of locations. A location that has had nobody in it for 60 frames in a row, holds no characters, animals, buildings or temporary sprites and has no event is skipped. Host or single player only. No visible change. Skipped if another mod patches the same game method.</summary>
         public bool SkipEmptyLocationUpdates { get; set; } = true;
 
