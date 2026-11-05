@@ -261,6 +261,12 @@ namespace ValleyFixes.DevHarness
                 yield break;
             }
 
+            if (Environment.GetEnvironmentVariable("VFH_ONLY") == "shadows")
+            {
+                foreach (int w in ShadowScenario()) yield return w;
+                yield break;
+            }
+
             if (Environment.GetEnvironmentVariable("VFH_ONLY") == "stardrop")
             {
                 foreach (int w in StardropScenario()) yield return w;

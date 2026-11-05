@@ -852,3 +852,27 @@ Traffic grows with the square of the player count because every position goes to
 - Split screen, a joiner on another PC or over the internet, a Steam invite and a dedicated server were not tested. Delay and loss were applied between two processes on one PC.
 - One run per cell. The 10 and 20 percent rows of the join table are 25 attempts each, so a few attempts either way would move them.
 - Three or four players with the real mod list were not run. Two real-mod processes already page on this PC.
+
+## Round seven (2026-11-05): two Nexus shadow fixes checked
+
+The two mods named were Fix Hover Shadows (Nexus 31087) and Barn Animals' Double Shadows Fix (Nexus 25428). Both are installed in the live Mods folder. Both are drawing bugs, so the harness got a `shadows` scenario that draws into an off-screen target and writes PNG files (`ModEntry.Shadows.cs`). Evidence: `docs/evidence/shadows-*`.
+
+| ID | Source | Verdict | Decision | One line |
+|---|---|---|---|---|
+| VF-064 | Fix Hover Shadows | FIXED_AND_TESTED | SHIP | `IClickableMenu.drawTextureBox` draws three of the four drop shadow corner pieces. The top left one is missing, which leaves a notch under the top left corner of every menu box. Seen in the real game and fixed |
+| none | Barn Animals' Double Shadows Fix | NOT PRESENT | NO FIX | In 1.6.15 build 24356 the farm animal data already sets the shadow to not visible for White Cow, Brown Cow, Goat, Sheep, Pig and Ostrich. The sprite is drawn with one shadow. The mod is now redundant but harmless |
+
+### VF-064, menu box shadow corner
+
+The game's shadow is eight pieces: three corners, four edges and a centre. The top left corner is not among them. Drawing a 320 by 200 box on a flat colour showed the shadow starting 16 pixels below the box's top left corner, with a square gap beside the corner. Fix Hover Shadows adds the missing draw with a transpiler. This fix is a prefix that draws the same piece (position x minus 8, y plus 8, the top left source tile, black at 40 percent, the game's own shadow layer) and lets the original run, so the draw order is the game's. It is skipped if any other mod patches the method.
+
+| Comparison | Pixels that differ |
+|---|---|
+| Vanilla and fixed, box 1 (plain box) | 112, all inside x 112 to 119, y 132 to 147, the notch |
+| Vanilla and fixed, box 2 (a tooltip) | 112, the same notch |
+| Fixed and the Fix Hover Shadows mod output | 0 |
+| Fix Hover Shadows installed beside this mod | This fix logs that it is off and the output is the other mod's |
+
+A second finding while testing. Adding one fully transparent sprite to the batch, with no fix on, changed 8,060 pixels inside the tooltip box. The tooltip draws its title box and its main box at the same layer depth, and the game's front to back sort does not keep equal items in order, so which one ends up on top changes with the number of sprites in the batch. The first fixed run showed this and looked like a regression until the dummy sprite run reproduced it without the fix. It is a game and MonoGame quirk. The comparison above uses the dummy run as the baseline, so only the notch differs. Nothing was changed for it, because the difference was inside the box where the two boxes agree on colour except for a faint banner band.
+
+Not tested: gamepad or split screen menus, other zoom levels (the piece scales with the box's own scale argument, as its siblings do), and a mod that draws its own box through another method.

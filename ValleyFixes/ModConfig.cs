@@ -66,6 +66,9 @@ namespace ValleyFixes
         /// <summary>VF-059: a stardrop that something cuts short while you eat it gives nothing, and the stardrop is already used up. When this is on, the energy bonus is applied the moment the eating is cut short. Other food is not changed.</summary>
         public bool FixStardropInterrupt { get; set; } = true;
 
+        /// <summary>VF-064: menu boxes (item tooltips, dialogue boxes) draw only three of the four corner pieces of their drop shadow, which leaves a small notch under the top left corner. The missing piece is drawn. Cosmetic only. Skipped if another mod patches the same method, such as Fix Hover Shadows.</summary>
+        public bool FixMenuBoxShadow { get; set; } = true;
+
         /// <summary>VF-004: writes a short log entry when something cuts the eating animation short. Changes nothing in the game.</summary>
         public bool LogEatInterrupts { get; set; } = true;
     }

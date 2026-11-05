@@ -1,10 +1,10 @@
 # Handoff for the next session
 
-Updated 2026-11-01 at the end of the fourth round (multiplayer). Read `docs/AUDIT.md` (Summary, VF-004, VF-043, Performance sample) and `README.md` first.
+Updated 2026-11-05 after round seven. The state lines below were written at 0.1.0, so read docs/CHANGELOG.md for what shipped since (now 0.2.0-alpha.8). Read `docs/AUDIT.md` (Summary, VF-004, VF-043, Performance sample) and `README.md` first.
 
 ## State
 
-- Mod: ValleyFixes 0.1.0 for Stardew Valley 1.6.15 build 24356, SMAPI 4.5.2, repo `C:\Users\Administrator\Documents\GitHub\ValleyFixes`. Not a git repo, nothing committed. The user wants to be asked before `git init` or any commit.
+- Mod: ValleyFixes 0.1.0 for Stardew Valley 1.6.15 build 24356, SMAPI 4.5.2, repo `C:\Users\Administrator\Documents\GitHub\ValleyFixes`. Now a git repo with a GitHub remote (Kkthnx-Stardew/ValleyFixes). The user wants to be asked before any commit or push.
 - Game: `D:\SteamLibrary\steamapps\common\Stardew Valley`. The live Mods folder has about 100 mods. Never touch it. Test only through `testprofile/Mods`.
 - Settings in the mod: `FixFairThirdPlaceText`, `FixMovieReactionScripts`, `FixChefBundleReward`, `FixPortugueseSingleStatus`, `FixBlankNames`, `FixTrashBearSardine`, `TrimLocationChangeBacklog`, `FixTitleMusicMute`, `FixGeorgeWheelchair`, `CheckStaleOrderParticipants`, `FixOfflineFarmhandWallets` (all on), `FixLumberjackMahoganyBonus`, `FixQuestItemGroundDrops`, `RepairStaleOrderParticipants` (off, opt-in), `LogEatInterrupts` (log only).
 - Thirteen fixes were tested in the running game: VF-001, 006, 007, 012, 022, 030, 036, 043, 044 (opt-in), 045, 046 (log on, repair opt-in, made-up id), 047 and 055 (offline farmhand gold, tested with a real second game). VF-004 (eating freeze) is only logged, its real trigger is still unknown.
@@ -29,6 +29,10 @@ Updated 2026-11-01 at the end of the fourth round (multiplayer). Read `docs/AUDI
 - VF-055 reproduced and fixed. VF-043 extended to a multiplayer host (locations without a network root). VF-056 and VF-048 could not be reproduced. VF-052 not reproduced in over 200 host nights. VF-049, 050, 051, 053, 054 untouched (need a festival day, schedules, rendering or the report's steps).
 - Multiplayer performance measured: a second player costs the host under 0.1 ms a frame. The only cost found was the queue leak.
 - Open: the game's own new day save froze twice in about 20 two-player runs (once with every fix off). Cause unknown. A stack dump of the stuck host (dotnet-dump) would show it.
+
+## Done in round seven (2026-11-05)
+
+- Checked Nexus 31087 (Fix Hover Shadows) and 25428 (Barn Animals Double Shadows Fix). VF-064 menu box shadow corner fixed and tested. The barn animal double shadow is not present in 1.6.15. New harness scenario `-Only shadows` (set `VFH_TAG` for the file names, `VFH_DUMMY=1` for the sort order control). Version 0.2.0-alpha.8, uncommitted.
 
 ## Ideas worth doing next
 

@@ -53,7 +53,7 @@ namespace ValleyFixes
                 Start("Lumberjack mahogany bonus", () => new LumberjackHardwoodFix(Monitor).Register(helper.Events));
 
             // one Harmony instance for every code patch, created only if a patching fix is on
-            Harmony? harmony = config.FixBlankNames || config.FixTrashBearSardine || config.LogEatInterrupts || config.FixQuestItemGroundDrops || config.FixTitleMusicMute || config.SyncCoalCarts || config.FixStardropInterrupt || config.FixStaleMapOverrides || config.CacheAssetNames || config.SkipEmptyLocationUpdates || config.PauseIdleLocationMonsters || config.RetryLostJoinRequests ? new Harmony(ModManifest.UniqueID) : null;
+            Harmony? harmony = config.FixBlankNames || config.FixTrashBearSardine || config.LogEatInterrupts || config.FixQuestItemGroundDrops || config.FixTitleMusicMute || config.SyncCoalCarts || config.FixStardropInterrupt || config.FixStaleMapOverrides || config.CacheAssetNames || config.SkipEmptyLocationUpdates || config.PauseIdleLocationMonsters || config.RetryLostJoinRequests || config.FixMenuBoxShadow ? new Harmony(ModManifest.UniqueID) : null;
 
             if (config.FixBlankNames)
                 Start("Blank name check", () => BlankNameFix.Apply(harmony!, Monitor));
@@ -84,6 +84,9 @@ namespace ValleyFixes
 
             if (config.RetryLostJoinRequests)
                 Start("Join request retry", () => LidgrenDiscoveryRetryFix.Apply(harmony!, Monitor));
+
+            if (config.FixMenuBoxShadow)
+                Start("Menu box shadow", () => MenuBoxShadowFix.Apply(harmony!, Monitor));
 
             if (config.LogEatInterrupts)
                 Start("Eat interrupt logging", () => EatInterruptLogger.Apply(harmony!, Monitor));

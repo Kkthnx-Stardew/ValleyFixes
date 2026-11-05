@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.2.0-alpha.8
+
+- VF-064: menu boxes no longer have a notch in their drop shadow under the top left corner (`FixMenuBoxShadow`). The game draws three of the four shadow corner pieces. The missing piece is drawn before the box, in the same layer as the others. Tested by drawing a box off screen and comparing pixels: 112 pixels change per box, all in the notch, and the result is identical to the Fix Hover Shadows mod. Skipped if another mod patches the same method.
+- The report that barn animals have two shadows (Barn Animals Double Shadows Fix) is not present in 1.6.15 build 24356. The game data already hides the extra shadow for cows, goats, sheep, pigs and ostriches. Nothing to fix.
+- Test tool: a `shadows` harness scenario that draws a menu box and every farm animal to PNG files.
+
 ## 0.2.0-alpha.7
 
 - VF-063: a lost join request is now sent again (`RetryLostJoinRequests`, farmhand side only). Joining by IP address or on a local network starts with one UDP packet, and the game never repeated it, so one lost packet meant 45 seconds of waiting and a timeout. With 25 join attempts at each loss rate, 14 of 100 failed before and 1 of 100 after (5, 10 and 20 percent loss each way). Nothing changes at 0 percent loss. The retry also keeps a port typed after the address.

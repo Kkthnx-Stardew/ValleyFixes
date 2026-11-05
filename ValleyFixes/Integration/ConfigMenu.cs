@@ -48,6 +48,7 @@ namespace ValleyFixes.Integration
                 Add(api, manifest, "Cache asset names", "VF-061. SMAPI builds new strings and objects every time a mod parses an asset name, and some mods do it for every sprite drawn. The answers are kept. Removes most of the garbage in big mod lists, no visible change.", () => config.CacheAssetNames, v => config.CacheAssetNames = v);
                 Add(api, manifest, "Skip empty location updates", "VF-062. Locations nobody has been in for 60 frames that hold nothing are not updated every frame. Host or single player only.", () => config.SkipEmptyLocationUpdates, v => config.SkipEmptyLocationUpdates = v);
                 Add(api, manifest, "Pause idle location monsters", "VF-062. Monsters in outdoor locations nobody is in are not updated. They move again when a player arrives. Host or single player only.", () => config.PauseIdleLocationMonsters, v => config.PauseIdleLocationMonsters = v);
+                Add(api, manifest, "Menu box shadow corner", "VF-064. Menu boxes such as item tooltips lack one corner piece of their drop shadow, leaving a small notch. The piece is drawn. Cosmetic only.", () => config.FixMenuBoxShadow, v => config.FixMenuBoxShadow = v);
                 Add(api, manifest, "Log eating interrupts", "VF-004. Writes a log line when something cuts the eating animation short. Changes nothing in the game.", () => config.LogEatInterrupts, v => config.LogEatInterrupts = v);
             }
             catch (Exception ex)

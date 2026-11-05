@@ -1,0 +1,293 @@
+{
+  "world": "ready in FarmHouse, tick 405",
+  "shadows": {
+    "animals": [
+      {
+        "type": "Blue Chicken",
+        "baby": false,
+        "shadowVisible": null,
+        "shadowScale": null,
+        "offset": null,
+        "spriteW": 16,
+        "textureW": 64,
+        "textureH": 112
+      },
+      {
+        "type": "Blue Chicken",
+        "baby": true,
+        "shadowVisible": null,
+        "shadowScale": null,
+        "offset": null,
+        "spriteW": 16,
+        "textureW": 64,
+        "textureH": 112
+      },
+      {
+        "type": "Brown Chicken",
+        "baby": false,
+        "shadowVisible": null,
+        "shadowScale": null,
+        "offset": null,
+        "spriteW": 16,
+        "textureW": 64,
+        "textureH": 112
+      },
+      {
+        "type": "Brown Chicken",
+        "baby": true,
+        "shadowVisible": null,
+        "shadowScale": null,
+        "offset": null,
+        "spriteW": 16,
+        "textureW": 64,
+        "textureH": 112
+      },
+      {
+        "type": "Brown Cow",
+        "baby": false,
+        "shadowVisible": false,
+        "shadowScale": null,
+        "offset": null,
+        "spriteW": 32,
+        "textureW": 128,
+        "textureH": 160
+      },
+      {
+        "type": "Brown Cow",
+        "baby": true,
+        "shadowVisible": false,
+        "shadowScale": null,
+        "offset": null,
+        "spriteW": 32,
+        "textureW": 128,
+        "textureH": 160
+      },
+      {
+        "type": "Dinosaur",
+        "baby": false,
+        "shadowVisible": null,
+        "shadowScale": null,
+        "offset": null,
+        "spriteW": 16,
+        "textureW": 64,
+        "textureH": 112
+      },
+      {
+        "type": "Dinosaur",
+        "baby": true,
+        "shadowVisible": null,
+        "shadowScale": null,
+        "offset": null,
+        "spriteW": 16,
+        "textureW": 64,
+        "textureH": 112
+      },
+      {
+        "type": "Duck",
+        "baby": false,
+        "shadowVisible": null,
+        "shadowScale": null,
+        "offset": null,
+        "spriteW": 16,
+        "textureW": 64,
+        "textureH": 224
+      },
+      {
+        "type": "Duck",
+        "baby": true,
+        "shadowVisible": null,
+        "shadowScale": null,
+        "offset": null,
+        "spriteW": 16,
+        "textureW": 64,
+        "textureH": 224
+      },
+      {
+        "type": "Goat",
+        "baby": false,
+        "shadowVisible": false,
+        "shadowScale": null,
+        "offset": null,
+        "spriteW": 32,
+        "textureW": 128,
+        "textureH": 160
+      },
+      {
+        "type": "Goat",
+        "baby": true,
+        "shadowVisible": false,
+        "shadowScale": null,
+        "offset": null,
+        "spriteW": 32,
+        "textureW": 128,
+        "textureH": 160
+      },
+      {
+        "type": "Golden Chicken",
+        "baby": false,
+        "shadowVisible": null,
+        "shadowScale": null,
+        "offset": null,
+        "spriteW": 16,
+        "textureW": 64,
+        "textureH": 112
+      },
+      {
+        "type": "Golden Chicken",
+        "baby": true,
+        "shadowVisible": null,
+        "shadowScale": null,
+        "offset": null,
+        "spriteW": 16,
+        "textureW": 64,
+        "textureH": 224
+      },
+      {
+        "type": "Ostrich",
+        "baby": false,
+        "shadowVisible": false,
+        "shadowScale": null,
+        "offset": null,
+        "spriteW": 32,
+        "textureW": 128,
+        "textureH": 160
+      },
+      {
+        "type": "Ostrich",
+        "baby": true,
+        "shadowVisible": false,
+        "shadowScale": null,
+        "offset": null,
+        "spriteW": 32,
+        "textureW": 128,
+        "textureH": 160
+      },
+      {
+        "type": "Pig",
+        "baby": false,
+        "shadowVisible": false,
+        "shadowScale": null,
+        "offset": null,
+        "spriteW": 32,
+        "textureW": 128,
+        "textureH": 160
+      },
+      {
+        "type": "Pig",
+        "baby": true,
+        "shadowVisible": false,
+        "shadowScale": null,
+        "offset": null,
+        "spriteW": 32,
+        "textureW": 128,
+        "textureH": 160
+      },
+      {
+        "type": "Rabbit",
+        "baby": false,
+        "shadowVisible": null,
+        "shadowScale": null,
+        "offset": null,
+        "spriteW": 16,
+        "textureW": 64,
+        "textureH": 112
+      },
+      {
+        "type": "Rabbit",
+        "baby": true,
+        "shadowVisible": null,
+        "shadowScale": null,
+        "offset": null,
+        "spriteW": 16,
+        "textureW": 64,
+        "textureH": 112
+      },
+      {
+        "type": "Sheep",
+        "baby": false,
+        "shadowVisible": false,
+        "shadowScale": null,
+        "offset": null,
+        "spriteW": 32,
+        "textureW": 128,
+        "textureH": 160
+      },
+      {
+        "type": "Sheep",
+        "baby": true,
+        "shadowVisible": false,
+        "shadowScale": null,
+        "offset": null,
+        "spriteW": 32,
+        "textureW": 128,
+        "textureH": 160
+      },
+      {
+        "type": "Void Chicken",
+        "baby": false,
+        "shadowVisible": null,
+        "shadowScale": null,
+        "offset": null,
+        "spriteW": 16,
+        "textureW": 64,
+        "textureH": 112
+      },
+      {
+        "type": "Void Chicken",
+        "baby": true,
+        "shadowVisible": null,
+        "shadowScale": null,
+        "offset": null,
+        "spriteW": 16,
+        "textureW": 64,
+        "textureH": 112
+      },
+      {
+        "type": "White Chicken",
+        "baby": false,
+        "shadowVisible": null,
+        "shadowScale": null,
+        "offset": null,
+        "spriteW": 16,
+        "textureW": 64,
+        "textureH": 112
+      },
+      {
+        "type": "White Chicken",
+        "baby": true,
+        "shadowVisible": null,
+        "shadowScale": null,
+        "offset": null,
+        "spriteW": 16,
+        "textureW": 64,
+        "textureH": 224
+      },
+      {
+        "type": "White Cow",
+        "baby": false,
+        "shadowVisible": false,
+        "shadowScale": null,
+        "offset": null,
+        "spriteW": 32,
+        "textureW": 128,
+        "textureH": 160
+      },
+      {
+        "type": "White Cow",
+        "baby": true,
+        "shadowVisible": false,
+        "shadowScale": null,
+        "offset": null,
+        "spriteW": 32,
+        "textureW": 128,
+        "textureH": 160
+      }
+    ]
+  },
+  "note": null,
+  "mods": [
+    "SMAPI.ConsoleCommands 4.5.2",
+    "Kkthnx.ValleyFixes 0.2.0-alpha.7",
+    "Kkthnx.ValleyFixes.DevHarness 0.1.0"
+  ]
+}

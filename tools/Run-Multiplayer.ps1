@@ -77,7 +77,7 @@ if ($Label -eq 'defaults') {
     Remove-Item $configFile -ErrorAction SilentlyContinue
 } else {
     $on = $Label -eq 'fixed'
-    $config = [ordered]@{ FixFairThirdPlaceText = $on; FixMovieReactionScripts = $on; FixLumberjackMahoganyBonus = $on; FixBlankNames = $on; FixChefBundleReward = $on; FixPortugueseSingleStatus = $on; TrimLocationChangeBacklog = $on; FixQuestItemGroundDrops = $on; FixTitleMusicMute = $on; FixGeorgeWheelchair = $on; FixOfflineFarmhandWallets = $on; CheckStaleOrderParticipants = $on; RepairStaleOrderParticipants = $on; FixTrashBearSardine = $on; SyncCoalCarts = $on; FixStardropInterrupt = $on; FixStaleMapOverrides = $on; CacheAssetNames = $on; SkipEmptyLocationUpdates = $on; PauseIdleLocationMonsters = $on; RetryLostJoinRequests = $on; LogEatInterrupts = $on } | ConvertTo-Json
+    $config = [ordered]@{ FixFairThirdPlaceText = $on; FixMovieReactionScripts = $on; FixLumberjackMahoganyBonus = $on; FixBlankNames = $on; FixChefBundleReward = $on; FixPortugueseSingleStatus = $on; TrimLocationChangeBacklog = $on; FixQuestItemGroundDrops = $on; FixTitleMusicMute = $on; FixGeorgeWheelchair = $on; FixOfflineFarmhandWallets = $on; CheckStaleOrderParticipants = $on; RepairStaleOrderParticipants = $on; FixTrashBearSardine = $on; SyncCoalCarts = $on; FixStardropInterrupt = $on; FixStaleMapOverrides = $on; CacheAssetNames = $on; SkipEmptyLocationUpdates = $on; PauseIdleLocationMonsters = $on; RetryLostJoinRequests = $on; FixMenuBoxShadow = $on; LogEatInterrupts = $on } | ConvertTo-Json
     Set-Content $configFile $config
 }
 
