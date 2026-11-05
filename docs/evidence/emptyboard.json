@@ -1,0 +1,16 @@
+{
+  "world": "ready in FarmHouse, tick 405",
+  "empty_board": {
+    "heldEntries": 18,
+    "dayAfter": 8,
+    "townOffered": 0,
+    "townEligibleByGameRule": 15
+  },
+  "note": null,
+  "mods": [
+    "SMAPI.ConsoleCommands 4.5.2",
+    "spacechase0.GenericModConfigMenu 1.16.0",
+    "Kkthnx.ValleyFixes 0.2.0-alpha.8",
+    "Kkthnx.ValleyFixes.DevHarness 0.1.0"
+  ]
+}

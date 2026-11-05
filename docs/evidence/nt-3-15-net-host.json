@@ -1,0 +1,3976 @@
+{
+  "world": "host ready in FarmHouse, multiplayerMode 2, server True",
+  "cabin": "ready for 6121168238893120697",
+  "clientJoined": true,
+  "nettune": {
+    "role": "host",
+    "condition": "3,15 net",
+    "broadcastPeriod": 3,
+    "interpolationTicks": 15,
+    "host_player_actor": null,
+    "host_player": {
+      "actor": "both",
+      "seconds": 23,
+      "net": {
+        "farmerDelta": {
+          "kbPerSecond": 0.29,
+          "totalKB": 6.8,
+          "messages": 91,
+          "meanBytes": 76,
+          "maxKB": 0.1
+        },
+        "worldDelta": {
+          "kbPerSecond": 0,
+          "totalKB": 0.1,
+          "messages": 3,
+          "meanBytes": 39,
+          "maxKB": 0
+        }
+      },
+      "modNet": [],
+      "gaps": {
+        "frames": 1380,
+        "meanMs": 16.67,
+        "medianMs": 21.63,
+        "p99Ms": 22.38,
+        "maxMs": 32.1,
+        "over40ms": 0,
+        "over100ms": 0,
+        "over500ms": 0,
+        "top5": [
+          32,
+          30,
+          28,
+          24,
+          23
+        ],
+        "bigGaps": []
+      },
+      "modMessagesReceived": [],
+      "sample": {
+        "seconds": 23,
+        "processCpuMsPerFrame": 1.64,
+        "processCpuPercentOfOneCore": 10,
+        "update": {
+          "frames": 1380,
+          "meanMs": 0.47,
+          "medianMs": 0.45,
+          "p99Ms": 0.66,
+          "maxMs": 7.44,
+          "over8ms": 0,
+          "over16ms": 0
+        },
+        "render": {
+          "frames": 1049,
+          "meanMs": 0.67,
+          "medianMs": 0.69,
+          "p99Ms": 0.84,
+          "maxMs": 1.55,
+          "over8ms": 0,
+          "over16ms": 0
+        },
+        "allocatedMBPerSecond": 5.97,
+        "gen0": 3,
+        "gen1": 2,
+        "gen2": 0,
+        "heapMB": 167,
+        "profile": {
+          "Game1._draw": {
+            "msPerFrame": 0.512,
+            "calls": 1049,
+            "kbPerCall": 3.81,
+            "meanUs": 673.9,
+            "maxMs": 1.55
+          },
+          "Game1._update": {
+            "msPerFrame": 0.448,
+            "calls": 1380,
+            "kbPerCall": 49.54,
+            "meanUs": 447.7,
+            "maxMs": 5.76
+          },
+          "GameLocation.updateEvenIfFarmerIsntHere": {
+            "msPerFrame": 0.299,
+            "calls": 111780,
+            "kbPerCall": 0.39,
+            "meanUs": 3.7,
+            "maxMs": 0.75
+          },
+          "GameLocation.updateCharacters": {
+            "msPerFrame": 0.183,
+            "calls": 111780,
+            "kbPerCall": 0.22,
+            "meanUs": 2.3,
+            "maxMs": 0.75
+          },
+          "Game1.shouldTimePass": {
+            "msPerFrame": 0.077,
+            "calls": 125967,
+            "kbPerCall": 0.09,
+            "meanUs": 0.8,
+            "maxMs": 0.1
+          },
+          "GameLocation.draw": {
+            "msPerFrame": 0.071,
+            "calls": 1049,
+            "kbPerCall": 1.37,
+            "meanUs": 93.4,
+            "maxMs": 0.27
+          },
+          "GameLocation.UpdateWhenCurrentLocation": {
+            "msPerFrame": 0.048,
+            "calls": 1380,
+            "kbPerCall": 0.93,
+            "meanUs": 48.3,
+            "maxMs": 3.2
+          },
+          "NPC.update": {
+            "msPerFrame": 0.021,
+            "calls": 53820,
+            "kbPerCall": 0.11,
+            "meanUs": 0.5,
+            "maxMs": 0.74
+          },
+          "Game1.performTenMinuteClockUpdate": {
+            "msPerFrame": 0.002,
+            "calls": 3,
+            "kbPerCall": 101.44,
+            "meanUs": 1011.1,
+            "maxMs": 2.36
+          }
+        },
+        "mods": {
+          "samples": 17264,
+          "droppedSamples": 0,
+          "samplesPerSecond": 751,
+          "byMod": {
+            "(game and vanilla code)": {
+              "sharePercent": 99.9,
+              "msPerFrame": 16.645
+            },
+            "Kkthnx.ValleyFixes.DevHarness": {
+              "sharePercent": 0.08,
+              "msPerFrame": 0.014
+            },
+            "SMAPI.ConsoleCommands": {
+              "sharePercent": 0.02,
+              "msPerFrame": 0.003
+            }
+          }
+        },
+        "locations": {
+          "backgroundUpdate": {
+            "total": {
+              "locations": 81,
+              "msPerFrame": 0.307,
+              "megabytesPerSecond": 1.86,
+              "calls": 111780
+            },
+            "empty": {
+              "locations": 53,
+              "msPerFrame": 0.179,
+              "megabytesPerSecond": 1.04,
+              "calls": 73140
+            },
+            "withCharacters": {
+              "locations": 26,
+              "msPerFrame": 0.118,
+              "megabytesPerSecond": 0.75,
+              "calls": 35880
+            },
+            "withMonsters": {
+              "locations": 0,
+              "msPerFrame": 0,
+              "megabytesPerSecond": 0,
+              "calls": 0
+            },
+            "withAnimals": {
+              "locations": 0,
+              "msPerFrame": 0,
+              "megabytesPerSecond": 0,
+              "calls": 0
+            },
+            "withBuildings": {
+              "locations": 1,
+              "msPerFrame": 0.005,
+              "megabytesPerSecond": 0.04,
+              "calls": 1380
+            },
+            "withSprites": {
+              "locations": 1,
+              "msPerFrame": 0.004,
+              "megabytesPerSecond": 0.02,
+              "calls": 1380
+            },
+            "topByTime": [
+              {
+                "location": "AnimalShop",
+                "msPerFrame": 0.007,
+                "meanUs": 7.4,
+                "maxMs": 0.75,
+                "kbPerCall": 0.88,
+                "Characters": 3,
+                "Monsters": 0,
+                "Villagers": 3,
+                "Sprites": 0,
+                "Animals": 0,
+                "Buildings": 0,
+                "Objects": 0
+              },
+              {
+                "location": "SeedShop",
+                "msPerFrame": 0.007,
+                "meanUs": 6.9,
+                "maxMs": 0.04,
+                "kbPerCall": 0.77,
+                "Characters": 3,
+                "Monsters": 0,
+                "Villagers": 3,
+                "Sprites": 0,
+                "Animals": 0,
+                "Buildings": 0,
+                "Objects": 0
+              },
+              {
+                "location": "JoshHouse",
+                "msPerFrame": 0.007,
+                "meanUs": 6.7,
+                "maxMs": 0.06,
+                "kbPerCall": 0.59,
+                "Characters": 3,
+                "Monsters": 0,
+                "Villagers": 3,
+                "Sprites": 0,
+                "Animals": 0,
+                "Buildings": 0,
+                "Objects": 0
+              },
+              {
+                "location": "SamHouse",
+                "msPerFrame": 0.005,
+                "meanUs": 5.2,
+                "maxMs": 0.18,
+                "kbPerCall": 0.59,
+                "Characters": 3,
+                "Monsters": 0,
+                "Villagers": 3,
+                "Sprites": 0,
+                "Animals": 0,
+                "Buildings": 0,
+                "Objects": 0
+              },
+              {
+                "location": "Farm",
+                "msPerFrame": 0.005,
+                "meanUs": 5.2,
+                "maxMs": 0.04,
+                "kbPerCall": 0.65,
+                "Characters": 0,
+                "Monsters": 0,
+                "Villagers": 0,
+                "Sprites": 0,
+                "Animals": 0,
+                "Buildings": 5,
+                "Objects": 1018
+              },
+              {
+                "location": "HarveyRoom",
+                "msPerFrame": 0.005,
+                "meanUs": 5,
+                "maxMs": 0.08,
+                "kbPerCall": 0.63,
+                "Characters": 1,
+                "Monsters": 0,
+                "Villagers": 1,
+                "Sprites": 0,
+                "Animals": 0,
+                "Buildings": 0,
+                "Objects": 0
+              },
+              {
+                "location": "Mountain",
+                "msPerFrame": 0.005,
+                "meanUs": 5,
+                "maxMs": 0.04,
+                "kbPerCall": 0.54,
+                "Characters": 1,
+                "Monsters": 0,
+                "Villagers": 1,
+                "Sprites": 0,
+                "Animals": 0,
+                "Buildings": 0,
+                "Objects": 63
+              },
+              {
+                "location": "ScienceHouse",
+                "msPerFrame": 0.005,
+                "meanUs": 4.9,
+                "maxMs": 0.03,
+                "kbPerCall": 0.59,
+                "Characters": 3,
+                "Monsters": 0,
+                "Villagers": 3,
+                "Sprites": 0,
+                "Animals": 0,
+                "Buildings": 0,
+                "Objects": 0
+              },
+              {
+                "location": "HaleyHouse",
+                "msPerFrame": 0.005,
+                "meanUs": 4.5,
+                "maxMs": 0.03,
+                "kbPerCall": 0.51,
+                "Characters": 2,
+                "Monsters": 0,
+                "Villagers": 2,
+                "Sprites": 0,
+                "Animals": 0,
+                "Buildings": 0,
+                "Objects": 0
+              },
+              {
+                "location": "SandyHouse",
+                "msPerFrame": 0.004,
+                "meanUs": 4.5,
+                "maxMs": 0.03,
+                "kbPerCall": 0.51,
+                "Characters": 2,
+                "Monsters": 0,
+                "Villagers": 2,
+                "Sprites": 0,
+                "Animals": 0,
+                "Buildings": 0,
+                "Objects": 0
+              },
+              {
+                "location": "Trailer",
+                "msPerFrame": 0.004,
+                "meanUs": 4.4,
+                "maxMs": 0.03,
+                "kbPerCall": 0.51,
+                "Characters": 2,
+                "Monsters": 0,
+                "Villagers": 2,
+                "Sprites": 0,
+                "Animals": 0,
+                "Buildings": 0,
+                "Objects": 0
+              },
+              {
+                "location": "Town",
+                "msPerFrame": 0.004,
+                "meanUs": 4.4,
+                "maxMs": 0.03,
+                "kbPerCall": 0.34,
+                "Characters": 0,
+                "Monsters": 0,
+                "Villagers": 0,
+                "Sprites": 13,
+                "Animals": 0,
+                "Buildings": 0,
+                "Objects": 85
+              }
+            ],
+            "topByBytes": [
+              {
+                "location": "AnimalShop",
+                "megabytesPerSecond": 0.05,
+                "kbPerCall": 0.88,
+                "Characters": 3,
+                "Monsters": 0,
+                "Sprites": 0,
+                "Animals": 0,
+                "Buildings": 0
+              },
+              {
+                "location": "SeedShop",
+                "megabytesPerSecond": 0.05,
+                "kbPerCall": 0.77,
+                "Characters": 3,
+                "Monsters": 0,
+                "Sprites": 0,
+                "Animals": 0,
+                "Buildings": 0
+              },
+              {
+                "location": "Farm",
+                "megabytesPerSecond": 0.04,
+                "kbPerCall": 0.65,
+                "Characters": 0,
+                "Monsters": 0,
+                "Sprites": 0,
+                "Animals": 0,
+                "Buildings": 5
+              },
+              {
+                "location": "HarveyRoom",
+                "megabytesPerSecond": 0.04,
+                "kbPerCall": 0.63,
+                "Characters": 1,
+                "Monsters": 0,
+                "Sprites": 0,
+                "Animals": 0,
+                "Buildings": 0
+              },
+              {
+                "location": "JoshHouse",
+                "megabytesPerSecond": 0.03,
+                "kbPerCall": 0.59,
+                "Characters": 3,
+                "Monsters": 0,
+                "Sprites": 0,
+                "Animals": 0,
+                "Buildings": 0
+              },
+              {
+                "location": "SamHouse",
+                "megabytesPerSecond": 0.03,
+                "kbPerCall": 0.59,
+                "Characters": 3,
+                "Monsters": 0,
+                "Sprites": 0,
+                "Animals": 0,
+                "Buildings": 0
+              },
+              {
+                "location": "ScienceHouse",
+                "megabytesPerSecond": 0.03,
+                "kbPerCall": 0.59,
+                "Characters": 3,
+                "Monsters": 0,
+                "Sprites": 0,
+                "Animals": 0,
+                "Buildings": 0
+              },
+              {
+                "location": "Mountain",
+                "megabytesPerSecond": 0.03,
+                "kbPerCall": 0.54,
+                "Characters": 1,
+                "Monsters": 0,
+                "Sprites": 0,
+                "Animals": 0,
+                "Buildings": 0
+              }
+            ]
+          },
+          "characterLoop": {
+            "total": {
+              "locations": 81,
+              "msPerFrame": 0.191,
+              "megabytesPerSecond": 1.06,
+              "calls": 111780
+            },
+            "empty": {
+              "locations": 53,
+              "msPerFrame": 0.106,
+              "megabytesPerSecond": 0.53,
+              "calls": 73140
+            },
+            "withCharacters": {
+              "locations": 26,
+              "msPerFrame": 0.081,
+              "megabytesPerSecond": 0.5,
+              "calls": 35880
+            },
+            "withMonsters": {
+              "locations": 0,
+              "msPerFrame": 0,
+              "megabytesPerSecond": 0,
+              "calls": 0
+            },
+            "withAnimals": {
+              "locations": 0,
+              "msPerFrame": 0,
+              "megabytesPerSecond": 0,
+              "calls": 0
+            },
+            "withBuildings": {
+              "locations": 1,
+              "msPerFrame": 0.002,
+              "megabytesPerSecond": 0.01,
+              "calls": 1380
+            },
+            "withSprites": {
+              "locations": 1,
+              "msPerFrame": 0.002,
+              "megabytesPerSecond": 0.01,
+              "calls": 1380
+            },
+            "topByTime": [
+              {
+                "location": "AnimalShop",
+                "msPerFrame": 0.006,
+                "meanUs": 5.9,
+                "maxMs": 0.75,
+                "kbPerCall": 0.72,
+                "Characters": 3,
+                "Monsters": 0,
+                "Villagers": 3,
+                "Sprites": 0,
+                "Animals": 0,
+                "Buildings": 0,
+                "Objects": 0
+              },
+              {
+                "location": "SeedShop",
+                "msPerFrame": 0.005,
+                "meanUs": 5.4,
+                "maxMs": 0.04,
+                "kbPerCall": 0.61,
+                "Characters": 3,
+                "Monsters": 0,
+                "Villagers": 3,
+                "Sprites": 0,
+                "Animals": 0,
+                "Buildings": 0,
+                "Objects": 0
+              },
+              {
+                "location": "JoshHouse",
+                "msPerFrame": 0.005,
+                "meanUs": 4.8,
+                "maxMs": 0.06,
+                "kbPerCall": 0.43,
+                "Characters": 3,
+                "Monsters": 0,
+                "Villagers": 3,
+                "Sprites": 0,
+                "Animals": 0,
+                "Buildings": 0,
+                "Objects": 0
+              },
+              {
+                "location": "SamHouse",
+                "msPerFrame": 0.004,
+                "meanUs": 3.7,
+                "maxMs": 0.18,
+                "kbPerCall": 0.43,
+                "Characters": 3,
+                "Monsters": 0,
+                "Villagers": 3,
+                "Sprites": 0,
+                "Animals": 0,
+                "Buildings": 0,
+                "Objects": 0
+              },
+              {
+                "location": "Mountain",
+                "msPerFrame": 0.004,
+                "meanUs": 3.6,
+                "maxMs": 0.04,
+                "kbPerCall": 0.37,
+                "Characters": 1,
+                "Monsters": 0,
+                "Villagers": 1,
+                "Sprites": 0,
+                "Animals": 0,
+                "Buildings": 0,
+                "Objects": 63
+              },
+              {
+                "location": "HarveyRoom",
+                "msPerFrame": 0.004,
+                "meanUs": 3.6,
+                "maxMs": 0.03,
+                "kbPerCall": 0.47,
+                "Characters": 1,
+                "Monsters": 0,
+                "Villagers": 1,
+                "Sprites": 0,
+                "Animals": 0,
+                "Buildings": 0,
+                "Objects": 0
+              },
+              {
+                "location": "ScienceHouse",
+                "msPerFrame": 0.003,
+                "meanUs": 3.5,
+                "maxMs": 0.03,
+                "kbPerCall": 0.43,
+                "Characters": 3,
+                "Monsters": 0,
+                "Villagers": 3,
+                "Sprites": 0,
+                "Animals": 0,
+                "Buildings": 0,
+                "Objects": 0
+              },
+              {
+                "location": "HaleyHouse",
+                "msPerFrame": 0.003,
+                "meanUs": 3.1,
+                "maxMs": 0.03,
+                "kbPerCall": 0.34,
+                "Characters": 2,
+                "Monsters": 0,
+                "Villagers": 2,
+                "Sprites": 0,
+                "Animals": 0,
+                "Buildings": 0,
+                "Objects": 0
+              },
+              {
+                "location": "Trailer",
+                "msPerFrame": 0.003,
+                "meanUs": 3,
+                "maxMs": 0.03,
+                "kbPerCall": 0.34,
+                "Characters": 2,
+                "Monsters": 0,
+                "Villagers": 2,
+                "Sprites": 0,
+                "Animals": 0,
+                "Buildings": 0,
+                "Objects": 0
+              },
+              {
+                "location": "SandyHouse",
+                "msPerFrame": 0.003,
+                "meanUs": 3,
+                "maxMs": 0.03,
+                "kbPerCall": 0.34,
+                "Characters": 2,
+                "Monsters": 0,
+                "Villagers": 2,
+                "Sprites": 0,
+                "Animals": 0,
+                "Buildings": 0,
+                "Objects": 0
+              },
+              {
+                "location": "Club",
+                "msPerFrame": 0.003,
+                "meanUs": 2.6,
+                "maxMs": 0.1,
+                "kbPerCall": 0.26,
+                "Characters": 1,
+                "Monsters": 0,
+                "Villagers": 1,
+                "Sprites": 0,
+                "Animals": 0,
+                "Buildings": 0,
+                "Objects": 0
+              },
+              {
+                "location": "WitchSwamp",
+                "msPerFrame": 0.003,
+                "meanUs": 2.6,
+                "maxMs": 0.03,
+                "kbPerCall": 0.26,
+                "Characters": 1,
+                "Monsters": 0,
+                "Villagers": 1,
+                "Sprites": 0,
+                "Animals": 0,
+                "Buildings": 0,
+                "Objects": 0
+              }
+            ],
+            "topByBytes": [
+              {
+                "location": "AnimalShop",
+                "megabytesPerSecond": 0.04,
+                "kbPerCall": 0.72,
+                "Characters": 3,
+                "Monsters": 0,
+                "Sprites": 0,
+                "Animals": 0,
+                "Buildings": 0
+              },
+              {
+                "location": "SeedShop",
+                "megabytesPerSecond": 0.04,
+                "kbPerCall": 0.61,
+                "Characters": 3,
+                "Monsters": 0,
+                "Sprites": 0,
+                "Animals": 0,
+                "Buildings": 0
+              },
+              {
+                "location": "HarveyRoom",
+                "megabytesPerSecond": 0.03,
+                "kbPerCall": 0.47,
+                "Characters": 1,
+                "Monsters": 0,
+                "Sprites": 0,
+                "Animals": 0,
+                "Buildings": 0
+              },
+              {
+                "location": "JoshHouse",
+                "megabytesPerSecond": 0.03,
+                "kbPerCall": 0.43,
+                "Characters": 3,
+                "Monsters": 0,
+                "Sprites": 0,
+                "Animals": 0,
+                "Buildings": 0
+              },
+              {
+                "location": "SamHouse",
+                "megabytesPerSecond": 0.03,
+                "kbPerCall": 0.43,
+                "Characters": 3,
+                "Monsters": 0,
+                "Sprites": 0,
+                "Animals": 0,
+                "Buildings": 0
+              },
+              {
+                "location": "ScienceHouse",
+                "megabytesPerSecond": 0.03,
+                "kbPerCall": 0.43,
+                "Characters": 3,
+                "Monsters": 0,
+                "Sprites": 0,
+                "Animals": 0,
+                "Buildings": 0
+              },
+              {
+                "location": "Mountain",
+                "megabytesPerSecond": 0.02,
+                "kbPerCall": 0.37,
+                "Characters": 1,
+                "Monsters": 0,
+                "Sprites": 0,
+                "Animals": 0,
+                "Buildings": 0
+              },
+              {
+                "location": "HaleyHouse",
+                "megabytesPerSecond": 0.02,
+                "kbPerCall": 0.34,
+                "Characters": 2,
+                "Monsters": 0,
+                "Sprites": 0,
+                "Animals": 0,
+                "Buildings": 0
+              }
+            ]
+          },
+          "tenMinuteUpdate": {
+            "total": {
+              "locations": 81,
+              "msPerFrame": 0.002,
+              "megabytesPerSecond": 0.01,
+              "calls": 243
+            },
+            "empty": {
+              "locations": 53,
+              "msPerFrame": 0,
+              "megabytesPerSecond": 0,
+              "calls": 159
+            },
+            "withCharacters": {
+              "locations": 26,
+              "msPerFrame": 0.002,
+              "megabytesPerSecond": 0.01,
+              "calls": 78
+            },
+            "withMonsters": {
+              "locations": 0,
+              "msPerFrame": 0,
+              "megabytesPerSecond": 0,
+              "calls": 0
+            },
+            "withAnimals": {
+              "locations": 0,
+              "msPerFrame": 0,
+              "megabytesPerSecond": 0,
+              "calls": 0
+            },
+            "withBuildings": {
+              "locations": 1,
+              "msPerFrame": 0,
+              "megabytesPerSecond": 0,
+              "calls": 3
+            },
+            "withSprites": {
+              "locations": 1,
+              "msPerFrame": 0,
+              "megabytesPerSecond": 0,
+              "calls": 3
+            },
+            "topByTime": [
+              {
+                "location": "AnimalShop",
+                "msPerFrame": 0.001,
+                "meanUs": 638.7,
+                "maxMs": 1.91,
+                "kbPerCall": 49.18,
+                "Characters": 3,
+                "Monsters": 0,
+                "Villagers": 3,
+                "Sprites": 0,
+                "Animals": 0,
+                "Buildings": 0,
+                "Objects": 0
+              },
+              {
+                "location": "Farm",
+                "msPerFrame": 0,
+                "meanUs": 66.7,
+                "maxMs": 0.07,
+                "kbPerCall": 0.74,
+                "Characters": 0,
+                "Monsters": 0,
+                "Villagers": 0,
+                "Sprites": 0,
+                "Animals": 0,
+                "Buildings": 5,
+                "Objects": 1018
+              },
+              {
+                "location": "IslandWest",
+                "msPerFrame": 0,
+                "meanUs": 37.3,
+                "maxMs": 0.05,
+                "kbPerCall": 1.72,
+                "Characters": 1,
+                "Monsters": 0,
+                "Villagers": 1,
+                "Sprites": 0,
+                "Animals": 0,
+                "Buildings": 0,
+                "Objects": 226
+              },
+              {
+                "location": "Forest",
+                "msPerFrame": 0,
+                "meanUs": 22.8,
+                "maxMs": 0.02,
+                "kbPerCall": 0.74,
+                "Characters": 0,
+                "Monsters": 0,
+                "Villagers": 0,
+                "Sprites": 0,
+                "Animals": 0,
+                "Buildings": 0,
+                "Objects": 182
+              },
+              {
+                "location": "BugLand",
+                "msPerFrame": 0,
+                "meanUs": 19.3,
+                "maxMs": 0.02,
+                "kbPerCall": 0.05,
+                "Characters": 0,
+                "Monsters": 0,
+                "Villagers": 0,
+                "Sprites": 0,
+                "Animals": 0,
+                "Buildings": 0,
+                "Objects": 176
+              },
+              {
+                "location": "Town",
+                "msPerFrame": 0,
+                "meanUs": 14.8,
+                "maxMs": 0.02,
+                "kbPerCall": 0.74,
+                "Characters": 0,
+                "Monsters": 0,
+                "Villagers": 0,
+                "Sprites": 9,
+                "Animals": 0,
+                "Buildings": 0,
+                "Objects": 85
+              },
+              {
+                "location": "Railroad",
+                "msPerFrame": 0,
+                "meanUs": 14.5,
+                "maxMs": 0.02,
+                "kbPerCall": 0.74,
+                "Characters": 0,
+                "Monsters": 0,
+                "Villagers": 0,
+                "Sprites": 0,
+                "Animals": 0,
+                "Buildings": 0,
+                "Objects": 63
+              },
+              {
+                "location": "SeedShop",
+                "msPerFrame": 0,
+                "meanUs": 14.3,
+                "maxMs": 0.04,
+                "kbPerCall": 1.16,
+                "Characters": 3,
+                "Monsters": 0,
+                "Villagers": 3,
+                "Sprites": 0,
+                "Animals": 0,
+                "Buildings": 0,
+                "Objects": 0
+              },
+              {
+                "location": "Mountain",
+                "msPerFrame": 0,
+                "meanUs": 13.3,
+                "maxMs": 0.02,
+                "kbPerCall": 1.84,
+                "Characters": 1,
+                "Monsters": 0,
+                "Villagers": 1,
+                "Sprites": 0,
+                "Animals": 0,
+                "Buildings": 0,
+                "Objects": 63
+              },
+              {
+                "location": "BusStop",
+                "msPerFrame": 0,
+                "meanUs": 6.5,
+                "maxMs": 0.01,
+                "kbPerCall": 0.74,
+                "Characters": 0,
+                "Monsters": 0,
+                "Villagers": 0,
+                "Sprites": 0,
+                "Animals": 0,
+                "Buildings": 0,
+                "Objects": 1
+              },
+              {
+                "location": "FarmHousede792046-c643-4650-a3e5-164911cc2919",
+                "msPerFrame": 0,
+                "meanUs": 4.5,
+                "maxMs": 0,
+                "kbPerCall": 0.05,
+                "Characters": 0,
+                "Monsters": 0,
+                "Villagers": 0,
+                "Sprites": 0,
+                "Animals": 0,
+                "Buildings": 0,
+                "Objects": 1
+              },
+              {
+                "location": "IslandFarmHouse",
+                "msPerFrame": 0,
+                "meanUs": 4.2,
+                "maxMs": 0.01,
+                "kbPerCall": 0.05,
+                "Characters": 0,
+                "Monsters": 0,
+                "Villagers": 0,
+                "Sprites": 0,
+                "Animals": 0,
+                "Buildings": 0,
+                "Objects": 0
+              }
+            ],
+            "topByBytes": [
+              {
+                "location": "AnimalShop",
+                "megabytesPerSecond": 0.01,
+                "kbPerCall": 49.18,
+                "Characters": 3,
+                "Monsters": 0,
+                "Sprites": 0,
+                "Animals": 0,
+                "Buildings": 0
+              },
+              {
+                "location": "Mountain",
+                "megabytesPerSecond": 0,
+                "kbPerCall": 1.84,
+                "Characters": 1,
+                "Monsters": 0,
+                "Sprites": 0,
+                "Animals": 0,
+                "Buildings": 0
+              },
+              {
+                "location": "IslandWest",
+                "megabytesPerSecond": 0,
+                "kbPerCall": 1.72,
+                "Characters": 1,
+                "Monsters": 0,
+                "Sprites": 0,
+                "Animals": 0,
+                "Buildings": 0
+              },
+              {
+                "location": "SeedShop",
+                "megabytesPerSecond": 0,
+                "kbPerCall": 1.16,
+                "Characters": 3,
+                "Monsters": 0,
+                "Sprites": 0,
+                "Animals": 0,
+                "Buildings": 0
+              },
+              {
+                "location": "HarveyRoom",
+                "megabytesPerSecond": 0,
+                "kbPerCall": 1.09,
+                "Characters": 1,
+                "Monsters": 0,
+                "Sprites": 0,
+                "Animals": 0,
+                "Buildings": 0
+              },
+              {
+                "location": "Farm",
+                "megabytesPerSecond": 0,
+                "kbPerCall": 0.74,
+                "Characters": 0,
+                "Monsters": 0,
+                "Sprites": 0,
+                "Animals": 0,
+                "Buildings": 5
+              },
+              {
+                "location": "Town",
+                "megabytesPerSecond": 0,
+                "kbPerCall": 0.74,
+                "Characters": 0,
+                "Monsters": 0,
+                "Sprites": 9,
+                "Animals": 0,
+                "Buildings": 0
+              },
+              {
+                "location": "Beach",
+                "megabytesPerSecond": 0,
+                "kbPerCall": 0.74,
+                "Characters": 0,
+                "Monsters": 0,
+                "Sprites": 0,
+                "Animals": 0,
+                "Buildings": 0
+              }
+            ]
+          }
+        },
+        "events": {
+          "handlersWrapped": 11,
+          "slowCalls": [],
+          "totalMsPerFrame": 0.011,
+          "totalMegabytesPerSecond": 0.01,
+          "topModsByTime": [
+            {
+              "mod": "Kkthnx.ValleyFixes.DevHarness",
+              "msPerFrame": 0.01,
+              "kbPerFrame": 0.18,
+              "megabytesPerSecond": 0.01,
+              "calls": 6238
+            },
+            {
+              "mod": "SMAPI.ConsoleCommands",
+              "msPerFrame": 0,
+              "kbPerFrame": 0,
+              "megabytesPerSecond": 0,
+              "calls": 1380
+            }
+          ],
+          "topModsByBytes": [
+            {
+              "mod": "Kkthnx.ValleyFixes.DevHarness",
+              "msPerFrame": 0.01,
+              "kbPerFrame": 0.18,
+              "megabytesPerSecond": 0.01,
+              "calls": 6238
+            },
+            {
+              "mod": "SMAPI.ConsoleCommands",
+              "msPerFrame": 0,
+              "kbPerFrame": 0,
+              "megabytesPerSecond": 0,
+              "calls": 1380
+            }
+          ],
+          "topHandlers": [
+            {
+              "Mod": "Kkthnx.ValleyFixes.DevHarness",
+              "Event": "UpdateTicked",
+              "msPerFrame": 0.01,
+              "meanUs": 4.9,
+              "kbPerCall": 0.08,
+              "Calls": 2760
+            },
+            {
+              "Mod": "SMAPI.ConsoleCommands",
+              "Event": "UpdateTicked",
+              "msPerFrame": 0,
+              "meanUs": 0.3,
+              "kbPerCall": 0,
+              "Calls": 1380
+            },
+            {
+              "Mod": "Kkthnx.ValleyFixes.DevHarness",
+              "Event": "UpdateTicking",
+              "msPerFrame": 0,
+              "meanUs": 0.3,
+              "kbPerCall": 0,
+              "Calls": 1380
+            },
+            {
+              "Mod": "Kkthnx.ValleyFixes.DevHarness",
+              "Event": "Rendered",
+              "msPerFrame": 0,
+              "meanUs": 0.3,
+              "kbPerCall": 0.03,
+              "Calls": 1049
+            },
+            {
+              "Mod": "Kkthnx.ValleyFixes.DevHarness",
+              "Event": "Rendering",
+              "msPerFrame": 0,
+              "meanUs": 0.1,
+              "kbPerCall": 0,
+              "Calls": 1049
+            }
+          ]
+        },
+        "allocTypes": {
+          "ticks": 1373,
+          "mainThreadMegabytesPerSecond": 5.6,
+          "otherThreadsMegabytesPerSecond": 0,
+          "mainThreadTopTypes": [
+            {
+              "type": "System.RuntimeMethodInfoStub",
+              "sharePercent": 27.8,
+              "megabytesPerSecond": 1.57
+            },
+            {
+              "type": "Enumerator[Microsoft.Xna.Framework.Vector2,StardewModdingAPI.Framework.StateTracking.ChestTracker]",
+              "sharePercent": 19.2,
+              "megabytesPerSecond": 1.09
+            },
+            {
+              "type": "Enumerator[StardewValley.NPC]",
+              "sharePercent": 14.2,
+              "megabytesPerSecond": 0.8
+            },
+            {
+              "type": "Enumerator[Microsoft.Xna.Framework.Vector2,StardewValley.Object]",
+              "sharePercent": 13.4,
+              "megabytesPerSecond": 0.75
+            },
+            {
+              "type": "System.Func\u00602[StardewValley.GameLocation,System.Boolean]",
+              "sharePercent": 6.3,
+              "megabytesPerSecond": 0.36
+            },
+            {
+              "type": "Enumerator[StardewModdingAPI.Framework.StateTracking.IWatcher]",
+              "sharePercent": 5.9,
+              "megabytesPerSecond": 0.33
+            },
+            {
+              "type": "\u003C\u003Ec__DisplayClass17_1",
+              "sharePercent": 2.6,
+              "megabytesPerSecond": 0.15
+            },
+            {
+              "type": "\u003CgetAllFarmhands\u003Ed__913",
+              "sharePercent": 1.3,
+              "megabytesPerSecond": 0.07
+            },
+            {
+              "type": "System.Func\u00602[Microsoft.Xna.Framework.Vector2,System.Boolean]",
+              "sharePercent": 0.8,
+              "megabytesPerSecond": 0.05
+            },
+            {
+              "type": "System.Int32[]",
+              "sharePercent": 0.7,
+              "megabytesPerSecond": 0.04
+            },
+            {
+              "type": "Concat2Iterator\u00601[StardewValley.Farmer]",
+              "sharePercent": 0.5,
+              "megabytesPerSecond": 0.03
+            },
+            {
+              "type": "StardewValley.Farmer[]",
+              "sharePercent": 0.5,
+              "megabytesPerSecond": 0.03
+            },
+            {
+              "type": "Enumerator[StardewValley.Item,System.Int32]",
+              "sharePercent": 0.4,
+              "megabytesPerSecond": 0.02
+            },
+            {
+              "type": "\u003C\u003Ec__DisplayClass244_0",
+              "sharePercent": 0.4,
+              "megabytesPerSecond": 0.02
+            },
+            {
+              "type": "System.Predicate\u00601[StardewValley.TemporaryAnimatedSprite]",
+              "sharePercent": 0.4,
+              "megabytesPerSecond": 0.02
+            },
+            {
+              "type": "Entry[StardewValley.Item,System.Int32][]",
+              "sharePercent": 0.4,
+              "megabytesPerSecond": 0.02
+            },
+            {
+              "type": "System.String",
+              "sharePercent": 0.4,
+              "megabytesPerSecond": 0.02
+            },
+            {
+              "type": "SelectEnumerableIterator\u00602[Netcode.NetRoot\u00601[StardewValley.Farmer],StardewValley.Farmer]",
+              "sharePercent": 0.3,
+              "megabytesPerSecond": 0.02
+            },
+            {
+              "type": "\u003C\u003Ec__DisplayClass14_0[StardewValley.Locations.MineShaft]",
+              "sharePercent": 0.3,
+              "megabytesPerSecond": 0.02
+            },
+            {
+              "type": "RepeatIterator\u00601[StardewValley.Farmer]",
+              "sharePercent": 0.3,
+              "megabytesPerSecond": 0.02
+            },
+            {
+              "type": "System.Collections.Generic.List\u00601[StardewValley.Farmer]",
+              "sharePercent": 0.2,
+              "megabytesPerSecond": 0.01
+            },
+            {
+              "type": "Enumerator[StardewValley.Item]",
+              "sharePercent": 0.2,
+              "megabytesPerSecond": 0.01
+            },
+            {
+              "type": "Enumerator[System.Int64,Netcode.NetRoot\u00601[StardewValley.Farmer]]",
+              "sharePercent": 0.2,
+              "megabytesPerSecond": 0.01
+            },
+            {
+              "type": "Entry[StardewValley.Item][]",
+              "sharePercent": 0.2,
+              "megabytesPerSecond": 0.01
+            },
+            {
+              "type": "System.Func\u00602[StardewValley.TerrainFeatures.LargeTerrainFeature,System.Boolean]",
+              "sharePercent": 0.1,
+              "megabytesPerSecond": 0.01
+            }
+          ]
+        },
+        "assets": {
+          "callsPerFrame": 2.4,
+          "callsPerSecond": 143,
+          "distinctNames": 9,
+          "topNames": [
+            {
+              "name": "Fonts\\SmallFont",
+              "perFrame": 1.52
+            },
+            {
+              "name": "Buildings\\Mailbox",
+              "perFrame": 0.76
+            },
+            {
+              "name": "LooseSprites\\Cursors",
+              "perFrame": 0.09
+            },
+            {
+              "name": "Data\\Machines",
+              "perFrame": 0
+            },
+            {
+              "name": "TerrainFeatures\\tree1_spring",
+              "perFrame": 0
+            },
+            {
+              "name": "TerrainFeatures\\tree3_spring",
+              "perFrame": 0
+            },
+            {
+              "name": "Data\\animationDescriptions",
+              "perFrame": 0
+            },
+            {
+              "name": "TerrainFeatures\\tree2_spring",
+              "perFrame": 0
+            },
+            {
+              "name": "TerrainFeatures\\grass",
+              "perFrame": 0
+            }
+          ],
+          "topCallers": [
+            {
+              "caller": "ChatMessage.draw \u003C- ChatBox.draw \u003C- Game1.DrawOverlays \u003C- .StardewValley.Game1._draw_PatchedBy\u003CKkthnx.ValleyFixes.DevHarness.Profiler\u003E",
+              "sharePercent": 62.5
+            },
+            {
+              "caller": "Building.draw \u003C- .StardewValley.GameLocation.draw_PatchedBy\u003CKkthnx.ValleyFixes.DevHarness.Profiler\u003E \u003C- Farm.draw \u003C- Game1.DrawWorld",
+              "sharePercent": 34.4
+            },
+            {
+              "caller": "TemporaryAnimatedSprite.loadTexture \u003C- TemporaryAnimatedSprite.GetTemporaryAnimatedSprite \u003C- Town.addClintMachineGraphics \u003C- \u003C\u003Ec.\u003CperformTenMinuteClockUpdate\u003Eb__738_0",
+              "sharePercent": 3.1
+            }
+          ]
+        }
+      },
+      "memory": {
+        "retainedMB": 166.8,
+        "gcHeapMB": 171,
+        "gcCommittedMB": 225,
+        "gcFragmentedMB": 26,
+        "privateMB": 1194,
+        "workingSetMB": 1068
+      }
+    },
+    "host_monster_actor": null,
+    "host_monster": {
+      "actor": "both",
+      "seconds": 23,
+      "net": {
+        "locationDelta": {
+          "kbPerSecond": 0.44,
+          "totalKB": 10,
+          "messages": 96,
+          "meanBytes": 106,
+          "maxKB": 0.7
+        },
+        "farmerDelta": {
+          "kbPerSecond": 0.01,
+          "totalKB": 0.3,
+          "messages": 4,
+          "meanBytes": 65,
+          "maxKB": 0.1
+        },
+        "worldDelta": {
+          "kbPerSecond": 0,
+          "totalKB": 0.1,
+          "messages": 3,
+          "meanBytes": 39,
+          "maxKB": 0
+        }
+      },
+      "modNet": [],
+      "gaps": {
+        "frames": 1380,
+        "meanMs": 16.67,
+        "medianMs": 21.62,
+        "p99Ms": 22.43,
+        "maxMs": 26.2,
+        "over40ms": 0,
+        "over100ms": 0,
+        "over500ms": 0,
+        "top5": [
+          26,
+          25,
+          24,
+          23,
+          23
+        ],
+        "bigGaps": []
+      },
+      "modMessagesReceived": [],
+      "sample": {
+        "seconds": 23,
+        "processCpuMsPerFrame": 1.66,
+        "processCpuPercentOfOneCore": 10,
+        "update": {
+          "frames": 1380,
+          "meanMs": 0.48,
+          "medianMs": 0.46,
+          "p99Ms": 0.71,
+          "maxMs": 15.07,
+          "over8ms": 2,
+          "over16ms": 0
+        },
+        "render": {
+          "frames": 1049,
+          "meanMs": 0.66,
+          "medianMs": 0.67,
+          "p99Ms": 0.78,
+          "maxMs": 5.2,
+          "over8ms": 0,
+          "over16ms": 0
+        },
+        "allocatedMBPerSecond": 5.98,
+        "gen0": 3,
+        "gen1": 1,
+        "gen2": 0,
+        "heapMB": 164,
+        "profile": {
+          "Game1._draw": {
+            "msPerFrame": 0.505,
+            "calls": 1049,
+            "kbPerCall": 3.8,
+            "meanUs": 663.9,
+            "maxMs": 5.2
+          },
+          "Game1._update": {
+            "msPerFrame": 0.456,
+            "calls": 1380,
+            "kbPerCall": 49.49,
+            "meanUs": 456.1,
+            "maxMs": 15.05
+          },
+          "GameLocation.updateEvenIfFarmerIsntHere": {
+            "msPerFrame": 0.319,
+            "calls": 111780,
+            "kbPerCall": 0.39,
+            "meanUs": 3.9,
+            "maxMs": 14.14
+          },
+          "GameLocation.updateCharacters": {
+            "msPerFrame": 0.203,
+            "calls": 111780,
+            "kbPerCall": 0.22,
+            "meanUs": 2.5,
+            "maxMs": 14.12
+          },
+          "Game1.shouldTimePass": {
+            "msPerFrame": 0.076,
+            "calls": 125967,
+            "kbPerCall": 0.09,
+            "meanUs": 0.8,
+            "maxMs": 0.03
+          },
+          "GameLocation.draw": {
+            "msPerFrame": 0.073,
+            "calls": 1049,
+            "kbPerCall": 1.37,
+            "meanUs": 95.5,
+            "maxMs": 4.21
+          },
+          "GameLocation.UpdateWhenCurrentLocation": {
+            "msPerFrame": 0.044,
+            "calls": 1380,
+            "kbPerCall": 0.93,
+            "meanUs": 44.4,
+            "maxMs": 0.86
+          },
+          "NPC.update": {
+            "msPerFrame": 0.033,
+            "calls": 54900,
+            "kbPerCall": 0.1,
+            "meanUs": 0.8,
+            "maxMs": 5.8
+          },
+          "Game1.performTenMinuteClockUpdate": {
+            "msPerFrame": 0.001,
+            "calls": 3,
+            "kbPerCall": 58.96,
+            "meanUs": 405.7,
+            "maxMs": 0.46
+          }
+        },
+        "mods": {
+          "samples": 17021,
+          "droppedSamples": 8,
+          "samplesPerSecond": 740,
+          "byMod": {
+            "(game and vanilla code)": {
+              "sharePercent": 99.88,
+              "msPerFrame": 16.647
+            },
+            "Kkthnx.ValleyFixes.DevHarness": {
+              "sharePercent": 0.11,
+              "msPerFrame": 0.019
+            },
+            "SMAPI.ConsoleCommands": {
+              "sharePercent": 0.01,
+              "msPerFrame": 0.002
+            }
+          }
+        },
+        "locations": {
+          "backgroundUpdate": {
+            "total": {
+              "locations": 81,
+              "msPerFrame": 0.326,
+              "megabytesPerSecond": 1.85,
+              "calls": 111780
+            },
+            "empty": {
+              "locations": 52,
+              "msPerFrame": 0.174,
+              "megabytesPerSecond": 1.02,
+              "calls": 71760
+            },
+            "withCharacters": {
+              "locations": 27,
+              "msPerFrame": 0.126,
+              "megabytesPerSecond": 0.76,
+              "calls": 37260
+            },
+            "withMonsters": {
+              "locations": 0,
+              "msPerFrame": 0,
+              "megabytesPerSecond": 0,
+              "calls": 0
+            },
+            "withAnimals": {
+              "locations": 0,
+              "msPerFrame": 0,
+              "megabytesPerSecond": 0,
+              "calls": 0
+            },
+            "withBuildings": {
+              "locations": 1,
+              "msPerFrame": 0.022,
+              "megabytesPerSecond": 0.04,
+              "calls": 1380
+            },
+            "withSprites": {
+              "locations": 1,
+              "msPerFrame": 0.004,
+              "megabytesPerSecond": 0.02,
+              "calls": 1380
+            },
+            "topByTime": [
+              {
+                "location": "Farm",
+                "msPerFrame": 0.022,
+                "meanUs": 21.8,
+                "maxMs": 14.14,
+                "kbPerCall": 0.76,
+                "Characters": 0,
+                "Monsters": 0,
+                "Villagers": 0,
+                "Sprites": 0,
+                "Animals": 0,
+                "Buildings": 5,
+                "Objects": 1018
+              },
+              {
+                "location": "Forest",
+                "msPerFrame": 0.014,
+                "meanUs": 13.8,
+                "maxMs": 0.47,
+                "kbPerCall": 0.94,
+                "Characters": 1,
+                "Monsters": 0,
+                "Villagers": 1,
+                "Sprites": 0,
+                "Animals": 0,
+                "Buildings": 0,
+                "Objects": 182
+              },
+              {
+                "location": "AnimalShop",
+                "msPerFrame": 0.008,
+                "meanUs": 7.7,
+                "maxMs": 3.67,
+                "kbPerCall": 0.59,
+                "Characters": 2,
+                "Monsters": 0,
+                "Villagers": 2,
+                "Sprites": 0,
+                "Animals": 0,
+                "Buildings": 0,
+                "Objects": 0
+              },
+              {
+                "location": "JoshHouse",
+                "msPerFrame": 0.006,
+                "meanUs": 5.9,
+                "maxMs": 0.03,
+                "kbPerCall": 0.59,
+                "Characters": 3,
+                "Monsters": 0,
+                "Villagers": 3,
+                "Sprites": 0,
+                "Animals": 0,
+                "Buildings": 0,
+                "Objects": 0
+              },
+              {
+                "location": "SamHouse",
+                "msPerFrame": 0.005,
+                "meanUs": 5,
+                "maxMs": 0.03,
+                "kbPerCall": 0.59,
+                "Characters": 3,
+                "Monsters": 0,
+                "Villagers": 3,
+                "Sprites": 0,
+                "Animals": 0,
+                "Buildings": 0,
+                "Objects": 0
+              },
+              {
+                "location": "SeedShop",
+                "msPerFrame": 0.005,
+                "meanUs": 4.9,
+                "maxMs": 0.03,
+                "kbPerCall": 0.59,
+                "Characters": 3,
+                "Monsters": 0,
+                "Villagers": 3,
+                "Sprites": 0,
+                "Animals": 0,
+                "Buildings": 0,
+                "Objects": 0
+              },
+              {
+                "location": "ScienceHouse",
+                "msPerFrame": 0.005,
+                "meanUs": 4.9,
+                "maxMs": 0.03,
+                "kbPerCall": 0.59,
+                "Characters": 3,
+                "Monsters": 0,
+                "Villagers": 3,
+                "Sprites": 0,
+                "Animals": 0,
+                "Buildings": 0,
+                "Objects": 0
+              },
+              {
+                "location": "HaleyHouse",
+                "msPerFrame": 0.004,
+                "meanUs": 4.5,
+                "maxMs": 0.03,
+                "kbPerCall": 0.51,
+                "Characters": 2,
+                "Monsters": 0,
+                "Villagers": 2,
+                "Sprites": 0,
+                "Animals": 0,
+                "Buildings": 0,
+                "Objects": 0
+              },
+              {
+                "location": "Trailer",
+                "msPerFrame": 0.004,
+                "meanUs": 4.4,
+                "maxMs": 0.03,
+                "kbPerCall": 0.51,
+                "Characters": 2,
+                "Monsters": 0,
+                "Villagers": 2,
+                "Sprites": 0,
+                "Animals": 0,
+                "Buildings": 0,
+                "Objects": 0
+              },
+              {
+                "location": "Town",
+                "msPerFrame": 0.004,
+                "meanUs": 4.4,
+                "maxMs": 0.03,
+                "kbPerCall": 0.34,
+                "Characters": 0,
+                "Monsters": 0,
+                "Villagers": 0,
+                "Sprites": 12,
+                "Animals": 0,
+                "Buildings": 0,
+                "Objects": 85
+              },
+              {
+                "location": "SandyHouse",
+                "msPerFrame": 0.004,
+                "meanUs": 4.3,
+                "maxMs": 0.03,
+                "kbPerCall": 0.51,
+                "Characters": 2,
+                "Monsters": 0,
+                "Villagers": 2,
+                "Sprites": 0,
+                "Animals": 0,
+                "Buildings": 0,
+                "Objects": 0
+              },
+              {
+                "location": "Mine",
+                "msPerFrame": 0.004,
+                "meanUs": 4,
+                "maxMs": 0.03,
+                "kbPerCall": 0.42,
+                "Characters": 1,
+                "Monsters": 0,
+                "Villagers": 1,
+                "Sprites": 0,
+                "Animals": 0,
+                "Buildings": 0,
+                "Objects": 1
+              }
+            ],
+            "topByBytes": [
+              {
+                "location": "Forest",
+                "megabytesPerSecond": 0.06,
+                "kbPerCall": 0.94,
+                "Characters": 1,
+                "Monsters": 0,
+                "Sprites": 0,
+                "Animals": 0,
+                "Buildings": 0
+              },
+              {
+                "location": "Farm",
+                "megabytesPerSecond": 0.04,
+                "kbPerCall": 0.76,
+                "Characters": 0,
+                "Monsters": 0,
+                "Sprites": 0,
+                "Animals": 0,
+                "Buildings": 5
+              },
+              {
+                "location": "JoshHouse",
+                "megabytesPerSecond": 0.03,
+                "kbPerCall": 0.59,
+                "Characters": 3,
+                "Monsters": 0,
+                "Sprites": 0,
+                "Animals": 0,
+                "Buildings": 0
+              },
+              {
+                "location": "SamHouse",
+                "megabytesPerSecond": 0.03,
+                "kbPerCall": 0.59,
+                "Characters": 3,
+                "Monsters": 0,
+                "Sprites": 0,
+                "Animals": 0,
+                "Buildings": 0
+              },
+              {
+                "location": "SeedShop",
+                "megabytesPerSecond": 0.03,
+                "kbPerCall": 0.59,
+                "Characters": 3,
+                "Monsters": 0,
+                "Sprites": 0,
+                "Animals": 0,
+                "Buildings": 0
+              },
+              {
+                "location": "ScienceHouse",
+                "megabytesPerSecond": 0.03,
+                "kbPerCall": 0.59,
+                "Characters": 3,
+                "Monsters": 0,
+                "Sprites": 0,
+                "Animals": 0,
+                "Buildings": 0
+              },
+              {
+                "location": "AnimalShop",
+                "megabytesPerSecond": 0.03,
+                "kbPerCall": 0.59,
+                "Characters": 2,
+                "Monsters": 0,
+                "Sprites": 0,
+                "Animals": 0,
+                "Buildings": 0
+              },
+              {
+                "location": "HaleyHouse",
+                "megabytesPerSecond": 0.03,
+                "kbPerCall": 0.51,
+                "Characters": 2,
+                "Monsters": 0,
+                "Sprites": 0,
+                "Animals": 0,
+                "Buildings": 0
+              }
+            ]
+          },
+          "characterLoop": {
+            "total": {
+              "locations": 81,
+              "msPerFrame": 0.211,
+              "megabytesPerSecond": 1.05,
+              "calls": 111780
+            },
+            "empty": {
+              "locations": 52,
+              "msPerFrame": 0.103,
+              "megabytesPerSecond": 0.52,
+              "calls": 71760
+            },
+            "withCharacters": {
+              "locations": 27,
+              "msPerFrame": 0.087,
+              "megabytesPerSecond": 0.5,
+              "calls": 37260
+            },
+            "withMonsters": {
+              "locations": 0,
+              "msPerFrame": 0,
+              "megabytesPerSecond": 0,
+              "calls": 0
+            },
+            "withAnimals": {
+              "locations": 0,
+              "msPerFrame": 0,
+              "megabytesPerSecond": 0,
+              "calls": 0
+            },
+            "withBuildings": {
+              "locations": 1,
+              "msPerFrame": 0.018,
+              "megabytesPerSecond": 0.02,
+              "calls": 1380
+            },
+            "withSprites": {
+              "locations": 1,
+              "msPerFrame": 0.002,
+              "megabytesPerSecond": 0.01,
+              "calls": 1380
+            },
+            "topByTime": [
+              {
+                "location": "Farm",
+                "msPerFrame": 0.018,
+                "meanUs": 18.4,
+                "maxMs": 14.12,
+                "kbPerCall": 0.29,
+                "Characters": 0,
+                "Monsters": 0,
+                "Villagers": 0,
+                "Sprites": 0,
+                "Animals": 0,
+                "Buildings": 5,
+                "Objects": 1018
+              },
+              {
+                "location": "Forest",
+                "msPerFrame": 0.012,
+                "meanUs": 12.4,
+                "maxMs": 0.47,
+                "kbPerCall": 0.78,
+                "Characters": 1,
+                "Monsters": 0,
+                "Villagers": 1,
+                "Sprites": 0,
+                "Animals": 0,
+                "Buildings": 0,
+                "Objects": 182
+              },
+              {
+                "location": "AnimalShop",
+                "msPerFrame": 0.006,
+                "meanUs": 6.3,
+                "maxMs": 3.67,
+                "kbPerCall": 0.43,
+                "Characters": 2,
+                "Monsters": 0,
+                "Villagers": 2,
+                "Sprites": 0,
+                "Animals": 0,
+                "Buildings": 0,
+                "Objects": 0
+              },
+              {
+                "location": "JoshHouse",
+                "msPerFrame": 0.004,
+                "meanUs": 4.1,
+                "maxMs": 0.03,
+                "kbPerCall": 0.43,
+                "Characters": 3,
+                "Monsters": 0,
+                "Villagers": 3,
+                "Sprites": 0,
+                "Animals": 0,
+                "Buildings": 0,
+                "Objects": 0
+              },
+              {
+                "location": "SamHouse",
+                "msPerFrame": 0.004,
+                "meanUs": 3.6,
+                "maxMs": 0.03,
+                "kbPerCall": 0.43,
+                "Characters": 3,
+                "Monsters": 0,
+                "Villagers": 3,
+                "Sprites": 0,
+                "Animals": 0,
+                "Buildings": 0,
+                "Objects": 0
+              },
+              {
+                "location": "SeedShop",
+                "msPerFrame": 0.003,
+                "meanUs": 3.5,
+                "maxMs": 0.03,
+                "kbPerCall": 0.43,
+                "Characters": 3,
+                "Monsters": 0,
+                "Villagers": 3,
+                "Sprites": 0,
+                "Animals": 0,
+                "Buildings": 0,
+                "Objects": 0
+              },
+              {
+                "location": "ScienceHouse",
+                "msPerFrame": 0.003,
+                "meanUs": 3.4,
+                "maxMs": 0.03,
+                "kbPerCall": 0.43,
+                "Characters": 3,
+                "Monsters": 0,
+                "Villagers": 3,
+                "Sprites": 0,
+                "Animals": 0,
+                "Buildings": 0,
+                "Objects": 0
+              },
+              {
+                "location": "HaleyHouse",
+                "msPerFrame": 0.003,
+                "meanUs": 3.1,
+                "maxMs": 0.03,
+                "kbPerCall": 0.34,
+                "Characters": 2,
+                "Monsters": 0,
+                "Villagers": 2,
+                "Sprites": 0,
+                "Animals": 0,
+                "Buildings": 0,
+                "Objects": 0
+              },
+              {
+                "location": "Trailer",
+                "msPerFrame": 0.003,
+                "meanUs": 3,
+                "maxMs": 0.03,
+                "kbPerCall": 0.34,
+                "Characters": 2,
+                "Monsters": 0,
+                "Villagers": 2,
+                "Sprites": 0,
+                "Animals": 0,
+                "Buildings": 0,
+                "Objects": 0
+              },
+              {
+                "location": "SandyHouse",
+                "msPerFrame": 0.003,
+                "meanUs": 2.9,
+                "maxMs": 0.02,
+                "kbPerCall": 0.34,
+                "Characters": 2,
+                "Monsters": 0,
+                "Villagers": 2,
+                "Sprites": 0,
+                "Animals": 0,
+                "Buildings": 0,
+                "Objects": 0
+              },
+              {
+                "location": "Mine",
+                "msPerFrame": 0.003,
+                "meanUs": 2.6,
+                "maxMs": 0.02,
+                "kbPerCall": 0.26,
+                "Characters": 1,
+                "Monsters": 0,
+                "Villagers": 1,
+                "Sprites": 0,
+                "Animals": 0,
+                "Buildings": 0,
+                "Objects": 1
+              },
+              {
+                "location": "Blacksmith",
+                "msPerFrame": 0.003,
+                "meanUs": 2.6,
+                "maxMs": 0.03,
+                "kbPerCall": 0.26,
+                "Characters": 1,
+                "Monsters": 0,
+                "Villagers": 1,
+                "Sprites": 0,
+                "Animals": 0,
+                "Buildings": 0,
+                "Objects": 0
+              }
+            ],
+            "topByBytes": [
+              {
+                "location": "Forest",
+                "megabytesPerSecond": 0.05,
+                "kbPerCall": 0.78,
+                "Characters": 1,
+                "Monsters": 0,
+                "Sprites": 0,
+                "Animals": 0,
+                "Buildings": 0
+              },
+              {
+                "location": "JoshHouse",
+                "megabytesPerSecond": 0.03,
+                "kbPerCall": 0.43,
+                "Characters": 3,
+                "Monsters": 0,
+                "Sprites": 0,
+                "Animals": 0,
+                "Buildings": 0
+              },
+              {
+                "location": "SamHouse",
+                "megabytesPerSecond": 0.03,
+                "kbPerCall": 0.43,
+                "Characters": 3,
+                "Monsters": 0,
+                "Sprites": 0,
+                "Animals": 0,
+                "Buildings": 0
+              },
+              {
+                "location": "SeedShop",
+                "megabytesPerSecond": 0.03,
+                "kbPerCall": 0.43,
+                "Characters": 3,
+                "Monsters": 0,
+                "Sprites": 0,
+                "Animals": 0,
+                "Buildings": 0
+              },
+              {
+                "location": "ScienceHouse",
+                "megabytesPerSecond": 0.03,
+                "kbPerCall": 0.43,
+                "Characters": 3,
+                "Monsters": 0,
+                "Sprites": 0,
+                "Animals": 0,
+                "Buildings": 0
+              },
+              {
+                "location": "AnimalShop",
+                "megabytesPerSecond": 0.02,
+                "kbPerCall": 0.43,
+                "Characters": 2,
+                "Monsters": 0,
+                "Sprites": 0,
+                "Animals": 0,
+                "Buildings": 0
+              },
+              {
+                "location": "HaleyHouse",
+                "megabytesPerSecond": 0.02,
+                "kbPerCall": 0.34,
+                "Characters": 2,
+                "Monsters": 0,
+                "Sprites": 0,
+                "Animals": 0,
+                "Buildings": 0
+              },
+              {
+                "location": "Trailer",
+                "megabytesPerSecond": 0.02,
+                "kbPerCall": 0.34,
+                "Characters": 2,
+                "Monsters": 0,
+                "Sprites": 0,
+                "Animals": 0,
+                "Buildings": 0
+              }
+            ]
+          },
+          "tenMinuteUpdate": {
+            "total": {
+              "locations": 81,
+              "msPerFrame": 0.001,
+              "megabytesPerSecond": 0,
+              "calls": 243
+            },
+            "empty": {
+              "locations": 52,
+              "msPerFrame": 0,
+              "megabytesPerSecond": 0,
+              "calls": 156
+            },
+            "withCharacters": {
+              "locations": 27,
+              "msPerFrame": 0,
+              "megabytesPerSecond": 0,
+              "calls": 81
+            },
+            "withMonsters": {
+              "locations": 0,
+              "msPerFrame": 0,
+              "megabytesPerSecond": 0,
+              "calls": 0
+            },
+            "withAnimals": {
+              "locations": 0,
+              "msPerFrame": 0,
+              "megabytesPerSecond": 0,
+              "calls": 0
+            },
+            "withBuildings": {
+              "locations": 1,
+              "msPerFrame": 0,
+              "megabytesPerSecond": 0,
+              "calls": 3
+            },
+            "withSprites": {
+              "locations": 1,
+              "msPerFrame": 0,
+              "megabytesPerSecond": 0,
+              "calls": 3
+            },
+            "topByTime": [
+              {
+                "location": "Farm",
+                "msPerFrame": 0,
+                "meanUs": 65.3,
+                "maxMs": 0.07,
+                "kbPerCall": 0.76,
+                "Characters": 0,
+                "Monsters": 0,
+                "Villagers": 0,
+                "Sprites": 0,
+                "Animals": 0,
+                "Buildings": 5,
+                "Objects": 1018
+              },
+              {
+                "location": "IslandWest",
+                "msPerFrame": 0,
+                "meanUs": 29.5,
+                "maxMs": 0.03,
+                "kbPerCall": 0.76,
+                "Characters": 1,
+                "Monsters": 0,
+                "Villagers": 1,
+                "Sprites": 0,
+                "Animals": 0,
+                "Buildings": 0,
+                "Objects": 226
+              },
+              {
+                "location": "Forest",
+                "msPerFrame": 0,
+                "meanUs": 22.6,
+                "maxMs": 0.02,
+                "kbPerCall": 0.76,
+                "Characters": 1,
+                "Monsters": 0,
+                "Villagers": 1,
+                "Sprites": 0,
+                "Animals": 0,
+                "Buildings": 0,
+                "Objects": 182
+              },
+              {
+                "location": "BugLand",
+                "msPerFrame": 0,
+                "meanUs": 19.6,
+                "maxMs": 0.02,
+                "kbPerCall": 0.05,
+                "Characters": 0,
+                "Monsters": 0,
+                "Villagers": 0,
+                "Sprites": 0,
+                "Animals": 0,
+                "Buildings": 0,
+                "Objects": 176
+              },
+              {
+                "location": "IslandSouth",
+                "msPerFrame": 0,
+                "meanUs": 19.2,
+                "maxMs": 0.03,
+                "kbPerCall": 2.61,
+                "Characters": 0,
+                "Monsters": 0,
+                "Villagers": 0,
+                "Sprites": 0,
+                "Animals": 0,
+                "Buildings": 0,
+                "Objects": 1
+              },
+              {
+                "location": "IslandSouthEast",
+                "msPerFrame": 0,
+                "meanUs": 16.9,
+                "maxMs": 0.04,
+                "kbPerCall": 3.31,
+                "Characters": 0,
+                "Monsters": 0,
+                "Villagers": 0,
+                "Sprites": 0,
+                "Animals": 0,
+                "Buildings": 0,
+                "Objects": 0
+              },
+              {
+                "location": "Town",
+                "msPerFrame": 0,
+                "meanUs": 15.8,
+                "maxMs": 0.02,
+                "kbPerCall": 0.74,
+                "Characters": 0,
+                "Monsters": 0,
+                "Villagers": 0,
+                "Sprites": 9,
+                "Animals": 0,
+                "Buildings": 0,
+                "Objects": 85
+              },
+              {
+                "location": "Railroad",
+                "msPerFrame": 0,
+                "meanUs": 10.9,
+                "maxMs": 0.01,
+                "kbPerCall": 0.74,
+                "Characters": 0,
+                "Monsters": 0,
+                "Villagers": 0,
+                "Sprites": 0,
+                "Animals": 0,
+                "Buildings": 0,
+                "Objects": 63
+              },
+              {
+                "location": "Mountain",
+                "msPerFrame": 0,
+                "meanUs": 10.9,
+                "maxMs": 0.01,
+                "kbPerCall": 0.74,
+                "Characters": 1,
+                "Monsters": 0,
+                "Villagers": 1,
+                "Sprites": 0,
+                "Animals": 0,
+                "Buildings": 0,
+                "Objects": 63
+              },
+              {
+                "location": "Beach",
+                "msPerFrame": 0,
+                "meanUs": 9.4,
+                "maxMs": 0.02,
+                "kbPerCall": 1.61,
+                "Characters": 0,
+                "Monsters": 0,
+                "Villagers": 0,
+                "Sprites": 0,
+                "Animals": 0,
+                "Buildings": 0,
+                "Objects": 3
+              },
+              {
+                "location": "BeachNightMarket",
+                "msPerFrame": 0,
+                "meanUs": 5.3,
+                "maxMs": 0.01,
+                "kbPerCall": 1.41,
+                "Characters": 0,
+                "Monsters": 0,
+                "Villagers": 0,
+                "Sprites": 0,
+                "Animals": 0,
+                "Buildings": 0,
+                "Objects": 0
+              },
+              {
+                "location": "Woods",
+                "msPerFrame": 0,
+                "meanUs": 5,
+                "maxMs": 0.01,
+                "kbPerCall": 0.74,
+                "Characters": 0,
+                "Monsters": 0,
+                "Villagers": 0,
+                "Sprites": 0,
+                "Animals": 0,
+                "Buildings": 0,
+                "Objects": 0
+              }
+            ],
+            "topByBytes": [
+              {
+                "location": "IslandSouthEast",
+                "megabytesPerSecond": 0,
+                "kbPerCall": 3.31,
+                "Characters": 0,
+                "Monsters": 0,
+                "Sprites": 0,
+                "Animals": 0,
+                "Buildings": 0
+              },
+              {
+                "location": "IslandSouth",
+                "megabytesPerSecond": 0,
+                "kbPerCall": 2.61,
+                "Characters": 0,
+                "Monsters": 0,
+                "Sprites": 0,
+                "Animals": 0,
+                "Buildings": 0
+              },
+              {
+                "location": "Beach",
+                "megabytesPerSecond": 0,
+                "kbPerCall": 1.61,
+                "Characters": 0,
+                "Monsters": 0,
+                "Sprites": 0,
+                "Animals": 0,
+                "Buildings": 0
+              },
+              {
+                "location": "BeachNightMarket",
+                "megabytesPerSecond": 0,
+                "kbPerCall": 1.41,
+                "Characters": 0,
+                "Monsters": 0,
+                "Sprites": 0,
+                "Animals": 0,
+                "Buildings": 0
+              },
+              {
+                "location": "Desert",
+                "megabytesPerSecond": 0,
+                "kbPerCall": 1.01,
+                "Characters": 0,
+                "Monsters": 0,
+                "Sprites": 0,
+                "Animals": 0,
+                "Buildings": 0
+              },
+              {
+                "location": "DesertFestival",
+                "megabytesPerSecond": 0,
+                "kbPerCall": 1.01,
+                "Characters": 0,
+                "Monsters": 0,
+                "Sprites": 0,
+                "Animals": 0,
+                "Buildings": 0
+              },
+              {
+                "location": "IslandWest",
+                "megabytesPerSecond": 0,
+                "kbPerCall": 0.76,
+                "Characters": 1,
+                "Monsters": 0,
+                "Sprites": 0,
+                "Animals": 0,
+                "Buildings": 0
+              },
+              {
+                "location": "Farm",
+                "megabytesPerSecond": 0,
+                "kbPerCall": 0.76,
+                "Characters": 0,
+                "Monsters": 0,
+                "Sprites": 0,
+                "Animals": 0,
+                "Buildings": 5
+              }
+            ]
+          }
+        },
+        "events": {
+          "handlersWrapped": 11,
+          "slowCalls": [],
+          "totalMsPerFrame": 0.012,
+          "totalMegabytesPerSecond": 0.02,
+          "topModsByTime": [
+            {
+              "mod": "Kkthnx.ValleyFixes.DevHarness",
+              "msPerFrame": 0.011,
+              "kbPerFrame": 0.41,
+              "megabytesPerSecond": 0.02,
+              "calls": 6238
+            },
+            {
+              "mod": "SMAPI.ConsoleCommands",
+              "msPerFrame": 0,
+              "kbPerFrame": 0,
+              "megabytesPerSecond": 0,
+              "calls": 1380
+            }
+          ],
+          "topModsByBytes": [
+            {
+              "mod": "Kkthnx.ValleyFixes.DevHarness",
+              "msPerFrame": 0.011,
+              "kbPerFrame": 0.41,
+              "megabytesPerSecond": 0.02,
+              "calls": 6238
+            },
+            {
+              "mod": "SMAPI.ConsoleCommands",
+              "msPerFrame": 0,
+              "kbPerFrame": 0,
+              "megabytesPerSecond": 0,
+              "calls": 1380
+            }
+          ],
+          "topHandlers": [
+            {
+              "Mod": "Kkthnx.ValleyFixes.DevHarness",
+              "Event": "UpdateTicked",
+              "msPerFrame": 0.011,
+              "meanUs": 5.4,
+              "kbPerCall": 0.2,
+              "Calls": 2760
+            },
+            {
+              "Mod": "SMAPI.ConsoleCommands",
+              "Event": "UpdateTicked",
+              "msPerFrame": 0,
+              "meanUs": 0.3,
+              "kbPerCall": 0,
+              "Calls": 1380
+            },
+            {
+              "Mod": "Kkthnx.ValleyFixes.DevHarness",
+              "Event": "UpdateTicking",
+              "msPerFrame": 0,
+              "meanUs": 0.3,
+              "kbPerCall": 0,
+              "Calls": 1380
+            },
+            {
+              "Mod": "Kkthnx.ValleyFixes.DevHarness",
+              "Event": "Rendered",
+              "msPerFrame": 0,
+              "meanUs": 0.2,
+              "kbPerCall": 0,
+              "Calls": 1049
+            },
+            {
+              "Mod": "Kkthnx.ValleyFixes.DevHarness",
+              "Event": "Rendering",
+              "msPerFrame": 0,
+              "meanUs": 0.1,
+              "kbPerCall": 0,
+              "Calls": 1049
+            }
+          ]
+        },
+        "allocTypes": {
+          "ticks": 1373,
+          "mainThreadMegabytesPerSecond": 5.7,
+          "otherThreadsMegabytesPerSecond": 0,
+          "mainThreadTopTypes": [
+            {
+              "type": "System.RuntimeMethodInfoStub",
+              "sharePercent": 23.8,
+              "megabytesPerSecond": 1.34
+            },
+            {
+              "type": "Enumerator[Microsoft.Xna.Framework.Vector2,StardewModdingAPI.Framework.StateTracking.ChestTracker]",
+              "sharePercent": 19.9,
+              "megabytesPerSecond": 1.13
+            },
+            {
+              "type": "Enumerator[Microsoft.Xna.Framework.Vector2,StardewValley.Object]",
+              "sharePercent": 19.8,
+              "megabytesPerSecond": 1.12
+            },
+            {
+              "type": "Enumerator[StardewValley.NPC]",
+              "sharePercent": 11.1,
+              "megabytesPerSecond": 0.63
+            },
+            {
+              "type": "Enumerator[StardewModdingAPI.Framework.StateTracking.IWatcher]",
+              "sharePercent": 7.8,
+              "megabytesPerSecond": 0.44
+            },
+            {
+              "type": "System.Func\u00602[StardewValley.GameLocation,System.Boolean]",
+              "sharePercent": 4.6,
+              "megabytesPerSecond": 0.26
+            },
+            {
+              "type": "\u003C\u003Ec__DisplayClass17_1",
+              "sharePercent": 1.9,
+              "megabytesPerSecond": 0.11
+            },
+            {
+              "type": "\u003CgetAllFarmhands\u003Ed__913",
+              "sharePercent": 1,
+              "megabytesPerSecond": 0.05
+            },
+            {
+              "type": "Entry[StardewValley.Item][]",
+              "sharePercent": 0.7,
+              "megabytesPerSecond": 0.04
+            },
+            {
+              "type": "Microsoft.Xna.Framework.Graphics.RenderTargetBinding[]",
+              "sharePercent": 0.6,
+              "megabytesPerSecond": 0.03
+            },
+            {
+              "type": "System.String",
+              "sharePercent": 0.5,
+              "megabytesPerSecond": 0.03
+            },
+            {
+              "type": "Entry[StardewValley.Item,System.Int32][]",
+              "sharePercent": 0.5,
+              "megabytesPerSecond": 0.03
+            },
+            {
+              "type": "System.Action",
+              "sharePercent": 0.5,
+              "megabytesPerSecond": 0.03
+            },
+            {
+              "type": "StardewValley.Farmer[]",
+              "sharePercent": 0.4,
+              "megabytesPerSecond": 0.02
+            },
+            {
+              "type": "Enumerator[StardewValley.Item]",
+              "sharePercent": 0.4,
+              "megabytesPerSecond": 0.02
+            },
+            {
+              "type": "Enumerator[StardewValley.GameLocation,StardewModdingAPI.Framework.StateTracking.LocationTracker]",
+              "sharePercent": 0.4,
+              "megabytesPerSecond": 0.02
+            },
+            {
+              "type": "System.Int32[]",
+              "sharePercent": 0.4,
+              "megabytesPerSecond": 0.02
+            },
+            {
+              "type": "System.Func\u00602[System.String,System.Nullable\u00601[StardewValley.LocalizedContentManager\u002BLanguageCode]]",
+              "sharePercent": 0.3,
+              "megabytesPerSecond": 0.02
+            },
+            {
+              "type": "System.Func\u00602[Microsoft.Xna.Framework.Vector2,System.Boolean]",
+              "sharePercent": 0.3,
+              "megabytesPerSecond": 0.02
+            },
+            {
+              "type": "System.Collections.Generic.Dictionary\u00602[StardewValley.Item,System.Int32]",
+              "sharePercent": 0.3,
+              "megabytesPerSecond": 0.02
+            },
+            {
+              "type": "Enumerator[System.Int64,Netcode.NetRoot\u00601[StardewValley.Farmer]]",
+              "sharePercent": 0.2,
+              "megabytesPerSecond": 0.01
+            },
+            {
+              "type": "RepeatIterator\u00601[StardewValley.Farmer]",
+              "sharePercent": 0.2,
+              "megabytesPerSecond": 0.01
+            },
+            {
+              "type": "System.Collections.Generic.HashSet\u00601[StardewValley.Item]",
+              "sharePercent": 0.2,
+              "megabytesPerSecond": 0.01
+            },
+            {
+              "type": "System.Byte[]",
+              "sharePercent": 0.1,
+              "megabytesPerSecond": 0.01
+            },
+            {
+              "type": "WhereEnumerableIterator\u00601[System.Collections.Generic.KeyValuePair\u00602[StardewValley.Item,System.Int32]]",
+              "sharePercent": 0.1,
+              "megabytesPerSecond": 0.01
+            }
+          ]
+        },
+        "assets": {
+          "callsPerFrame": 2.4,
+          "callsPerSecond": 143,
+          "distinctNames": 6,
+          "topNames": [
+            {
+              "name": "Fonts\\SmallFont",
+              "perFrame": 1.52
+            },
+            {
+              "name": "Buildings\\Mailbox",
+              "perFrame": 0.76
+            },
+            {
+              "name": "LooseSprites\\Cursors",
+              "perFrame": 0.1
+            },
+            {
+              "name": "TileSheets\\animations",
+              "perFrame": 0
+            },
+            {
+              "name": "Characters\\Monsters\\Green Slime",
+              "perFrame": 0
+            },
+            {
+              "name": "Data\\Monsters",
+              "perFrame": 0
+            }
+          ],
+          "topCallers": [
+            {
+              "caller": "ChatMessage.draw \u003C- ChatBox.draw \u003C- Game1.DrawOverlays \u003C- .StardewValley.Game1._draw_PatchedBy\u003CKkthnx.ValleyFixes.DevHarness.Profiler\u003E",
+              "sharePercent": 59.4
+            },
+            {
+              "caller": "Building.draw \u003C- .StardewValley.GameLocation.draw_PatchedBy\u003CKkthnx.ValleyFixes.DevHarness.Profiler\u003E \u003C- Farm.draw \u003C- Game1.DrawWorld",
+              "sharePercent": 34.4
+            },
+            {
+              "caller": "TemporaryAnimatedSprite.loadTexture \u003C- TemporaryAnimatedSprite.GetTemporaryAnimatedSprite \u003C- Town.addClintMachineGraphics \u003C- \u003C\u003Ec.\u003CperformTenMinuteClockUpdate\u003Eb__738_0",
+              "sharePercent": 6.2
+            }
+          ]
+        }
+      },
+      "memory": {
+        "retainedMB": 164,
+        "gcHeapMB": 171,
+        "gcCommittedMB": 225,
+        "gcFragmentedMB": 26,
+        "privateMB": 1196,
+        "workingSetMB": 1070
+      }
+    },
+    "client_player_watcher": {
+      "samples": 741,
+      "meanLagMs": 300,
+      "medianLagMs": 296,
+      "p05LagMs": 274,
+      "p95LagMs": 342,
+      "spreadMs": 25.7,
+      "stillTickPercent": 1.8
+    },
+    "client_player": {
+      "actor": "both",
+      "seconds": 23,
+      "net": {
+        "farmerDelta": {
+          "kbPerSecond": 0.01,
+          "totalKB": 0.2,
+          "messages": 3,
+          "meanBytes": 65,
+          "maxKB": 0.1
+        },
+        "worldDelta": {
+          "kbPerSecond": 0,
+          "totalKB": 0.1,
+          "messages": 3,
+          "meanBytes": 39,
+          "maxKB": 0
+        }
+      },
+      "modNet": [],
+      "gaps": {
+        "frames": 1380,
+        "meanMs": 16.65,
+        "medianMs": 21.61,
+        "p99Ms": 22.38,
+        "maxMs": 24.6,
+        "over40ms": 0,
+        "over100ms": 0,
+        "over500ms": 0,
+        "top5": [
+          25,
+          24,
+          23,
+          23,
+          23
+        ],
+        "bigGaps": []
+      },
+      "modMessagesReceived": [],
+      "sample": {
+        "seconds": 23,
+        "processCpuMsPerFrame": 2.05,
+        "processCpuPercentOfOneCore": 12,
+        "update": {
+          "frames": 1380,
+          "meanMs": 0.48,
+          "medianMs": 0.47,
+          "p99Ms": 0.76,
+          "maxMs": 3.52,
+          "over8ms": 0,
+          "over16ms": 0
+        },
+        "render": {
+          "frames": 1049,
+          "meanMs": 0.66,
+          "medianMs": 0.67,
+          "p99Ms": 0.8,
+          "maxMs": 1.33,
+          "over8ms": 0,
+          "over16ms": 0
+        },
+        "allocatedMBPerSecond": 6.12,
+        "gen0": 3,
+        "gen1": 0,
+        "gen2": 0,
+        "heapMB": 163,
+        "profile": {
+          "Game1._draw": {
+            "msPerFrame": 0.5,
+            "calls": 1049,
+            "kbPerCall": 3.86,
+            "meanUs": 658.3,
+            "maxMs": 1.33
+          },
+          "Game1._update": {
+            "msPerFrame": 0.463,
+            "calls": 1380,
+            "kbPerCall": 52.03,
+            "meanUs": 462.9,
+            "maxMs": 3.23
+          },
+          "GameLocation.updateEvenIfFarmerIsntHere": {
+            "msPerFrame": 0.317,
+            "calls": 111780,
+            "kbPerCall": 0.42,
+            "meanUs": 3.9,
+            "maxMs": 2.35
+          },
+          "GameLocation.updateCharacters": {
+            "msPerFrame": 0.202,
+            "calls": 111780,
+            "kbPerCall": 0.25,
+            "meanUs": 2.5,
+            "maxMs": 2.35
+          },
+          "Game1.shouldTimePass": {
+            "msPerFrame": 0.076,
+            "calls": 125967,
+            "kbPerCall": 0.09,
+            "meanUs": 0.8,
+            "maxMs": 0.03
+          },
+          "GameLocation.draw": {
+            "msPerFrame": 0.07,
+            "calls": 1049,
+            "kbPerCall": 1.41,
+            "meanUs": 92.4,
+            "maxMs": 0.18
+          },
+          "GameLocation.UpdateWhenCurrentLocation": {
+            "msPerFrame": 0.047,
+            "calls": 1380,
+            "kbPerCall": 0.95,
+            "meanUs": 46.6,
+            "maxMs": 0.18
+          },
+          "NPC.update": {
+            "msPerFrame": 0.042,
+            "calls": 53820,
+            "kbPerCall": 0.17,
+            "meanUs": 1.1,
+            "maxMs": 2.34
+          },
+          "Game1.performTenMinuteClockUpdate": {
+            "msPerFrame": 0.001,
+            "calls": 3,
+            "kbPerCall": 68.54,
+            "meanUs": 417,
+            "maxMs": 0.43
+          }
+        },
+        "mods": {
+          "samples": 17114,
+          "droppedSamples": 6,
+          "samplesPerSecond": 745,
+          "byMod": {
+            "(game and vanilla code)": {
+              "sharePercent": 99.95,
+              "msPerFrame": 16.645
+            },
+            "Kkthnx.ValleyFixes.DevHarness": {
+              "sharePercent": 0.05,
+              "msPerFrame": 0.008
+            }
+          }
+        },
+        "locations": {
+          "backgroundUpdate": {
+            "total": {
+              "locations": 81,
+              "msPerFrame": 0.325,
+              "megabytesPerSecond": 2,
+              "calls": 111780
+            },
+            "empty": {
+              "locations": 53,
+              "msPerFrame": 0.177,
+              "megabytesPerSecond": 1.05,
+              "calls": 73140
+            },
+            "withCharacters": {
+              "locations": 27,
+              "msPerFrame": 0.142,
+              "megabytesPerSecond": 0.91,
+              "calls": 37260
+            },
+            "withMonsters": {
+              "locations": 0,
+              "msPerFrame": 0,
+              "megabytesPerSecond": 0,
+              "calls": 0
+            },
+            "withAnimals": {
+              "locations": 0,
+              "msPerFrame": 0,
+              "megabytesPerSecond": 0,
+              "calls": 0
+            },
+            "withBuildings": {
+              "locations": 1,
+              "msPerFrame": 0.005,
+              "megabytesPerSecond": 0.04,
+              "calls": 1380
+            },
+            "withSprites": {
+              "locations": 1,
+              "msPerFrame": 0.018,
+              "megabytesPerSecond": 0.06,
+              "calls": 1380
+            },
+            "topByTime": [
+              {
+                "location": "Town",
+                "msPerFrame": 0.018,
+                "meanUs": 18.1,
+                "maxMs": 0.06,
+                "kbPerCall": 1.08,
+                "Characters": 2,
+                "Monsters": 0,
+                "Villagers": 2,
+                "Sprites": 12,
+                "Animals": 0,
+                "Buildings": 0,
+                "Objects": 85
+              },
+              {
+                "location": "Trailer",
+                "msPerFrame": 0.009,
+                "meanUs": 8.8,
+                "maxMs": 2.35,
+                "kbPerCall": 0.78,
+                "Characters": 1,
+                "Monsters": 0,
+                "Villagers": 1,
+                "Sprites": 0,
+                "Animals": 0,
+                "Buildings": 0,
+                "Objects": 0
+              },
+              {
+                "location": "JoshHouse",
+                "msPerFrame": 0.008,
+                "meanUs": 8.5,
+                "maxMs": 0.84,
+                "kbPerCall": 1,
+                "Characters": 3,
+                "Monsters": 0,
+                "Villagers": 3,
+                "Sprites": 0,
+                "Animals": 0,
+                "Buildings": 0,
+                "Objects": 0
+              },
+              {
+                "location": "ScienceHouse",
+                "msPerFrame": 0.008,
+                "meanUs": 8.4,
+                "maxMs": 0.04,
+                "kbPerCall": 1.47,
+                "Characters": 3,
+                "Monsters": 0,
+                "Villagers": 3,
+                "Sprites": 0,
+                "Animals": 0,
+                "Buildings": 0,
+                "Objects": 0
+              },
+              {
+                "location": "SeedShop",
+                "msPerFrame": 0.007,
+                "meanUs": 6.8,
+                "maxMs": 0.04,
+                "kbPerCall": 0.94,
+                "Characters": 3,
+                "Monsters": 0,
+                "Villagers": 3,
+                "Sprites": 0,
+                "Animals": 0,
+                "Buildings": 0,
+                "Objects": 0
+              },
+              {
+                "location": "Farm",
+                "msPerFrame": 0.005,
+                "meanUs": 5.5,
+                "maxMs": 0.03,
+                "kbPerCall": 0.65,
+                "Characters": 0,
+                "Monsters": 0,
+                "Villagers": 0,
+                "Sprites": 0,
+                "Animals": 0,
+                "Buildings": 5,
+                "Objects": 1018
+              },
+              {
+                "location": "Saloon",
+                "msPerFrame": 0.005,
+                "meanUs": 5.4,
+                "maxMs": 0.03,
+                "kbPerCall": 0.77,
+                "Characters": 1,
+                "Monsters": 0,
+                "Villagers": 1,
+                "Sprites": 0,
+                "Animals": 0,
+                "Buildings": 0,
+                "Objects": 0
+              },
+              {
+                "location": "SamHouse",
+                "msPerFrame": 0.005,
+                "meanUs": 5.3,
+                "maxMs": 0.04,
+                "kbPerCall": 0.62,
+                "Characters": 3,
+                "Monsters": 0,
+                "Villagers": 3,
+                "Sprites": 0,
+                "Animals": 0,
+                "Buildings": 0,
+                "Objects": 0
+              },
+              {
+                "location": "AnimalShop",
+                "msPerFrame": 0.005,
+                "meanUs": 5,
+                "maxMs": 0.03,
+                "kbPerCall": 0.67,
+                "Characters": 2,
+                "Monsters": 0,
+                "Villagers": 2,
+                "Sprites": 0,
+                "Animals": 0,
+                "Buildings": 0,
+                "Objects": 0
+              },
+              {
+                "location": "HaleyHouse",
+                "msPerFrame": 0.005,
+                "meanUs": 4.7,
+                "maxMs": 0.03,
+                "kbPerCall": 0.56,
+                "Characters": 2,
+                "Monsters": 0,
+                "Villagers": 2,
+                "Sprites": 0,
+                "Animals": 0,
+                "Buildings": 0,
+                "Objects": 0
+              },
+              {
+                "location": "SandyHouse",
+                "msPerFrame": 0.004,
+                "meanUs": 4.4,
+                "maxMs": 0.03,
+                "kbPerCall": 0.51,
+                "Characters": 2,
+                "Monsters": 0,
+                "Villagers": 2,
+                "Sprites": 0,
+                "Animals": 0,
+                "Buildings": 0,
+                "Objects": 0
+              },
+              {
+                "location": "Club",
+                "msPerFrame": 0.004,
+                "meanUs": 4,
+                "maxMs": 0.03,
+                "kbPerCall": 0.42,
+                "Characters": 1,
+                "Monsters": 0,
+                "Villagers": 1,
+                "Sprites": 0,
+                "Animals": 0,
+                "Buildings": 0,
+                "Objects": 0
+              }
+            ],
+            "topByBytes": [
+              {
+                "location": "ScienceHouse",
+                "megabytesPerSecond": 0.09,
+                "kbPerCall": 1.47,
+                "Characters": 3,
+                "Monsters": 0,
+                "Sprites": 0,
+                "Animals": 0,
+                "Buildings": 0
+              },
+              {
+                "location": "Town",
+                "megabytesPerSecond": 0.06,
+                "kbPerCall": 1.08,
+                "Characters": 2,
+                "Monsters": 0,
+                "Sprites": 12,
+                "Animals": 0,
+                "Buildings": 0
+              },
+              {
+                "location": "JoshHouse",
+                "megabytesPerSecond": 0.06,
+                "kbPerCall": 1,
+                "Characters": 3,
+                "Monsters": 0,
+                "Sprites": 0,
+                "Animals": 0,
+                "Buildings": 0
+              },
+              {
+                "location": "SeedShop",
+                "megabytesPerSecond": 0.06,
+                "kbPerCall": 0.94,
+                "Characters": 3,
+                "Monsters": 0,
+                "Sprites": 0,
+                "Animals": 0,
+                "Buildings": 0
+              },
+              {
+                "location": "Trailer",
+                "megabytesPerSecond": 0.05,
+                "kbPerCall": 0.78,
+                "Characters": 1,
+                "Monsters": 0,
+                "Sprites": 0,
+                "Animals": 0,
+                "Buildings": 0
+              },
+              {
+                "location": "Saloon",
+                "megabytesPerSecond": 0.05,
+                "kbPerCall": 0.77,
+                "Characters": 1,
+                "Monsters": 0,
+                "Sprites": 0,
+                "Animals": 0,
+                "Buildings": 0
+              },
+              {
+                "location": "AnimalShop",
+                "megabytesPerSecond": 0.04,
+                "kbPerCall": 0.67,
+                "Characters": 2,
+                "Monsters": 0,
+                "Sprites": 0,
+                "Animals": 0,
+                "Buildings": 0
+              },
+              {
+                "location": "Farm",
+                "megabytesPerSecond": 0.04,
+                "kbPerCall": 0.65,
+                "Characters": 0,
+                "Monsters": 0,
+                "Sprites": 0,
+                "Animals": 0,
+                "Buildings": 5
+              }
+            ]
+          },
+          "characterLoop": {
+            "total": {
+              "locations": 81,
+              "msPerFrame": 0.21,
+              "megabytesPerSecond": 1.2,
+              "calls": 111780
+            },
+            "empty": {
+              "locations": 53,
+              "msPerFrame": 0.105,
+              "megabytesPerSecond": 0.54,
+              "calls": 73140
+            },
+            "withCharacters": {
+              "locations": 27,
+              "msPerFrame": 0.103,
+              "megabytesPerSecond": 0.65,
+              "calls": 37260
+            },
+            "withMonsters": {
+              "locations": 0,
+              "msPerFrame": 0,
+              "megabytesPerSecond": 0,
+              "calls": 0
+            },
+            "withAnimals": {
+              "locations": 0,
+              "msPerFrame": 0,
+              "megabytesPerSecond": 0,
+              "calls": 0
+            },
+            "withBuildings": {
+              "locations": 1,
+              "msPerFrame": 0.002,
+              "megabytesPerSecond": 0.01,
+              "calls": 1380
+            },
+            "withSprites": {
+              "locations": 1,
+              "msPerFrame": 0.016,
+              "megabytesPerSecond": 0.05,
+              "calls": 1380
+            },
+            "topByTime": [
+              {
+                "location": "Town",
+                "msPerFrame": 0.016,
+                "meanUs": 15.7,
+                "maxMs": 0.06,
+                "kbPerCall": 0.92,
+                "Characters": 2,
+                "Monsters": 0,
+                "Villagers": 2,
+                "Sprites": 12,
+                "Animals": 0,
+                "Buildings": 0,
+                "Objects": 85
+              },
+              {
+                "location": "Trailer",
+                "msPerFrame": 0.007,
+                "meanUs": 7.4,
+                "maxMs": 2.35,
+                "kbPerCall": 0.62,
+                "Characters": 1,
+                "Monsters": 0,
+                "Villagers": 1,
+                "Sprites": 0,
+                "Animals": 0,
+                "Buildings": 0,
+                "Objects": 0
+              },
+              {
+                "location": "ScienceHouse",
+                "msPerFrame": 0.007,
+                "meanUs": 7,
+                "maxMs": 0.04,
+                "kbPerCall": 1.3,
+                "Characters": 3,
+                "Monsters": 0,
+                "Villagers": 3,
+                "Sprites": 0,
+                "Animals": 0,
+                "Buildings": 0,
+                "Objects": 0
+              },
+              {
+                "location": "JoshHouse",
+                "msPerFrame": 0.007,
+                "meanUs": 6.9,
+                "maxMs": 0.83,
+                "kbPerCall": 0.84,
+                "Characters": 3,
+                "Monsters": 0,
+                "Villagers": 3,
+                "Sprites": 0,
+                "Animals": 0,
+                "Buildings": 0,
+                "Objects": 0
+              },
+              {
+                "location": "SeedShop",
+                "msPerFrame": 0.005,
+                "meanUs": 5.4,
+                "maxMs": 0.04,
+                "kbPerCall": 0.78,
+                "Characters": 3,
+                "Monsters": 0,
+                "Villagers": 3,
+                "Sprites": 0,
+                "Animals": 0,
+                "Buildings": 0,
+                "Objects": 0
+              },
+              {
+                "location": "Saloon",
+                "msPerFrame": 0.004,
+                "meanUs": 3.9,
+                "maxMs": 0.03,
+                "kbPerCall": 0.61,
+                "Characters": 1,
+                "Monsters": 0,
+                "Villagers": 1,
+                "Sprites": 0,
+                "Animals": 0,
+                "Buildings": 0,
+                "Objects": 0
+              },
+              {
+                "location": "SamHouse",
+                "msPerFrame": 0.004,
+                "meanUs": 3.8,
+                "maxMs": 0.03,
+                "kbPerCall": 0.46,
+                "Characters": 3,
+                "Monsters": 0,
+                "Villagers": 3,
+                "Sprites": 0,
+                "Animals": 0,
+                "Buildings": 0,
+                "Objects": 0
+              },
+              {
+                "location": "AnimalShop",
+                "msPerFrame": 0.004,
+                "meanUs": 3.6,
+                "maxMs": 0.03,
+                "kbPerCall": 0.5,
+                "Characters": 2,
+                "Monsters": 0,
+                "Villagers": 2,
+                "Sprites": 0,
+                "Animals": 0,
+                "Buildings": 0,
+                "Objects": 0
+              },
+              {
+                "location": "HaleyHouse",
+                "msPerFrame": 0.003,
+                "meanUs": 3.3,
+                "maxMs": 0.03,
+                "kbPerCall": 0.4,
+                "Characters": 2,
+                "Monsters": 0,
+                "Villagers": 2,
+                "Sprites": 0,
+                "Animals": 0,
+                "Buildings": 0,
+                "Objects": 0
+              },
+              {
+                "location": "SandyHouse",
+                "msPerFrame": 0.003,
+                "meanUs": 3,
+                "maxMs": 0.03,
+                "kbPerCall": 0.34,
+                "Characters": 2,
+                "Monsters": 0,
+                "Villagers": 2,
+                "Sprites": 0,
+                "Animals": 0,
+                "Buildings": 0,
+                "Objects": 0
+              },
+              {
+                "location": "Club",
+                "msPerFrame": 0.003,
+                "meanUs": 2.6,
+                "maxMs": 0.03,
+                "kbPerCall": 0.26,
+                "Characters": 1,
+                "Monsters": 0,
+                "Villagers": 1,
+                "Sprites": 0,
+                "Animals": 0,
+                "Buildings": 0,
+                "Objects": 0
+              },
+              {
+                "location": "IslandWest",
+                "msPerFrame": 0.003,
+                "meanUs": 2.5,
+                "maxMs": 0.04,
+                "kbPerCall": 0.26,
+                "Characters": 1,
+                "Monsters": 0,
+                "Villagers": 1,
+                "Sprites": 0,
+                "Animals": 0,
+                "Buildings": 0,
+                "Objects": 226
+              }
+            ],
+            "topByBytes": [
+              {
+                "location": "ScienceHouse",
+                "megabytesPerSecond": 0.08,
+                "kbPerCall": 1.3,
+                "Characters": 3,
+                "Monsters": 0,
+                "Sprites": 0,
+                "Animals": 0,
+                "Buildings": 0
+              },
+              {
+                "location": "Town",
+                "megabytesPerSecond": 0.05,
+                "kbPerCall": 0.92,
+                "Characters": 2,
+                "Monsters": 0,
+                "Sprites": 12,
+                "Animals": 0,
+                "Buildings": 0
+              },
+              {
+                "location": "JoshHouse",
+                "megabytesPerSecond": 0.05,
+                "kbPerCall": 0.84,
+                "Characters": 3,
+                "Monsters": 0,
+                "Sprites": 0,
+                "Animals": 0,
+                "Buildings": 0
+              },
+              {
+                "location": "SeedShop",
+                "megabytesPerSecond": 0.05,
+                "kbPerCall": 0.78,
+                "Characters": 3,
+                "Monsters": 0,
+                "Sprites": 0,
+                "Animals": 0,
+                "Buildings": 0
+              },
+              {
+                "location": "Trailer",
+                "megabytesPerSecond": 0.04,
+                "kbPerCall": 0.62,
+                "Characters": 1,
+                "Monsters": 0,
+                "Sprites": 0,
+                "Animals": 0,
+                "Buildings": 0
+              },
+              {
+                "location": "Saloon",
+                "megabytesPerSecond": 0.04,
+                "kbPerCall": 0.61,
+                "Characters": 1,
+                "Monsters": 0,
+                "Sprites": 0,
+                "Animals": 0,
+                "Buildings": 0
+              },
+              {
+                "location": "AnimalShop",
+                "megabytesPerSecond": 0.03,
+                "kbPerCall": 0.5,
+                "Characters": 2,
+                "Monsters": 0,
+                "Sprites": 0,
+                "Animals": 0,
+                "Buildings": 0
+              },
+              {
+                "location": "SamHouse",
+                "megabytesPerSecond": 0.03,
+                "kbPerCall": 0.46,
+                "Characters": 3,
+                "Monsters": 0,
+                "Sprites": 0,
+                "Animals": 0,
+                "Buildings": 0
+              }
+            ]
+          },
+          "tenMinuteUpdate": {
+            "total": {
+              "locations": 81,
+              "msPerFrame": 0.001,
+              "megabytesPerSecond": 0.01,
+              "calls": 243
+            },
+            "empty": {
+              "locations": 53,
+              "msPerFrame": 0,
+              "megabytesPerSecond": 0,
+              "calls": 159
+            },
+            "withCharacters": {
+              "locations": 27,
+              "msPerFrame": 0,
+              "megabytesPerSecond": 0,
+              "calls": 81
+            },
+            "withMonsters": {
+              "locations": 0,
+              "msPerFrame": 0,
+              "megabytesPerSecond": 0,
+              "calls": 0
+            },
+            "withAnimals": {
+              "locations": 0,
+              "msPerFrame": 0,
+              "megabytesPerSecond": 0,
+              "calls": 0
+            },
+            "withBuildings": {
+              "locations": 1,
+              "msPerFrame": 0,
+              "megabytesPerSecond": 0,
+              "calls": 3
+            },
+            "withSprites": {
+              "locations": 2,
+              "msPerFrame": 0,
+              "megabytesPerSecond": 0,
+              "calls": 6
+            },
+            "topByTime": [
+              {
+                "location": "Farm",
+                "msPerFrame": 0,
+                "meanUs": 71.1,
+                "maxMs": 0.08,
+                "kbPerCall": 3.31,
+                "Characters": 0,
+                "Monsters": 0,
+                "Villagers": 0,
+                "Sprites": 4,
+                "Animals": 0,
+                "Buildings": 5,
+                "Objects": 1018
+              },
+              {
+                "location": "IslandWest",
+                "msPerFrame": 0,
+                "meanUs": 45.7,
+                "maxMs": 0.08,
+                "kbPerCall": 2.65,
+                "Characters": 1,
+                "Monsters": 0,
+                "Villagers": 1,
+                "Sprites": 0,
+                "Animals": 0,
+                "Buildings": 0,
+                "Objects": 226
+              },
+              {
+                "location": "Forest",
+                "msPerFrame": 0,
+                "meanUs": 28.4,
+                "maxMs": 0.04,
+                "kbPerCall": 0.74,
+                "Characters": 0,
+                "Monsters": 0,
+                "Villagers": 0,
+                "Sprites": 0,
+                "Animals": 0,
+                "Buildings": 0,
+                "Objects": 182
+              },
+              {
+                "location": "Town",
+                "msPerFrame": 0,
+                "meanUs": 24,
+                "maxMs": 0.03,
+                "kbPerCall": 1.42,
+                "Characters": 1,
+                "Monsters": 0,
+                "Villagers": 1,
+                "Sprites": 9,
+                "Animals": 0,
+                "Buildings": 0,
+                "Objects": 85
+              },
+              {
+                "location": "BugLand",
+                "msPerFrame": 0,
+                "meanUs": 19.3,
+                "maxMs": 0.02,
+                "kbPerCall": 0.05,
+                "Characters": 0,
+                "Monsters": 0,
+                "Villagers": 0,
+                "Sprites": 0,
+                "Animals": 0,
+                "Buildings": 0,
+                "Objects": 176
+              },
+              {
+                "location": "Mountain",
+                "msPerFrame": 0,
+                "meanUs": 15.6,
+                "maxMs": 0.02,
+                "kbPerCall": 0.74,
+                "Characters": 1,
+                "Monsters": 0,
+                "Villagers": 1,
+                "Sprites": 0,
+                "Animals": 0,
+                "Buildings": 0,
+                "Objects": 63
+              },
+              {
+                "location": "Railroad",
+                "msPerFrame": 0,
+                "meanUs": 11,
+                "maxMs": 0.01,
+                "kbPerCall": 0.74,
+                "Characters": 0,
+                "Monsters": 0,
+                "Villagers": 0,
+                "Sprites": 0,
+                "Animals": 0,
+                "Buildings": 0,
+                "Objects": 63
+              },
+              {
+                "location": "JoshHouse",
+                "msPerFrame": 0,
+                "meanUs": 9.5,
+                "maxMs": 0.03,
+                "kbPerCall": 3.59,
+                "Characters": 3,
+                "Monsters": 0,
+                "Villagers": 3,
+                "Sprites": 0,
+                "Animals": 0,
+                "Buildings": 0,
+                "Objects": 0
+              },
+              {
+                "location": "ScienceHouse",
+                "msPerFrame": 0,
+                "meanUs": 8.5,
+                "maxMs": 0.02,
+                "kbPerCall": 4.22,
+                "Characters": 3,
+                "Monsters": 0,
+                "Villagers": 3,
+                "Sprites": 0,
+                "Animals": 0,
+                "Buildings": 0,
+                "Objects": 0
+              },
+              {
+                "location": "BeachNightMarket",
+                "msPerFrame": 0,
+                "meanUs": 7.1,
+                "maxMs": 0.02,
+                "kbPerCall": 0.74,
+                "Characters": 0,
+                "Monsters": 0,
+                "Villagers": 0,
+                "Sprites": 0,
+                "Animals": 0,
+                "Buildings": 0,
+                "Objects": 0
+              },
+              {
+                "location": "AnimalShop",
+                "msPerFrame": 0,
+                "meanUs": 5.6,
+                "maxMs": 0.01,
+                "kbPerCall": 1.18,
+                "Characters": 2,
+                "Monsters": 0,
+                "Villagers": 2,
+                "Sprites": 0,
+                "Animals": 0,
+                "Buildings": 0,
+                "Objects": 0
+              },
+              {
+                "location": "IslandNorth",
+                "msPerFrame": 0,
+                "meanUs": 5.1,
+                "maxMs": 0.01,
+                "kbPerCall": 0.74,
+                "Characters": 0,
+                "Monsters": 0,
+                "Villagers": 0,
+                "Sprites": 0,
+                "Animals": 0,
+                "Buildings": 0,
+                "Objects": 12
+              }
+            ],
+            "topByBytes": [
+              {
+                "location": "ScienceHouse",
+                "megabytesPerSecond": 0,
+                "kbPerCall": 4.22,
+                "Characters": 3,
+                "Monsters": 0,
+                "Sprites": 0,
+                "Animals": 0,
+                "Buildings": 0
+              },
+              {
+                "location": "JoshHouse",
+                "megabytesPerSecond": 0,
+                "kbPerCall": 3.59,
+                "Characters": 3,
+                "Monsters": 0,
+                "Sprites": 0,
+                "Animals": 0,
+                "Buildings": 0
+              },
+              {
+                "location": "Farm",
+                "megabytesPerSecond": 0,
+                "kbPerCall": 3.31,
+                "Characters": 0,
+                "Monsters": 0,
+                "Sprites": 4,
+                "Animals": 0,
+                "Buildings": 5
+              },
+              {
+                "location": "Trailer",
+                "megabytesPerSecond": 0,
+                "kbPerCall": 3.14,
+                "Characters": 2,
+                "Monsters": 0,
+                "Sprites": 0,
+                "Animals": 0,
+                "Buildings": 0
+              },
+              {
+                "location": "IslandWest",
+                "megabytesPerSecond": 0,
+                "kbPerCall": 2.65,
+                "Characters": 1,
+                "Monsters": 0,
+                "Sprites": 0,
+                "Animals": 0,
+                "Buildings": 0
+              },
+              {
+                "location": "SamHouse",
+                "megabytesPerSecond": 0,
+                "kbPerCall": 1.6,
+                "Characters": 3,
+                "Monsters": 0,
+                "Sprites": 0,
+                "Animals": 0,
+                "Buildings": 0
+              },
+              {
+                "location": "Town",
+                "megabytesPerSecond": 0,
+                "kbPerCall": 1.42,
+                "Characters": 1,
+                "Monsters": 0,
+                "Sprites": 9,
+                "Animals": 0,
+                "Buildings": 0
+              },
+              {
+                "location": "AnimalShop",
+                "megabytesPerSecond": 0,
+                "kbPerCall": 1.18,
+                "Characters": 2,
+                "Monsters": 0,
+                "Sprites": 0,
+                "Animals": 0,
+                "Buildings": 0
+              }
+            ]
+          }
+        },
+        "events": {
+          "handlersWrapped": 11,
+          "slowCalls": [],
+          "totalMsPerFrame": 0.009,
+          "totalMegabytesPerSecond": 0.02,
+          "topModsByTime": [
+            {
+              "mod": "Kkthnx.ValleyFixes.DevHarness",
+              "msPerFrame": 0.008,
+              "kbPerFrame": 0.31,
+              "megabytesPerSecond": 0.02,
+              "calls": 6238
+            },
+            {
+              "mod": "SMAPI.ConsoleCommands",
+              "msPerFrame": 0,
+              "kbPerFrame": 0,
+              "megabytesPerSecond": 0,
+              "calls": 1380
+            }
+          ],
+          "topModsByBytes": [
+            {
+              "mod": "Kkthnx.ValleyFixes.DevHarness",
+              "msPerFrame": 0.008,
+              "kbPerFrame": 0.31,
+              "megabytesPerSecond": 0.02,
+              "calls": 6238
+            },
+            {
+              "mod": "SMAPI.ConsoleCommands",
+              "msPerFrame": 0,
+              "kbPerFrame": 0,
+              "megabytesPerSecond": 0,
+              "calls": 1380
+            }
+          ],
+          "topHandlers": [
+            {
+              "Mod": "Kkthnx.ValleyFixes.DevHarness",
+              "Event": "UpdateTicked",
+              "msPerFrame": 0.008,
+              "meanUs": 4,
+              "kbPerCall": 0.15,
+              "Calls": 2760
+            },
+            {
+              "Mod": "SMAPI.ConsoleCommands",
+              "Event": "UpdateTicked",
+              "msPerFrame": 0,
+              "meanUs": 0.3,
+              "kbPerCall": 0,
+              "Calls": 1380
+            },
+            {
+              "Mod": "Kkthnx.ValleyFixes.DevHarness",
+              "Event": "UpdateTicking",
+              "msPerFrame": 0,
+              "meanUs": 0.3,
+              "kbPerCall": 0,
+              "Calls": 1380
+            },
+            {
+              "Mod": "Kkthnx.ValleyFixes.DevHarness",
+              "Event": "Rendered",
+              "msPerFrame": 0,
+              "meanUs": 0.2,
+              "kbPerCall": 0,
+              "Calls": 1049
+            },
+            {
+              "Mod": "Kkthnx.ValleyFixes.DevHarness",
+              "Event": "Rendering",
+              "msPerFrame": 0,
+              "meanUs": 0.1,
+              "kbPerCall": 0,
+              "Calls": 1049
+            }
+          ]
+        },
+        "allocTypes": {
+          "ticks": 1406,
+          "mainThreadMegabytesPerSecond": 5.7,
+          "otherThreadsMegabytesPerSecond": 0.1,
+          "mainThreadTopTypes": [
+            {
+              "type": "System.RuntimeMethodInfoStub",
+              "sharePercent": 22.9,
+              "megabytesPerSecond": 1.32
+            },
+            {
+              "type": "Enumerator[Microsoft.Xna.Framework.Vector2,StardewValley.Object]",
+              "sharePercent": 22.2,
+              "megabytesPerSecond": 1.27
+            },
+            {
+              "type": "Enumerator[Microsoft.Xna.Framework.Vector2,StardewModdingAPI.Framework.StateTracking.ChestTracker]",
+              "sharePercent": 17.1,
+              "megabytesPerSecond": 0.98
+            },
+            {
+              "type": "Enumerator[StardewValley.NPC]",
+              "sharePercent": 11.9,
+              "megabytesPerSecond": 0.68
+            },
+            {
+              "type": "Enumerator[StardewModdingAPI.Framework.StateTracking.IWatcher]",
+              "sharePercent": 5.6,
+              "megabytesPerSecond": 0.32
+            },
+            {
+              "type": "System.Func\u00602[StardewValley.GameLocation,System.Boolean]",
+              "sharePercent": 4.3,
+              "megabytesPerSecond": 0.24
+            },
+            {
+              "type": "\u003C\u003Ec__DisplayClass17_1",
+              "sharePercent": 2.2,
+              "megabytesPerSecond": 0.12
+            },
+            {
+              "type": "System.Func\u00602[Microsoft.Xna.Framework.Vector2,System.Boolean]",
+              "sharePercent": 1.4,
+              "megabytesPerSecond": 0.08
+            },
+            {
+              "type": "\u003CgetAllFarmhands\u003Ed__913",
+              "sharePercent": 1.4,
+              "megabytesPerSecond": 0.08
+            },
+            {
+              "type": "System.String",
+              "sharePercent": 1.2,
+              "megabytesPerSecond": 0.07
+            },
+            {
+              "type": "Microsoft.Xna.Framework.Graphics.RenderTargetBinding[]",
+              "sharePercent": 1,
+              "megabytesPerSecond": 0.06
+            },
+            {
+              "type": "Entry[StardewValley.Item,System.Int32][]",
+              "sharePercent": 0.8,
+              "megabytesPerSecond": 0.05
+            },
+            {
+              "type": "Concat2Iterator\u00601[StardewValley.Farmer]",
+              "sharePercent": 0.7,
+              "megabytesPerSecond": 0.04
+            },
+            {
+              "type": "RepeatIterator\u00601[StardewValley.Farmer]",
+              "sharePercent": 0.7,
+              "megabytesPerSecond": 0.04
+            },
+            {
+              "type": "System.Int32[]",
+              "sharePercent": 0.5,
+              "megabytesPerSecond": 0.03
+            },
+            {
+              "type": "\u003C\u003Ec__DisplayClass244_0",
+              "sharePercent": 0.4,
+              "megabytesPerSecond": 0.02
+            },
+            {
+              "type": "System.Collections.Generic.HashSet\u00601[StardewValley.Item]",
+              "sharePercent": 0.4,
+              "megabytesPerSecond": 0.02
+            },
+            {
+              "type": "System.Collections.Generic.List\u00601[StardewValley.Farmer]",
+              "sharePercent": 0.3,
+              "megabytesPerSecond": 0.02
+            },
+            {
+              "type": "System.Predicate\u00601[StardewValley.TemporaryAnimatedSprite]",
+              "sharePercent": 0.3,
+              "megabytesPerSecond": 0.02
+            },
+            {
+              "type": "Enumerator[StardewValley.Farmer]",
+              "sharePercent": 0.2,
+              "megabytesPerSecond": 0.01
+            },
+            {
+              "type": "System.String[]",
+              "sharePercent": 0.2,
+              "megabytesPerSecond": 0.01
+            },
+            {
+              "type": "Enumerator[StardewValley.Item]",
+              "sharePercent": 0.2,
+              "megabytesPerSecond": 0.01
+            },
+            {
+              "type": "DistinctIterator\u00601[StardewValley.Item]",
+              "sharePercent": 0.2,
+              "megabytesPerSecond": 0.01
+            },
+            {
+              "type": "Enumerator[StardewValley.GameLocation,StardewModdingAPI.Framework.StateTracking.LocationTracker]",
+              "sharePercent": 0.2,
+              "megabytesPerSecond": 0.01
+            },
+            {
+              "type": "Entry[StardewValley.Item][]",
+              "sharePercent": 0.2,
+              "megabytesPerSecond": 0.01
+            }
+          ]
+        },
+        "assets": {
+          "callsPerFrame": 2.4,
+          "callsPerSecond": 146,
+          "distinctNames": 6,
+          "topNames": [
+            {
+              "name": "Fonts\\SmallFont",
+              "perFrame": 1.52
+            },
+            {
+              "name": "Buildings\\Mailbox",
+              "perFrame": 0.76
+            },
+            {
+              "name": "LooseSprites\\Cursors",
+              "perFrame": 0.07
+            },
+            {
+              "name": "TileSheets\\animations",
+              "perFrame": 0.06
+            },
+            {
+              "name": "Data\\animationDescriptions",
+              "perFrame": 0.01
+            },
+            {
+              "name": "TileSheets\\critters",
+              "perFrame": 0
+            }
+          ],
+          "topCallers": [
+            {
+              "caller": "ChatMessage.draw \u003C- ChatBox.draw \u003C- Game1.DrawOverlays \u003C- .StardewValley.Game1._draw_PatchedBy\u003CKkthnx.ValleyFixes.DevHarness.Profiler\u003E",
+              "sharePercent": 54.5
+            },
+            {
+              "caller": "Building.draw \u003C- .StardewValley.GameLocation.draw_PatchedBy\u003CKkthnx.ValleyFixes.DevHarness.Profiler\u003E \u003C- Farm.draw \u003C- Game1.DrawWorld",
+              "sharePercent": 36.4
+            },
+            {
+              "caller": "TemporaryAnimatedSprite.loadTexture \u003C- TemporaryAnimatedSprite.GetTemporaryAnimatedSprite \u003C- FarmerSprite.checkForFootstep \u003C- FarmerSprite.animate",
+              "sharePercent": 6.1
+            },
+            {
+              "caller": "TemporaryAnimatedSprite.loadTexture \u003C- TemporaryAnimatedSprite.GetTemporaryAnimatedSprite \u003C- Utility.addSmokePuff \u003C- Town.addClintMachineGraphics",
+              "sharePercent": 3
+            }
+          ]
+        }
+      },
+      "memory": {
+        "retainedMB": 163,
+        "gcHeapMB": 171,
+        "gcCommittedMB": 224,
+        "gcFragmentedMB": 26,
+        "privateMB": 1196,
+        "workingSetMB": 1070
+      }
+    },
+    "memory": {
+      "retainedMB": 163.6,
+      "gcHeapMB": 171,
+      "gcCommittedMB": 224,
+      "gcFragmentedMB": 26,
+      "privateMB": 1196,
+      "workingSetMB": 1070
+    }
+  },
+  "note": null,
+  "mods": [
+    "SMAPI.ConsoleCommands 4.5.2",
+    "Kkthnx.ValleyFixes 0.2.0-alpha.8",
+    "Kkthnx.ValleyFixes.DevHarness 0.1.0"
+  ]
+}

@@ -1,0 +1,760 @@
+{
+  "world": "ready in FarmHouse, tick 405",
+  "special_orders": {
+    "orders": [
+      {
+        "id": "Willy",
+        "type": "",
+        "repeatable": false,
+        "duration": "Week",
+        "tags": "",
+        "condition": ""
+      },
+      {
+        "id": "Pam",
+        "type": "",
+        "repeatable": false,
+        "duration": "TwoWeeks",
+        "tags": "season_spring",
+        "condition": ""
+      },
+      {
+        "id": "Pierre",
+        "type": "",
+        "repeatable": false,
+        "duration": "Month",
+        "tags": "",
+        "condition": ""
+      },
+      {
+        "id": "Robin",
+        "type": "",
+        "repeatable": false,
+        "duration": "Week",
+        "tags": "",
+        "condition": ""
+      },
+      {
+        "id": "Emily",
+        "type": "",
+        "repeatable": false,
+        "duration": "Week",
+        "tags": "event_992559",
+        "condition": ""
+      },
+      {
+        "id": "Demetrius",
+        "type": "",
+        "repeatable": true,
+        "duration": "Week",
+        "tags": "",
+        "condition": ""
+      },
+      {
+        "id": "Demetrius2",
+        "type": "",
+        "repeatable": true,
+        "duration": "Week",
+        "tags": "",
+        "condition": ""
+      },
+      {
+        "id": "Gus",
+        "type": "",
+        "repeatable": true,
+        "duration": "TwoWeeks",
+        "tags": "",
+        "condition": ""
+      },
+      {
+        "id": "Lewis",
+        "type": "",
+        "repeatable": true,
+        "duration": "Month",
+        "tags": "!season_winter",
+        "condition": ""
+      },
+      {
+        "id": "Wizard",
+        "type": "",
+        "repeatable": false,
+        "duration": "Week",
+        "tags": "",
+        "condition": ""
+      },
+      {
+        "id": "Clint",
+        "type": "",
+        "repeatable": true,
+        "duration": "Week",
+        "tags": "",
+        "condition": ""
+      },
+      {
+        "id": "Linus",
+        "type": "",
+        "repeatable": false,
+        "duration": "Week",
+        "tags": "",
+        "condition": ""
+      },
+      {
+        "id": "Evelyn",
+        "type": "",
+        "repeatable": false,
+        "duration": "Month",
+        "tags": "season_spring",
+        "condition": ""
+      },
+      {
+        "id": "Wizard2",
+        "type": "",
+        "repeatable": false,
+        "duration": "Week",
+        "tags": "",
+        "condition": ""
+      },
+      {
+        "id": "Robin2",
+        "type": "",
+        "repeatable": true,
+        "duration": "Week",
+        "tags": "",
+        "condition": ""
+      },
+      {
+        "id": "Gunther",
+        "type": "",
+        "repeatable": false,
+        "duration": "Week",
+        "tags": "",
+        "condition": ""
+      },
+      {
+        "id": "Caroline",
+        "type": "",
+        "repeatable": true,
+        "duration": "Month",
+        "tags": "island",
+        "condition": ""
+      },
+      {
+        "id": "Willy2",
+        "type": "",
+        "repeatable": false,
+        "duration": "Week",
+        "tags": "island, mail_Island_Resort",
+        "condition": ""
+      },
+      {
+        "id": "QiChallenge",
+        "type": "Qi",
+        "repeatable": true,
+        "duration": "Week",
+        "tags": "NOT_IMPLEMENTED, !rule_QI_BEANS",
+        "condition": ""
+      },
+      {
+        "id": "QiChallenge2",
+        "type": "Qi",
+        "repeatable": true,
+        "duration": "Month",
+        "tags": "!rule_QI_BEANS",
+        "condition": ""
+      },
+      {
+        "id": "QiChallenge3",
+        "type": "Qi",
+        "repeatable": true,
+        "duration": "Week",
+        "tags": "",
+        "condition": ""
+      },
+      {
+        "id": "QiChallenge4",
+        "type": "Qi",
+        "repeatable": true,
+        "duration": "Month",
+        "tags": "!dropbox_QiChallengeBox",
+        "condition": ""
+      },
+      {
+        "id": "QiChallenge5",
+        "type": "Qi",
+        "repeatable": true,
+        "duration": "Week",
+        "tags": "",
+        "condition": ""
+      },
+      {
+        "id": "QiChallenge6",
+        "type": "Qi",
+        "repeatable": true,
+        "duration": "TwoWeeks",
+        "tags": "",
+        "condition": ""
+      },
+      {
+        "id": "QiChallenge7",
+        "type": "Qi",
+        "repeatable": true,
+        "duration": "Week",
+        "tags": "",
+        "condition": ""
+      },
+      {
+        "id": "QiChallenge8",
+        "type": "Qi",
+        "repeatable": true,
+        "duration": "ThreeDays",
+        "tags": "",
+        "condition": ""
+      },
+      {
+        "id": "QiChallenge9",
+        "type": "Qi",
+        "repeatable": true,
+        "duration": "Week",
+        "tags": "",
+        "condition": ""
+      },
+      {
+        "id": "QiChallenge10",
+        "type": "Qi",
+        "repeatable": true,
+        "duration": "Week",
+        "tags": "",
+        "condition": ""
+      },
+      {
+        "id": "QiChallenge11",
+        "type": "Qi",
+        "repeatable": true,
+        "duration": "OneDay",
+        "tags": "NOT_IMPLEMENTED",
+        "condition": ""
+      },
+      {
+        "id": "QiChallenge12",
+        "type": "Qi",
+        "repeatable": true,
+        "duration": "TwoWeeks",
+        "tags": "!dropbox_QiChallengeBox",
+        "condition": ""
+      },
+      {
+        "id": "DesertFestivalMarlon1",
+        "type": "DesertFestivalMarlon",
+        "repeatable": true,
+        "duration": "OneDay",
+        "tags": "",
+        "condition": ""
+      },
+      {
+        "id": "DesertFestivalMarlon2",
+        "type": "DesertFestivalMarlon",
+        "repeatable": true,
+        "duration": "OneDay",
+        "tags": "",
+        "condition": ""
+      },
+      {
+        "id": "DesertFestivalMarlon3",
+        "type": "DesertFestivalMarlon",
+        "repeatable": true,
+        "duration": "OneDay",
+        "tags": "",
+        "condition": ""
+      }
+    ],
+    "states": [
+      {
+        "state": "fresh",
+        "season": "Spring",
+        "day": 1,
+        "town_eligible": 15,
+        "town_offered": [
+          "Evelyn",
+          "Gus"
+        ],
+        "qi_eligible": 10,
+        "qi_offered": [
+          "QiChallenge9",
+          "QiChallenge5"
+        ]
+      },
+      {
+        "state": "fresh",
+        "season": "Spring",
+        "day": 8,
+        "town_eligible": 15,
+        "town_offered": [
+          "Evelyn",
+          "Gus"
+        ],
+        "qi_eligible": 10,
+        "qi_offered": [
+          "QiChallenge9",
+          "QiChallenge5"
+        ]
+      },
+      {
+        "state": "fresh",
+        "season": "Spring",
+        "day": 15,
+        "town_eligible": 15,
+        "town_offered": [
+          "Evelyn",
+          "Gus"
+        ],
+        "qi_eligible": 10,
+        "qi_offered": [
+          "QiChallenge9",
+          "QiChallenge5"
+        ]
+      },
+      {
+        "state": "fresh",
+        "season": "Spring",
+        "day": 22,
+        "town_eligible": 12,
+        "town_offered": [
+          "Wizard2",
+          "Demetrius2"
+        ],
+        "qi_eligible": 8,
+        "qi_offered": [
+          "QiChallenge10",
+          "QiChallenge7"
+        ]
+      },
+      {
+        "state": "fresh",
+        "season": "Summer",
+        "day": 1,
+        "town_eligible": 13,
+        "town_offered": [
+          "Wizard2",
+          "Gus"
+        ],
+        "qi_eligible": 10,
+        "qi_offered": [
+          "QiChallenge9",
+          "QiChallenge5"
+        ]
+      },
+      {
+        "state": "fresh",
+        "season": "Summer",
+        "day": 8,
+        "town_eligible": 13,
+        "town_offered": [
+          "Wizard2",
+          "Gus"
+        ],
+        "qi_eligible": 10,
+        "qi_offered": [
+          "QiChallenge9",
+          "QiChallenge5"
+        ]
+      },
+      {
+        "state": "fresh",
+        "season": "Summer",
+        "day": 15,
+        "town_eligible": 13,
+        "town_offered": [
+          "Wizard2",
+          "Gus"
+        ],
+        "qi_eligible": 10,
+        "qi_offered": [
+          "QiChallenge9",
+          "QiChallenge5"
+        ]
+      },
+      {
+        "state": "fresh",
+        "season": "Summer",
+        "day": 22,
+        "town_eligible": 11,
+        "town_offered": [
+          "Wizard2",
+          "Gus"
+        ],
+        "qi_eligible": 8,
+        "qi_offered": [
+          "QiChallenge10",
+          "QiChallenge7"
+        ]
+      },
+      {
+        "state": "fresh",
+        "season": "Fall",
+        "day": 1,
+        "town_eligible": 13,
+        "town_offered": [
+          "Wizard2",
+          "Gus"
+        ],
+        "qi_eligible": 10,
+        "qi_offered": [
+          "QiChallenge9",
+          "QiChallenge5"
+        ]
+      },
+      {
+        "state": "fresh",
+        "season": "Fall",
+        "day": 8,
+        "town_eligible": 13,
+        "town_offered": [
+          "Wizard2",
+          "Gus"
+        ],
+        "qi_eligible": 10,
+        "qi_offered": [
+          "QiChallenge9",
+          "QiChallenge5"
+        ]
+      },
+      {
+        "state": "fresh",
+        "season": "Fall",
+        "day": 15,
+        "town_eligible": 13,
+        "town_offered": [
+          "Wizard2",
+          "Gus"
+        ],
+        "qi_eligible": 10,
+        "qi_offered": [
+          "QiChallenge9",
+          "QiChallenge5"
+        ]
+      },
+      {
+        "state": "fresh",
+        "season": "Fall",
+        "day": 22,
+        "town_eligible": 11,
+        "town_offered": [
+          "Wizard2",
+          "Gus"
+        ],
+        "qi_eligible": 8,
+        "qi_offered": [
+          "QiChallenge10",
+          "QiChallenge7"
+        ]
+      },
+      {
+        "state": "fresh",
+        "season": "Winter",
+        "day": 1,
+        "town_eligible": 12,
+        "town_offered": [
+          "Wizard2",
+          "Demetrius2"
+        ],
+        "qi_eligible": 10,
+        "qi_offered": [
+          "QiChallenge9",
+          "QiChallenge5"
+        ]
+      },
+      {
+        "state": "fresh",
+        "season": "Winter",
+        "day": 8,
+        "town_eligible": 12,
+        "town_offered": [
+          "Wizard2",
+          "Demetrius2"
+        ],
+        "qi_eligible": 10,
+        "qi_offered": [
+          "QiChallenge9",
+          "QiChallenge5"
+        ]
+      },
+      {
+        "state": "fresh",
+        "season": "Winter",
+        "day": 15,
+        "town_eligible": 12,
+        "town_offered": [
+          "Wizard2",
+          "Demetrius2"
+        ],
+        "qi_eligible": 10,
+        "qi_offered": [
+          "QiChallenge9",
+          "QiChallenge5"
+        ]
+      },
+      {
+        "state": "fresh",
+        "season": "Winter",
+        "day": 22,
+        "town_eligible": 11,
+        "town_offered": [
+          "Wizard2",
+          "Gus"
+        ],
+        "qi_eligible": 8,
+        "qi_offered": [
+          "QiChallenge10",
+          "QiChallenge7"
+        ]
+      },
+      {
+        "state": "all_non_repeatable_done",
+        "season": "Spring",
+        "day": 1,
+        "town_eligible": 6,
+        "town_offered": [
+          "Clint",
+          "Gus"
+        ],
+        "qi_eligible": 10,
+        "qi_offered": [
+          "QiChallenge9",
+          "QiChallenge5"
+        ]
+      },
+      {
+        "state": "all_non_repeatable_done",
+        "season": "Spring",
+        "day": 8,
+        "town_eligible": 6,
+        "town_offered": [
+          "Clint",
+          "Gus"
+        ],
+        "qi_eligible": 10,
+        "qi_offered": [
+          "QiChallenge9",
+          "QiChallenge5"
+        ]
+      },
+      {
+        "state": "all_non_repeatable_done",
+        "season": "Spring",
+        "day": 15,
+        "town_eligible": 6,
+        "town_offered": [
+          "Clint",
+          "Gus"
+        ],
+        "qi_eligible": 10,
+        "qi_offered": [
+          "QiChallenge9",
+          "QiChallenge5"
+        ]
+      },
+      {
+        "state": "all_non_repeatable_done",
+        "season": "Spring",
+        "day": 22,
+        "town_eligible": 5,
+        "town_offered": [
+          "Clint",
+          "Demetrius2"
+        ],
+        "qi_eligible": 8,
+        "qi_offered": [
+          "QiChallenge10",
+          "QiChallenge7"
+        ]
+      },
+      {
+        "state": "all_non_repeatable_done",
+        "season": "Summer",
+        "day": 1,
+        "town_eligible": 6,
+        "town_offered": [
+          "Clint",
+          "Gus"
+        ],
+        "qi_eligible": 10,
+        "qi_offered": [
+          "QiChallenge9",
+          "QiChallenge5"
+        ]
+      },
+      {
+        "state": "all_non_repeatable_done",
+        "season": "Summer",
+        "day": 8,
+        "town_eligible": 6,
+        "town_offered": [
+          "Clint",
+          "Gus"
+        ],
+        "qi_eligible": 10,
+        "qi_offered": [
+          "QiChallenge9",
+          "QiChallenge5"
+        ]
+      },
+      {
+        "state": "all_non_repeatable_done",
+        "season": "Summer",
+        "day": 15,
+        "town_eligible": 6,
+        "town_offered": [
+          "Clint",
+          "Gus"
+        ],
+        "qi_eligible": 10,
+        "qi_offered": [
+          "QiChallenge9",
+          "QiChallenge5"
+        ]
+      },
+      {
+        "state": "all_non_repeatable_done",
+        "season": "Summer",
+        "day": 22,
+        "town_eligible": 5,
+        "town_offered": [
+          "Clint",
+          "Demetrius2"
+        ],
+        "qi_eligible": 8,
+        "qi_offered": [
+          "QiChallenge10",
+          "QiChallenge7"
+        ]
+      },
+      {
+        "state": "all_non_repeatable_done",
+        "season": "Fall",
+        "day": 1,
+        "town_eligible": 6,
+        "town_offered": [
+          "Clint",
+          "Gus"
+        ],
+        "qi_eligible": 10,
+        "qi_offered": [
+          "QiChallenge9",
+          "QiChallenge5"
+        ]
+      },
+      {
+        "state": "all_non_repeatable_done",
+        "season": "Fall",
+        "day": 8,
+        "town_eligible": 6,
+        "town_offered": [
+          "Clint",
+          "Gus"
+        ],
+        "qi_eligible": 10,
+        "qi_offered": [
+          "QiChallenge9",
+          "QiChallenge5"
+        ]
+      },
+      {
+        "state": "all_non_repeatable_done",
+        "season": "Fall",
+        "day": 15,
+        "town_eligible": 6,
+        "town_offered": [
+          "Clint",
+          "Gus"
+        ],
+        "qi_eligible": 10,
+        "qi_offered": [
+          "QiChallenge9",
+          "QiChallenge5"
+        ]
+      },
+      {
+        "state": "all_non_repeatable_done",
+        "season": "Fall",
+        "day": 22,
+        "town_eligible": 5,
+        "town_offered": [
+          "Clint",
+          "Demetrius2"
+        ],
+        "qi_eligible": 8,
+        "qi_offered": [
+          "QiChallenge10",
+          "QiChallenge7"
+        ]
+      },
+      {
+        "state": "all_non_repeatable_done",
+        "season": "Winter",
+        "day": 1,
+        "town_eligible": 5,
+        "town_offered": [
+          "Clint",
+          "Demetrius2"
+        ],
+        "qi_eligible": 10,
+        "qi_offered": [
+          "QiChallenge9",
+          "QiChallenge5"
+        ]
+      },
+      {
+        "state": "all_non_repeatable_done",
+        "season": "Winter",
+        "day": 8,
+        "town_eligible": 5,
+        "town_offered": [
+          "Clint",
+          "Demetrius2"
+        ],
+        "qi_eligible": 10,
+        "qi_offered": [
+          "QiChallenge9",
+          "QiChallenge5"
+        ]
+      },
+      {
+        "state": "all_non_repeatable_done",
+        "season": "Winter",
+        "day": 15,
+        "town_eligible": 5,
+        "town_offered": [
+          "Clint",
+          "Demetrius2"
+        ],
+        "qi_eligible": 10,
+        "qi_offered": [
+          "QiChallenge9",
+          "QiChallenge5"
+        ]
+      },
+      {
+        "state": "all_non_repeatable_done",
+        "season": "Winter",
+        "day": 22,
+        "town_eligible": 5,
+        "town_offered": [
+          "Clint",
+          "Demetrius2"
+        ],
+        "qi_eligible": 8,
+        "qi_offered": [
+          "QiChallenge10",
+          "QiChallenge7"
+        ]
+      }
+    ]
+  },
+  "note": null,
+  "mods": [
+    "SMAPI.ConsoleCommands 4.5.2",
+    "spacechase0.GenericModConfigMenu 1.16.0",
+    "Kkthnx.ValleyFixes 0.2.0-alpha.8",
+    "Kkthnx.ValleyFixes.DevHarness 0.1.0"
+  ]
+}

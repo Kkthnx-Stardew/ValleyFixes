@@ -1,10 +1,20 @@
 # Changelog
 
-## 0.2.0-alpha.8
+## 0.9.0-beta.1
 
-- VF-064: menu boxes no longer have a notch in their drop shadow under the top left corner (`FixMenuBoxShadow`). The game draws three of the four shadow corner pieces. The missing piece is drawn before the box, in the same layer as the others. Tested by drawing a box off screen and comparing pixels: 112 pixels change per box, all in the notch, and the result is identical to the Fix Hover Shadows mod. Skipped if another mod patches the same method.
-- The report that barn animals have two shadows (Barn Animals Double Shadows Fix) is not present in 1.6.15 build 24356. The game data already hides the extra shadow for cows, goats, sheep, pigs and ostriches. Nothing to fix.
-- Test tool: a `shadows` harness scenario that draws a menu box and every farm animal to PNG files.
+First beta. 1.0 is for the release after beta testing.
+
+- VF-067: with separate wallets, an empty slot in a farmhand's part of a Mini-Shipping Bin made the host throw a NullReferenceException when the day ended, and the new day never started (`FixMiniShippingBinCrash`). The game's developers confirmed it on the forum and said 1.6.16 fixes it. Reproduced in the game, where the day stayed stuck after 3,001 ticks without the fix and started after 40 ticks with it.
+- VF-068: opt-in (`FixFruitTreeQuality`, off by default). Fruit that grew on a tree before it aged to the next quality kept the old quality when picked. The game's developers called this an unintended change in 1.6. In the test the tree was at quality 1 and its fruit dropped at quality 0 without the fix and at quality 1 with it.
+- VF-066: SMAPI writes a rotation and a flip property of 0 on every tile of every Tiled (TMX) mod map, and nothing needs them (`SkipDefaultTileProperties`). On a copy of a real save with 101 mods that was 2,771,099 property entries, 99% of them default. Not storing them cut the managed heap after load from 1,832 to 1,522 MB and the process private memory from 6,236 to 5,874 MB. A hash of the rotation, flip and other properties of all 2,017,674 tiles in 461 maps is identical with and without the fix, so nothing looks different.
+- VF-065: opt-in setting `MultiplayerInterpolationTicks` (default 15, the game's own value). The game shows other players and monsters about 250 ms late on purpose. How late follows this number and nothing else, so 15 gave 258 ms, 8 gave 141 ms, 4 gave 72 ms. How often changes are sent made no difference to it. On a link with 15 ms jitter and 1% loss, 4 froze up to 3.7% of frames and 15 froze up to 1.8%. Only the machine that sets it is affected.
+- VF-064: menu boxes no longer have a notch in their drop shadow under the top left corner (`FixMenuBoxShadow`). The game draws three of the four shadow corner pieces. 112 pixels change per box, all in the notch, and the result is identical to the Fix Hover Shadows mod. It steps aside if another mod patches the same method.
+- The Barn Animals' Double Shadows Fix report is not present in 1.6.15 build 24356. The game data already hides the extra shadow for cows, goats, sheep, pigs and ostriches.
+- Special orders: when the town board comes up empty on a refresh day (1, 8, 15, 22), the host now logs which orders are held by entries still in the team list (`CheckStaleOrderParticipants`). The game's own rules do not empty the board when every one-time order is done, because at least 5 repeatable town orders stay eligible in every season. An empty board needs held entries, and the log now names them.
+- The Generic Mod Config Menu page is grouped by purpose, with plain names that fit next to their checkbox. Four labels used to run into the checkboxes.
+- `manifest.json` now carries a GitHub update key so SMAPI can tell you about new releases.
+- Cleanup: one shared check for other mods patching the same method, one Harmony instance always created, no stray static fields.
+- Test tools: harness scenarios `shadows`, `configshot`, `nettune`, `realmem`, `realclock`, `specialorders`, `emptyboard`, `minibin`, `fruit`, and `tools\Summarize-NetTune.ps1`.
 
 ## 0.2.0-alpha.7
 

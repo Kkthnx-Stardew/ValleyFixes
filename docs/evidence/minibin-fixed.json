@@ -1,0 +1,20 @@
+{
+  "world": "ready in FarmHouse, tick 405",
+  "mini_bin": {
+    "specialChestType": "MiniShippingBin",
+    "slotsBefore": 3,
+    "nullSlotsBefore": 1,
+    "dayBefore": 1,
+    "dayAfter": 2,
+    "dayStarted": true,
+    "stillInNewDay": false,
+    "waitedTicks": 40
+  },
+  "note": null,
+  "mods": [
+    "SMAPI.ConsoleCommands 4.5.2",
+    "spacechase0.GenericModConfigMenu 1.16.0",
+    "Kkthnx.ValleyFixes 0.9.0-beta.1",
+    "Kkthnx.ValleyFixes.DevHarness 0.1.0"
+  ]
+}

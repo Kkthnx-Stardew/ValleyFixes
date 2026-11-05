@@ -876,3 +876,99 @@ The game's shadow is eight pieces: three corners, four edges and a centre. The t
 A second finding while testing. Adding one fully transparent sprite to the batch, with no fix on, changed 8,060 pixels inside the tooltip box. The tooltip draws its title box and its main box at the same layer depth, and the game's front to back sort does not keep equal items in order, so which one ends up on top changes with the number of sprites in the batch. The first fixed run showed this and looked like a regression until the dummy sprite run reproduced it without the fix. It is a game and MonoGame quirk. The comparison above uses the dummy run as the baseline, so only the notch differs. Nothing was changed for it, because the difference was inside the box where the two boxes agree on colour except for a faint banner band.
 
 Not tested: gamepad or split screen menus, other zoom levels (the piece scales with the box's own scale argument, as its siblings do), and a mod that draws its own box through another method.
+
+## Round eight (2026-11-05): popular performance and sync mods, and developer confirmed reports
+
+The question was which claims of the popular performance, sync and bug fix mods and which forum reports hold on this build. Every row below was run in the real game. Sources read were the Nexus pages and public source of Stardropium, Stardew Stabilizer, Multiplayer Lag Fixer, UltraSmooth, the SMAPI release notes, and the bug forum up to 2026-11-05.
+
+| ID | Source | Verdict | Decision | One line |
+|---|---|---|---|---|
+| VF-065 | Multiplayer Lag Fixer | FIXED_AND_TESTED (opt-in setting) | SHIP, default unchanged | Other players and monsters look late by the interpolation buffer and nothing else. 15 ticks gave 258 ms, 8 gave 141 ms, 4 gave 72 ms. Send frequency changed nothing |
+| VF-066 | Stardropium, TMX module | FIXED_AND_TESTED | SHIP | 2.77 million default `@Rotation` and `@Flip` entries on a real 101 mod save. Not storing them cut the heap after load by 311 MB with an identical tile hash |
+| VF-067 | Forum, confirmed by the game's developers | FIXED_AND_TESTED | SHIP | With separate wallets an empty slot in a farmhand's part of a Mini-Shipping Bin crashes the host when the day ends |
+| VF-068 | Forum, confirmed by the game's developers | FIXED_AND_TESTED | SHIP, off by default | Fruit that grew before its tree aged keeps the old quality |
+| none | Stardropium, 10 minute clock module | NOT WORTH BUILDING | NO | The 343 empty locations out of 470 cost 0.27 ms of a 7.25 ms mean update |
+| none | Special orders board blank report | NOT REPRODUCED as running out | LOG ADDED | The game's rules never empty the board by completion. An empty board needs held entries, reproduced, and the host now logs them |
+
+### VF-065, how late other players look
+
+One side moves a player or a monster at a constant 256 pixels a second, back and forth, as a function of the shared PC clock. The other side reads where it sees it every tick and turns the error into milliseconds. Two game processes, a clean profile, three phases of 15 seconds each. "Net" is a relay adding 40 ms each way, 15 ms jitter and 1% loss. Spread is the standard deviation of the lag, so it is how jerky the movement looks. Still is the share of ticks where a moving thing did not change position.
+
+| Broadcast every, buffer | Link | Host player lag | Monster lag | Joiner player lag | Host sent in all phases |
+|---|---|---|---|---|---|
+| 3 ticks, 15 ticks (game) | direct | 257 ms, spread 11 | 258 ms, spread 9 | 260 ms, spread 10 | 17 KB |
+| 3, 15 | net | 293 ms, spread 12, still 0% | 299 ms, still 0.8% | 300 ms, still 1.8% | 18 KB |
+| 1, 15 | direct | 259 ms | 259 ms | 257 ms | 18 KB |
+| 3, 8 | direct | 143 ms, spread 5 | 143 ms | 140 ms | 33 KB |
+| 3, 8 | net | 181 ms, still 0% | 185 ms, still 1.7% | 181 ms, still 0.7% | 33 KB |
+| 2, 8 | direct | 141 ms | 141 ms | 141 ms | 33 KB |
+| 1, 8 | direct | 140 ms | 140 ms | 141 ms | 33 KB |
+| 1, 4 | direct | 71 ms, spread 9 | 71 ms | 75 ms | 64 KB |
+| 1, 4 | net | 118 ms, still 3.7% | 114 ms, still 0.8% | 117 ms, still 1.6% | 64 KB |
+
+- Lag is the buffer in milliseconds plus about 9 ms, on every row. Broadcast every 1, 2 or 3 ticks made no difference to it.
+- The shipped setting was tested through the real mod (`MultiplayerInterpolationTicks`, no harness override). 8 ticks gave 141 ms direct and 183 ms on the net link. 4 ticks gave 112 ms on the net link. The log line is `Multiplayer delay is 8 ticks (133 ms) instead of 15 (250 ms)`.
+- At 4 ticks up to 3.7% of frames froze on the jittery link in one run and 0.6% in the other. At 15 and at 8 the most was 1.8%.
+- The traffic is small. The most any setting sent was 64 KB over the 45 seconds of the three phases.
+- Not measured were whether a shorter buffer changes how monster hits and knockback feel, a link with more than 15 ms jitter, and three or more players.
+
+### VF-066, default tile properties
+
+The scenario loads a copy of a real played save with the real mod list (101 mods, 467 locations, 461 distinct maps) and counts what is on every tile. The same scan hashes, for every tile, its map, layer, position, tile index, rotation and flip as the library would answer them, plus every other property.
+
+| | Without the fix | With the fix |
+|---|---|---|
+| Tiles with any property | 1,379,267 | 38,255 |
+| Property entries | 2,771,099 | 40,126 |
+| `@Rotation` entries, of which 0 | 1,373,673, of which 1,370,346 | 3,327 |
+| `@Flip` entries, of which 0 | 1,373,673, of which 1,360,627 | 13,046 |
+| Tile hash over 2,017,674 tiles | `42b3668b6a211871` | `42b3668b6a211871` |
+| Managed heap after load, full collection | 1,832.5 MB | 1,521.6 MB |
+| Process private memory | 6,236 MB | 5,874 MB |
+| Working set | 4,283 MB | 3,941 MB |
+
+Stripping the entries after load instead (no fix) freed only 125 MB, so not creating them is worth more than cleaning up. The decompiled TMX library shows why nothing changes. `GetRotationValue` and `GetFlip` answer 0 when the property is missing, and nothing else in the game or the library reads the two keys. Vanilla maps are `.tbin` and carry none of these, so this only helps with Tiled mod maps.
+
+### VF-067, Mini-Shipping Bin crash
+
+A forum thread on build 24356 (host crashes at every new day) was answered by a developer. The game removes empty slots from the Mini-Shipping Bin before processing it, but only for the host's items, and 1.6.16 does it for all players. The code agrees. `Chest.clearNulls` cleans `GetItemsForPlayer()`, which is the calling player's part, and then the new day code calls `onDetachedFromParent` on every item of every part. Reproduced with a bin whose farmhand part is item, empty slot, item, and separate wallets on.
+
+| | Without the fix | With the fix |
+|---|---|---|
+| Result | `Error on new day: NullReferenceException` in `_newDayAfterFade`, still in the new day after 3,001 ticks | Day started after 40 ticks, log line names what was cleaned |
+
+The fix cleans every part from a postfix on `Chest.clearNulls`, only while a new day is being processed, because at other times a farmhand may have their part open.
+
+### VF-068, fruit tree quality
+
+A forum report with code analysis, answered by a developer as an unintended change in 1.6, fixed in 1.6.16. A cherry tree grew three fruit 100 days after maturing (quality 0), then aged to 120 days (quality 1). Shaking it dropped the fruit at quality 0 without the fix and quality 1 with it. The tree's own quality rule is untouched. It is off by default because it raises the quality of some fruit.
+
+### Performance with every fix on, real save
+
+The copy of the real save with all 101 mods, a tour of 13 places for 10 seconds each, then one night, with every ValleyFixes setting off and then on. Release build 0.9.0-beta.1.
+
+| | Settings off | Settings on |
+|---|---|---|
+| Update plus render, mean over the 13 stops | 4.88 ms | 2.83 ms |
+| Allocation, mean over the 13 stops | 178 MB/s | 33 MB/s |
+| Gen 0 collections in 10 seconds, typical stop | 31 to 48 | 6 to 9 |
+| Update p99 on the Farm | 4.49 ms | 3.99 ms |
+| Night: day started at | 5.6 s | 5.6 s |
+| Managed heap before and after the night | 2,200 and 2,363 MB | 1,621 and 1,740 MB |
+
+The night takes the same time with and without the fixes. The harness waits 210 seconds in both runs for a reason that is not the game's own day change, because `DayStarted` is at 5.6 seconds in both. The heap numbers at each stop move around from run to run, so only the before and after of the night are listed.
+
+### Config menu
+
+Rendering the page in the game found four labels that ran into their checkbox. Reading the code had not. They were shortened to 29 characters or less and rendered again. The page is grouped as Multiplayer and connection, Performance, Bug fixes, Text fixes, Off by default and Diagnostics. The default states match the table in the README.
+
+### Checked and not built
+
+- Stardropium, 10 minute clock, on the real save a clock update takes 3.4 to 8 ms (the first one 35 ms), and the empty locations cost 0.141 ms in `passTimeForObjects` and 0.129 ms in `timeUpdate` per update. About 3.7% of the update, once every 7 seconds of play.
+- Stardropium, UDP buffer from 128 KB to 1 MB, not tested. The joins of earlier rounds (480 KB in 59 messages on the real mod list) always completed with the game's own buffer. That shows no failure and does not show that no packet was dropped.
+- Stardropium, save stream, string cache, item query index, collision grid, culling, lighting, camera smoothing, schedule cache, not tested. The render time left after VF-061 is 1 to 1.9 ms a frame on this save.
+- Stardew Stabilizer, forces garbage collections when memory stays high. Not built. The two measured memory causes found so far are fixed at the source (VF-043, VF-066).
+- Junimos Accept Cash UI scale fix, a bug in that mod, not in the game.
+- Special orders board blank report (new, 2026-11-05, no mods, two farms), the game's data has 33 orders. With every one-time order done, the town board still has 5 to 6 eligible repeatable orders and offers 2 in every season and on every refresh day, so running out is not the cause. With an entry for every town order held in the team list, the real overnight into day 8 offered 0. The host now logs the held orders. Not confirmed as the player's cause, because their save was not available.
+- Marlon missing from a save (new, 2026-10-28), the report has no log and no steps. Nothing to test.
+- Stardew Valley Expanded logs an ArgumentNullException (null path1, in its JsonAssets ItemMigrator) at SaveLoaded in 4 of 5 real save runs. It is in the logs of the three runs with ValleyFixes off and the one with only the tile fix on, and absent from the one run with every fix on. It is raised inside that mod's own code. It was not investigated further, so no claim is made about why it varies.

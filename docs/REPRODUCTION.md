@@ -50,6 +50,13 @@ Each pass starts the game, creates a throwaway farm called "VFTest" with no menu
 | George | Part of the full run: compares the four walking up frames of George's wheel area as the game loads the sheet |
 | Network and crowd | `-Scenario netcond` (position and object latency, both ways), `discovery` (join attempts under loss), `deadclient` (`VFH_DEADMODE` kill, blackhole, killsleep), `crowd` (`-Clients 2` or `3`), with `-DelayMs`, `-JitterMs`, `-LossPct`, `-Shape` and `-JoinProbe` through `toolsNetShaper`. `toolsNew-RealSaveCopy.ps1` makes the real save copy |
 | Two players | `tools/Run-Multiplayer.ps1`: one game process hosts a throwaway farm, a second one joins as a farmhand through the real farmhand menu. They wait for each other at named points through small files. Scenarios: `join`, `perf`, `soak` (nights with both online, add `-Visit` to have the joiner walk into locations afterwards, `-HeapDumps` for dumps), `roundtrip` (progress, nights, the joiner leaves, the file is read), `gold`, `goldreload` (a kept world is loaded in a fresh game and the farmhand joins), `makeover`. The runner stops a run that makes no progress for 4 minutes |
+| Drawing | `-Only shadows`: draws a menu box and every farm animal into an off-screen target and writes PNG files, so shadows can be compared pixel by pixel. `VFH_DUMMY=1` adds one transparent sprite as a control for the game's equal depth sort order |
+| Config menu | `-Only configshot`: opens ValleyFixes' own page in Generic Mod Config Menu (copy that mod into `testprofile/Mods` first) and writes a PNG at every scroll position |
+| Sync delay | `-Scenario nettune` with `VFH_NETTUNE="period,buffer"` or `-Interp N`: one side moves a player or a monster at a constant speed by the shared PC clock, the other measures its lag and jerkiness. `tools/Summarize-NetTune.ps1` prints the runs |
+| Real save | `-Only realmem`, `-Only realclock` and `-Only realsp` with `-ModsName ModsReal -LoadSave VFReal_<save>` on a copy of a played save and a copy of the Mods folder, made with `tools/New-RealSaveCopy.ps1`. They count tile properties and hash every tile, time the 10 minute clock update, and tour 13 places and one night with the profiler |
+| Special order board | `-Only specialorders` runs the game's own weekly refresh for each season and refresh day on a fresh world and on a world where every one-time order is done. `-Only emptyboard` holds an entry for every town order and plays a real overnight into day 8 |
+| Mini-Shipping Bin | `-Only minibin`: separate wallets on, a bin with a farmhand part of item, empty slot, item, then a real overnight. Reports whether the day started |
+| Fruit tree | `-Only fruit`: a cherry tree grows fruit at one quality, ages to the next, is shaken, and the quality of the drops is read |
 | Eating states | `-Only eatstates`: eats while an emote plays, after and during a monster hit, while sitting, during a clock update, with an item pick-up message and during a warp, and records which ones orphan the freeze |
 
 ## Stress and memory results are machine specific
@@ -59,10 +66,10 @@ Frame times, CPU and memory above depend on this PC (2560 by 1440, 60 fps). The 
 ## What was not tested
 
 - A human playing: no controller, no keyboard play-through, no window focus changes.
-- Split screen, three or more players, a joiner on another PC or over the internet, another operating system, any mod beyond the test tool.
+- Split screen, three or more players with the real mod list, a joiner on another PC or over the internet, another operating system. Mod lists other than the one real 101 mod list.
 - Languages other than English and Portuguese in the running game.
 - A real Grange award, a full movie screening, a real axe on a tree, a real Trash Bear conversation, the real OK click in the menus.
-- Real fights in Skull Cavern, a real played late-game save, sessions of many hours.
+- Real fights in Skull Cavern, sessions of many hours. The real save runs were a copy of one played save loaded by the test tool, not a person playing.
 
 ## Raw results
 

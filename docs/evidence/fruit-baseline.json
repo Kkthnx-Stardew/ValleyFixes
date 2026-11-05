@@ -1,0 +1,36 @@
+{
+  "world": "ready in FarmHouse, tick 405",
+  "fruit_tree": {
+    "fruitGrown": 3,
+    "qualityWhenGrown": [
+      0,
+      0,
+      0
+    ],
+    "treeQualityNow": 1,
+    "dropped": [
+      {
+        "item": "(O)638",
+        "quality": 0,
+        "passed": 1
+      },
+      {
+        "item": "(O)638",
+        "quality": 0,
+        "passed": 1
+      },
+      {
+        "item": "(O)638",
+        "quality": 0,
+        "passed": 1
+      }
+    ]
+  },
+  "note": null,
+  "mods": [
+    "SMAPI.ConsoleCommands 4.5.2",
+    "spacechase0.GenericModConfigMenu 1.16.0",
+    "Kkthnx.ValleyFixes 0.9.0-beta.1",
+    "Kkthnx.ValleyFixes.DevHarness 0.1.0"
+  ]
+}
