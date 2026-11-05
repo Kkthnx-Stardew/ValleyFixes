@@ -2,7 +2,7 @@
 
 Small, separately switchable fixes for verified Stardew Valley 1.6.15 bugs. Every fix has its own toggle in `config.json`, and each one skips itself when the game data no longer matches what it expects.
 
-Status: 0.2.0-alpha.6 (the table lists every fix, 0.1.0 tested twelve of them). Twelve fixes were tested before and after in the running game (Stardew Valley 1.6.15 build 24356, SMAPI 4.5.2, Windows 11, English and Portuguese, single player, plus a host with one joining player on the same PC for the multiplayer fixes). Split screen, three or more players and other mods were not tested. See `docs/AUDIT.md` for what was and was not covered.
+Status: 0.2.0-alpha.7 (the table lists every fix, 0.1.0 tested twelve of them). Twelve fixes were tested before and after in the running game (Stardew Valley 1.6.15 build 24356, SMAPI 4.5.2, Windows 11, English and Portuguese, single player, plus a host with one joining player on the same PC for the multiplayer fixes). Split screen, four players and other mods were not tested, and three players only on a clean profile. See `docs/AUDIT.md` for what was and was not covered.
 
 ## Install
 
@@ -33,6 +33,7 @@ Status: 0.2.0-alpha.6 (the table lists every fix, 0.1.0 tested twelve of them). 
 | `CacheAssetNames` | VF-061 | SMAPI builds a new asset name object, several strings and two delegates every time a mod asks it to parse an asset name. Content Patcher Animations does it after every sprite drawn, about 2,000 times a frame in a big mod list. The answers are now kept and handed back. On a real 100 mod save this cut garbage from 97 to 36 MB/s and render time from 3.1 to 1.6 ms. No visible change. Skipped if another mod patches the same SMAPI method. |
 | `SkipEmptyLocationUpdates` | VF-062 | The game updates every location every frame, even ones nobody is in. A location with nobody in it for 60 frames, holding nothing and with no event, is skipped. Host or single player only. |
 | `PauseIdleLocationMonsters` | VF-062 | Monsters in outdoor locations nobody is in are not updated. In the test they did not move there anyway, and they move again when a player arrives. Never done on the Farm, in buildings, mines or the volcano. Host or single player only. |
+| `RetryLostJoinRequests` | VF-063 | Joining by IP address or on a local network starts with one UDP packet, and the game never sends it again if it is lost. The joiner then waits 45 seconds and gets a timeout. This sends the request again up to three times, three seconds apart, and keeps a port typed after the address. Farmhand side only. In the test with 5 to 20 percent packet loss, 14 of 100 joins failed before and 1 of 100 after. Skipped if another mod patches the same game methods. |
 | `LogEatInterrupts` | VF-004 | Writes a log line with the calling code when something cuts the eating animation short. This only logs. It changes nothing in the game. |
 
 ## What is not fixed

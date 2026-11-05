@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.2.0-alpha.7
+
+- VF-063: a lost join request is now sent again (`RetryLostJoinRequests`, farmhand side only). Joining by IP address or on a local network starts with one UDP packet, and the game never repeated it, so one lost packet meant 45 seconds of waiting and a timeout. With 25 join attempts at each loss rate, 14 of 100 failed before and 1 of 100 after (5, 10 and 20 percent loss each way). Nothing changes at 0 percent loss. The retry also keeps a port typed after the address.
+- Test tools: a join probe for the host's join steps, `tools\NetShaper` (a UDP relay that adds delay, jitter and loss), and harness scenarios for network conditions, join attempts under loss, a vanished player and three or four players. See `docs/AUDIT.md`, round six.
+
 ## 0.2.0-alpha.6
 
 - VF-058: in multiplayer, a coal cart a farmhand empties now stays empty for the host, for every other player, and for that farmhand after they leave the floor and return (`SyncCoalCarts`). The host keeps the list, shares it, and saves it with the world. Needs the mod on every player's machine. Tested with a host and a joining player: three visits gave coal once instead of three times.
