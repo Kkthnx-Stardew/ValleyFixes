@@ -1,0 +1,30 @@
+{
+  "world": "ready in FarmHouse, tick 405",
+  "wedding_play": {
+    "eventBuilt": true,
+    "eventCurrentCommand": 55,
+    "eventCommandCount": 54,
+    "eventPlayerControl": true,
+    "eventFreeze": 0,
+    "eventStarted": true,
+    "eventStillRunning": false,
+    "ticksUsed": 2062,
+    "dialogueShown": [
+      "Lewis: When VFTest first arrived in Pelican Town, no one knew if he\u0027d fit in with our community... / But from this day forward, @ is going to be as much a part of this town as any of us!$h{ / It is my great honor on this day 1 of spring, to unite @ and %spouse in the bonds of marriage.",
+      "Lewis: Well, let\u0027s get right to it!",
+      "Lewis: [SpouseGenderedText",
+      "Lewis: You may kiss.",
+      "\r\nLife \r\nis \r\ngoing \r\nto \r\nbe \r\ndifferent \r\nfrom \r\nnow \r\non... ",
+      "\r\n...But \r\nthe \r\nfuture \r\nlooks \r\nbright! "
+    ],
+    "statusAfter": "Engaged",
+    "location": "Farm"
+  },
+  "note": null,
+  "mods": [
+    "SMAPI.ConsoleCommands 4.5.2",
+    "spacechase0.GenericModConfigMenu 1.16.0",
+    "Kkthnx.ValleyFixes 0.9.0-beta.1",
+    "Kkthnx.ValleyFixes.DevHarness 0.1.0"
+  ]
+}

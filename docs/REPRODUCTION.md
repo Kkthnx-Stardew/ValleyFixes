@@ -57,6 +57,10 @@ Each pass starts the game, creates a throwaway farm called "VFTest" with no menu
 | Special order board | `-Only specialorders` runs the game's own weekly refresh for each season and refresh day on a fresh world and on a world where every one-time order is done. `-Only emptyboard` holds an entry for every town order and plays a real overnight into day 8 |
 | Mini-Shipping Bin | `-Only minibin`: separate wallets on, a bin with a farmhand part of item, empty slot, item, then a real overnight. Reports whether the day started |
 | Fruit tree | `-Only fruit`: a cherry tree grows fruit at one quality, ages to the next, is shaken, and the quality of the drops is read |
+| Pierre shop | `-Only pierre`: builds the real seed shop stock for each season without and with his missing stock list, with a pinned farm id, and records every wheat, corn and sunflower seed entry with its price and a hash of the whole stock |
+| Delivery quests | `-Only delivery`: builds the real item delivery quest for 600 days in each season with a pinned farm id and the item picker forced to hand out cooked dishes (a test only patch), and records which quests throw and a hash of each quest text |
+| Wedding | `-Only wedding` builds the real wedding event for an engaged farmer through the game wedding day path and records every command. `-Only weddingplay` runs the event in the Town, closes each dialogue box and records what each speaker says |
+| Patch conflicts | `-Only realpatches` on a real save copy lists every method ValleyFixes patches and every other mod patch on it |
 | Eating states | `-Only eatstates`: eats while an emote plays, after and during a monster hit, while sitting, during a clock update, with an item pick-up message and during a warp, and records which ones orphan the freeze |
 
 ## Stress and memory results are machine specific

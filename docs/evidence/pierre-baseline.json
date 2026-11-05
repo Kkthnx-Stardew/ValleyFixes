@@ -1,0 +1,106 @@
+{
+  "world": "ready in FarmHouse, tick 405",
+  "pierre": {
+    "rows": [
+      {
+        "stockList": false,
+        "season": "Spring",
+        "entries": 24,
+        "hash": "e2b25aa30765fd54",
+        "crops": []
+      },
+      {
+        "stockList": false,
+        "season": "Summer",
+        "entries": 28,
+        "hash": "fe57e6618a67658b",
+        "crops": [
+          "(O)431 SunflowerSeeds_Summer 200g",
+          "(O)483 WheatSeeds_Summer 10g",
+          "(O)487 CornSeeds_Summer 150g"
+        ]
+      },
+      {
+        "stockList": false,
+        "season": "Fall",
+        "entries": 28,
+        "hash": "a226b932459f8615",
+        "crops": [
+          "(O)431 SunflowerSeeds_Fall 200g",
+          "(O)483 WheatSeeds_Fall 10g",
+          "(O)487 CornSeeds_Fall 150g"
+        ]
+      },
+      {
+        "stockList": false,
+        "season": "Winter",
+        "entries": 17,
+        "hash": "2079e7be83563e0c",
+        "crops": []
+      },
+      {
+        "stockList": true,
+        "season": "Spring",
+        "entries": 46,
+        "hash": "44d4b7d584ab41e6",
+        "crops": [
+          "(O)431 SunflowerSeeds_Summer 300g",
+          "(O)431 SunflowerSeeds_Fall 300g",
+          "(O)483 WheatSeeds_Summer 15g",
+          "(O)483 WheatSeeds_Fall 15g",
+          "(O)487 CornSeeds_Summer 225g",
+          "(O)487 CornSeeds_Fall 225g"
+        ]
+      },
+      {
+        "stockList": true,
+        "season": "Summer",
+        "entries": 46,
+        "hash": "6054f08cf6c9c3b7",
+        "crops": [
+          "(O)431 SunflowerSeeds_Summer 200g",
+          "(O)431 SunflowerSeeds_Fall 300g",
+          "(O)483 WheatSeeds_Summer 10g",
+          "(O)483 WheatSeeds_Fall 15g",
+          "(O)487 CornSeeds_Summer 150g",
+          "(O)487 CornSeeds_Fall 225g"
+        ]
+      },
+      {
+        "stockList": true,
+        "season": "Fall",
+        "entries": 46,
+        "hash": "ec1e29a1e8d8f59b",
+        "crops": [
+          "(O)431 SunflowerSeeds_Fall 200g",
+          "(O)431 SunflowerSeeds_Summer 300g",
+          "(O)483 WheatSeeds_Fall 10g",
+          "(O)483 WheatSeeds_Summer 15g",
+          "(O)487 CornSeeds_Fall 150g",
+          "(O)487 CornSeeds_Summer 225g"
+        ]
+      },
+      {
+        "stockList": true,
+        "season": "Winter",
+        "entries": 46,
+        "hash": "12dba7317d3b7f58",
+        "crops": [
+          "(O)431 SunflowerSeeds_Summer 300g",
+          "(O)431 SunflowerSeeds_Fall 300g",
+          "(O)483 WheatSeeds_Summer 15g",
+          "(O)483 WheatSeeds_Fall 15g",
+          "(O)487 CornSeeds_Summer 225g",
+          "(O)487 CornSeeds_Fall 225g"
+        ]
+      }
+    ]
+  },
+  "note": null,
+  "mods": [
+    "SMAPI.ConsoleCommands 4.5.2",
+    "spacechase0.GenericModConfigMenu 1.16.0",
+    "Kkthnx.ValleyFixes 0.9.0-beta.1",
+    "Kkthnx.ValleyFixes.DevHarness 0.1.0"
+  ]
+}

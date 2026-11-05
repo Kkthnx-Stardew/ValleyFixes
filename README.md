@@ -2,7 +2,7 @@
 
 Verified fixes for Stardew Valley 1.6.15 bugs, plus performance and multiplayer fixes that matter most in big mod lists. Every fix is a separate switch, every claim was measured in the running game, and a fix steps aside by itself if the game data or another mod no longer matches what it expects.
 
-**Beta.** This is `0.9.0-beta.1`. 1.0 comes after beta testers report no problems.
+**Beta.** This is `0.9.0-beta.2`. 1.0 comes after beta testers report no problems.
 
 ## What you get
 
@@ -18,6 +18,7 @@ Measured on a copy of a real played save with 101 mods (Stardew Valley Expanded,
 Each of these was also reproduced in the game before and after the fix.
 
 - The host crashed when the day ended if a farmhand's part of a Mini-Shipping Bin had an empty slot (separate wallets).
+- A cooked dish delivery quest crashed the game in about a third of cases, and the wedding showed Lewis's speech as a broken fragment.
 - A farmhand could empty the same Mines coal cart again and again, and gold sent to an offline farmhand was lost at the next save and reload.
 - A lost join packet meant 45 seconds of waiting and a timeout. In a test with packet loss, 14 of 100 joins failed before and 1 of 100 after.
 - Stardrop energy lost when eating is cut short, a wrong Trash Bear request, a blank farm name that blocks joining, a notch in menu shadows, and more, listed below.
@@ -65,6 +66,9 @@ Defaults are on unless marked **off**. Names are the keys in `config.json`.
 
 | Setting | What it does |
 |---|---|
+| `FixCookingDeliveryQuestCrash` | An item delivery quest asking for a cooked dish, for any NPC but the Wizard, crashed the game about a third of the time, on days fixed by your save. The game's developers list it as fixed in 1.6.16. |
+| `FixWeddingSpouseTokens` | On the day of the wedding the script could not find your spouse while you are engaged, so Lewis's matrimonial speech came out as the fragment "[SpouseGenderedText" and the game logged 61 errors. The spouse is now found. The game's developers list it as fixed in 1.6.16. |
+| `FixPierreDuplicateSeeds` | After you give Pierre his missing stock list, wheat, corn and sunflower seeds were listed twice, one of them out of season at 1.5 times the price. The dearer copy is dropped. |
 | `FixStardropInterrupt` | A stardrop whose eating is cut short gave nothing and was already used up. The energy bonus is now applied at once. |
 | `FixTrashBearSardine` | Trash Bear could ask for a Sardine in summer, when it cannot be caught. |
 | `FixChefBundleReward` | The remixed Chef's bundle gave 1 Pink Cake, the classic one gives 3. New remixed worlds only. |

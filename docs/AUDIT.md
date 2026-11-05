@@ -98,7 +98,7 @@ Caveat: the installed `Mods` folder holds roughly 100 mods. All runtime tests ne
 | VF-054 | Partly | REPORTED_UNCONFIRMED | DEFER | Horse passes through fences. The gate code adds temporary passable tiles to the rider (`Fence.cs`), the likely path. No repro steps available |
 | VF-055 | Yes | FIXED_AND_TESTED | SHIP | Separate wallets: gold sent to an offline farmhand, or paid for their shipping bin, is lost at the next save and reload. A saved farmhand has a private team, the save writes its stale wallet. Reproduced and fixed with a real second game |
 | VF-056 | Yes | CANNOT_REPRODUCE | REJECT | Multiplayer masteries, powers and upgrades lost. A joiner earned professions, mail (powers), mastery experience, a skill level, recipes, a tool upgrade, a house upgrade and keys. All of it was in the host's save file after the joiner left. Only the report's own trigger is missing |
-| VF-057 | No | UPSTREAM_FIX_PLANNED | REJECT | Fruit trees give mixed quality fruit after aging. Developer says 1.6.16 fixes it |
+| VF-057 | Yes | FIXED_AND_TESTED | SHIP (opt-in, VF-068) | Fruit trees give mixed quality fruit after aging. Developer says 1.6.16 fixes it. Reproduced and fixed in round eight, off by default |
 
 ## Evidence for the inspected items
 
@@ -972,3 +972,88 @@ Rendering the page in the game found four labels that ran into their checkbox. R
 - Special orders board blank report (new, 2026-11-05, no mods, two farms), the game's data has 33 orders. With every one-time order done, the town board still has 5 to 6 eligible repeatable orders and offers 2 in every season and on every refresh day, so running out is not the cause. With an entry for every town order held in the team list, the real overnight into day 8 offered 0. The host now logs the held orders. Not confirmed as the player's cause, because their save was not available.
 - Marlon missing from a save (new, 2026-10-28), the report has no log and no steps. Nothing to test.
 - Stardew Valley Expanded logs an ArgumentNullException (null path1, in its JsonAssets ItemMigrator) at SaveLoaded in 4 of 5 real save runs. It is in the logs of the three runs with ValleyFixes off and the one with only the tile fix on, and absent from the one run with every fix on. It is raised inside that mod's own code. It was not investigated further, so no claim is made about why it varies.
+
+## Round nine (2026-11-05): conflicts, world equality and the developers' 1.6.16 list
+
+The questions were whether any of our patches collide with the 101 mods on the real save, whether the fixes change the simulated world, and which of the bugs the game's developers list for 1.6.16 are real on 1.6.15. The 1.6.16 list is on the wiki page "Modding:Migrate to Stardew Valley 1.6.16", which says the patch is a possible release before 1.7 with no planned date. Each item was checked in the installed game's code and data first, and only then built.
+
+| ID | Source | Verdict | Decision | One line |
+|---|---|---|---|---|
+| VF-069 | 1.6.16 list, Pierre's shop | FIXED_AND_TESTED | SHIP | After the missing stock list is given to Pierre, wheat, corn and sunflower seeds are listed twice in every season, 46 entries instead of 43 |
+| VF-070 | 1.6.16 list, delivery quest crash | FIXED_AND_TESTED | SHIP | A cooked dish quest for any NPC but the Wizard throws a NullReferenceException in 702 of 2,103 cases (33.4%) |
+| VF-071 | 1.6.16 list, Lewis at the wedding | FIXED_AND_TESTED | SHIP | On the wedding day the script cannot find the engaged spouse. Lewis's speech shows as "[SpouseGenderedText" and the game logs 61 errors |
+| none | World equality | NO DIFFERENCE FOUND | none | 15 saved worlds after a real night, with fixes off, on, and each idle fix alone, differ from each other by the same amount |
+| none | Conflicts with the real mod list | DONE | none | With the shipped defaults 20 methods are patched and 19 have no other mod on them |
+
+### Conflicts with the real mod list
+
+The harness lists every method ValleyFixes patches and every other owner of a patch on it, from the live game with the real 101 mods loaded (`-Only realpatches`). With the shipped defaults of 0.9.0-beta.2, 20 methods are patched and 19 have no other mod on them. The one shared method is `GameLocation.MakeMapModifications`, where two other mods add postfixes and ours is a prefix. An earlier map with every setting on, including the off by default fruit fix, showed that `FruitTree.shake` and `FruitTree.performToolAction` carry prefixes from three other mods and one postfix. Only the menu box shadow fix stepped aside, because Fix Hover Shadows is installed. The map for the final build is in `docs/evidence/fin2-realpatches.json`.
+
+### World equality, fixes on and off
+
+The real save copy was loaded and put through one real night 15 times, keeping the saved world each time. Six had every setting off, seven had settings on (all on, the shipped defaults, the four opt-ins alone, the others without the idle fixes), and two had only one idle fix on. The saved files were streamed and every element name was counted overall and per location. Money, date, play time and farm are identical in all 15.
+
+| Pairs | Pairs compared | Mean number of differing counts | Range |
+|---|---|---|---|
+| fixes off against fixes off | 15 | 772 | 373 to 1,167 |
+| fixes off against fixes on | 42 | 774 | 355 to 1,357 |
+| fixes on against fixes on | 21 | 793 | 416 to 1,324 |
+| fixes off against one idle fix alone | 12 | 679 | 436 to 1,159 |
+
+The differences are the game's own random spawns (stones, forage, tree growth) and are as large between two runs with every fix off as between off and on. A first look at four runs seemed to show 66 keys that differed in every on against off pair and in neither identical pair. It was an accident of runs A and B happening to agree. Four more runs with every fix off differed from run A by 45 to 536 keys outside that set. The tool for this is `tools/Compare-SavedWorlds.ps1`.
+
+### VF-069, Pierre's duplicate seeds
+
+`ShopBuilder.CheckItemCondition` lets Pierre's shop sell out of season crops at 1.5 times the price once the missing stock list was given, by ignoring the season in each entry's condition. Wheat, corn and sunflower seeds each have a Summer entry and a Fall entry, so both pass. The real shop stock was built for each season with a pinned farm id.
+
+| Stock list given | Entries before | Entries after | The seeds before | The seeds after |
+|---|---|---|---|---|
+| no | 24, 28, 28, 17 (spring to winter) | the same, and the stock hash is identical | one each in summer and fall | the same |
+| yes, summer | 46 | 43 | sunflower 200g and 300g, wheat 10g and 15g, corn 150g and 225g | 200g, 10g, 150g |
+| yes, spring | 46 | 43 | each of the three twice at 1.5 times | one each at 300g, 15g, 225g |
+
+The fix drops the dearer copy of those six entries after the stock is built, so the in season price stays and shop mods that change other entries are not affected. The first version of the patch failed to start because `GetShopStock` has overloads, which a run of the game showed at once.
+
+### VF-070, delivery quest crash
+
+In `ItemDeliveryQuest.loadQuestInfo` the cooked dish branch has two ways of writing the text. The 33% one writes the text and leaves `array` null, and the code after both branches reads `array.Length`. The quest random is seeded by the save and the day. The requested item is chosen from a pool that includes cooked dishes only when the players know recipes whose ingredients are available, which is why a well played save meets it. The test forces the item picker to hand out dishes and pins the farm id, and runs the real quest code for 2,400 days and seasons.
+
+| | Without the fix | With the fix |
+|---|---|---|
+| Quests built | 2,400 | 2,400 |
+| Cooked dish quests for non-Wizard NPCs | 2,103 | 2,103 |
+| NullReferenceException | 702 (33.4%) | 0 |
+| Run twice, same result | yes, identical hashes | |
+| The 1,698 quests that built before | | identical text, 1,698 of 1,698 |
+| The 702 that threw before | | all built with text |
+
+The fix is a transpiler that points the end of the short text branch at the code that builds the quest dialogue, which is where the other path continues. It matches on the method's own structure, and it patches nothing if the method does not look the way it was read. It runs only with the game's IL, so a future game update that reshuffles the method turns it off and says so.
+
+### VF-071, Lewis's wedding speech
+
+The game queues a wedding for a farmer who is engaged with the countdown finished. The wedding script then resolves `[SpouseFarmerText ...]` and `[SpouseGenderedText ...]`, which call `Farmer.getSpouse`, and that answers only for a married farmer. Both tokens fail with "the target player isn't married". Tested through the game's own wedding day path (`queueWeddingsForToday` and `getAvailableWeddingEvent`) with an engaged farmer and Abigail as the spouse.
+
+| | Without the fix | With the fix |
+|---|---|---|
+| Spouse tokens left unresolved in the event | 7 | 0 |
+| Event commands | 54, some of them fragments such as `[SpouseFarmerText faceDirection Abigail 2` | 53, all well formed |
+| Game errors while the event plays through | 61 | 0 |
+| What Lewis's matrimonial box says | `[SpouseGenderedText` | the speech |
+
+The event plays to its last command in both runs. The spouse's position and wedding frames were missing in the first and are in the script in the second. The fix makes `getSpouse` also answer for an engaged farmer, only while the wedding event is being built. Not tested were a wedding between two farmers, a roommate, and the other languages.
+
+### Developers' 1.6.16 list, the rest
+
+| Item | Verdict |
+|---|---|
+| Mini-Shipping Bin crash, fruit tree quality | Fixed in round eight (VF-067, VF-068) |
+| Storage furniture on a table loses its items | Cannot happen in vanilla. A table only takes 1 tile furniture and no vanilla dresser or fish tank is 1 tile. Mods only |
+| RejectItem dialogue turns off normal dialogue | Vanilla dialogue has no RejectItem keys. Mods only |
+| Location dialogue keys do not know the spring prefix | Vanilla dialogue has summer location keys and no spring ones. Mods only |
+| Farm animals in a farmhouse deleted at day start, crash on a save with missing building interiors | Need a mod or a damaged save |
+| A George event line not shown since 1.6.9 | Not identified. The event scripts have no localized key to check, and the fix is not described |
+| Weeds stat, bed time average, calico egg stone, Marnie capitalization, event commands with invalid arguments, NetMutex release, item add overhaul | Not tested |
+
+### Not found
+
+The special orders blank board and the missing Marlon reports are unchanged from round eight.

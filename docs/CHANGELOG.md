@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.9.0-beta.2
+
+- VF-071: Lewis's matrimonial speech at the wedding came out as the fragment "[SpouseGenderedText" and the spouse's place in the script was left unresolved (`FixWeddingSpouseTokens`). The game queues a wedding for an engaged farmer, and the script asks for the spouse with `Farmer.getSpouse`, which only answers for a married one. While the wedding event is built, it now answers for an engaged farmer too. Played through in the game, the unfixed wedding logged 61 errors and the fixed one 0. The game's developers list it as fixed in 1.6.16.
+- VF-070: a cooked dish delivery quest for any NPC but the Wizard threw a NullReferenceException about a third of the time (`FixCookingDeliveryQuestCrash`). The text branch drawn 33% of the time leaves an array null and the code after it reads its length. Which days it happens on is fixed by the save and the day. With the real quest code run for 2,400 days and seasons, 702 of 2,103 dish quests threw without the fix and none with it, and the 1,698 quests that worked before are unchanged. The game's developers list it as fixed in 1.6.16.
+- VF-069: after Pierre is given his missing stock list, his shop listed wheat, corn and sunflower seeds twice, one at the normal price and one out of season at 1.5 times the price (`FixPierreDuplicateSeeds`). The dearer copy is dropped, from those six entries only. A shop without the stock list is unchanged, checked by a hash of the whole stock. The game's developers list it as fixed in 1.6.16.
+- Checked and unchanged. With the shipped defaults 20 methods are patched and 19 have no other mod on them in a real 101 mod list. Fifteen real nights with settings off and on changed the saved world by the same amount as the game changes it by itself. See `docs/AUDIT.md` round nine.
+- Test tools: harness scenarios `pierre`, `delivery`, `wedding`, `weddingplay` and `realpatches`, and `tools\Compare-SavedWorlds.ps1`.
+
 ## 0.9.0-beta.1
 
 First beta. 1.0 is for the release after beta testing.

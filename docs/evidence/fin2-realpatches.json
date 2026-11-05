@@ -1,0 +1,368 @@
+{
+  "real_patches": {
+    "world": {
+      "date": "fall 24 y5",
+      "time": 600,
+      "mods": 101,
+      "topLevelLocations": 467,
+      "allCharacters": 1596,
+      "villagers": 218,
+      "monsters": 1372,
+      "animalsOnFarm": 12,
+      "farmObjects": 211,
+      "farmTerrainFeatures": 161,
+      "farmBuildings": 10,
+      "festivalDay": false,
+      "player": "Josh",
+      "farm": "Lazy Rooster"
+    },
+    "patch_map": {
+      "ourMethods": [
+        {
+          "method": "StardewModdingAPI.Framework.ContentCoordinator.ParseAssetName",
+          "otherPatches": []
+        },
+        {
+          "method": "StardewValley.Farmer.completelyStopAnimatingOrDoingAction",
+          "otherPatches": []
+        },
+        {
+          "method": "StardewValley.Farmer.getSpouse",
+          "otherPatches": []
+        },
+        {
+          "method": "StardewValley.GameLocation.MakeMapModifications",
+          "otherPatches": [
+            "DLX.Bundles postfix priority 400",
+            "FlashShifter.SVECode postfix priority 400"
+          ]
+        },
+        {
+          "method": "StardewValley.GameLocation.updateEvenIfFarmerIsntHere",
+          "otherPatches": []
+        },
+        {
+          "method": "StardewValley.Internal.ShopBuilder.GetShopStock",
+          "otherPatches": []
+        },
+        {
+          "method": "StardewValley.Locations.MineShaft.checkAction",
+          "otherPatches": []
+        },
+        {
+          "method": "StardewValley.Locations.MineShaft.updateMineLevelData",
+          "otherPatches": []
+        },
+        {
+          "method": "StardewValley.Menus.CharacterCustomization.canLeaveMenu",
+          "otherPatches": []
+        },
+        {
+          "method": "StardewValley.Menus.LoadGameMenu.saveFileScanComplete",
+          "otherPatches": []
+        },
+        {
+          "method": "StardewValley.Menus.TitleMenu.ReturnToMainTitleScreen",
+          "otherPatches": []
+        },
+        {
+          "method": "StardewValley.Monsters.Monster.update",
+          "otherPatches": []
+        },
+        {
+          "method": "StardewValley.Network.LidgrenClient..ctor",
+          "otherPatches": []
+        },
+        {
+          "method": "StardewValley.Network.LidgrenClient.attemptConnection",
+          "otherPatches": []
+        },
+        {
+          "method": "StardewValley.Objects.Chest.clearNulls",
+          "otherPatches": []
+        },
+        {
+          "method": "StardewValley.Quests.ItemDeliveryQuest.loadQuestInfo",
+          "otherPatches": []
+        },
+        {
+          "method": "StardewValley.Utility.getRandomPureSeasonalItem",
+          "otherPatches": []
+        },
+        {
+          "method": "StardewValley.Utility.getWeddingEvent",
+          "otherPatches": []
+        },
+        {
+          "method": "TMXTile.TMXExtensions.SetFlip",
+          "otherPatches": []
+        },
+        {
+          "method": "TMXTile.TMXExtensions.SetRotationValue",
+          "otherPatches": []
+        }
+      ],
+      "patchedMethods": 436,
+      "hotMethods": [
+        {
+          "method": "GameLocation.updateEvenIfFarmerIsntHere",
+          "prefixes": [
+            "Kkthnx.ValleyFixes"
+          ],
+          "postfixes": [],
+          "transpilers": [],
+          "finalizers": []
+        },
+        {
+          "method": "GameLocation.updateCharacters",
+          "prefixes": [],
+          "postfixes": [],
+          "transpilers": [],
+          "finalizers": []
+        },
+        {
+          "method": "GameLocation.UpdateWhenCurrentLocation",
+          "prefixes": [],
+          "postfixes": [
+            "FlashShifter.SVECode"
+          ],
+          "transpilers": [],
+          "finalizers": []
+        },
+        {
+          "method": "GameLocation.MakeMapModifications",
+          "prefixes": [
+            "Kkthnx.ValleyFixes"
+          ],
+          "postfixes": [
+            "DLX.Bundles",
+            "FlashShifter.SVECode"
+          ],
+          "transpilers": [],
+          "finalizers": []
+        },
+        {
+          "method": "GameLocation.performTenMinuteUpdate",
+          "prefixes": [],
+          "postfixes": [],
+          "transpilers": [],
+          "finalizers": []
+        },
+        {
+          "method": "GameLocation.draw",
+          "prefixes": [],
+          "postfixes": [
+            "Rafseazz.RidgesideVillage"
+          ],
+          "transpilers": [],
+          "finalizers": []
+        },
+        {
+          "method": "NPC.update",
+          "prefixes": [],
+          "postfixes": [],
+          "transpilers": [],
+          "finalizers": []
+        },
+        {
+          "method": "Monster.update",
+          "prefixes": [
+            "Kkthnx.ValleyFixes"
+          ],
+          "postfixes": [],
+          "transpilers": [],
+          "finalizers": []
+        },
+        {
+          "method": "Game1._update",
+          "prefixes": [],
+          "postfixes": [],
+          "transpilers": [],
+          "finalizers": []
+        },
+        {
+          "method": "Game1._draw",
+          "prefixes": [],
+          "postfixes": [],
+          "transpilers": [],
+          "finalizers": []
+        },
+        {
+          "method": "Game1.shouldTimePass",
+          "prefixes": [],
+          "postfixes": [],
+          "transpilers": [],
+          "finalizers": []
+        },
+        {
+          "method": "Game1.performTenMinuteClockUpdate",
+          "prefixes": [],
+          "postfixes": [],
+          "transpilers": [],
+          "finalizers": []
+        },
+        {
+          "method": "Game1.drawHUD",
+          "prefixes": [],
+          "postfixes": [],
+          "transpilers": [],
+          "finalizers": []
+        },
+        {
+          "method": "Game1.drawWorld",
+          "note": "not found or ambiguous"
+        },
+        {
+          "method": "Game1.UpdateLocations",
+          "prefixes": [],
+          "postfixes": [
+            "spacechase0.SpaceCore"
+          ],
+          "transpilers": [],
+          "finalizers": []
+        },
+        {
+          "method": "Game1._UpdateLocation",
+          "prefixes": [],
+          "postfixes": [],
+          "transpilers": [
+            "leclair.bettercrafting"
+          ],
+          "finalizers": []
+        }
+      ],
+      "methodsPatchedByOwner": {
+        "spacechase0.SpaceCore": 126,
+        "selph.ExtraMachineConfig": 49,
+        "FlashShifter.SVECode": 47,
+        "Spiderbuttons.BETAS": 44,
+        "mistyspring.ItemExtensions": 42,
+        "Rafseazz.RidgesideVillage": 41,
+        "SunberryTeam.SBVSMAPI": 25,
+        "DLX.Bundles": 21,
+        "Esca.FarmTypeManager": 20,
+        "Kkthnx.ValleyFixes": 20,
+        "leclair.bettercrafting": 12,
+        "PeacefulEnd.CustomCompanions": 11,
+        "Digus.ProducerFrameworkMod": 9,
+        "atravita.EastScarp": 9,
+        "Esca.EMP": 9,
+        "Kkthnx.Flashlight": 8,
+        "spacechase0.ContentPatcherAnimations": 7,
+        "Esca.CustomNPCExclusions": 5,
+        "DecidedlyHuman.MappingExtensionsAndExtraProperties": 4,
+        "Kkthnx.SlimSteed": 4,
+        "Digus.MailFrameworkMod": 3,
+        "atravita.NovaNPCTest": 3,
+        "MiniMonoModHotfix": 2,
+        "Esca.DestroyableBushes": 2,
+        "shekurika.WaterFish": 1,
+        "AlanBF.FixHoverShadows": 1
+      }
+    }
+  },
+  "note": null,
+  "mods": [
+    "Pathoschild.ContentPatcher 2.9.1",
+    "PeacefulEnd.CustomCompanions 5.1.0",
+    "Himetarts.ARVCC 1.5.1",
+    "spacechase0.GenericModConfigMenu 1.16.0",
+    "Esca.FarmTypeManager 1.26.1",
+    "Lumisteria.LumiTilesheetsIndoor 1.4.0",
+    "hxw.tilesheets 2.0.0",
+    "mistyspring.ItemExtensions 1.16.0",
+    "skellady.SBVCC 1.1.2",
+    "skellady.SBVFTM 1.1.2",
+    "SunberryTeam.SBVSMAPI 1.1.2",
+    "skellady.SBVCP 1.1.2",
+    "DLX.Bundles 4.3.1",
+    "DIGUS.MailFrameworkMod 1.20.0",
+    "FlashShifter.SVE-FTM 1.15.11",
+    "FlashShifter.SVECode 1.15.11",
+    "selph.ExtraMachineConfig 1.18.0",
+    "MoreFish 5.4.0",
+    "FlashShifter.StardewValleyExpandedCP 1.15.11",
+    "Himetarts.ARV.CP 1.5.1",
+    "Spiderbuttons.BETAS 3.5.2",
+    "leclair.bettercrafting 2.18.0",
+    "BetterRanching 2.0.5",
+    "Pathoschild.CentralStation 1.7.0",
+    "Pathoschild.CentralStation.Content 1.7.0",
+    "SMAPI.ConsoleCommands 4.5.2",
+    "spacechase0.ContentPatcherAnimations 1.2.4",
+    "Esca.CustomNPCExclusions 1.6.0",
+    "Esca.DestroyableBushes 1.5.2",
+    "atravita.EastScarp 3.0.9",
+    "DaisyNiko.Tilesheets 2.0.2",
+    "Lumisteria.TtilesheetsOutdoor 1.4.0",
+    "spacechase0.SpaceCore 1.28.4",
+    "Bouhm.NPCMapLocations 3.5.2",
+    "Lemurkat.EastScarp 3.0.9",
+    "Lemurkat.EastScarpe.FTM 3.0.9",
+    "DecidedlyHuman.MappingExtensionsAndExtraProperties 2.5.3",
+    "Rafseazz.RSVCC 2.5.17",
+    "Rafseazz.RSVFTM 2.5.17",
+    "Rafseazz.RidgesideVillage 2.5.17",
+    "Rafseazz.RSVCP 2.5.17",
+    "Lemurkat.EastScarpNPCs 3.0.9",
+    "ES.BarberShop 3.0.9",
+    "Esca.EMP 1.7.2",
+    "AlanBF.FixHoverShadows 1.0.0",
+    "Kkthnx.Flashlight 1.2.0",
+    "flashshifter.FrontierFarm 1.15.11",
+    "FlashShifter.FrontierFarmFTM 1.15.11",
+    "Pathoschild.LookupAnything 1.55.0",
+    "DelphinWave.MultiplayerHorseReskin 2.0.0",
+    "Digus.ProducerFrameworkMod 1.9.8",
+    "SMAPI.SaveBackup 4.5.2",
+    "Kkthnx.SimpleLocationDisplay 2.0.1",
+    "Pathoschild.SkipIntro 1.9.25",
+    "Kkthnx.SlimSteed 1.1.1",
+    "aedenthorn.SoundTweaker 0.5.1",
+    "Cherry.StardewAquarium 2.3.0",
+    "Gervig91.StardewAquariumCP 2.3.0",
+    "Gervig91.StardewAquariumCC 2.3.0",
+    "Annosz.UiInfoSuite2 2.3.7",
+    "Kkthnx.ValleyFixes 0.9.0-beta.2",
+    "Kkthnx.ValleyFixes.DevHarness 0.1.0",
+    "shekurika.WaterFish 0.4.2",
+    "SmolHooman.WildAnimalsCC 1.3.0",
+    "SmolHooman.WildAnimals 1.3.2",
+    "Gervig91.AnimatedClothes 1.2.0",
+    "Gervig91.AnimatedESFish 1.3.2",
+    "Gervig91.AnimatedFish 1.4.0",
+    "Gervig91.AnimatedFishSVE 1.9.0",
+    "Gervig91.AnimatedFood 3.5.0",
+    "Gervig91.AnimatedFurnitureAndStuff 1.2.0",
+    "Gervig91.AnimatedMiningPack 1.3.0",
+    "Gervig91.AnimatedMoreNewFish 1.4.0",
+    "Gervig91.AnimatedRSVFish 1.4.1",
+    "Gervig91.AnimatedSlimeEggandLoot 2.2.0",
+    "Gervig91.AnimatedToolsAndWeapons 1.2.0",
+    "LemurKat.CommunityCenter.CP 1.3.2",
+    "Elle.SeasonalBuildings 1.3.5",
+    "Arknir.Jonghyuk 1.2.3",
+    "SamSpare.NoMoreSpongebobSteps 1.1.0",
+    "PC.Tilesheets 1.1.0",
+    "Rafseazz.RSVSeasonalOutfits 1.1.3",
+    "Poltergeister.SeasonalCuteCharacters 6.1.4",
+    "Poltergeister.SeasonalCuteSpritesSVE 3.0.0",
+    "mangozey.SeasonalVPRUI 3.0.1",
+    "plurffle.WildCritterTweaks 1.4.0",
+    "Nekotekina.BarnAnimalsDoubleShadowsFix 1.0.0",
+    "xiddav.tilesheet 2.1.0",
+    "MNFLetters 1.0.0",
+    "Airyn.Dao.CP 1.0.4",
+    "atravita.NovaNPCTest 1.4.4",
+    "TenebrousNova.EliDylanCC 1.4.4",
+    "TenebrousNova.EliDylan.CP 1.4.4",
+    "atelier99.LaniCC 1.1.8",
+    "atelier99.SBV.NPCLani 1.1.8",
+    "Squeaks.MGCCC 1.0.0",
+    "Squeaks.MGC.CP 1.1.2",
+    "Bagi.Nora.CP 2.9.2",
+    "Clara.RipleyCC 1.0.9",
+    "Clara.Ripley 1.0.9",
+    "tiakall.wren 1.0.4"
+  ]
+}

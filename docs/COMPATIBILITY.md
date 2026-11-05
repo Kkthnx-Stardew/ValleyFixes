@@ -17,6 +17,9 @@ Tested against Stardew Valley 1.6.15 build 24356 with SMAPI 4.5.2 on Windows 11.
 | `FixBlankNames` | Harmony postfix | `CharacterCustomization.canLeaveMenu` | on |
 | `FixTrashBearSardine` | Harmony postfix | `Utility.getRandomPureSeasonalItem` | on |
 | `FixStardropInterrupt` | Harmony prefix and postfix | `Farmer.completelyStopAnimatingOrDoingAction`, only for the local player eating a stardrop | on |
+| `FixPierreDuplicateSeeds` | Harmony postfix | The stock `ShopBuilder.GetShopStock` builds for `SeedShop`, and only the six wheat, corn and sunflower entries. Skipped if another mod patches the method | on |
+| `FixCookingDeliveryQuestCrash` | Harmony transpiler | `ItemDeliveryQuest.loadQuestInfo`, one jump. Skipped if another mod patches it or if the method does not look the way it was read | on |
+| `FixWeddingSpouseTokens` | Harmony prefix and finalizer on `Utility.getWeddingEvent`, postfix on `Farmer.getSpouse` | `getSpouse` answers for an engaged farmer, only while the wedding event is being built. Skipped if another mod patches either method | on |
 | `FixMenuBoxShadow` | Harmony prefix | `IClickableMenu.drawTextureBox`. Skipped if another mod patches it | on |
 | `FixQuestItemGroundDrops` | Harmony postfix | `Game1._RecursiveRemoveThisNormalItemLocation` | **off** |
 | `CheckStaleOrderParticipants` | `DayStarted` event, main player only, log only | Reads `team.specialOrders`, `team.availableSpecialOrders` and `Data/SpecialOrders` | on |
@@ -34,7 +37,7 @@ Tested against Stardew Valley 1.6.15 build 24356 with SMAPI 4.5.2 on Windows 11.
 | `FixFruitTreeQuality` | Harmony prefix | `FruitTree.shake` and `FruitTree.performToolAction`, sets the quality of the fruit on the tree before the game drops it | **off** |
 | `LogEatInterrupts` | Harmony prefix, log only | `Farmer.completelyStopAnimatingOrDoingAction` | on |
 
-No transpilers. Patches that run often are the four performance ones and the menu box shadow. Each does a few comparisons and returns. They are also the ones that step aside when another mod patches the same method, and they say so in the SMAPI log. The only data written is `config.json` and, in multiplayer, the small coal cart list in the save's SMAPI data.
+One transpiler, for the delivery quest, which patches nothing if the method has changed. Patches that run often are the four performance ones and the menu box shadow. Each does a few comparisons and returns. They are also the ones that step aside when another mod patches the same method, and they say so in the SMAPI log. The only data written is `config.json` and, in multiplayer, the small coal cart list in the save's SMAPI data.
 
 ## Failure behavior
 
@@ -66,6 +69,7 @@ Tested with a host and one joining player, each a separate game process on the s
 - `SyncCoalCarts` needs the mod on every player. Mixed setups were not tested.
 - `RetryLostJoinRequests`, `FixStaleMapOverrides` and `MultiplayerInterpolationTicks` act on the machine they are installed on. The host does not need them.
 - `FixMiniShippingBinCrash` runs where the day is processed, which is the host. A farmhand does not need it.
+- `FixPierreDuplicateSeeds` acts on the machine that opens the shop. `FixCookingDeliveryQuestCrash` and `FixWeddingSpouseTokens` act on the machine that builds the quest or the wedding event. A wedding between two farmers uses another path and was not tested.
 - `FixFruitTreeQuality` acts on the machine that shakes or chops the tree. It was tested in single player only.
 - `SkipEmptyLocationUpdates` and `PauseIdleLocationMonsters` only act on the host or in single player. A joiner never skips anything.
 
