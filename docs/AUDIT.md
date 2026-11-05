@@ -770,3 +770,85 @@ Limits:
 - One run per case, a vanilla profile, one PC.
 - The barn was placed with the placement checks skipped, because the checked call refused every tile on a new farm. The days-left counter is what was compared.
 - No fix was made for items 36 to 42. None of them has a reproduction on this build.
+
+## Round six (2026-11-04): multiplayer connection and performance
+
+Questions: what freezes the host during a join, what latency and packet loss do, how long the host waits for a player who vanishes, and what extra players cost. Everything was run in the game, two to four real game processes on this PC. Evidence is `docs/evidence/mp-joinprobe*`, `mp-netcond-*`, `mp-discovery-*`, `mp-dead-*` and `mp-crowd-*`.
+
+| ID | Verdict | Decision | One line |
+|---|---|---|---|
+| VF-063 | FIXED_AND_TESTED | SHIP | A lost join request is never sent again, so one lost UDP packet means 45 seconds of waiting and a timeout. With 25 attempts at each loss rate, 14 of 100 joins failed before and 1 of 100 after. Farmhand side only |
+
+### The two host freezes during a join
+
+A join probe timed the game's own join steps on the host, with the JIT time, garbage collections, allocation and page faults of each. The game ships with tiered compilation off, so every code path is fully compiled the first time it runs.
+
+| Case | Step | Time | JIT part |
+|---|---|---|---|
+| Real mods, first join | `sendAvailableFarmhands` | 208 ms | 156 ms (164 methods) |
+| Real mods, first join | `readFarmer` | 303 ms | 246 ms (139 methods) |
+| Real mods, first join | `checkFarmhandRequest` (15 `sendLocation`, `sendServerIntroduction`) | 219 ms | 45 ms |
+| Clean profile, first join | `GameServer.receiveMessages` in the tick that held `readFarmer` | 361 ms | 326 ms (298 methods) |
+| Clean profile, same host, join again | the same tick | 10 ms | 0 |
+
+So the two freezes are compile-on-first-use, once per host session, about half a second in all. The second `sendLocation` calls had no JIT and took 8 to 18 ms each. Not built: a warm-up would save half a second once a session, would need a method list tied to this build, and no other multiplayer mod does it.
+
+Separately, one 2.9 second gap in the real-mod run had 522,000 page faults and 2.4 GB of RAM free. Two real-mod processes of 6 GB do not fit this 15.4 GB PC. It is the test setup and not the game. The first probe run failed because the save copy kept the old file names inside the folder, so `tools\New-RealSaveCopy.ps1` renames them.
+
+### Delay, jitter and loss
+
+`tools\NetShaper` is a UDP relay between the joiner and the host. Clean profile, fixed build, 12 trials per cell, medians. Position is how long a move takes to show on the other side. Object is placing then removing an object. Night is the host's longest frame gap in one night.
+
+| One way delay, loss | Ping | Position | Object | Longest walking gap | Night gap, host |
+|---|---|---|---|---|---|
+| direct | 0.1 ms | 45 to 57 ms | 291 to 295 ms | 36 ms | 2.2 s |
+| relay only | 0.2 ms | 37 to 50 ms | 289 to 294 ms | 38 ms | 2.2 s |
+| 25 ms, 0% | 32 ms | 67 to 69 ms | 305 to 323 ms | 35 ms | 2.5 s |
+| 75 ms, 1% | 79 to 81 ms | 133 to 134 ms | 348 to 365 ms | 35 ms | 3.3 s |
+| 150 ms, 5% | 156 to 169 ms | 205 to 207 ms | 428 to 445 ms | 33 ms | 5.6 s |
+
+- Every trial was seen in every run. No frame gap over 100 ms while walking in any case.
+- The night gap grows with delay. SMAPI runs the game's new day task on the main thread (the log says `Synchronizing 'NewDay' task`) and each of the game's day end barriers waits for every player. Not changed.
+- At 10% loss with 50 ms delay the joiner never connected. The relay had seen one packet and dropped it. That is VF-063.
+
+### VF-063, join requests under loss
+
+The game's `LidgrenClient` sends one discovery packet and has retry code, but `maxRetryAttempts` is 0, so the retry never runs. The client then waits `Client.connectionTimeout`, 45 seconds. The retry code also cuts the port off `address` on its first call, so a second call would use the default port. The fix sets the limit to 3 with a 3 second wait and puts the typed address back before each attempt. The joiner stayed on the title screen and tried 25 times at each loss rate, with 30 ms delay and 5 ms jitter, and a join counted when the farmhand list arrived within 20 seconds.
+
+| Loss each way | Connected before | Connected after | Median before | Median after |
+|---|---|---|---|---|
+| 0% | 25 of 25 | 25 of 25 | 386 ms | 370 ms |
+| 5% | 22 of 25 | 25 of 25 | 404 ms | 386 ms |
+| 10% | 22 of 25 | 25 of 25 | 537 ms | 703 ms |
+| 20% | 17 of 25 | 24 of 25 | 3,335 ms | 3,536 ms |
+
+The retries went through the lossy relay and not around it, because attempts 3 and 4 were logged 10 times, and a retry sent straight to the host could not be lost. No mod in the real 101 mod list mentions `LidgrenClient`, `attemptConnection` or `maxRetryAttempts`. The patch skips itself if another mod patches either member. It applies to the joining player only, and only to joins by IP address or local network. A Steam invite uses another code path that was not tested.
+
+### A player who vanishes
+
+The game's Lidgren connection timeout is 30 seconds on both sides. Clean profile, fixed build.
+
+| Case | Host drops the player after | Host longest gap |
+|---|---|---|
+| The joiner's process is killed | 29.5 s | 32 ms |
+| The link is cut and both stay alive | 28.5 s (the joiner notices at 28.5 s) | 39 ms |
+| The joiner is killed while the host sleeps | 28.5 s, new day 32 s after the kill | 1.85 s |
+
+The host stays responsive during the wait. The cost is a sleeping host waiting about 32 seconds for the night to finish. No fix: a shorter timeout would risk dropping live players during the 3 to 9 second host stalls at night and at load.
+
+### More players
+
+A host with one joiner and with two joiners, clean profile, 20 second phases.
+
+| Players | Host update (walking) | Host sent while walking | Longest walking gap, host | Night gap, host |
+|---|---|---|---|---|
+| 2 | 1.15 ms | 15.7 KB | 31 ms | 2.2 s |
+| 3 | 1.19 ms | 64.2 KB | 55 ms | 2.2 s |
+
+Traffic grows with the square of the player count because every position goes to every other player, about 3 KB a second at three players. The second joiner took 7 seconds to join, against 21 for the first, because the first join paid the compile cost above. Four players were not completed. The run had trouble keeping several game windows loading on one desktop, because a game window that is not in front does not finish loading its join (bringing it to the front let it continue at once). That affects this test setup only. Three joiners were not measured.
+
+### Not done or not known
+
+- Split screen, a joiner on another PC or over the internet, a Steam invite and a dedicated server were not tested. Delay and loss were applied between two processes on one PC.
+- One run per cell. The 10 and 20 percent rows of the join table are 25 attempts each, so a few attempts either way would move them.
+- Three or four players with the real mod list were not run. Two real-mod processes already page on this PC.

@@ -1,0 +1,9 @@
+{
+  "world": "client never reached the world",
+  "note": null,
+  "mods": [
+    "SMAPI.ConsoleCommands 4.5.2",
+    "Kkthnx.ValleyFixes 0.2.0-alpha.6",
+    "Kkthnx.ValleyFixes.DevHarness 0.1.0"
+  ]
+}

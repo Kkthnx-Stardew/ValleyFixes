@@ -1,0 +1,16 @@
+{
+  "join_to_ready_ms": 2185,
+  "world": "client ready in FarmHouse50fd0b43-b6a1-43af-8cb0-dfa897bae746, id 3442522902867139643",
+  "dead": {
+    "mode": "blackhole",
+    "role": "client",
+    "seconds_until_joiner_notices": 28.5,
+    "joiner_world_ready_at_end": false
+  },
+  "note": null,
+  "mods": [
+    "SMAPI.ConsoleCommands 4.5.2",
+    "Kkthnx.ValleyFixes 0.2.0-alpha.6",
+    "Kkthnx.ValleyFixes.DevHarness 0.1.0"
+  ]
+}

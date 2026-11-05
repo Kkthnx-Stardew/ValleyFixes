@@ -1,0 +1,1209 @@
+{
+  "world": "host ready in FarmHouse, multiplayerMode 2, server True",
+  "cabin": "ready for -9002042392405962410",
+  "clientJoined": true,
+  "rj39": {
+    "start": "spring 1 y1 630",
+    "handoff_hostView": {
+      "name": "Client",
+      "money": 0,
+      "levels": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "xp": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "newLevels": [],
+      "craftingRecipes": [
+        "Campfire",
+        "Chest",
+        "Cobblestone Path",
+        "Gate",
+        "Gravel Path",
+        "Stone Sign",
+        "Text Sign",
+        "Torch",
+        "Wood Fence",
+        "Wood Path",
+        "Wood Sign"
+      ],
+      "cookingRecipes": [
+        "Fried Egg"
+      ],
+      "mailReceived": [
+        "button_tut_1"
+      ],
+      "mailForTomorrow": [],
+      "mailbox": [],
+      "basicShipped": {},
+      "toolBeingUpgraded": "(T)Pickaxe upgrade 1",
+      "daysLeftForToolUpgrade": 2,
+      "toolsInInventory": [
+        "(T)Axe:0",
+        "(T)Hoe:0",
+        "(T)WateringCan:0",
+        "(W)47:0"
+      ],
+      "houseUpgradeLevel": 0,
+      "daysUntilHouseUpgrade": -1,
+      "questLog": [
+        "9"
+      ],
+      "fridge": [],
+      "homeName": "FarmHouse631c7b2f-7910-4a8c-b8bc-d8864f9564a4",
+      "homeUpgradeLevel": 0
+    },
+    "leave1_host_view_while_away": {
+      "name": "Client",
+      "money": 0,
+      "levels": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "xp": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "newLevels": [],
+      "craftingRecipes": [
+        "Campfire",
+        "Chest",
+        "Cobblestone Path",
+        "Gate",
+        "Gravel Path",
+        "Stone Sign",
+        "Text Sign",
+        "Torch",
+        "Wood Fence",
+        "Wood Path",
+        "Wood Sign"
+      ],
+      "cookingRecipes": [
+        "Fried Egg"
+      ],
+      "mailReceived": [
+        "button_tut_1"
+      ],
+      "mailForTomorrow": [],
+      "mailbox": [],
+      "basicShipped": {},
+      "toolBeingUpgraded": "(T)Pickaxe upgrade 1",
+      "daysLeftForToolUpgrade": 2,
+      "toolsInInventory": [
+        "(T)Axe:0",
+        "(T)Hoe:0",
+        "(T)WateringCan:0",
+        "(W)47:0"
+      ],
+      "houseUpgradeLevel": 0,
+      "daysUntilHouseUpgrade": -1,
+      "questLog": [
+        "9"
+      ],
+      "fridge": [],
+      "homeName": "FarmHouse631c7b2f-7910-4a8c-b8bc-d8864f9564a4",
+      "homeUpgradeLevel": 0
+    },
+    "after_rejoin_same_day_hostView": {
+      "name": "Client",
+      "money": 0,
+      "levels": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "xp": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "newLevels": [],
+      "craftingRecipes": [
+        "Campfire",
+        "Chest",
+        "Cobblestone Path",
+        "Gate",
+        "Gravel Path",
+        "Stone Sign",
+        "Text Sign",
+        "Torch",
+        "Wood Fence",
+        "Wood Path",
+        "Wood Sign"
+      ],
+      "cookingRecipes": [
+        "Fried Egg"
+      ],
+      "mailReceived": [
+        "button_tut_1"
+      ],
+      "mailForTomorrow": [],
+      "mailbox": [],
+      "basicShipped": {},
+      "toolBeingUpgraded": "(T)Pickaxe upgrade 1",
+      "daysLeftForToolUpgrade": 2,
+      "toolsInInventory": [
+        "(T)Axe:0",
+        "(T)Hoe:0",
+        "(T)WateringCan:0",
+        "(W)47:0"
+      ],
+      "houseUpgradeLevel": 0,
+      "daysUntilHouseUpgrade": -1,
+      "questLog": [
+        "9"
+      ],
+      "fridge": [],
+      "homeName": "FarmHouse631c7b2f-7910-4a8c-b8bc-d8864f9564a4",
+      "homeUpgradeLevel": 0
+    },
+    "night1_hostView": {
+      "name": "Client",
+      "money": 0,
+      "levels": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "xp": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "newLevels": [],
+      "craftingRecipes": [
+        "Campfire",
+        "Chest",
+        "Cobblestone Path",
+        "Gate",
+        "Gravel Path",
+        "Stone Sign",
+        "Text Sign",
+        "Torch",
+        "Wood Fence",
+        "Wood Path",
+        "Wood Sign"
+      ],
+      "cookingRecipes": [
+        "Fried Egg"
+      ],
+      "mailReceived": [
+        "button_tut_1"
+      ],
+      "mailForTomorrow": [],
+      "mailbox": [
+        "spring_2_1"
+      ],
+      "basicShipped": {},
+      "toolBeingUpgraded": "(T)Pickaxe upgrade 1",
+      "daysLeftForToolUpgrade": 1,
+      "toolsInInventory": [
+        "(T)Axe:0",
+        "(T)Hoe:0",
+        "(T)WateringCan:0",
+        "(W)47:0"
+      ],
+      "houseUpgradeLevel": 0,
+      "daysUntilHouseUpgrade": -1,
+      "questLog": [
+        "9"
+      ],
+      "fridge": [],
+      "homeName": "FarmHouse631c7b2f-7910-4a8c-b8bc-d8864f9564a4",
+      "homeUpgradeLevel": 0
+    },
+    "night2_hostView": {
+      "name": "Client",
+      "money": 0,
+      "levels": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "xp": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "newLevels": [],
+      "craftingRecipes": [
+        "Campfire",
+        "Chest",
+        "Cobblestone Path",
+        "Gate",
+        "Gravel Path",
+        "Stone Sign",
+        "Text Sign",
+        "Torch",
+        "Wood Fence",
+        "Wood Path",
+        "Wood Sign"
+      ],
+      "cookingRecipes": [
+        "Fried Egg"
+      ],
+      "mailReceived": [
+        "button_tut_1"
+      ],
+      "mailForTomorrow": [],
+      "mailbox": [
+        "spring_2_1"
+      ],
+      "basicShipped": {},
+      "toolBeingUpgraded": "(T)Pickaxe upgrade 1",
+      "daysLeftForToolUpgrade": 0,
+      "toolsInInventory": [
+        "(T)Axe:0",
+        "(T)Hoe:0",
+        "(T)WateringCan:0",
+        "(W)47:0"
+      ],
+      "houseUpgradeLevel": 0,
+      "daysUntilHouseUpgrade": -1,
+      "questLog": [
+        "9"
+      ],
+      "fridge": [],
+      "homeName": "FarmHouse631c7b2f-7910-4a8c-b8bc-d8864f9564a4",
+      "homeUpgradeLevel": 0
+    },
+    "DIFF_handoff_to_after_rejoin_same_day_hostView": [],
+    "DIFF_after_rejoin_same_day_to_night1_hostView": [
+      "mailbox: [] -\u003E [\u0022spring_2_1\u0022]",
+      "daysLeftForToolUpgrade: 2 -\u003E 1"
+    ],
+    "DIFF_night1_to_night2_hostView": [
+      "daysLeftForToolUpgrade: 1 -\u003E 0"
+    ],
+    "menusSeen_host": {},
+    "end": "spring 3 y1"
+  },
+  "note": null,
+  "joinprobe_end": {
+    "totals": [
+      {
+        "label": "SaveSerializer.GetSerializer",
+        "calls": 405,
+        "totalMs": 677.9
+      },
+      {
+        "label": "GameServer.receiveMessages",
+        "calls": 3522,
+        "totalMs": 542
+      },
+      {
+        "label": "Multiplayer.readFarmer",
+        "calls": 2,
+        "totalMs": 302
+      },
+      {
+        "label": "GameServer.checkFarmhandRequest",
+        "calls": 2,
+        "totalMs": 53
+      },
+      {
+        "label": "GameServer.processIncomingMessage#0",
+        "calls": 23,
+        "totalMs": 46.8
+      },
+      {
+        "label": "Multiplayer.processIncomingMessage#0",
+        "calls": 23,
+        "totalMs": 46.5
+      },
+      {
+        "label": "GameServer.sendLocation",
+        "calls": 8,
+        "totalMs": 40.4
+      },
+      {
+        "label": "GameServer.processIncomingMessage#19",
+        "calls": 1,
+        "totalMs": 12.8
+      },
+      {
+        "label": "Multiplayer.processIncomingMessage#19",
+        "calls": 1,
+        "totalMs": 12.7
+      },
+      {
+        "label": "GameServer.processIncomingMessage#6",
+        "calls": 11,
+        "totalMs": 10.9
+      },
+      {
+        "label": "Multiplayer.processIncomingMessage#6",
+        "calls": 11,
+        "totalMs": 10.2
+      },
+      {
+        "label": "GameServer.processIncomingMessage#13",
+        "calls": 12,
+        "totalMs": 9.4
+      },
+      {
+        "label": "Multiplayer.processIncomingMessage#13",
+        "calls": 12,
+        "totalMs": 9.3
+      },
+      {
+        "label": "GameServer.sendAvailableFarmhands",
+        "calls": 2,
+        "totalMs": 7.9
+      },
+      {
+        "label": "GameServer.sendServerIntroduction",
+        "calls": 2,
+        "totalMs": 7.5
+      },
+      {
+        "label": "GameServer.processIncomingMessage#31",
+        "calls": 12,
+        "totalMs": 2.3
+      },
+      {
+        "label": "GameServer.sendMessage",
+        "calls": 154,
+        "totalMs": 2.2
+      },
+      {
+        "label": "Multiplayer.processIncomingMessage#31",
+        "calls": 12,
+        "totalMs": 2.1
+      },
+      {
+        "label": "Game1.updateCellarAssignments",
+        "calls": 3,
+        "totalMs": 1.7
+      },
+      {
+        "label": "GameServer.processIncomingMessage#14",
+        "calls": 42,
+        "totalMs": 1.6
+      },
+      {
+        "label": "GameServer.onConnect",
+        "calls": 2,
+        "totalMs": 1.5
+      },
+      {
+        "label": "Multiplayer.addPlayer",
+        "calls": 2,
+        "totalMs": 1.4
+      },
+      {
+        "label": "Multiplayer.processIncomingMessage#14",
+        "calls": 42,
+        "totalMs": 1.2
+      },
+      {
+        "label": "GameServer.updateLobbyData",
+        "calls": 6,
+        "totalMs": 1.2
+      },
+      {
+        "label": "NetWorldState.TryAssignFarmhandHome",
+        "calls": 12,
+        "totalMs": 0.1
+      },
+      {
+        "label": "GameServer.processIncomingMessage#15",
+        "calls": 2,
+        "totalMs": 0.1
+      },
+      {
+        "label": "Multiplayer.processIncomingMessage#15",
+        "calls": 2,
+        "totalMs": 0.1
+      },
+      {
+        "label": "NetFarmerRoot..ctor",
+        "calls": 3,
+        "totalMs": 0.1
+      },
+      {
+        "label": "GameServer.IsFarmhandAvailable",
+        "calls": 4,
+        "totalMs": 0
+      },
+      {
+        "label": "Multiplayer.broadcastPlayerIntroduction",
+        "calls": 2,
+        "totalMs": 0
+      }
+    ],
+    "calls": [
+      {
+        "At": "20:49:29.941",
+        "Label": "GameServer.receiveMessages",
+        "Depth": 0,
+        "Thread": 1,
+        "Ms": 8.9,
+        "JitMs": 9.6,
+        "JitMethods": 26,
+        "Gc0": 0,
+        "Gc1": 0,
+        "Gc2": 0,
+        "AllocKB": 18,
+        "PageFaults": 9
+      },
+      {
+        "At": "20:49:30.885",
+        "Label": "SaveSerializer.GetSerializer",
+        "Depth": 0,
+        "Thread": 1,
+        "Ms": 5.2,
+        "JitMs": 0,
+        "JitMethods": 0,
+        "Gc0": 0,
+        "Gc1": 0,
+        "Gc2": 0,
+        "AllocKB": 500,
+        "PageFaults": 9
+      },
+      {
+        "At": "20:49:30.980",
+        "Label": "SaveSerializer.GetSerializer",
+        "Depth": 0,
+        "Thread": 1,
+        "Ms": 204,
+        "JitMs": 0,
+        "JitMethods": 0,
+        "Gc0": 6,
+        "Gc1": 1,
+        "Gc2": 0,
+        "AllocKB": 30254,
+        "PageFaults": 473
+      },
+      {
+        "At": "20:49:31.275",
+        "Label": "SaveSerializer.GetSerializer",
+        "Depth": 0,
+        "Thread": 1,
+        "Ms": 3.4,
+        "JitMs": 0,
+        "JitMethods": 0,
+        "Gc0": 0,
+        "Gc1": 0,
+        "Gc2": 0,
+        "AllocKB": 362,
+        "PageFaults": 4
+      },
+      {
+        "At": "20:49:31.334",
+        "Label": "SaveSerializer.GetSerializer",
+        "Depth": 0,
+        "Thread": 1,
+        "Ms": 37.3,
+        "JitMs": 0,
+        "JitMethods": 0,
+        "Gc0": 1,
+        "Gc1": 0,
+        "Gc2": 0,
+        "AllocKB": 8973,
+        "PageFaults": 282
+      },
+      {
+        "At": "20:49:31.375",
+        "Label": "SaveSerializer.GetSerializer",
+        "Depth": 0,
+        "Thread": 1,
+        "Ms": 206.3,
+        "JitMs": 0,
+        "JitMethods": 0,
+        "Gc0": 6,
+        "Gc1": 1,
+        "Gc2": 0,
+        "AllocKB": 30221,
+        "PageFaults": 707
+      },
+      {
+        "At": "20:49:31.620",
+        "Label": "SaveSerializer.GetSerializer",
+        "Depth": 0,
+        "Thread": 1,
+        "Ms": 209.2,
+        "JitMs": 0,
+        "JitMethods": 0,
+        "Gc0": 7,
+        "Gc1": 0,
+        "Gc2": 0,
+        "AllocKB": 30734,
+        "PageFaults": 804
+      },
+      {
+        "At": "20:49:53.615",
+        "Label": "GameServer.receiveMessages",
+        "Depth": 0,
+        "Thread": 1,
+        "Ms": 4.4,
+        "JitMs": 4.2,
+        "JitMethods": 14,
+        "Gc0": 0,
+        "Gc1": 0,
+        "Gc2": 0,
+        "AllocKB": 7,
+        "PageFaults": 2
+      },
+      {
+        "At": "20:49:53.694",
+        "Label": "GameServer.sendAvailableFarmhands",
+        "Depth": 1,
+        "Thread": 1,
+        "Ms": 7.2,
+        "JitMs": 5.4,
+        "JitMethods": 22,
+        "Gc0": 0,
+        "Gc1": 0,
+        "Gc2": 0,
+        "AllocKB": 355,
+        "PageFaults": 34
+      },
+      {
+        "At": "20:49:53.692",
+        "Label": "GameServer.receiveMessages",
+        "Depth": 0,
+        "Thread": 1,
+        "Ms": 9.2,
+        "JitMs": 7.3,
+        "JitMethods": 31,
+        "Gc0": 0,
+        "Gc1": 0,
+        "Gc2": 0,
+        "AllocKB": 360,
+        "PageFaults": 35
+      },
+      {
+        "At": "20:49:55.439",
+        "Label": "Multiplayer.readFarmer",
+        "Depth": 1,
+        "Thread": 1,
+        "Ms": 297.5,
+        "JitMs": 291.1,
+        "JitMethods": 167,
+        "Gc0": 1,
+        "Gc1": 0,
+        "Gc2": 0,
+        "AllocKB": 1660,
+        "PageFaults": 5043
+      },
+      {
+        "At": "20:49:55.741",
+        "Label": "GameServer.sendLocation",
+        "Depth": 2,
+        "Thread": 1,
+        "Ms": 36,
+        "JitMs": 11.2,
+        "JitMethods": 48,
+        "Gc0": 2,
+        "Gc1": 0,
+        "Gc2": 0,
+        "AllocKB": 8975,
+        "PageFaults": 298
+      },
+      {
+        "At": "20:49:55.778",
+        "Label": "GameServer.sendServerIntroduction",
+        "Depth": 2,
+        "Thread": 1,
+        "Ms": 6.3,
+        "JitMs": 4.6,
+        "JitMethods": 24,
+        "Gc0": 0,
+        "Gc1": 0,
+        "Gc2": 0,
+        "AllocKB": 680,
+        "PageFaults": 7
+      },
+      {
+        "At": "20:49:55.736",
+        "Label": "GameServer.checkFarmhandRequest",
+        "Depth": 1,
+        "Thread": 1,
+        "Ms": 47.5,
+        "JitMs": 20.2,
+        "JitMethods": 87,
+        "Gc0": 2,
+        "Gc1": 0,
+        "Gc2": 0,
+        "AllocKB": 9865,
+        "PageFaults": 306
+      },
+      {
+        "At": "20:49:55.422",
+        "Label": "GameServer.receiveMessages",
+        "Depth": 0,
+        "Thread": 1,
+        "Ms": 361.5,
+        "JitMs": 325.7,
+        "JitMethods": 298,
+        "Gc0": 3,
+        "Gc1": 0,
+        "Gc2": 0,
+        "AllocKB": 11768,
+        "PageFaults": 5560
+      },
+      {
+        "At": "20:49:56.122",
+        "Label": "Multiplayer.processIncomingMessage#6",
+        "Depth": 2,
+        "Thread": 1,
+        "Ms": 7.7,
+        "JitMs": 7.4,
+        "JitMethods": 29,
+        "Gc0": 0,
+        "Gc1": 0,
+        "Gc2": 0,
+        "AllocKB": 27,
+        "PageFaults": 18
+      },
+      {
+        "At": "20:49:56.122",
+        "Label": "GameServer.processIncomingMessage#6",
+        "Depth": 1,
+        "Thread": 1,
+        "Ms": 8.2,
+        "JitMs": 7.9,
+        "JitMethods": 32,
+        "Gc0": 0,
+        "Gc1": 0,
+        "Gc2": 0,
+        "AllocKB": 30,
+        "PageFaults": 18
+      },
+      {
+        "At": "20:49:56.130",
+        "Label": "Multiplayer.processIncomingMessage#0",
+        "Depth": 2,
+        "Thread": 1,
+        "Ms": 4.6,
+        "JitMs": 4.2,
+        "JitMethods": 22,
+        "Gc0": 0,
+        "Gc1": 0,
+        "Gc2": 0,
+        "AllocKB": 33,
+        "PageFaults": 13
+      },
+      {
+        "At": "20:49:56.130",
+        "Label": "GameServer.processIncomingMessage#0",
+        "Depth": 1,
+        "Thread": 1,
+        "Ms": 4.6,
+        "JitMs": 4.2,
+        "JitMethods": 22,
+        "Gc0": 0,
+        "Gc1": 0,
+        "Gc2": 0,
+        "AllocKB": 33,
+        "PageFaults": 15
+      },
+      {
+        "At": "20:49:56.122",
+        "Label": "GameServer.receiveMessages",
+        "Depth": 0,
+        "Thread": 1,
+        "Ms": 13,
+        "JitMs": 12,
+        "JitMethods": 54,
+        "Gc0": 0,
+        "Gc1": 0,
+        "Gc2": 0,
+        "AllocKB": 66,
+        "PageFaults": 33
+      },
+      {
+        "At": "20:50:01.670",
+        "Label": "Multiplayer.processIncomingMessage#0",
+        "Depth": 2,
+        "Thread": 1,
+        "Ms": 19.9,
+        "JitMs": 14.9,
+        "JitMethods": 12,
+        "Gc0": 1,
+        "Gc1": 0,
+        "Gc2": 0,
+        "AllocKB": 1614,
+        "PageFaults": 6
+      },
+      {
+        "At": "20:50:01.670",
+        "Label": "GameServer.processIncomingMessage#0",
+        "Depth": 1,
+        "Thread": 1,
+        "Ms": 19.9,
+        "JitMs": 14.9,
+        "JitMethods": 12,
+        "Gc0": 1,
+        "Gc1": 0,
+        "Gc2": 0,
+        "AllocKB": 1615,
+        "PageFaults": 6
+      },
+      {
+        "At": "20:50:01.690",
+        "Label": "Multiplayer.processIncomingMessage#19",
+        "Depth": 2,
+        "Thread": 1,
+        "Ms": 12.7,
+        "JitMs": 9.5,
+        "JitMethods": 12,
+        "Gc0": 0,
+        "Gc1": 0,
+        "Gc2": 0,
+        "AllocKB": 2059,
+        "PageFaults": 5
+      },
+      {
+        "At": "20:50:01.690",
+        "Label": "GameServer.processIncomingMessage#19",
+        "Depth": 1,
+        "Thread": 1,
+        "Ms": 12.8,
+        "JitMs": 9.5,
+        "JitMethods": 12,
+        "Gc0": 0,
+        "Gc1": 0,
+        "Gc2": 0,
+        "AllocKB": 2060,
+        "PageFaults": 5
+      },
+      {
+        "At": "20:50:01.670",
+        "Label": "GameServer.receiveMessages",
+        "Depth": 0,
+        "Thread": 1,
+        "Ms": 34.4,
+        "JitMs": 25.9,
+        "JitMethods": 30,
+        "Gc0": 1,
+        "Gc1": 0,
+        "Gc2": 0,
+        "AllocKB": 3739,
+        "PageFaults": 11
+      },
+      {
+        "At": "20:50:05.775",
+        "Label": "GameServer.sendAvailableFarmhands",
+        "Depth": 1,
+        "Thread": 1,
+        "Ms": 0.7,
+        "JitMs": 0,
+        "JitMethods": 0,
+        "Gc0": 0,
+        "Gc1": 0,
+        "Gc2": 0,
+        "AllocKB": 390,
+        "PageFaults": 0
+      },
+      {
+        "At": "20:50:06.137",
+        "Label": "Multiplayer.readFarmer",
+        "Depth": 1,
+        "Thread": 1,
+        "Ms": 4.4,
+        "JitMs": 0,
+        "JitMethods": 0,
+        "Gc0": 1,
+        "Gc1": 0,
+        "Gc2": 0,
+        "AllocKB": 1540,
+        "PageFaults": 1
+      },
+      {
+        "At": "20:50:06.141",
+        "Label": "GameServer.sendLocation",
+        "Depth": 2,
+        "Thread": 1,
+        "Ms": 4,
+        "JitMs": 0,
+        "JitMethods": 0,
+        "Gc0": 0,
+        "Gc1": 0,
+        "Gc2": 0,
+        "AllocKB": 2298,
+        "PageFaults": 243
+      },
+      {
+        "At": "20:50:06.141",
+        "Label": "GameServer.checkFarmhandRequest",
+        "Depth": 1,
+        "Thread": 1,
+        "Ms": 5.5,
+        "JitMs": 0,
+        "JitMethods": 0,
+        "Gc0": 0,
+        "Gc1": 0,
+        "Gc2": 0,
+        "AllocKB": 3022,
+        "PageFaults": 243
+      },
+      {
+        "At": "20:50:06.136",
+        "Label": "GameServer.receiveMessages",
+        "Depth": 0,
+        "Thread": 1,
+        "Ms": 10.3,
+        "JitMs": 0,
+        "JitMethods": 0,
+        "Gc0": 1,
+        "Gc1": 0,
+        "Gc2": 0,
+        "AllocKB": 4641,
+        "PageFaults": 244
+      },
+      {
+        "At": "20:50:11.869",
+        "Label": "GameServer.receiveMessages",
+        "Depth": 0,
+        "Thread": 1,
+        "Ms": 3.2,
+        "JitMs": 2.9,
+        "JitMethods": 8,
+        "Gc0": 0,
+        "Gc1": 0,
+        "Gc2": 0,
+        "AllocKB": 10,
+        "PageFaults": 2
+      },
+      {
+        "At": "20:50:13.836",
+        "Label": "Multiplayer.processIncomingMessage#13",
+        "Depth": 2,
+        "Thread": 1,
+        "Ms": 3.4,
+        "JitMs": 3.1,
+        "JitMethods": 7,
+        "Gc0": 0,
+        "Gc1": 0,
+        "Gc2": 0,
+        "AllocKB": 5,
+        "PageFaults": 1
+      },
+      {
+        "At": "20:50:13.836",
+        "Label": "GameServer.processIncomingMessage#13",
+        "Depth": 1,
+        "Thread": 1,
+        "Ms": 3.4,
+        "JitMs": 3.1,
+        "JitMethods": 7,
+        "Gc0": 0,
+        "Gc1": 0,
+        "Gc2": 0,
+        "AllocKB": 5,
+        "PageFaults": 1
+      },
+      {
+        "At": "20:50:13.836",
+        "Label": "GameServer.receiveMessages",
+        "Depth": 0,
+        "Thread": 1,
+        "Ms": 3.4,
+        "JitMs": 3.1,
+        "JitMethods": 7,
+        "Gc0": 0,
+        "Gc1": 0,
+        "Gc2": 0,
+        "AllocKB": 11,
+        "PageFaults": 1
+      },
+      {
+        "At": "20:50:13.876",
+        "Label": "Multiplayer.processIncomingMessage#0",
+        "Depth": 2,
+        "Thread": 1,
+        "Ms": 4.8,
+        "JitMs": 4.5,
+        "JitMethods": 9,
+        "Gc0": 0,
+        "Gc1": 0,
+        "Gc2": 0,
+        "AllocKB": 9,
+        "PageFaults": 2
+      },
+      {
+        "At": "20:50:13.876",
+        "Label": "GameServer.processIncomingMessage#0",
+        "Depth": 1,
+        "Thread": 1,
+        "Ms": 4.8,
+        "JitMs": 4.5,
+        "JitMethods": 9,
+        "Gc0": 0,
+        "Gc1": 0,
+        "Gc2": 0,
+        "AllocKB": 9,
+        "PageFaults": 2
+      },
+      {
+        "At": "20:50:13.876",
+        "Label": "GameServer.receiveMessages",
+        "Depth": 0,
+        "Thread": 1,
+        "Ms": 5,
+        "JitMs": 4.5,
+        "JitMethods": 9,
+        "Gc0": 0,
+        "Gc1": 0,
+        "Gc2": 0,
+        "AllocKB": 18,
+        "PageFaults": 2
+      },
+      {
+        "At": "20:50:13.934",
+        "Label": "Multiplayer.processIncomingMessage#0",
+        "Depth": 2,
+        "Thread": 1,
+        "Ms": 4.3,
+        "JitMs": 0,
+        "JitMethods": 0,
+        "Gc0": 1,
+        "Gc1": 0,
+        "Gc2": 0,
+        "AllocKB": 1612,
+        "PageFaults": 0
+      },
+      {
+        "At": "20:50:13.934",
+        "Label": "GameServer.processIncomingMessage#0",
+        "Depth": 1,
+        "Thread": 1,
+        "Ms": 4.3,
+        "JitMs": 0,
+        "JitMethods": 0,
+        "Gc0": 1,
+        "Gc1": 0,
+        "Gc2": 0,
+        "AllocKB": 1612,
+        "PageFaults": 0
+      },
+      {
+        "At": "20:50:13.933",
+        "Label": "GameServer.receiveMessages",
+        "Depth": 0,
+        "Thread": 1,
+        "Ms": 4.5,
+        "JitMs": 0,
+        "JitMethods": 0,
+        "Gc0": 1,
+        "Gc1": 0,
+        "Gc2": 0,
+        "AllocKB": 1686,
+        "PageFaults": 0
+      },
+      {
+        "At": "20:50:14.482",
+        "Label": "GameServer.receiveMessages",
+        "Depth": 0,
+        "Thread": 1,
+        "Ms": 4.7,
+        "JitMs": 1.8,
+        "JitMethods": 4,
+        "Gc0": 0,
+        "Gc1": 0,
+        "Gc2": 0,
+        "AllocKB": 1681,
+        "PageFaults": 0
+      },
+      {
+        "At": "20:50:23.107",
+        "Label": "Multiplayer.processIncomingMessage#0",
+        "Depth": 2,
+        "Thread": 1,
+        "Ms": 5.5,
+        "JitMs": 0,
+        "JitMethods": 0,
+        "Gc0": 1,
+        "Gc1": 1,
+        "Gc2": 0,
+        "AllocKB": 1612,
+        "PageFaults": 0
+      },
+      {
+        "At": "20:50:23.107",
+        "Label": "GameServer.processIncomingMessage#0",
+        "Depth": 1,
+        "Thread": 1,
+        "Ms": 5.5,
+        "JitMs": 0,
+        "JitMethods": 0,
+        "Gc0": 1,
+        "Gc1": 1,
+        "Gc2": 0,
+        "AllocKB": 1613,
+        "PageFaults": 0
+      },
+      {
+        "At": "20:50:23.107",
+        "Label": "GameServer.receiveMessages",
+        "Depth": 0,
+        "Thread": 1,
+        "Ms": 5.8,
+        "JitMs": 0,
+        "JitMethods": 0,
+        "Gc0": 1,
+        "Gc1": 1,
+        "Gc2": 0,
+        "AllocKB": 1689,
+        "PageFaults": 0
+      },
+      {
+        "At": "20:50:23.384",
+        "Label": "Multiplayer.processIncomingMessage#0",
+        "Depth": 2,
+        "Thread": 1,
+        "Ms": 3.1,
+        "JitMs": 0,
+        "JitMethods": 0,
+        "Gc0": 0,
+        "Gc1": 0,
+        "Gc2": 0,
+        "AllocKB": 1611,
+        "PageFaults": 0
+      },
+      {
+        "At": "20:50:23.384",
+        "Label": "GameServer.processIncomingMessage#0",
+        "Depth": 1,
+        "Thread": 1,
+        "Ms": 3.1,
+        "JitMs": 0,
+        "JitMethods": 0,
+        "Gc0": 0,
+        "Gc1": 0,
+        "Gc2": 0,
+        "AllocKB": 1611,
+        "PageFaults": 0
+      },
+      {
+        "At": "20:50:23.384",
+        "Label": "GameServer.receiveMessages",
+        "Depth": 0,
+        "Thread": 1,
+        "Ms": 3.2,
+        "JitMs": 0,
+        "JitMethods": 0,
+        "Gc0": 0,
+        "Gc1": 0,
+        "Gc2": 0,
+        "AllocKB": 1680,
+        "PageFaults": 0
+      }
+    ],
+    "gaps": [
+      {
+        "At": "20:49:55.403",
+        "Ms": 395,
+        "JitMs": 336,
+        "JitMethods": 322,
+        "Gc0": 3,
+        "Gc1": 0,
+        "Gc2": 0,
+        "PageFaults": 5566,
+        "AllocKB": 11969,
+        "AvailableMB": 10480,
+        "WorkingSetMB": 939,
+        "Location": "FarmHouse"
+      },
+      {
+        "At": "20:50:13.112",
+        "Ms": 1333,
+        "JitMs": 119,
+        "JitMethods": 117,
+        "Gc0": 7,
+        "Gc1": 1,
+        "Gc2": 0,
+        "PageFaults": 1683,
+        "AllocKB": 25349,
+        "AvailableMB": 10391,
+        "WorkingSetMB": 936,
+        "Location": "FarmHouse"
+      },
+      {
+        "At": "20:50:14.445",
+        "Ms": 2239,
+        "JitMs": 21,
+        "JitMethods": 23,
+        "Gc0": 5,
+        "Gc1": 0,
+        "Gc2": 0,
+        "PageFaults": 6205,
+        "AllocKB": 36096,
+        "AvailableMB": 10356,
+        "WorkingSetMB": 960,
+        "Location": "FarmHouse"
+      },
+      {
+        "At": "20:50:22.351",
+        "Ms": 1009,
+        "JitMs": 18,
+        "JitMethods": 19,
+        "Gc0": 5,
+        "Gc1": 1,
+        "Gc2": 0,
+        "PageFaults": 863,
+        "AllocKB": 19999,
+        "AvailableMB": 10378,
+        "WorkingSetMB": 955,
+        "Location": "FarmHouse"
+      },
+      {
+        "At": "20:50:23.361",
+        "Ms": 2235,
+        "JitMs": 2,
+        "JitMethods": 5,
+        "Gc0": 5,
+        "Gc1": 2,
+        "Gc2": 1,
+        "PageFaults": 1776,
+        "AllocKB": 31395,
+        "AvailableMB": 10375,
+        "WorkingSetMB": 962,
+        "Location": "FarmHouse"
+      }
+    ]
+  },
+  "mods": [
+    "SMAPI.ConsoleCommands 4.5.2",
+    "Kkthnx.ValleyFixes 0.2.0-alpha.6",
+    "Kkthnx.ValleyFixes.DevHarness 0.1.0"
+  ]
+}

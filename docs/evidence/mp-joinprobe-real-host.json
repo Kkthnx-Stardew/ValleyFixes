@@ -1,0 +1,1254 @@
+{
+  "world": "host ready in FarmHouse, multiplayerMode 2, server True",
+  "cabin": "ready for -3268769819081363848",
+  "clientJoined": true,
+  "realnet": {
+    "role": "host",
+    "world": {
+      "date": "winter 7 y5",
+      "time": 750,
+      "mods": 101,
+      "topLevelLocations": 467,
+      "allCharacters": 1603,
+      "villagers": 218,
+      "monsters": 1379,
+      "animalsOnFarm": 0,
+      "farmObjects": 201,
+      "farmTerrainFeatures": 120,
+      "farmBuildings": 10,
+      "festivalDay": false,
+      "player": "Josh",
+      "farm": "Lazy Rooster"
+    },
+    "gaps_since_host_ready": {
+      "frames": 4815,
+      "meanMs": 17.18,
+      "medianMs": 16.64,
+      "p99Ms": 26.95,
+      "maxMs": 2897.9,
+      "over40ms": 6,
+      "over100ms": 4,
+      "over500ms": 2,
+      "top5": [
+        2898,
+        591,
+        221,
+        124,
+        49
+      ],
+      "bigGaps": [
+        {
+          "at": "20:44:14.835",
+          "ms": 124,
+          "location": "FarmHouse"
+        },
+        {
+          "at": "20:45:01.986",
+          "ms": 221,
+          "location": "FarmHouse"
+        },
+        {
+          "at": "20:45:21.725",
+          "ms": 2898,
+          "location": "FarmHouse"
+        },
+        {
+          "at": "20:45:28.345",
+          "ms": 591,
+          "location": "FarmHouse"
+        }
+      ]
+    },
+    "join_and_load": {
+      "bytesByType": {},
+      "modNet": [],
+      "modMessagesReceived": [
+        {
+          "message": "Spiderbuttons.BETAS | BETAS.NpcCache",
+          "count": 5,
+          "totalKB": 16.1,
+          "meanChars": 3299
+        }
+      ],
+      "slowHandlers": {
+        "handlersWrapped": 0,
+        "slowCalls": [],
+        "totalMsPerFrame": 0,
+        "totalMegabytesPerSecond": 0,
+        "topModsByTime": [],
+        "topModsByBytes": [],
+        "topHandlers": []
+      }
+    },
+    "joinprobe": {
+      "totals": [
+        {
+          "label": "GameServer.receiveMessages",
+          "calls": 4977,
+          "totalMs": 874.7
+        },
+        {
+          "label": "SaveSerializer.GetSerializer",
+          "calls": 1057,
+          "totalMs": 740.6
+        },
+        {
+          "label": "Multiplayer.readFarmer",
+          "calls": 1,
+          "totalMs": 303.5
+        },
+        {
+          "label": "GameServer.checkFarmhandRequest",
+          "calls": 1,
+          "totalMs": 218.7
+        },
+        {
+          "label": "GameServer.sendAvailableFarmhands",
+          "calls": 1,
+          "totalMs": 207.8
+        },
+        {
+          "label": "GameServer.sendLocation",
+          "calls": 15,
+          "totalMs": 146.3
+        },
+        {
+          "label": "GameServer.sendServerIntroduction",
+          "calls": 1,
+          "totalMs": 66.4
+        },
+        {
+          "label": "GameServer.sendMessage",
+          "calls": 29,
+          "totalMs": 6.5
+        },
+        {
+          "label": "Game1.updateCellarAssignments",
+          "calls": 3,
+          "totalMs": 3.8
+        },
+        {
+          "label": "Multiplayer.addPlayer",
+          "calls": 1,
+          "totalMs": 1.9
+        },
+        {
+          "label": "GameServer.onConnect",
+          "calls": 1,
+          "totalMs": 1.5
+        },
+        {
+          "label": "GameServer.updateLobbyData",
+          "calls": 2,
+          "totalMs": 1.2
+        },
+        {
+          "label": "NetWorldState.TryAssignFarmhandHome",
+          "calls": 4,
+          "totalMs": 0.1
+        },
+        {
+          "label": "GameServer.IsFarmhandAvailable",
+          "calls": 2,
+          "totalMs": 0.1
+        },
+        {
+          "label": "NetFarmerRoot..ctor",
+          "calls": 2,
+          "totalMs": 0
+        },
+        {
+          "label": "Multiplayer.broadcastPlayerIntroduction",
+          "calls": 1,
+          "totalMs": 0
+        }
+      ],
+      "calls": [
+        {
+          "At": "20:42:47.544",
+          "Label": "SaveSerializer.GetSerializer",
+          "Depth": 0,
+          "Thread": 1,
+          "Ms": 3.4,
+          "JitMs": 4,
+          "JitMethods": 25,
+          "Gc0": 0,
+          "Gc1": 0,
+          "Gc2": 0,
+          "AllocKB": 106,
+          "PageFaults": 11
+        },
+        {
+          "At": "20:42:47.697",
+          "Label": "SaveSerializer.GetSerializer",
+          "Depth": 0,
+          "Thread": 1,
+          "Ms": 23.2,
+          "JitMs": 1.4,
+          "JitMethods": 2,
+          "Gc0": 1,
+          "Gc1": 1,
+          "Gc2": 0,
+          "AllocKB": 1795,
+          "PageFaults": 77
+        },
+        {
+          "At": "20:43:20.035",
+          "Label": "SaveSerializer.GetSerializer",
+          "Depth": 0,
+          "Thread": 1,
+          "Ms": 204.7,
+          "JitMs": 0,
+          "JitMethods": 0,
+          "Gc0": 7,
+          "Gc1": 1,
+          "Gc2": 0,
+          "AllocKB": 29079,
+          "PageFaults": 2322
+        },
+        {
+          "At": "20:43:20.391",
+          "Label": "SaveSerializer.GetSerializer",
+          "Depth": 0,
+          "Thread": 1,
+          "Ms": 16.7,
+          "JitMs": 0,
+          "JitMethods": 0,
+          "Gc0": 1,
+          "Gc1": 0,
+          "Gc2": 0,
+          "AllocKB": 3630,
+          "PageFaults": 8
+        },
+        {
+          "At": "20:43:20.599",
+          "Label": "SaveSerializer.GetSerializer",
+          "Depth": 0,
+          "Thread": 1,
+          "Ms": 59.4,
+          "JitMs": 0,
+          "JitMethods": 0,
+          "Gc0": 2,
+          "Gc1": 1,
+          "Gc2": 0,
+          "AllocKB": 10950,
+          "PageFaults": 411
+        },
+        {
+          "At": "20:43:20.707",
+          "Label": "SaveSerializer.GetSerializer",
+          "Depth": 0,
+          "Thread": 1,
+          "Ms": 203.5,
+          "JitMs": 0,
+          "JitMethods": 0,
+          "Gc0": 5,
+          "Gc1": 2,
+          "Gc2": 0,
+          "AllocKB": 29132,
+          "PageFaults": 1714
+        },
+        {
+          "At": "20:43:21.112",
+          "Label": "SaveSerializer.GetSerializer",
+          "Depth": 0,
+          "Thread": 1,
+          "Ms": 211.8,
+          "JitMs": 0,
+          "JitMethods": 0,
+          "Gc0": 7,
+          "Gc1": 0,
+          "Gc2": 0,
+          "AllocKB": 29707,
+          "PageFaults": 1220
+        },
+        {
+          "At": "20:43:23.409",
+          "Label": "SaveSerializer.GetSerializer",
+          "Depth": 0,
+          "Thread": 1,
+          "Ms": 4.6,
+          "JitMs": 0,
+          "JitMethods": 0,
+          "Gc0": 0,
+          "Gc1": 0,
+          "Gc2": 0,
+          "AllocKB": 438,
+          "PageFaults": 113
+        },
+        {
+          "At": "20:43:59.992",
+          "Label": "Game1.updateCellarAssignments",
+          "Depth": 0,
+          "Thread": 1,
+          "Ms": 3.7,
+          "JitMs": 3.1,
+          "JitMethods": 10,
+          "Gc0": 0,
+          "Gc1": 0,
+          "Gc2": 0,
+          "AllocKB": 13,
+          "PageFaults": 2
+        },
+        {
+          "At": "20:44:04.826",
+          "Label": "GameServer.receiveMessages",
+          "Depth": 0,
+          "Thread": 1,
+          "Ms": 7.8,
+          "JitMs": 7.5,
+          "JitMethods": 21,
+          "Gc0": 0,
+          "Gc1": 0,
+          "Gc2": 0,
+          "AllocKB": 14,
+          "PageFaults": 5
+        },
+        {
+          "At": "20:45:01.725",
+          "Label": "GameServer.receiveMessages",
+          "Depth": 0,
+          "Thread": 1,
+          "Ms": 3.5,
+          "JitMs": 3.3,
+          "JitMethods": 14,
+          "Gc0": 0,
+          "Gc1": 0,
+          "Gc2": 0,
+          "AllocKB": 6,
+          "PageFaults": 0
+        },
+        {
+          "At": "20:45:01.776",
+          "Label": "GameServer.sendAvailableFarmhands",
+          "Depth": 1,
+          "Thread": 1,
+          "Ms": 207.8,
+          "JitMs": 155.6,
+          "JitMethods": 164,
+          "Gc0": 1,
+          "Gc1": 0,
+          "Gc2": 0,
+          "AllocKB": 9600,
+          "PageFaults": 2556
+        },
+        {
+          "At": "20:45:01.774",
+          "Label": "GameServer.receiveMessages",
+          "Depth": 0,
+          "Thread": 1,
+          "Ms": 209.9,
+          "JitMs": 157.5,
+          "JitMethods": 173,
+          "Gc0": 1,
+          "Gc1": 0,
+          "Gc2": 0,
+          "AllocKB": 9605,
+          "PageFaults": 2556
+        },
+        {
+          "At": "20:45:27.794",
+          "Label": "Multiplayer.readFarmer",
+          "Depth": 1,
+          "Thread": 1,
+          "Ms": 303.5,
+          "JitMs": 246.1,
+          "JitMethods": 139,
+          "Gc0": 5,
+          "Gc1": 2,
+          "Gc2": 0,
+          "AllocKB": 22571,
+          "PageFaults": 8311
+        },
+        {
+          "At": "20:45:28.104",
+          "Label": "GameServer.sendLocation",
+          "Depth": 2,
+          "Thread": 1,
+          "Ms": 30.1,
+          "JitMs": 14.4,
+          "JitMethods": 59,
+          "Gc0": 1,
+          "Gc1": 0,
+          "Gc2": 0,
+          "AllocKB": 6659,
+          "PageFaults": 480
+        },
+        {
+          "At": "20:45:28.134",
+          "Label": "GameServer.sendLocation",
+          "Depth": 2,
+          "Thread": 1,
+          "Ms": 16.9,
+          "JitMs": 0.2,
+          "JitMethods": 1,
+          "Gc0": 1,
+          "Gc1": 0,
+          "Gc2": 0,
+          "AllocKB": 3233,
+          "PageFaults": 34
+        },
+        {
+          "At": "20:45:28.150",
+          "Label": "GameServer.sendLocation",
+          "Depth": 2,
+          "Thread": 1,
+          "Ms": 8.5,
+          "JitMs": 0,
+          "JitMethods": 0,
+          "Gc0": 1,
+          "Gc1": 0,
+          "Gc2": 0,
+          "AllocKB": 126,
+          "PageFaults": 5
+        },
+        {
+          "At": "20:45:28.161",
+          "Label": "GameServer.sendLocation",
+          "Depth": 2,
+          "Thread": 1,
+          "Ms": 18.4,
+          "JitMs": 0,
+          "JitMethods": 0,
+          "Gc0": 1,
+          "Gc1": 1,
+          "Gc2": 0,
+          "AllocKB": 2745,
+          "PageFaults": 737
+        },
+        {
+          "At": "20:45:28.179",
+          "Label": "GameServer.sendLocation",
+          "Depth": 2,
+          "Thread": 1,
+          "Ms": 8.9,
+          "JitMs": 0,
+          "JitMethods": 0,
+          "Gc0": 1,
+          "Gc1": 0,
+          "Gc2": 0,
+          "AllocKB": 2545,
+          "PageFaults": 96
+        },
+        {
+          "At": "20:45:28.188",
+          "Label": "GameServer.sendLocation",
+          "Depth": 2,
+          "Thread": 1,
+          "Ms": 9.7,
+          "JitMs": 0,
+          "JitMethods": 0,
+          "Gc0": 1,
+          "Gc1": 0,
+          "Gc2": 0,
+          "AllocKB": 2141,
+          "PageFaults": 107
+        },
+        {
+          "At": "20:45:28.198",
+          "Label": "GameServer.sendLocation",
+          "Depth": 2,
+          "Thread": 1,
+          "Ms": 52.2,
+          "JitMs": 0.2,
+          "JitMethods": 1,
+          "Gc0": 2,
+          "Gc1": 1,
+          "Gc2": 0,
+          "AllocKB": 14732,
+          "PageFaults": 806
+        },
+        {
+          "At": "20:45:28.310",
+          "Label": "GameServer.sendMessage",
+          "Depth": 3,
+          "Thread": 1,
+          "Ms": 3.5,
+          "JitMs": 0,
+          "JitMethods": 0,
+          "Gc0": 0,
+          "Gc1": 0,
+          "Gc2": 0,
+          "AllocKB": 2966,
+          "PageFaults": 740
+        },
+        {
+          "At": "20:45:28.251",
+          "Label": "GameServer.sendServerIntroduction",
+          "Depth": 2,
+          "Thread": 1,
+          "Ms": 66.4,
+          "JitMs": 25,
+          "JitMethods": 27,
+          "Gc0": 2,
+          "Gc1": 1,
+          "Gc2": 0,
+          "AllocKB": 13068,
+          "PageFaults": 2836
+        },
+        {
+          "At": "20:45:28.098",
+          "Label": "GameServer.checkFarmhandRequest",
+          "Depth": 1,
+          "Thread": 1,
+          "Ms": 218.7,
+          "JitMs": 44.8,
+          "JitMethods": 101,
+          "Gc0": 10,
+          "Gc1": 3,
+          "Gc2": 0,
+          "AllocKB": 46866,
+          "PageFaults": 5230
+        },
+        {
+          "At": "20:45:27.768",
+          "Label": "GameServer.receiveMessages",
+          "Depth": 0,
+          "Thread": 1,
+          "Ms": 568.8,
+          "JitMs": 315.8,
+          "JitMethods": 314,
+          "Gc0": 17,
+          "Gc1": 6,
+          "Gc2": 0,
+          "AllocKB": 75984,
+          "PageFaults": 15049
+        }
+      ],
+      "gaps": [
+        {
+          "At": "20:44:05.135",
+          "Ms": 2923,
+          "JitMs": 668,
+          "JitMethods": 1998,
+          "Gc0": 76,
+          "Gc1": 26,
+          "Gc2": 0,
+          "PageFaults": 4029128,
+          "AllocKB": 694114,
+          "AvailableMB": 6157,
+          "WorkingSetMB": 6150,
+          "Location": "FarmHouse"
+        },
+        {
+          "At": "20:44:08.194",
+          "Ms": 227,
+          "JitMs": 169,
+          "JitMethods": 316,
+          "Gc0": 1,
+          "Gc1": 0,
+          "Gc2": 0,
+          "PageFaults": 5701,
+          "AllocKB": 17120,
+          "AvailableMB": 6136,
+          "WorkingSetMB": 6168,
+          "Location": "FarmHouse"
+        },
+        {
+          "At": "20:44:14.712",
+          "Ms": 124,
+          "JitMs": 68,
+          "JitMethods": 136,
+          "Gc0": 2,
+          "Gc1": 0,
+          "Gc2": 0,
+          "PageFaults": 866,
+          "AllocKB": 7903,
+          "AvailableMB": 6132,
+          "WorkingSetMB": 6143,
+          "Location": "FarmHouse"
+        },
+        {
+          "At": "20:45:01.767",
+          "Ms": 221,
+          "JitMs": 163,
+          "JitMethods": 183,
+          "Gc0": 1,
+          "Gc1": 0,
+          "Gc2": 0,
+          "PageFaults": 2558,
+          "AllocKB": 10827,
+          "AvailableMB": 3819,
+          "WorkingSetMB": 6144,
+          "Location": "FarmHouse"
+        },
+        {
+          "At": "20:45:18.829",
+          "Ms": 2898,
+          "JitMs": 1,
+          "JitMethods": 2,
+          "Gc0": 1,
+          "Gc1": 1,
+          "Gc2": 1,
+          "PageFaults": 522216,
+          "AllocKB": 1208,
+          "AvailableMB": 2476,
+          "WorkingSetMB": 1992,
+          "Location": "FarmHouse"
+        },
+        {
+          "At": "20:45:27.756",
+          "Ms": 591,
+          "JitMs": 324,
+          "JitMethods": 332,
+          "Gc0": 18,
+          "Gc1": 6,
+          "Gc2": 0,
+          "PageFaults": 15167,
+          "AllocKB": 77432,
+          "AvailableMB": 3938,
+          "WorkingSetMB": 1927,
+          "Location": "FarmHouse"
+        }
+      ]
+    },
+    "memory_light_after_join": {
+      "retainedMB": 1836.2,
+      "gcHeapMB": 2586,
+      "gcCommittedMB": 2593,
+      "gcFragmentedMB": 751,
+      "privateMB": 6157,
+      "workingSetMB": 1935
+    },
+    "memory_after_join": {
+      "forced": {
+        "retainedMB": 1752.2,
+        "workingSetMB": 1916
+      },
+      "light": {
+        "retainedMB": 1752.2,
+        "gcHeapMB": 2587,
+        "gcCommittedMB": 2593,
+        "gcFragmentedMB": 835,
+        "privateMB": 6137,
+        "workingSetMB": 1916
+      }
+    },
+    "spot": "76,33",
+    "first_farm_entry": {
+      "actor": "client",
+      "seconds": 11.7,
+      "net": {},
+      "modNet": [],
+      "gaps": {
+        "frames": 705,
+        "meanMs": 16.65,
+        "medianMs": 16.65,
+        "p99Ms": 28.62,
+        "maxMs": 34.8,
+        "over40ms": 0,
+        "over100ms": 0,
+        "over500ms": 0,
+        "top5": [
+          35,
+          34,
+          33,
+          29,
+          29
+        ],
+        "bigGaps": []
+      },
+      "modMessagesReceived": [
+        {
+          "message": "Spiderbuttons.BETAS | BETAS.NpcCache",
+          "count": 12,
+          "totalKB": 37.7,
+          "meanChars": 3213
+        }
+      ],
+      "sample": {
+        "seconds": 11.7,
+        "processCpuMsPerFrame": 14.54,
+        "processCpuPercentOfOneCore": 87,
+        "update": {
+          "frames": 705,
+          "meanMs": 2.97,
+          "medianMs": 2.49,
+          "p99Ms": 13.06,
+          "maxMs": 19.94,
+          "over8ms": 28,
+          "over16ms": 2
+        },
+        "render": {
+          "frames": 705,
+          "meanMs": 2.74,
+          "medianMs": 1.96,
+          "p99Ms": 4.68,
+          "maxMs": 27.45,
+          "over8ms": 1,
+          "over16ms": 1
+        },
+        "allocatedMBPerSecond": 82.72,
+        "gen0": 442,
+        "gen1": 4,
+        "gen2": 0,
+        "heapMB": 1898,
+        "profile": null,
+        "mods": null,
+        "locations": null,
+        "events": null,
+        "allocTypes": null,
+        "assets": null
+      },
+      "memory": {
+        "retainedMB": 1897.8,
+        "gcHeapMB": 2588,
+        "gcCommittedMB": 2595,
+        "gcFragmentedMB": 691,
+        "privateMB": 6150,
+        "workingSetMB": 2066
+      }
+    },
+    "idle_together_30s": {
+      "actor": "both",
+      "seconds": 35,
+      "net": {},
+      "modNet": [],
+      "gaps": {
+        "frames": 2100,
+        "meanMs": 16.67,
+        "medianMs": 16.65,
+        "p99Ms": 28.48,
+        "maxMs": 41.9,
+        "over40ms": 1,
+        "over100ms": 0,
+        "over500ms": 0,
+        "top5": [
+          42,
+          38,
+          37,
+          36,
+          35
+        ],
+        "bigGaps": []
+      },
+      "modMessagesReceived": [
+        {
+          "message": "Spiderbuttons.BETAS | BETAS.NpcCache",
+          "count": 35,
+          "totalKB": 140.3,
+          "meanChars": 4105
+        }
+      ],
+      "sample": {
+        "seconds": 35,
+        "processCpuMsPerFrame": 15.22,
+        "processCpuPercentOfOneCore": 91,
+        "update": {
+          "frames": 2100,
+          "meanMs": 3.06,
+          "medianMs": 2.51,
+          "p99Ms": 13.6,
+          "maxMs": 27.11,
+          "over8ms": 79,
+          "over16ms": 6
+        },
+        "render": {
+          "frames": 2100,
+          "meanMs": 2.74,
+          "medianMs": 1.97,
+          "p99Ms": 4.64,
+          "maxMs": 7.79,
+          "over8ms": 0,
+          "over16ms": 0
+        },
+        "allocatedMBPerSecond": 82.61,
+        "gen0": 1337,
+        "gen1": 22,
+        "gen2": 0,
+        "heapMB": 1916,
+        "profile": null,
+        "mods": null,
+        "locations": null,
+        "events": null,
+        "allocTypes": null,
+        "assets": null
+      },
+      "memory": {
+        "retainedMB": 1915.9,
+        "gcHeapMB": 2587,
+        "gcCommittedMB": 2593,
+        "gcFragmentedMB": 671,
+        "privateMB": 6153,
+        "workingSetMB": 2081
+      }
+    },
+    "walking_together_15s": {
+      "actor": "both",
+      "seconds": 20,
+      "net": {},
+      "modNet": [],
+      "gaps": {
+        "frames": 1200,
+        "meanMs": 16.67,
+        "medianMs": 16.65,
+        "p99Ms": 27.88,
+        "maxMs": 33.5,
+        "over40ms": 0,
+        "over100ms": 0,
+        "over500ms": 0,
+        "top5": [
+          34,
+          32,
+          31,
+          29,
+          28
+        ],
+        "bigGaps": []
+      },
+      "modMessagesReceived": [
+        {
+          "message": "Spiderbuttons.BETAS | BETAS.NpcCache",
+          "count": 20,
+          "totalKB": 74.8,
+          "meanChars": 3831
+        }
+      ],
+      "sample": {
+        "seconds": 20,
+        "processCpuMsPerFrame": 15.27,
+        "processCpuPercentOfOneCore": 92,
+        "update": {
+          "frames": 1200,
+          "meanMs": 3.04,
+          "medianMs": 2.52,
+          "p99Ms": 13.06,
+          "maxMs": 19.33,
+          "over8ms": 42,
+          "over16ms": 2
+        },
+        "render": {
+          "frames": 1200,
+          "meanMs": 2.73,
+          "medianMs": 1.97,
+          "p99Ms": 4.57,
+          "maxMs": 5.99,
+          "over8ms": 0,
+          "over16ms": 0
+        },
+        "allocatedMBPerSecond": 81.7,
+        "gen0": 761,
+        "gen1": 9,
+        "gen2": 0,
+        "heapMB": 1924,
+        "profile": null,
+        "mods": null,
+        "locations": null,
+        "events": null,
+        "allocTypes": null,
+        "assets": null
+      },
+      "memory": {
+        "retainedMB": 1923.9,
+        "gcHeapMB": 2587,
+        "gcCommittedMB": 2593,
+        "gcFragmentedMB": 664,
+        "privateMB": 6152,
+        "workingSetMB": 2086
+      }
+    },
+    "client_to_town": {
+      "actor": "client",
+      "seconds": 11.7,
+      "net": {},
+      "modNet": [],
+      "gaps": {
+        "frames": 705,
+        "meanMs": 16.67,
+        "medianMs": 16.65,
+        "p99Ms": 30.94,
+        "maxMs": 42.1,
+        "over40ms": 2,
+        "over100ms": 0,
+        "over500ms": 0,
+        "top5": [
+          42,
+          41,
+          35,
+          35,
+          35
+        ],
+        "bigGaps": []
+      },
+      "modMessagesReceived": [
+        {
+          "message": "Spiderbuttons.BETAS | BETAS.NpcCache",
+          "count": 12,
+          "totalKB": 56,
+          "meanChars": 4781
+        }
+      ],
+      "sample": {
+        "seconds": 11.7,
+        "processCpuMsPerFrame": 17.31,
+        "processCpuPercentOfOneCore": 104,
+        "update": {
+          "frames": 705,
+          "meanMs": 3.17,
+          "medianMs": 2.59,
+          "p99Ms": 14.71,
+          "maxMs": 28.31,
+          "over8ms": 27,
+          "over16ms": 7
+        },
+        "render": {
+          "frames": 702,
+          "meanMs": 2.88,
+          "medianMs": 1.94,
+          "p99Ms": 7.16,
+          "maxMs": 9.48,
+          "over8ms": 3,
+          "over16ms": 0
+        },
+        "allocatedMBPerSecond": 82.44,
+        "gen0": 453,
+        "gen1": 9,
+        "gen2": 1,
+        "heapMB": 1767,
+        "profile": null,
+        "mods": null,
+        "locations": null,
+        "events": null,
+        "allocTypes": null,
+        "assets": null
+      },
+      "memory": {
+        "retainedMB": 1767.3,
+        "gcHeapMB": 2589,
+        "gcCommittedMB": 2596,
+        "gcFragmentedMB": 825,
+        "privateMB": 6157,
+        "workingSetMB": 2107
+      }
+    },
+    "client_back_to_farm": {
+      "actor": "client",
+      "seconds": 11.7,
+      "net": {},
+      "modNet": [],
+      "gaps": {
+        "frames": 705,
+        "meanMs": 16.67,
+        "medianMs": 16.66,
+        "p99Ms": 28.05,
+        "maxMs": 37.4,
+        "over40ms": 0,
+        "over100ms": 0,
+        "over500ms": 0,
+        "top5": [
+          37,
+          36,
+          35,
+          35,
+          28
+        ],
+        "bigGaps": []
+      },
+      "modMessagesReceived": [
+        {
+          "message": "Spiderbuttons.BETAS | BETAS.NpcCache",
+          "count": 11,
+          "totalKB": 41.1,
+          "meanChars": 3821
+        }
+      ],
+      "sample": {
+        "seconds": 11.7,
+        "processCpuMsPerFrame": 15,
+        "processCpuPercentOfOneCore": 90,
+        "update": {
+          "frames": 705,
+          "meanMs": 3.05,
+          "medianMs": 2.47,
+          "p99Ms": 13.09,
+          "maxMs": 21.35,
+          "over8ms": 26,
+          "over16ms": 3
+        },
+        "render": {
+          "frames": 705,
+          "meanMs": 2.72,
+          "medianMs": 2,
+          "p99Ms": 4.69,
+          "maxMs": 5.73,
+          "over8ms": 0,
+          "over16ms": 0
+        },
+        "allocatedMBPerSecond": 81.68,
+        "gen0": 442,
+        "gen1": 8,
+        "gen2": 0,
+        "heapMB": 1769,
+        "profile": null,
+        "mods": null,
+        "locations": null,
+        "events": null,
+        "allocTypes": null,
+        "assets": null
+      },
+      "memory": {
+        "retainedMB": 1769,
+        "gcHeapMB": 2587,
+        "gcCommittedMB": 2594,
+        "gcFragmentedMB": 819,
+        "privateMB": 6155,
+        "workingSetMB": 2106
+      }
+    },
+    "in_bed_host": true,
+    "one_night": {
+      "actor": "both",
+      "seconds": 22,
+      "net": {},
+      "modNet": [],
+      "gaps": {
+        "frames": 548,
+        "meanMs": 40.22,
+        "medianMs": 16.63,
+        "p99Ms": 28.03,
+        "maxMs": 10288,
+        "over40ms": 5,
+        "over100ms": 2,
+        "over500ms": 2,
+        "top5": [
+          10288,
+          3067,
+          96,
+          44,
+          43
+        ],
+        "bigGaps": [
+          {
+            "at": "20:47:33.642",
+            "ms": 96,
+            "location": "FarmHouse"
+          },
+          {
+            "at": "20:47:36.710",
+            "ms": 3067,
+            "location": "FarmHouse"
+          },
+          {
+            "at": "20:47:46.998",
+            "ms": 10288,
+            "location": "FarmHouse"
+          }
+        ]
+      },
+      "modMessagesReceived": [
+        {
+          "message": "Spiderbuttons.BETAS | BETAS.NpcCache",
+          "count": 3,
+          "totalKB": 9.3,
+          "meanChars": 3177
+        }
+      ],
+      "sample": {
+        "seconds": 22,
+        "processCpuMsPerFrame": 34.39,
+        "processCpuPercentOfOneCore": 86,
+        "update": {
+          "frames": 548,
+          "meanMs": 8.37,
+          "medianMs": 2.01,
+          "p99Ms": 13.24,
+          "maxMs": 3062.74,
+          "over8ms": 25,
+          "over16ms": 5
+        },
+        "render": {
+          "frames": 661,
+          "meanMs": 2.17,
+          "medianMs": 1.81,
+          "p99Ms": 4.89,
+          "maxMs": 95.59,
+          "over8ms": 4,
+          "over16ms": 1
+        },
+        "allocatedMBPerSecond": 121.74,
+        "gen0": 709,
+        "gen1": 75,
+        "gen2": 1,
+        "heapMB": 2091,
+        "profile": null,
+        "mods": null,
+        "locations": null,
+        "events": null,
+        "allocTypes": null,
+        "assets": null
+      },
+      "memory": {
+        "retainedMB": 2091.1,
+        "gcHeapMB": 2803,
+        "gcCommittedMB": 2809,
+        "gcFragmentedMB": 715,
+        "privateMB": 6379,
+        "workingSetMB": 2651
+      }
+    },
+    "date_after_night": "winter 8 y5",
+    "memory_end": {
+      "forced": {
+        "retainedMB": 1978.4,
+        "workingSetMB": 2652
+      },
+      "light": {
+        "retainedMB": 1978.4,
+        "gcHeapMB": 2806,
+        "gcCommittedMB": 2809,
+        "gcFragmentedMB": 828,
+        "privateMB": 6379,
+        "workingSetMB": 2652
+      }
+    },
+    "message_type_numbers": {
+      "farmerDelta": 0,
+      "serverIntroduction": 1,
+      "playerIntroduction": 2,
+      "locationIntroduction": 3,
+      "forceEvent": 4,
+      "warpFarmer": 5,
+      "locationDelta": 6,
+      "locationSprites": 7,
+      "characterWarp": 8,
+      "availableFarmhands": 9,
+      "chatMessage": 10,
+      "connectionMessage": 11,
+      "worldDelta": 12,
+      "teamDelta": 13,
+      "newDaySync": 14,
+      "chatInfoMessage": 15,
+      "userNameUpdate": 16,
+      "farmerGainExperience": 17,
+      "serverToClientsMessage": 18,
+      "disconnecting": 19,
+      "sharedAchievement": 20,
+      "globalMessage": 21,
+      "partyWideMail": 22,
+      "forceKick": 23,
+      "removeLocationFromLookup": 24,
+      "farmerKilledMonster": 25,
+      "requestGrandpaReevaluation": 26,
+      "digBuriedNut": 27,
+      "requestPassout": 28,
+      "passout": 29,
+      "startNewDaySync": 30,
+      "readySync": 31,
+      "chestHitSync": 32,
+      "dedicatedServerSync": 33,
+      "compressed": 127,
+      "WARP_FLAG_STRUCTURE": 1,
+      "WARP_FLAG_FORCED": 2,
+      "WARP_FLAG_NEEDS_INFO": 4,
+      "WARP_FLAG_FACE_UP": 8,
+      "WARP_FLAG_FACE_RIGHT": 16,
+      "WARP_FLAG_FACE_DOWN": 32,
+      "WARP_FLAG_FACE_LEFT": 64
+    },
+    "mod_message_heads": {}
+  },
+  "note": null,
+  "mods": [
+    "Pathoschild.ContentPatcher 2.9.1",
+    "PeacefulEnd.CustomCompanions 5.1.0",
+    "Himetarts.ARVCC 1.5.1",
+    "spacechase0.GenericModConfigMenu 1.16.0",
+    "Esca.FarmTypeManager 1.26.1",
+    "Lumisteria.LumiTilesheetsIndoor 1.4.0",
+    "hxw.tilesheets 2.0.0",
+    "mistyspring.ItemExtensions 1.16.0",
+    "skellady.SBVCC 1.1.2",
+    "skellady.SBVFTM 1.1.2",
+    "SunberryTeam.SBVSMAPI 1.1.2",
+    "skellady.SBVCP 1.1.2",
+    "DLX.Bundles 4.3.1",
+    "DIGUS.MailFrameworkMod 1.20.0",
+    "FlashShifter.SVE-FTM 1.15.11",
+    "FlashShifter.SVECode 1.15.11",
+    "selph.ExtraMachineConfig 1.18.0",
+    "MoreFish 5.4.0",
+    "FlashShifter.StardewValleyExpandedCP 1.15.11",
+    "Himetarts.ARV.CP 1.5.1",
+    "Spiderbuttons.BETAS 3.5.2",
+    "leclair.bettercrafting 2.18.0",
+    "BetterRanching 2.0.5",
+    "Pathoschild.CentralStation 1.7.0",
+    "Pathoschild.CentralStation.Content 1.7.0",
+    "SMAPI.ConsoleCommands 4.5.2",
+    "spacechase0.ContentPatcherAnimations 1.2.4",
+    "Esca.CustomNPCExclusions 1.6.0",
+    "Esca.DestroyableBushes 1.5.2",
+    "atravita.EastScarp 3.0.9",
+    "DaisyNiko.Tilesheets 2.0.2",
+    "Lumisteria.TtilesheetsOutdoor 1.4.0",
+    "spacechase0.SpaceCore 1.28.4",
+    "Bouhm.NPCMapLocations 3.5.2",
+    "Lemurkat.EastScarp 3.0.9",
+    "Lemurkat.EastScarpe.FTM 3.0.9",
+    "DecidedlyHuman.MappingExtensionsAndExtraProperties 2.5.3",
+    "Rafseazz.RSVCC 2.5.17",
+    "Rafseazz.RSVFTM 2.5.17",
+    "Rafseazz.RidgesideVillage 2.5.17",
+    "Rafseazz.RSVCP 2.5.17",
+    "Lemurkat.EastScarpNPCs 3.0.9",
+    "ES.BarberShop 3.0.9",
+    "Esca.EMP 1.7.2",
+    "AlanBF.FixHoverShadows 1.0.0",
+    "Kkthnx.Flashlight 1.2.0",
+    "flashshifter.FrontierFarm 1.15.11",
+    "FlashShifter.FrontierFarmFTM 1.15.11",
+    "Pathoschild.LookupAnything 1.55.0",
+    "DelphinWave.MultiplayerHorseReskin 2.0.0",
+    "Digus.ProducerFrameworkMod 1.9.8",
+    "SMAPI.SaveBackup 4.5.2",
+    "Kkthnx.SimpleLocationDisplay 2.0.1",
+    "Pathoschild.SkipIntro 1.9.25",
+    "Kkthnx.SlimSteed 1.1.1",
+    "aedenthorn.SoundTweaker 0.5.1",
+    "Cherry.StardewAquarium 2.3.0",
+    "Gervig91.StardewAquariumCP 2.3.0",
+    "Gervig91.StardewAquariumCC 2.3.0",
+    "Annosz.UiInfoSuite2 2.3.7",
+    "Kkthnx.ValleyFixes 0.2.0-alpha.6",
+    "Kkthnx.ValleyFixes.DevHarness 0.1.0",
+    "shekurika.WaterFish 0.4.2",
+    "SmolHooman.WildAnimalsCC 1.3.0",
+    "SmolHooman.WildAnimals 1.3.2",
+    "Gervig91.AnimatedClothes 1.2.0",
+    "Gervig91.AnimatedESFish 1.3.2",
+    "Gervig91.AnimatedFish 1.4.0",
+    "Gervig91.AnimatedFishSVE 1.9.0",
+    "Gervig91.AnimatedFood 3.5.0",
+    "Gervig91.AnimatedFurnitureAndStuff 1.2.0",
+    "Gervig91.AnimatedMiningPack 1.3.0",
+    "Gervig91.AnimatedMoreNewFish 1.4.0",
+    "Gervig91.AnimatedRSVFish 1.4.1",
+    "Gervig91.AnimatedSlimeEggandLoot 2.2.0",
+    "Gervig91.AnimatedToolsAndWeapons 1.2.0",
+    "LemurKat.CommunityCenter.CP 1.3.2",
+    "Elle.SeasonalBuildings 1.3.5",
+    "Arknir.Jonghyuk 1.2.3",
+    "SamSpare.NoMoreSpongebobSteps 1.1.0",
+    "PC.Tilesheets 1.1.0",
+    "Rafseazz.RSVSeasonalOutfits 1.1.3",
+    "Poltergeister.SeasonalCuteCharacters 6.1.4",
+    "Poltergeister.SeasonalCuteSpritesSVE 3.0.0",
+    "mangozey.SeasonalVPRUI 3.0.1",
+    "plurffle.WildCritterTweaks 1.4.0",
+    "Nekotekina.BarnAnimalsDoubleShadowsFix 1.0.0",
+    "xiddav.tilesheet 2.1.0",
+    "MNFLetters 1.0.0",
+    "Airyn.Dao.CP 1.0.4",
+    "atravita.NovaNPCTest 1.4.4",
+    "TenebrousNova.EliDylanCC 1.4.4",
+    "TenebrousNova.EliDylan.CP 1.4.4",
+    "atelier99.LaniCC 1.1.8",
+    "atelier99.SBV.NPCLani 1.1.8",
+    "Squeaks.MGCCC 1.0.0",
+    "Squeaks.MGC.CP 1.1.2",
+    "Bagi.Nora.CP 2.9.2",
+    "Clara.RipleyCC 1.0.9",
+    "Clara.Ripley 1.0.9",
+    "tiakall.wren 1.0.4"
+  ]
+}

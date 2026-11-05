@@ -1,0 +1,70 @@
+{
+  "world": "host ready in FarmHouse, multiplayerMode 2, server True",
+  "cabin": "ready for 3442522902867139643",
+  "clientJoined": true,
+  "dead": {
+    "mode": "blackhole",
+    "role": "host",
+    "clientId": 3442522902867139643,
+    "seconds_until_host_drops_joiner_from_otherFarmers": 28.5,
+    "seconds_until_host_counts_one_online": 28.5,
+    "seconds_until_new_day": -1,
+    "host_gaps_during_wait": {
+      "frames": 2310,
+      "meanMs": 16.66,
+      "medianMs": 24.29,
+      "p99Ms": 26.33,
+      "maxMs": 39.1,
+      "over40ms": 0,
+      "over100ms": 0,
+      "over500ms": 0,
+      "top5": [
+        39,
+        29,
+        28,
+        27,
+        27
+      ],
+      "bigGaps": []
+    },
+    "ping_samples": [
+      {
+        "secondsSinceCut": 0,
+        "pingMs": 0.5,
+        "others": 1
+      },
+      {
+        "secondsSinceCut": 5,
+        "pingMs": 0.5,
+        "others": 1
+      },
+      {
+        "secondsSinceCut": 10,
+        "pingMs": 0.5,
+        "others": 1
+      },
+      {
+        "secondsSinceCut": 15,
+        "pingMs": 0.5,
+        "others": 1
+      },
+      {
+        "secondsSinceCut": 20,
+        "pingMs": 0.5,
+        "others": 1
+      },
+      {
+        "secondsSinceCut": 25,
+        "pingMs": 0.5,
+        "others": 1
+      }
+    ],
+    "host_alive_ticks": 1710
+  },
+  "note": null,
+  "mods": [
+    "SMAPI.ConsoleCommands 4.5.2",
+    "Kkthnx.ValleyFixes 0.2.0-alpha.6",
+    "Kkthnx.ValleyFixes.DevHarness 0.1.0"
+  ]
+}
